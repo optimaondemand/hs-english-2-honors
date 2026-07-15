@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 1.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 1.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 1.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Semicolons, colons &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from the opening scene</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Semicolons and Colons</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Two punctuation marks that hold an argument together: one joins two related claims, the other sets up the evidence behind one.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You just learned that a real argument needs a claim connected to its evidence. The semicolon and the colon are two of the small tools that make that connection visible on the page. You will use both, along with this week&rsquo;s Word Study words, in Quick Write 9.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use a semicolon to join two closely related independent claims.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use a colon to set up evidence, an explanation, or a list.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; JOINING CLAIMS, SETTING UP EVIDENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>semicolon</strong> joins two independent claims (each one able to stand as its own complete sentence) that are closely related in meaning. It signals to the reader: these two ideas belong together, more tightly than two separate sentences would suggest, but not tightly enough to be joined with just a comma. A <strong>colon</strong> does a different job. It comes at the end of a complete statement and sets up what follows: an explanation, a list, or a specific piece of evidence that proves the claim just made. Think of the colon as a small arrow pointing forward: &ldquo;here is what I mean, exactly.&rdquo;</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; SEMICOLON OR COLON?</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Thebes is dying by inches<span style="color:#C7922C; font-weight:bold;">;</span> its king has already sent for the god&rsquo;s answer.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Semicolon: two complete, closely related claims about the same crisis, joined without a conjunction like &ldquo;and.&rdquo;</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">The oracle&rsquo;s demand is exact<span style="color:#3B4E8C; font-weight:bold;">:</span> find the murderer of Laius, and drive him out.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Colon: a complete claim (&ldquo;the oracle&rsquo;s demand is exact&rdquo;) followed by the specific evidence that explains it.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Oedipus does not hesitate<span style="color:#C7922C; font-weight:bold;">;</span> he issues a public proclamation before the priest has even finished speaking.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Semicolon: the second claim gives a closely related, almost proof-like follow-up to the first, so it earns the tighter connection.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A quick test for the semicolon: read each half on its own. If both halves could stand as complete sentences by themselves, and the ideas are closely related, a semicolon is a strong option. A quick test for the colon: the words before it must form a complete statement on their own. You cannot put a colon after &ldquo;the oracle demands&rdquo; because that clause never finishes its own thought; it needs the rest of the sentence to become complete first.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; DOES THE PUNCTUATION ACTUALLY WORK?</div>
+            <div class="widget-question">Each item below looks correctly punctuated at first glance. Look closely at what stands on each side of the mark before you decide.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. A semicolon needs two clauses that could each stand alone as a full sentence. &lsquo;Because he has already sent Creon to Delphi&rsquo; cannot stand alone; the word &lsquo;because&rsquo; makes it dependent on the first clause. Removing &lsquo;because&rsquo; (or using a comma instead) would fix it." data-hint="Test each half on its own. Can &lsquo;because he has already sent Creon to Delphi&rsquo; stand alone as a complete sentence? What does the word &lsquo;because&rsquo; do to a clause?">
+                <div class="widget-row-prompt">1. Read this sentence: &ldquo;Oedipus does not hesitate; because he has already sent Creon to Delphi.&rdquo; Something is wrong with the semicolon here even though the sentence looks balanced. What is the problem?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Semicolons can only join two clauses about kings, never about a king&rsquo;s decisions.</button>
+                    <button data-choice="1">Nothing is wrong; two related ideas joined by a semicolon is always correct, regardless of what follows it.</button>
+                    <button data-choice="2">The clause after the semicolon starts with &lsquo;because,&rsquo; which makes it dependent, not independent; a semicolon needs an independent clause on both sides.</button>
+                    <button data-choice="3">The word &lsquo;hesitate&rsquo; should be capitalized after a semicolon, the way it would be after a period.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. A colon needs a complete statement in front of it. &lsquo;The oracle demands&rsquo; is left hanging; it needs an object (demands what?) to finish its own thought. Rewritten as &lsquo;The oracle&rsquo;s demand is exact: find Laius&rsquo;s murderer,&rsquo; the words before the colon now form a complete statement, and the colon works correctly." data-hint="Read only the words before the colon. Do they form a complete sentence on their own, or are they still waiting for something to finish the thought?">
+                <div class="widget-row-prompt">2. Read this sentence: &ldquo;The oracle demands: find Laius&rsquo;s murderer and drive him out.&rdquo; Is the colon used correctly here?</div>
+                <div class="widget-options">
+                    <button data-choice="0">No, because &lsquo;the oracle demands&rsquo; is not a complete statement on its own; it needs an object to finish its thought, so the colon interrupts it rather than following it.</button>
+                    <button data-choice="1">Yes, because a colon can always introduce the specific content of a demand.</button>
+                    <button data-choice="2">Yes, because the words after the colon form a complete list.</button>
+                    <button data-choice="3">No, because colons can never be used after a verb like &lsquo;demands.&rsquo;</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Both halves are complete, closely related claims about the same crisis. A semicolon joins them without needing a conjunction like &lsquo;and.&rsquo;" data-hint="Check both halves: can each stand alone as a complete sentence, and are they closely related enough to deserve a tighter connection than two separate sentences?">
+                <div class="widget-row-prompt">3. Which punctuation correctly joins these two complete, closely related claims: &ldquo;Thebes is dying by inches&rdquo; and &ldquo;its king has already sent for the god&rsquo;s answer&rdquo;?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Comma alone</button>
+                    <button data-choice="1">No punctuation; run the clauses together</button>
+                    <button data-choice="2">Colon</button>
+                    <button data-choice="3">Semicolon</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in this week&rsquo;s reading, the opening scene. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>suppliant</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person who humbly begs or petitions someone with power to help them</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus asks the crowd why they &ldquo;sit ye here as suppliants&rdquo;: a whole city, kneeling before its own king.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>blight</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a disease or force that destroys plants, animals, or health on a large scale</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The priest repeats the word three times, on the harvest, the herds, and childbirth, to show the plague striking every part of Theban life.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>oracle</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a sacred shrine where a god&rsquo;s will is revealed, or the message given there</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon travels to the oracle at Delphi to learn how Thebes can be saved; his report of what he learns there sets the whole plot in motion.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>pollution</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; here, a religious stain or defilement on a community, not chemical waste</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon reports that Apollo demands the city &ldquo;extirpate a fell pollution,&rdquo; meaning the unsolved murder itself has spiritually contaminated Thebes.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>proclamation</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; an official public announcement made by someone in authority</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus addresses one directly &ldquo;to all&rdquo; Thebans, demanding that anyone with knowledge of Laius&rsquo;s murder come forward.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>curse</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun/verb) &mdash; a solemn call for harm or misfortune to fall on someone</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus lays this on Laius&rsquo;s murderer, whoever he may be, and even extends it to cover himself if he unknowingly shelters the guilty man.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This week&rsquo;s Quick Write is where these tools get tested for real. As you draft Quick Write 9, use <strong>at least one semicolon</strong> to join two related claims and <strong>at least one colon</strong> to set up a piece of evidence, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A semicolon says: these two claims belong together. A colon says: here is exactly the evidence I promised. Carry both, along with two Word Study words, into Quick Write 9.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.GV &middot; Semicolons and Colons</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

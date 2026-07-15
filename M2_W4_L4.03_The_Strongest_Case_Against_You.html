@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 4.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0; }
+    details.notebook-reveal summary { font-size: 16px; color: #0e1c42; cursor: pointer; }
+    details.notebook-reveal .reveal-body { margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 4.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 4.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Counterclaim and rebuttal</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 12</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Strongest Case Against You</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 4 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A case that never answers its best opposing argument is not actually a strong case. It just has not been tested yet.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Every advocate arguing a verdict on Oedipus has to face a hard fact: the other side has real arguments too, and a skeptical reader already knows it. Today you learn how to state the strongest version of the opposing verdict, fairly and forcefully, and then answer it. This is the exact move you will make in Quick Write 12, and it is one of the most persuasive things a writer can do, because a reader who sees you have already considered their best objection trusts everything else you say more.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define counterclaim and rebuttal and explain why an unanswered counterclaim weakens even well-supported writing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> distinguish a fairly stated counterclaim from a weak, easily dismissed one.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> draft a rebuttal that either answers a counterclaim with evidence and reasoning, or concedes part of it honestly.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE ARGUMENT YOU HAVEN&rsquo;T ANSWERED YET</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a strong disagreement you have had. Did you ever seriously consider the best version of the other person&rsquo;s point, not just the easiest version to dismiss? What happened? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That is exactly the habit this lesson builds. Taking the other side seriously, even briefly, usually makes your own position sharper, not weaker.">&#129504; I actually considered their strongest point, and it changed how I argued</button>
+                <button data-response="That is a common and human response, and it is also the exact trap this lesson is built to help you avoid: dismissing the easy version instead of the real one.">&#128584; I dismissed the version that was easiest to argue against</button>
+                <button data-response="Notice that feeling. A reader who senses you have not considered their strongest objection reacts the same way, with less trust in everything else you say.">&#128533; I never really thought about their side at all</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Two new terms, one habit</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>counterclaim</strong> is the strongest reasonable argument against your own position, stated in its best form, not its weakest one. A <strong>rebuttal</strong> is your answer to that counterclaim: either you refute it with evidence and reasoning, or you concede part of it honestly and explain why your verdict still holds anyway. Skipping the counterclaim does not make your case stronger. It just means a skeptical reader supplies the counterclaim themselves, unanswered, and concludes you never considered it.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE STRONGEST VERSION, NOT THE EASIEST ONE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A weak or mocked counterclaim convinces no one, including you. If you state the other side&rsquo;s argument in a form no reasonable person would actually make, a careful reader notices immediately, and your whole essay looks less trustworthy for it. The goal is the opposite: state the other side&rsquo;s best, most reasonable case, as if you believed it yourself, before you answer it.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: worked example, steelmanned counterclaims side by side -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; THE STRONGEST CASE FOR EACH VERDICT</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:14px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom:6px;">STEELMANNING &ldquo;NOT GUILTY&rdquo;</div>
+                    <div style="font-size:16px; color:#1a2340; line-height:1.55;">Oedipus could not have known the stranger at the crossroads was his father. He had already tried to flee the very prophecy that trapped him, leaving Corinth specifically to avoid it. The oracle set this trap in motion before he was even born, through no choice of his own.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:14px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px; margin-bottom:6px;">STEELMANNING &ldquo;GUILTY&rdquo;</div>
+                    <div style="font-size:16px; color:#1a2340; line-height:1.55;">Whatever Oedipus knew or did not know, he killed a man in anger at a crossroads. His own rashness in that moment, and his refusal now to stop asking questions once Jocasta begged him to, are choices that belong to him, not to fate.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that both versions are genuinely persuasive on their own. Neither one is a strawman. That is exactly what makes them worth answering instead of ignoring.</p>
+
+        <!-- notebook practice before reveal -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#9997;&#65039; TRY IT YOURSELF, IN YOUR NOTEBOOK, BEFORE YOU LOOK AT THE MODEL BELOW</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Write the single strongest sentence you can construct FOR the verdict you do NOT currently hold, as if you believed it yourself. Do this in your notebook first.</div>
+        </div>
+
+        <details class="notebook-reveal">
+            <summary><strong>Compare your work: a model steelman and rebuttal</strong> (open only after you have written your own)</summary>
+            <div class="reveal-body">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>Steelman (arguing FOR &ldquo;not guilty,&rdquo; from a writer who ultimately argues guilty):</strong> &ldquo;Oedipus had no way to know the man he struck at the crossroads was Laius, and he had already left Corinth specifically to keep the prophecy from coming true.&rdquo;</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>Rebuttal:</strong> Even granting that Oedipus could not have known Laius&rsquo;s identity, intent is not the only standard by which Thebes can judge a killing. An armed man cut down in anger at a crossroads still requires an answer, whatever the killer knew at the time.</div>
+            </div>
+        </details>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; CONCEDE WHAT MUST BE CONCEDED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every counterclaim needs to be defeated outright. Sometimes the strongest rebuttal concedes a real, true piece of the other side&rsquo;s argument, and then explains why that concession does not sink your overall verdict. Giving honest ground on one point, then reframing why your case still stands, often reads as more trustworthy than trying to win every single point. You will learn the specific language for doing this cleanly in tomorrow&rsquo;s grammar lesson.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND COUNTERCLAIMS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can generate an opposing argument for almost any position in seconds. What it is weak at is generating the single strongest version specific to this exact case, grounded in the actual facts of the messenger scene and Jocasta&rsquo;s exit, rather than a generic argument about guilt and innocence. If you use an AI tool to brainstorm a counterclaim, check its argument against the actual text and sharpen it yourself before you write your rebuttal.</div>
+        </div>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; STEELMAN OR STRAWMAN?</div>
+            <div class="widget-question">For each verdict, choose the version an advocate could not easily dismiss.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. This version accounts for the specific facts (he did not know the man&rsquo;s identity, he had already tried to flee the prophecy by leaving Corinth) instead of dodging the crime, dismissing the play&rsquo;s premise, or blaming someone else. That is what makes it strong enough to require a real rebuttal, not a dismissal." data-hint="Ask which version actually engages with the facts of the killing, instead of rejecting the play&rsquo;s premise, appealing only to character, or shifting blame elsewhere.">
+                <div class="widget-row-prompt">1. Which version of the &ldquo;not guilty&rdquo; counterclaim is the strongest, fairest an advocate could offer?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Oedipus is not guilty because prophecies are not real and none of this matters.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Oedipus is not guilty because he is a good person deep down and would never hurt anyone.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Oedipus is not guilty in the full sense, because he had no way to know the stranger at the crossroads was his father, and he had already tried to flee the very prophecy that trapped him.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Oedipus is not guilty because Jocasta and Creon are the ones really at fault.&rdquo;</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. This grounds guilt in the actual act, an armed killing at a crossroads, and in Oedipus&rsquo;s own choices (his temper, and his refusal now to stop pulling at a thread that keeps unraveling), not in a side issue, a mood, or an assumption about ancient belief." data-hint="Ask which version points at what Oedipus actually did and chose, rather than a separate flaw, a mood in the room, or an assumption about the audience.">
+                <div class="widget-row-prompt">2. Which version of the &ldquo;guilty&rdquo; counterclaim is the strongest, fairest an advocate could offer?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Oedipus is guilty because he is arrogant and disrespectful to Tiresias, an old blind man.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Oedipus is guilty because he killed a man in anger at the crossroads regardless of what he knew about the man&rsquo;s identity, and his own rash choices, not fate alone, drove that moment and his refusal since to stop investigating.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Oedipus is guilty because the chorus seems worried about him near the end of this week&rsquo;s scene.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Oedipus is guilty because ancient Greek audiences would have assumed anyone cursed by the gods must deserve it.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Complete Lesson 4.GV.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn the specific language for conceding a point fairly without giving away your whole argument.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 12 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Steelman the opposing verdict, then answer it. Full directions are on the Quick Write 12 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A case that never faces its strongest opposition has not actually been tested. State the best argument against your own verdict as fairly as you can manage, then answer it honestly. That single move will make everything else in your brief more convincing, not less.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.03 &middot; The Strongest Case Against You</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

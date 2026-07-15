@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 3.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 3.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Three Roads</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 3</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Jocasta tells a story meant to prove prophecy false. It hands Oedipus the one detail he cannot ignore.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today&rsquo;s reading is the hinge of the whole play. Jocasta tries to calm Oedipus by telling him an old oracle about Laius never came true. Instead, one phrase in her story, a place where three roads meet, stops Oedipus cold, and he answers with a story of his own. Watch how much you, the audience, can see that neither character can yet see. That gap has a name: dramatic irony, when the audience knows more than a character on stage.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize Jocasta&rsquo;s account of the oracle given to Laius, the exposed child, and the crossroads killing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize Oedipus&rsquo;s own story: Corinth, the Delphic prophecy, and the killing at the crossroads.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what dramatic irony is and identify it in this scene.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week, read <strong>Jocasta&rsquo;s oracle story</strong> through <strong>the summons of the herdsman</strong>. Full text free at <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg #31</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: JOCASTA'S STORY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; JOCASTA&rsquo;S STORY, MEANT TO REASSURE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta wants to prove to Oedipus that prophecy cannot be trusted, so she tells him about an old oracle given to her first husband, Laius:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;An oracle / Once came to Laius (I will not say / &lsquo;Twas from the Delphic god himself, but from / His ministers) declaring he was doomed / To perish by the hand of his own son, / A child that should be born to him by me.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Jocasta, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She explains that she and Laius made certain the prophecy could never come true:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;As for the child, it was but three days old, / When Laius, its ankles pierced and pinned / Together, gave it to be cast away / By others on the trackless mountain side.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Jocasta, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To Jocasta, the story proves the oracle wrong twice over: the son was left to die on a mountainside, and Laius himself was killed years later a different way entirely, by strangers:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Now Laius&mdash;so at least report affirmed&mdash; / Was murdered on a day by highwaymen, / No natives, at a spot where three roads meet.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Jocasta, trans. F. Storr, public domain</div>
+    </div>
+
+    <!-- ===== PART 2: THE CHILL ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ONE PHRASE STOPS HIM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta means every word of this as comfort. It has the opposite effect. Oedipus reacts at once:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;What memories, what wild tumult of the soul / Came o&rsquo;er me, lady, as I heard thee speak! [&hellip;] Methought I heard thee say that Laius / Was murdered at the meeting of three roads.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, dramatic irony -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; WHAT THE AUDIENCE SEES THAT THE SPEAKERS CANNOT</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">WHAT JOCASTA BELIEVES</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">She believes the story proves prophecy false and will calm her husband. She has no reason yet to connect &ldquo;three roads&rdquo; to anything Oedipus has done.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">WHAT THE AUDIENCE ALREADY SUSPECTS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">An audience that already suspects Oedipus killed Laius hears &ldquo;three roads&rdquo; land like a struck bell, long before either character says the word &ldquo;father.&rdquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This gap, where the audience holds knowledge the characters on stage do not yet have, is called <strong>dramatic irony</strong>. It is not a coincidence of plotting. The playwright builds every line of Jocasta&rsquo;s reassurance so that it reads as comfort to her and as a countdown to us. Keep watching for it as the two stories in this lesson converge.</p>
+    </div>
+
+    <!-- ===== PART 3: OEDIPUS'S STORY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; OEDIPUS TELLS HIS OWN STORY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus answers Jocasta&rsquo;s story with a story of his own, one he has never told her before. He grew up in Corinth believing he was the son of King Polybus and Queen Merope. At a banquet, a drunken guest called him no true son of his father. Unsettled, he went in secret to the oracle at Delphi, and heard something far worse than an answer about his parents:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;A roisterer at some banquet, flown with wine, / Shouted &lsquo;Thou art not true son of thy sire.&rsquo; [&hellip;] So privily without their leave I went / To Delphi, and Apollo sent me back / Baulked of the knowledge that I came to seek. / But other grievous things he prophesied, / Woes, lamentations, mourning, portents dire; / To wit I should defile my mother&rsquo;s bed / And raise up seed too loathsome to behold, / And slay the father from whose loins I sprang.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To escape that fate, Oedipus fled Corinth and never went home again. On the road, at a place he describes precisely, he ran into an old man&rsquo;s carriage and a fight broke out:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;As I drew near the triple-branching roads, / A herald met me and a man who sat / In a car drawn by colts&mdash;as in thy tale&mdash; / The man in front and the old man himself / Threatened to thrust me rudely from the path [&hellip;] I struck him, and the old man, seeing this, / Watched till I passed and from his car brought down / Full on my head the double-pointed goad. / Yet was I quits with him and more [&hellip;] And so I slew them every one.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two stories, told by two people who love each other and cannot see what the other has just handed them, have now landed on the same crossroads.</p>
+    </div>
+
+    <!-- ===== PART 4: THE HERDSMAN AND THE ONE HOPE ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; ONE HOPE LEFT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There is one detail standing between Oedipus and certainty, and both he and Jocasta reach for it. The witness who survived the attack on Laius, a herdsman, reported it a specific way at the time:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Robbers, he told us, not one bandit but / A troop of knaves, attacked and murdered him.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">If the herdsman is remembered rightly, a band of robbers killed Laius, not one man alone, and Oedipus was alone that day at the crossroads. That single discrepancy, one attacker against many, is the last thread the truth might still hang from. Oedipus orders the herdsman found:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Fetch him at once. I fain would see the man.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As an advocate building a case, notice what this scene teaches you about evidence: a single surviving witness, and a single word, plural instead of singular, is now the whole hinge of the case. That is how much can rest on one detail, remembered correctly or not.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES IT SHOW?</div>
+            <div class="widget-question">For each detail from today&rsquo;s reading, choose what it most reveals.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Jocasta has no reason yet to connect &lsquo;three roads&rsquo; to anything Oedipus has done. But an audience that already suspects Oedipus killed Laius hears the phrase land like a struck bell, long before either character says the word &lsquo;father.&rsquo; That gap between her intent and the audience&rsquo;s knowledge is dramatic irony." data-hint="Ask what Jocasta believes she is doing (comforting her husband) versus what an audience already suspects about Laius&rsquo;s killer. Where is the information gap?">
+                <div class="widget-row-prompt">1. Jocasta mentions &ldquo;three roads&rdquo; while trying to prove prophecy false. What does this moment in the play primarily illustrate?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals that Jocasta secretly suspects Oedipus killed Laius, but says nothing to spare his feelings.</button>
+                    <button data-choice="1">It is dramatic irony: what Jocasta intends as comfort, the audience, already suspecting Oedipus, hears as a warning.</button>
+                    <button data-choice="2">It shows that Jocasta and Oedipus have discussed his crossroads story before, so this is not really new information to either of them.</button>
+                    <button data-choice="3">It proves the oracle given to Laius must have been fabricated by his enemies, since Jocasta doubts it herself.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. Oedipus is certain he acted alone that day. If the herdsman truly remembered a group of robbers, that single detail, one attacker against many, would be enough to clear him. That is how much weight one word, plural instead of singular, can carry as evidence." data-hint="Oedipus insists he acted alone at the crossroads. What would it mean for his case if the witness actually described a group of attackers instead of one man?">
+                <div class="widget-row-prompt">2. The herdsman originally reported that &ldquo;robbers,&rdquo; not one man, killed Laius. Why does this detail matter so much to the case?</div>
+                <div class="widget-options">
+                    <button data-choice="0">If the herdsman&rsquo;s memory holds, it would clear Oedipus, since he says he acted entirely alone at the crossroads.</button>
+                    <button data-choice="1">It proves the herdsman lied to protect the real killer at the time.</button>
+                    <button data-choice="2">It has no real bearing on Oedipus&rsquo;s guilt, since eyewitness memory from years ago cannot be trusted either way.</button>
+                    <button data-choice="3">It confirms that Laius was killed by ordinary bandits with no connection to his household at all.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Log the two stories side by side in your Evidence Bank.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note every point where Jocasta&rsquo;s story and Oedipus&rsquo;s story overlap.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 3.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will practice restating one of today&rsquo;s speeches faithfully in your own words before you argue about what it proves.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Jocasta reaches for comfort and hands her husband a countdown. Oedipus reaches for proof of his own innocence and instead finds himself standing at the same crossroads twice. Only one witness, and one word, still stands between them and the truth. Hold onto that image, one detail carrying the whole weight of a case, for your own work as an advocate.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; Three Roads</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

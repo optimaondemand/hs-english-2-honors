@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Recitation Q1: Launch</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Recitation Q1 &middot; Launch</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Task</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Recitation Launch</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Recitation Q1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Your Turn to Tell It</div>
+        <div style="font-size: 16px; color: #1a2340;">Launch &middot; ungraded practice Weeks 5&ndash;7 &middot; recording due Week 8</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">&ldquo;Demodocus, there is no one in the world whom I admire more than I do you.&rdquo;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You just watched a hero weep at a song sung entirely from memory, by a performer who never once glanced at a page. Every book of the Odyssey you have read so far was originally told exactly that way: performed aloud, from memory, for a listening crowd. This week you begin practicing that same skill, in miniature. You will choose one short passage from the poem&rsquo;s own opening pages, learn it by heart over the next several weeks, and record yourself telling it in Week 8. This is your Quarter 1 recitation, and it connects directly to the telling you will perform at the end of your Bard&rsquo;s Hall project.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a recitation is and why oral performance mattered in the world that produced the Odyssey.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose one passage from a provided menu and begin memorizing it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use a memorization and delivery routine I can keep practicing through Week 7.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A quiet space where you can practice speaking aloud.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer, to note which passage you choose and how your practice is going.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Optional: your own copy of <em>The Odyssey</em>, open to Book 9, if you want to see Odysseus&rsquo;s self-naming in its full context.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT A RECITATION IS, AND WHY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A recitation is the memorization and spoken delivery of a short passage. No notes, no script, no page to glance at, just a passage you have learned well enough to say aloud in your own voice. It sounds old-fashioned, but it is the exact skill the Odyssey itself is built on. Demodocus does not read his song about Troy from a page. He carries it in memory and delivers it live, shaping his pace and his voice to the room in front of him.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This connects directly to your module project. The Bard&rsquo;s Hall asks you to tell your own story aloud in Week 9. The recitation is your rehearsal for that skill, using someone else&rsquo;s words first so that the pressure of inventing a story is not also on you yet. Get comfortable delivering a memorized passage now, and telling your own story later will feel far more familiar.</p>
+
+        <!-- historical context (indigo box) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In ancient Greece, professional performers called rhapsodes traveled from festival to festival reciting Homeric epic from memory, sometimes across several days of performance. Memorized delivery was not a shortcut or a lesser version of the poem. It was a genuine, respected craft, and reciting well was itself proof of skill and care for the story being told.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR PASSAGE MENU (CHOOSE ONE)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Read both passages below aloud once before you decide. Notice which one feels natural in your mouth and voice.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: the passage menu, annotated -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 10px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px; letter-spacing: 0.4px;">&#128220; PASSAGE MENU</div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 18px; margin-bottom: 14px; border-top: 3px solid #3B4E8C;">
+                <div style="font-size: 14px; color: #3B4E8C; margin-bottom: 8px;"><strong>OPTION A &middot; THE PROEM</strong></div>
+                <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy.&rdquo;</div>
+                <div style="font-size: 12px; color: #1a2340; margin-bottom: 10px;">trans. Samuel Butler, public domain</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Why choose this one: it is the poem&rsquo;s very first words, an invocation to a goddess and the epithet that defines its hero, all in a single sentence. Short, self-contained, and instantly recognizable.</div>
+            </div>
+
+            <div style="background: #FDF3E3; border-radius: 8px; padding: 16px 18px; border-top: 3px solid #C7922C;">
+                <div style="font-size: 14px; color: #7A5A17; margin-bottom: 8px;"><strong>OPTION B &middot; ODYSSEUS&rsquo;S SELF-NAMING (BOOK 9)</strong></div>
+                <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;Firstly, then, I will tell you my name that you too may know it, and one day, if I outlive this time of sorrow, may become my guests though I live so far away from all of you. I am Odysseus son of Laertes, renowned among mankind for all manner of subtlety, so that my fame ascends to heaven.&rdquo;</div>
+                <div style="font-size: 12px; color: #1a2340; margin-bottom: 10px;">trans. Samuel Butler, public domain</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Why choose this one: it is the moment the hidden guest finally reveals who he is, at the very feast where Demodocus has just sung his own story back to him. A declaration, not a description.</div>
+            </div>
+        </div>
+        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin: 0 0 14px 0; font-style: italic;">Both passages come from the public-domain Butler translation. That translation originally used Roman names for the gods and hero (Ulysses instead of Odysseus); the Greek forms are restored here, as they are throughout this course.</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">You do not need to decide alone right now. Say each one aloud once. Whichever passage you can already say without stumbling is probably your passage.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HOW TO PRACTICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">You have several weeks of ungraded practice before the recording is due. Use them. Here is a routine that works:</p>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Memorize in chunks.</strong> Break your passage into two or three small phrases instead of trying to learn the whole thing at once. Master one chunk before linking it to the next.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Always say it aloud.</strong> Reading it silently will not build the same memory that speaking it out loud will.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Watch your pace.</strong> Rushing is the most common mistake. Speak a little slower than feels natural, and pause where a comma or a period would fall.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Eyes up.</strong> Each time you practice, try to look up from the page a little longer than the time before. By Week 8, you should not need it at all.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Let your voice carry the meaning.</strong> A proem asks a goddess for help before a grand tale begins. A self-naming is a declaration after twenty years of concealment. Decide what your passage is doing, then let your delivery show it.</div>
+        </div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Which passage are you leaning toward right now, and why? (No wrong answer, just check in with yourself before practice begins.)</div>
+            <div class="widget-options">
+                <button data-response="A strong choice if you like the formality of an invocation. Practice slowing your pace on &lsquo;Tell me, O Muse&rsquo; so it sounds like an appeal to a goddess, not a list of facts.">&#128220; The proem, the poem&rsquo;s opening voice</button>
+                <button data-response="A strong choice if you like the drama of a reveal. Practice letting your voice rise slightly on &lsquo;I am Odysseus son of Laertes,&rsquo; the way a hidden guest might finally say his own name aloud.">&#127917; The self-naming, Odysseus&rsquo;s declaration</button>
+                <button data-response="That is fine. Say both passages aloud once, today, before you decide. Whichever one you can already deliver without stumbling is probably your passage.">&#129300; I am not sure yet</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Choose your passage this week.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note your choice in your Module 1 Organizer and begin memorizing your first chunk.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Practice through Weeks 5&ndash;7.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This is ungraded, no separate assignment page. Just use the routine above until you can say your full passage without notes.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Record and submit in Week 8.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Full directions, the rubric, and the due date are on the Recitation Q1 Submission page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A bard&rsquo;s whole craft lives in a memory trained to carry a story and a voice trained to deliver it. You are about to practice a small piece of that same craft. Choose your passage, start today, and give yourself the next several weeks to make it truly yours.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Recitation Q1 &middot; Your Turn to Tell It</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

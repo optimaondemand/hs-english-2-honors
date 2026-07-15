@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 5.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What the Blind Man Sees</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Oedipus passes his own sentence before any court in Thebes ever convenes.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A note before you read: what happens inside the palace this week is genuinely terrible, and the play knows it. Sophocles never stages it directly; you hear it, as the original Athenian audience did, through a messenger&rsquo;s report. Read (or reread) the scene at the link on this week&rsquo;s Module Map using the scene landmarks &ldquo;the messenger&rsquo;s report&rdquo; and &ldquo;the final scene with Creon,&rdquo; not a line number, before you continue.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize what the messenger reports and explain why Sophocles keeps it offstage.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain, in Oedipus&rsquo;s own words, why he chooses blinding, and describe Creon&rsquo;s measured response.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what it means for a trial that Oedipus sentences himself before any court can rule.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> (trans. F. Storr), the messenger&rsquo;s report through the closing chorus. <a href="https://www.gutenberg.org/ebooks/31" target="_blank" rel="noopener" style="color:#3B4E8C;">Read it free at Project Gutenberg</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to the Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE MESSENGER&rsquo;S REPORT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Once Oedipus understands the truth, he rushes into the palace. What happens there is never shown to the audience. A messenger comes out and reports it to the chorus instead, which is the standard practice of Greek tragedy: violence happens offstage, and the audience receives it through a witness&rsquo;s controlled, grieving account. First, Jocasta:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;When in her frenzy she had passed inside the vestibule, she hurried straight to win the bridal-chamber, clutching at her hair with both her hands, and, once within the room, she shut the doors behind her with a crash.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">the Second Messenger, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She has understood the truth before Oedipus does, and she cannot bear it. The messenger reports what is found behind that shut door:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then we beheld the woman hanging there, a running noose entwined about her neck.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">the Second Messenger, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta&rsquo;s death is reported in a single, plain sentence. The play does not linger on it, and neither should you. Its weight comes from what it means, not from any description of the act itself.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A PUNISHMENT CHOSEN, NOT IMPOSED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus finds her body himself. The messenger reports what Oedipus does next, and what he says while he does it:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;He tore the golden brooches that upheld her queenly robes, upraised them high and smote full on his eye-balls, uttering words like these: &lsquo;No more shall ye behold such sights of woe, deeds I have suffered and myself have wrought.&rsquo;&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">the Second Messenger, reporting Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">No one orders this. No court has convened, no verdict has been read, and Creon has not yet even entered. Oedipus judges his own case and carries out his own sentence, alone, in the space of a single scene. When he is questioned about it afterward, he explains his reasoning plainly:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;For, had I sight, I know not with what eyes I could have met my father in the shades, or my poor mother, since against the twain I sinned, a sin no gallows could atone.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read that reasoning carefully. He does not say the blinding will restore his innocence, or that it repays a debt. He says explicitly that no ordinary punishment, not even execution, could answer what he did. He chooses a punishment matched, in his own mind, to a crime that has no proper penalty.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: chosen vs imposed diagram -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#9878;&#65039; A PUNISHMENT IMPOSED, VERSUS A PUNISHMENT CHOSEN</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">HOW A TRIAL USUALLY WORKS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">An accusation is made. Evidence is weighed by someone other than the accused. A verdict is reached. Only then is a sentence imposed, by a court, on the person judged.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">WHAT OEDIPUS ACTUALLY DOES</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">He hears the evidence, reaches his own verdict in a single cry, and carries out his own sentence, blinding and a plea for exile, before any court, including Creon, has ruled on anything.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Keep that gap in mind. Whatever verdict you plan to argue in your brief, you are arguing it for a defendant who has already judged and sentenced himself. That is a genuine complication for an advocate, not a detail to skip past.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; CREON, THE DAUGHTERS, AND THE CLOSING CHORUS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The blinded Oedipus enters, and Creon, now the only figure left with any real authority in Thebes, arrives to take charge. His first words are careful, neither cruel to Oedipus nor indulgent toward the crowd gathering to stare:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Not in derision, Oedipus, I come nor to upbraid thee with thy past misdeeds. (To bystanders) But shame upon you! If ye feel no sense of human decencies, at least revere the Sun whose light beholds and nurtures all.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Creon, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus, for his part, does not ask for mercy. He asks for exile, in terms that go well beyond simple banishment:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Forth from thy borders thrust me with all speed; set me within some vasty desert where no mortal voice shall greet me any more.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">His one remaining request is not for himself. It is for his daughters:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;But for my daughters twain, poor innocent maids, who ever sat beside me at the board sharing my viands, drinking of my cup, for them, I pray thee, care.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The play ends with the chorus addressing the audience directly, over Oedipus&rsquo;s ruin:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Look ye, countrymen and Thebans, this is Oedipus the great, he who knew the Sphinx&rsquo;s riddle and was mightiest in our state. Who of all our townsmen gazed not on his fame with envious eyes? Now, in what a sea of troubles sunk and overwhelmed he lies! Therefore wait to see life&rsquo;s ending ere thou count one mortal blest; wait till free from pain and sorrow he has gained his final rest.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">the Chorus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The chorus does not pronounce a verdict on Oedipus at all. It steps back from judging him specifically and offers a warning to everyone watching instead: no life can be called happy until it is over. That refusal to hand down a final verdict is itself worth noticing, given the trial you are about to argue.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND TONE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize this ending accurately. What it will not reliably do is match the restraint the play itself uses: Sophocles never describes the deaths directly, and neither should your own writing about them. If you ever use AI to help you summarize this scene, check that its language keeps the same gravity the original does; sensational retellings misrepresent the source.</div>
+        </div>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; A SENTENCE PASSED BEFORE ANY TRIAL</div>
+            <div class="widget-question">For each question, choose the reading the text best supports.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Correct. Oedipus says plainly that no ordinary penalty, including death, could answer what he did. Blinding is a chosen, living punishment matched, in his own reasoning, to a crime he believes has no proper sentence." data-hint="Reread his actual reasoning: who does he say he could not bear to face, and why would death not solve that problem?">
+                <div class="widget-row-prompt">1. Why, in his own words, does Oedipus choose blinding rather than suicide?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He believes the act of blinding himself will restore his innocence before the gods.</button>
+                    <button data-choice="1">He wants to punish Jocasta&rsquo;s memory by refusing to look at anything that reminds him of her.</button>
+                    <button data-choice="2">He fears the citizens of Thebes will mock him if he lives and can still see their faces.</button>
+                    <button data-choice="3">He judges that no ordinary punishment, including death, could answer his crime, so he chooses a living punishment: eyes that will never again have to face what they cannot bear to see.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Creon explicitly denies coming in derision, and turns his one sharp line on the gawking bystanders, not on Oedipus. That combination, firm but not cruel, is exactly what measured authority looks like here." data-hint="Notice who Creon actually directs his one rebuke toward, and compare his tone to how Oedipus treated Tiresias back in Week 2.">
+                <div class="widget-row-prompt">2. What does Creon&rsquo;s first response to the blinded Oedipus reveal about him?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is careful to be neither cruel toward Oedipus nor indulgent toward the crowd&rsquo;s instinct to stare; his authority is measured from his first words.</button>
+                    <button data-choice="1">He is secretly gloating over his rival&rsquo;s downfall while pretending otherwise.</button>
+                    <button data-choice="2">He immediately forgives Oedipus and restores him to the throne on the spot.</button>
+                    <button data-choice="3">He refuses to take any authority at all, leaving every decision to the chorus.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. Asking to be set where &lsquo;no mortal voice shall greet me any more&rsquo; is not a request for a fresh start elsewhere; it echoes the very curse Oedipus pronounced on Laius&rsquo;s killer back in Week 1, treating himself now as that same source of pollution." data-hint="Compare this request to the curse Oedipus pronounced on the unknown killer back in Lesson 1.02. Is he asking for a lighter fate, or applying the same one to himself?">
+                <div class="widget-row-prompt">3. What does Oedipus&rsquo;s plea to be exiled suggest about what he believes he deserves?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He believes exile is an unfair punishment being forced on him by a vindictive city.</button>
+                    <button data-choice="1">He hopes exile will let him quietly rebuild his life and reputation somewhere else.</button>
+                    <button data-choice="2">He believes his presence pollutes Thebes and that only total separation from human contact answers what he has done, echoing his own earlier curse.</button>
+                    <button data-choice="3">He is bargaining with Creon for a lighter sentence than the one already proposed.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Once someone has already carried out a punishment more severe than most courts would ever impose, on themselves, before any verdict, a trial has to reckon with what it is even deciding at that point. That is a genuine complication for your brief, not a detail to smooth over." data-hint="Ask what a verdict is actually FOR, and whether that purpose changes once the sentence has already been carried out by the defendant himself.">
+                <div class="widget-row-prompt">4. Oedipus sentences himself before any court in Thebes rules on his case. What does that complicate for an advocate?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Nothing; a self-imposed punishment has no bearing on what a later court should decide.</button>
+                    <button data-choice="1">It raises a real question about what a verdict is even for, once the accused has already carried out a punishment harsher than most courts would impose.</button>
+                    <button data-choice="2">It proves conclusively that Oedipus is guilty, since only a guilty man would punish himself this way.</button>
+                    <button data-choice="3">It means Creon no longer holds any real authority over what happens next.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add one final entry to your Evidence Bank.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note how the play ends, and one sentence on what the self-imposed punishment means for the verdict you plan to argue.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 5.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will start the research your brief needs: one scholarly source, found and evaluated for yourself.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Oedipus judges himself and carries out his own sentence before Thebes ever gets the chance to. The chorus, watching, refuses to hand down a verdict of its own and instead warns the whole audience: wait until a life is over before you call it happy. Carry that refusal to judge with you into next week, when you start building the case a real court will actually hear.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.02 &middot; What the Blind Man Sees</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

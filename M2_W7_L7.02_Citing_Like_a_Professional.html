@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .cite-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 7.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Citing Like a Professional</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 7 &middot; Research &amp; Citation</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Your brief cites two very different kinds of source: a 2,400-year-old play in translation, and a modern scholarly article. Each has its own correct MLA form.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already know how to integrate a quotation into your own sentence. Today you learn how to credit it correctly: the in-text citation that tells a reader exactly where a quote came from, and the Works Cited entry that gives full publication information. You will need both forms for your brief, one for the play, one for your Week 5 JStor source, and one honesty rule governs both.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> cite a translated play in MLA in-text form and build its Works Cited entry.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> cite a scholarly journal article from JStor in MLA in-text form and build its Works Cited entry.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why you only ever cite a source you have actually read yourself.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: THE HONESTY RULE ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; CITE WHAT YOU ACTUALLY READ</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Have you ever repeated a fact you heard secondhand, only to realize later you were not sure where it originally came from? What would have made you more confident sharing it? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That instinct, going back to the original, is exactly the honesty rule this lesson is built on.">&#128269; Going back and checking the original source myself</button>
+                <button data-response="A citation is a promise to the reader that you actually looked; that promise only holds if you did.">&#129504; Realizing I could not actually vouch for it myself</button>
+                <button data-response="A secondhand summary is not the same as reading the thing itself, and a citation should only ever point to what you actually opened.">&#128172; Someone else telling me it was fine to repeat</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A citation is a promise to your reader: <em>I read this myself, and here is exactly where to find it.</em> That promise only holds if it is true. Never cite a source you have not personally opened and read, even if an AI tool, a summary, or a classmate describes it accurately. If you cannot point to the actual page, article, or translation in your own hands, it does not belong in your Works Cited. This rule also settles a question students often ask about a translated play: you cite the <strong>translation you actually read</strong>, this Storr translation, not some other edition you have never seen.</p>
+    </div>
+
+    <!-- ===== PART 2: CITING THE PLAY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CITING A VERSE PLAY IN PROSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This edition of the play has no page numbers or line numbers marked for you (that is why you have referred to scenes by shorthand all module: &ldquo;the curse,&rdquo; &ldquo;the Tiresias confrontation&rdquo;). MLA&rsquo;s rule for a source like this is simple: when a source has no stable page or line numbers, do not invent one. Cite the author&rsquo;s name alone.</p>
+
+        <div class="cite-card">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 8px;">IN-TEXT CITATION</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.6;">Oedipus extends his curse to include himself &ldquo;if with my privity he gain admittance to my hearth&rdquo; <strong>(Sophocles)</strong>.</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 8px; line-height: 1.5;">Cite the <strong>playwright</strong>, Sophocles, not the translator. The translator is credited fully in the Works Cited entry below, not repeated in every in-text citation.</div>
+        </div>
+
+        <div class="cite-card">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 8px;">WORKS CITED ENTRY</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.6;">Sophocles. &ldquo;Oedipus the King.&rdquo; <em>The Oedipus Trilogy</em>, translated by F. Storr, Project Gutenberg, 2000, www.gutenberg.org/ebooks/31.</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 8px; line-height: 1.5;">Notice the pieces: the playwright, the specific play in quotation marks (since it is one work inside the larger collected ebook), the collection title italicized, the translator named, the publisher, the year, and the URL.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 3: CITING A JSTOR ARTICLE ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; CITING YOUR JSTOR SOURCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A scholarly journal article works differently: it does have stable page numbers, so your in-text citation names both the author and the exact page a quote or idea came from. The example below is a <strong>model</strong>, built to show the correct form; it is not a real article to look up. Use it to check the shape of your own citation, built from the actual source you logged in Quick Write 13.</p>
+
+        <div class="cite-card">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 8px;">IN-TEXT CITATION (MODEL)</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.6;">One scholar argues that ancient audiences judged guilt by the act itself, since &ldquo;pollution asks what was done, not what was known&rdquo; <strong>(Bennett 220)</strong>.</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 8px; line-height: 1.5;">Author&rsquo;s last name, then the page number, no comma between them, no word &ldquo;page&rdquo; or abbreviation.</div>
+        </div>
+
+        <div class="cite-card">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 8px;">WORKS CITED ENTRY (MODEL)</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.6;">Bennett, Laura. &ldquo;Guilt Without Knowledge: Pollution and Intent in Sophoclean Tragedy.&rdquo; <em>Classical Quarterly Review</em>, vol. 42, no. 3, 2019, pp. 215&ndash;234. <em>JSTOR</em>, www.jstor.org/stable/00000000.</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 8px; line-height: 1.5;">Notice the pieces: author (last name first), article title in quotation marks, journal name italicized, volume and issue number, year, page range, then the database name italicized and the stable URL.</div>
+        </div>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND YOUR CITATIONS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can format a citation correctly and still cite a source that does not exist, or misstate the page number of a real one. Formatting and honesty are two different problems, and an AI tool can only ever help with the first. Every citation in your Works Cited must point to something you personally opened and read, whether or not you used an AI tool to help you format it.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 4: RIGOR WIDGET ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; TRY IT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Below are four ways to cite the same quotation from the play in-text. Three of them look plausible at first glance. Only one is actually correct.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH IN-TEXT CITATION IS CORRECT?</div>
+            <div class="widget-question">You are citing Tiresias&rsquo;s line, &ldquo;the accursed polluter of this land,&rdquo; from this Gutenberg edition of the play. Which in-text citation is actually correct?</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Sophocles is the playwright, this edition has no stable page or line numbers to cite, and naming the author alone, with nothing invented, is exactly the correct MLA form for a source like this one." data-hint="Compare all four again. Does this one name the actual author of the play, and does it avoid inventing a page number this edition does not have?">
+                <div class="widget-row-prompt">Which in-text citation is correct for this Gutenberg edition?</div>
+                <div class="widget-options">
+                    <button data-choice="0">(Storr 45)</button>
+                    <button data-choice="1">(&ldquo;Oedipus the King&rdquo;)</button>
+                    <button data-choice="2">(Sophocles 45)</button>
+                    <button data-choice="3">(Sophocles)</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 4px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE FALL SHORT</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>&ldquo;(Storr 45)&rdquo;</strong> makes two errors at once: it credits the translator as though he were the play&rsquo;s author, and it invents a page number this e-text edition does not have.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>&ldquo;(&lsquo;Oedipus the King&rsquo;)&rdquo;</strong> leads with the title instead of the author. MLA cites the author by name whenever the author is known, and here Sophocles is known.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>&ldquo;(Sophocles 45)&rdquo;</strong> gets the author right but still invents a page number. This Gutenberg edition has none, so no number belongs in the citation at all.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Complete Lesson 7.GV.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn exactly where the punctuation goes when a citation follows a quotation, plus how to tighten wordy openers.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 15 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Use the citation forms you learned today when you draft your argument section. Full directions are on the Quick Write 15 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Cite the play by its author, with no invented page number. Cite your journal article by author and page. And cite only what you have actually read yourself, in the edition you actually read it in. A citation is a small thing on the page and a large promise behind it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.02 &middot; Citing Like a Professional</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

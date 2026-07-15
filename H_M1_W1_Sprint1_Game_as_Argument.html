@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 Honors &mdash; Honors Sprint 1</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.worked-example { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+    details.worked-example summary { font-size: 17px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    details.worked-example summary::marker { color: #C7922C; }
+    details.worked-example .reveal { margin-top: 14px; padding-top: 14px; border-top: 1px solid #D0D9E8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2 HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Honors Sprint 1 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Sprint</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Honors Sprint 1 (Wks 1&ndash;2)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Honors Track</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Designer&rsquo;s Table</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Honors Sprint 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Game Is an Argument</div>
+        <div style="font-size: 16px; color: #1a2340;">Launch &middot; The Designer&rsquo;s Table &middot; Weeks 1&ndash;2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127918; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This year, alongside the four works we read together, you will design, build, playtest, and defend one game of your own. It will be set in the real historical world of one of our four anchor texts, and it will run all year: The Designer&rsquo;s Table. This is not a side project. It carries its own line of graded work, separate from your literary writing, and it asks the same question the course keeps asking in a different form: what does a community owe its members, and what do they owe it back? Today you learn the idea that makes the whole project make sense, and you meet the four worlds you might choose to build in.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain <strong>procedural rhetoric</strong>: the idea that a game argues through what its rules reward, punish, and leave to chance, not only through its story.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> reverse-engineer a game I already know: what it rewards, what it punishes, and what it leaves to chance.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> survey four historical worlds and begin narrowing toward the one I will build my game in.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document, separate from your literary reading notes.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">One game you already know well in mind: a board game, a card game, a dice game, a video game, or even a playground game. Any game works.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This lesson leads into the <strong>Design Question</strong> assignment, so keep your notebook thoughts; you will use them there.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127918; PART 1 &middot; WHAT A GAME ARGUES</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a game you already play often. When you win, what is it usually because of? (No wrong answer &mdash; just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Practice and skill are real, and plenty of games reward them honestly. As you read the four worlds below, notice which ones seem to prize skill and which ones quietly reward something else instead, like luck or reputation.">&#127942; Skill and practice</button>
+                <button data-response="Luck matters more in some games than players like to admit. A game that leaves the outcome mostly to chance is making a claim of its own, about how much control anyone really has. Keep that thought handy for later in this lesson.">&#127922; Luck and chance</button>
+                <button data-response="Reading other people, bluffing, and trust are their own kind of skill, and several of this year's worlds were built on exactly that skill in real life. Hold onto that connection.">&#128065;&#65039; Reading other people</button>
+                <button data-response="Most real games mix more than one of these. Part of reverse-engineering a game, which you will practice in a moment, is figuring out the exact mix a game uses and why the designer chose it.">&#9878;&#65039; A mix of more than one</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Rules can persuade</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A story argues with words: a narrator, a character&rsquo;s choice, an ending that lands one way and not another. A game can argue with something else entirely: its <strong>rules</strong>. What a game lets you do, what it rewards, what it punishes, and what it leaves to chance is not neutral. It is a claim about what matters, built right into the system a player has to move through. The technical name for this idea is <strong>procedural rhetoric</strong>: a game persuades through its procedures, not only through its story or art. You will use this idea all year to talk about your own game.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two examples make it concrete. Picture a simple property-trading board game where the only way to win is to out-accumulate every other player until they go bankrupt, and where a single unlucky roll can undo an hour of careful planning. Even if its box calls it a game about business, its rules argue that success means accumulation and that chance can flatten anyone&rsquo;s plan, no matter how it is dressed up as strategy. Now picture a game where players must talk to each other to figure out who among them is secretly working against the group, and where winning depends on trust, suspicion, and how well you can read a room. Its rules argue that a group&rsquo;s safety depends on vigilance and honest communication. Neither game says any of this out loud. Their <em>systems</em> say it.</p>
+
+        <!-- worked example: reverse-engineering, instruction before reveal -->
+        <details class="worked-example">
+            <summary>Try it yourself first: in your notebook, pick the game you had in mind and answer three questions about it: what does it reward, what does it punish, and what does it leave to chance? Write a few sentences for each. When you are done, open this to see how a designer might read a different game the same way.</summary>
+            <div class="reveal">
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 8px 0;"><strong>Worked example: a simple foot race with an obstacle partway through:</strong></p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;"><strong>Rewards:</strong> speed and a steady pace early, since the obstacle punishes anyone who arrives exhausted.</p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;"><strong>Punishes:</strong> going all-out from the start; there is no reward for early speed alone if it leaves nothing for the obstacle.</p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;"><strong>Leaves to chance:</strong> almost nothing, which is itself a design choice. This is a game arguing that fair effort, not luck, should decide the outcome.</p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Compare that to your own notebook answers. Did your game leave more to chance, or less? What did that choice seem to argue?</p>
+            </div>
+        </details>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127757; PART 2 &middot; THE WORLD TOUR</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Your game will be set in one real historical world. You will <strong>declare your world by the end of Sprint 2 (Week 4)</strong>, so take this tour with an open mind. Each snapshot describes the <strong>world</strong>, not the plot of the text we will read there, so nothing below spoils anything. The seed questions are genuinely open; you begin answering them for real once you start researching on JStor in Sprint 2.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0;">
+
+            <!-- World A -->
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.3px;">WORLD A &middot; BRONZE AGE / HOMERIC GREECE</div>
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 10px; font-style: italic;">Anchored by The Odyssey</div>
+                <p style="font-size: 15px; color: #1a2340; line-height: 1.55; margin: 0 0 8px 0;">A world of islands and sea routes, held together less by written law than by reputation, oaths, and the sacred bond between a guest and a host (sometimes called <em>guest-friendship</em>). A stranger at your door could be a beggar, a king, or a god in disguise, and how you treat them is a test you can pass or fail. In the public-domain Butler translation, a host&rsquo;s welcome to an unknown visitor is simple: &ldquo;Welcome, to our house, and when you have partaken of food you shall tell us what you have come for.&rdquo; The guest is fed and seated before anyone even asks his business.</p>
+                <p style="font-size: 14px; color: #1a2340; line-height: 1.5; margin: 0 0 8px 0; font-style: italic;">Design tension: trust negotiated face to face; gifts create obligations; cleverness can slide into treachery.</p>
+                <div style="font-size: 13px; color: #3B4E8C;">Seed questions: How did a traveler know a household would welcome, not harm, them? What did accepting a gift obligate you to do in return? When does cunning become dishonor?</div>
+            </div>
+
+            <!-- World B -->
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #3B4E8C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.3px;">WORLD B &middot; CLASSICAL ATHENS, 5TH CENTURY BC</div>
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 10px; font-style: italic;">Anchored by Oedipus the King</div>
+                <p style="font-size: 15px; color: #1a2340; line-height: 1.55; margin: 0 0 8px 0;">A self-governing city of citizens who argued in the assembly by day and gathered by the thousands to watch tragedies at a civic religious festival. Prophecy and the will of the gods sat beside democratic debate. A real plague once tore through the city, and the community sometimes healed itself by fixing blame on a single figure.</p>
+                <p style="font-size: 14px; color: #1a2340; line-height: 1.5; margin: 0 0 8px 0; font-style: italic;">Design tension: public truth, blame, fate, and collective decision colliding in a city that ran itself.</p>
+                <div style="font-size: 13px; color: #3B4E8C;">Seed questions: Why would a democracy stage tragedies as an official civic event? What did a whole community believe ritual pollution could do to it? What happens to a city&rsquo;s institutions when disaster strikes?</div>
+            </div>
+
+            <!-- World C -->
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.3px;">WORLD C &middot; ELIZABETHAN ENGLAND</div>
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 10px; font-style: italic;">Anchored by A Midsummer Night&rsquo;s Dream</div>
+                <p style="font-size: 15px; color: #1a2340; line-height: 1.55; margin: 0 0 8px 0;">A tightly ranked society of court and commoner, where what you could wear, marry, and become was bound by custom and law, but where festival and theater offered a temporary, licensed turning-upside-down of all of it before everyday order returned. A world thick with fairy folklore and a brand-new commercial playhouse.</p>
+                <p style="font-size: 14px; color: #1a2340; line-height: 1.5; margin: 0 0 8px 0; font-style: italic;">Design tension: a rigid social order that festival and disguise invert, and then restore.</p>
+                <div style="font-size: 13px; color: #3B4E8C;">Seed questions: Who decided whom a person could marry, and on what authority? What rules loosened during a festival, and why was that allowed? How did a playhouse make its money and its meaning?</div>
+            </div>
+
+            <!-- World D -->
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #3B4E8C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.3px;">WORLD D &middot; JAZZ-AGE AMERICA, 1920s</div>
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 10px; font-style: italic;">Anchored by The Great Gatsby</div>
+                <p style="font-size: 15px; color: #1a2340; line-height: 1.55; margin: 0 0 8px 0;">A decade promising that anyone could remake themselves, lit by jazz, the automobile, advertising, and a soaring stock market, and shadowed by Prohibition, organized crime, the Great Migration, and lines of class and race that the promise of mobility did not actually erase.</p>
+                <p style="font-size: 14px; color: #1a2340; line-height: 1.5; margin: 0 0 8px 0; font-style: italic;">Design tension: a society that sells self-reinvention and abundance while quietly guarding who gets through the door.</p>
+                <div style="font-size: 13px; color: #3B4E8C;">Seed questions: Could anyone really reinvent themselves in the 1920s, or were the doors open only to some? What did Prohibition do to who held money and power? What was being built, and on whose labor?</div>
+            </div>
+
+        </div>
+
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 4px 0 0 0;">You may build in a world whose text we read later in the year. That is allowed on purpose: research it now, and the text will deepen your game when the class reaches it. Notice which world&rsquo;s tensions and seed questions pull at you most; that pull is real data.</p>
+
+        <!-- evaluative widget: rigor rule, design judgment (mechanic carries theme vs. decorates it). Correct indices 0,2,1,3 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; DOES THE MECHANIC CARRY THE THEME, OR JUST DECORATE IT?</div>
+            <div class="widget-question">Each world below already has a tension baked into its history. Every option is a mechanic someone could plausibly pitch for that world. Only one actually forces players to live out the tension through play; the rest are theme painted onto an unrelated system. Choose the one that would really carry the argument.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Xenia's real pressure is deciding how to treat someone before you can be sure who they are. A hidden-identity mechanic recreates exactly that uncertainty during play, which is what makes it functional rather than decorative." data-hint="Greek-themed flavor is not the same as a mechanic that makes a player face xenia's actual pressure: deciding how to treat a stranger without knowing who they really are.">
+                <div class="widget-row-prompt">1. World A's tension is xenia: a stranger might be a beggar, a king, or a god, and how a household treats them is a test. Which mechanic would actually carry that tension through play?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A hidden-identity mechanic: other players secretly know more about a visiting character than the host does, forcing the host to decide how to treat them before the truth is revealed.</button>
+                    <button data-choice="1">Turn order decided by a dice roll at the start of each round, themed as &ldquo;the whims of the gods.&rdquo;</button>
+                    <button data-choice="2">A resource-management system where players collect olive oil and wine to fund building projects, rendered in a Greek-pottery art style.</button>
+                    <button data-choice="3">An end-of-game vote where players rate each other's hospitality on a numeric scale from 1 to 10.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. A mechanic where the whole group must vote to blame one player, with real consequences whether or not the blame is fair, actually recreates the collision between public debate and collective scapegoating. That is the tension, not just a marble backdrop for it." data-hint="A private mechanic with no effect on anyone else's standing skips the part of this tension that matters most: it is a PUBLIC, COLLECTIVE act of judgment, not a personal or hidden one.">
+                <div class="widget-row-prompt">2. World B's tension is a self-governing city that argues openly, yet sometimes heals itself by fixing blame on a single figure. Which mechanic would actually carry that tension?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A private leaderboard tracking each player's individual score, revealed only at the very end.</button>
+                    <button data-choice="1">A private hand of &ldquo;fate&rdquo; cards, played secretly, with no effect on any other player's standing.</button>
+                    <button data-choice="2">A public-accusation mechanic: the group must vote to blame one player for a shared misfortune, with real consequences whether or not the accusation is fair.</button>
+                    <button data-choice="3">A game board styled with marble columns and an agora, used for a simple move-and-collect game unrelated to blame or judgment.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The tension is not just disorder, it is disorder that gets undone: a licensed reversal followed by a return to the old order. A mechanic that grants temporary freedom and then requires the rank to snap back captures both halves of that." data-hint="Watch for mechanics that only capture half the tension. This world's inversion is temporary and gets undone; a permanent change removes exactly the part of the theme that makes it a festival rather than a revolution.">
+                <div class="widget-row-prompt">3. World C's tension is a rigid social order that a licensed festival temporarily turns upside down, before everyday order returns. Which mechanic would actually carry that tension?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Elizabethan costume art on the card backs of an otherwise standard trick-taking game.</button>
+                    <button data-choice="1">A temporary role-swap: players trade their fixed social rank for one round of unusual freedom, then must return to their original rank and its rules.</button>
+                    <button data-choice="2">A permanent rank-upgrade: a player who wins a round keeps their new rank for the rest of the game.</button>
+                    <button data-choice="3">A random event deck themed &ldquo;midsummer magic&rdquo; that grants one-time bonuses unconnected to social rank.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. The tension is not just mobility, it is mobility that is secretly gatekept. A mechanic that lets players reinvent their public persona while a hidden, pre-set check still decides who actually gets through certain doors keeps both halves of the argument alive." data-hint="A mechanic where anyone can enter anywhere once they have enough currency removes the gatekeeping half of this tension entirely. This world's promise of reinvention was never actually extended equally, and the mechanic needs to preserve that gap.">
+                <div class="widget-row-prompt">4. World D's tension is a decade that sells self-reinvention while quietly guarding who actually gets through the door. Which mechanic would actually carry that tension?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A trivia-card mechanic asking players historical questions about the 1920s for bonus points.</button>
+                    <button data-choice="1">A mechanic where any player can freely enter any part of the board once they collect enough currency, with no hidden restriction.</button>
+                    <button data-choice="2">A 1920s-themed dice-rolling movement mechanic with flapper-and-jazz iconography.</button>
+                    <button data-choice="3">A resource-based mobility mechanic where players can reinvent their public persona, but a separate, hidden gatekeeping check still decides who is actually let into certain rooms.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Keep noticing which world pulls at you.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You do not have to know your world today. You have until the end of Sprint 2 (Week 4) to declare it.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Design Question (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Draft the human question your game will pose through play, and write up the game-analysis paragraph from your reverse-engineering notes. Full directions are on the Design Question assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A game argues the way its rules let you win, lose, and gamble, whether or not it ever says so out loud. You now have a name for that idea, procedural rhetoric, and a first look at the four worlds you might build in. Neither choice is due yet. What is due is noticing: what does the game you already love actually argue, and which of these four worlds will not stop tugging at your attention?</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Honors Sprint 1 &middot; A Game Is an Argument</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

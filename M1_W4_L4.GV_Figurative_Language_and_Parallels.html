@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 4.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 4.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 4.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Diction, figurative language &amp; parallels</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from Books 7&ndash;8</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Figurative Language and Parallels</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 4</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The right word, said once, and a matched set of them, said in a row: two small habits that make a sentence carry more weight.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already studied the epic simile in Lesson 4.03. Today&rsquo;s tools work alongside it: choosing precise words instead of vague ones, and building a parallel series, three or more matched items in the same grammatical form, so a list lands with rhythm instead of clutter. You will use both, plus this week&rsquo;s Word Study words, in Quick Write 4.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> replace a vague word with a precise one and build a parallel series of three or more matched items.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; PRECISE WORDS AND MATCHED LISTS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Precise diction</strong> means choosing the exact word a moment calls for instead of a vague, all-purpose one. &ldquo;Nice palace&rdquo; tells a reader almost nothing; &ldquo;a palace with bronze walls and gold doors&rdquo; tells them something they can picture. A <strong>parallel series</strong> lists three or more items in the same grammatical form, so the list reads smoothly instead of lurching between different shapes of phrase.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; VAGUE VS. PRECISE, AND A PARALLEL SERIES</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="text-decoration: line-through; color:#B9C3DE;">The hall was really impressive.</span></div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Vague: &ldquo;really impressive&rdquo; could describe almost anything. It gives the reader no actual image.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">The hall&rsquo;s <span style="border-bottom: 2px solid #C7922C; padding: 0 3px;">bronze</span> walls and <span style="border-bottom: 2px solid #C7922C; padding: 0 3px;">gold</span> doors caught the firelight.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Precise: specific materials replace the vague label, and the reader can now picture the actual room.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Demodocus could <span style="border-bottom: 2px solid #3B4E8C; padding: 0 3px;">move a hall to tears</span>, <span style="border-bottom: 2px solid #3B4E8C; padding: 0 3px;">command a king&rsquo;s attention</span>, and <span style="border-bottom: 2px solid #3B4E8C; padding: 0 3px;">turn a stranger&rsquo;s own war into song</span>.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Parallel series: three matched verb phrases, each the same shape (verb plus object), keep the list moving instead of stumbling over mismatched grammar.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fastest test for diction: could this word describe almost anything? If so, replace it with the one specific detail that could only describe this. The fastest test for a parallel series: read each item on its own after the shared verb or lead-in. If one item suddenly needs different grammar to make sense, it is breaking the pattern and needs to be reshaped to match the others.</p>
+
+        <!-- evaluative widget: harder items, real analysis required -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; PRECISE OR JUST DRESSED UP? PARALLEL OR SUBTLY BROKEN?</div>
+            <div class="widget-question">Read each item carefully. A fancier word is not automatically a more precise one, and a list can look parallel even when one item quietly breaks the pattern.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. &lsquo;Resplendent grandeur&rsquo; sounds impressive but names nothing you could picture or check. &lsquo;Bronze walls and gold doors&rsquo; gives an actual, verifiable detail, which is what precise diction really requires." data-hint="Don&rsquo;t be fooled by an elegant-sounding word. Ask whether the phrase names an actual, checkable detail, or just describes size and importance in general terms.">
+                <div class="widget-row-prompt">1. Which phrase is more precise: &ldquo;the palace radiated resplendent grandeur&rdquo; or &ldquo;the palace&rsquo;s bronze walls and gold doors caught the firelight&rdquo;?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;The palace radiated resplendent grandeur.&rdquo;</button>
+                    <button data-choice="1">&ldquo;The palace&rsquo;s bronze walls and gold doors caught the firelight.&rdquo;</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. All three verbs need to share the same bare form after &lsquo;could&rsquo;: move, command, turn. Switching the middle item to &lsquo;commanding&rsquo; breaks that pattern, even though the sentence still reads smoothly out loud." data-hint="Check what verb form each item takes right after the shared word &lsquo;could.&rsquo; Do all three genuinely match, or does one quietly shift form?">
+                <div class="widget-row-prompt">2. Which list is truly parallel: &ldquo;Demodocus could move a hall to tears, commanding a king&rsquo;s attention, and turn a stranger&rsquo;s war into song&rdquo; or &ldquo;Demodocus could move a hall to tears, command a king&rsquo;s attention, and turn a stranger&rsquo;s war into song&rdquo;?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Demodocus could move a hall to tears, commanding a king&rsquo;s attention, and turn a stranger&rsquo;s war into song.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Demodocus could move a hall to tears, command a king&rsquo;s attention, and turn a stranger&rsquo;s war into song.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in Books 7 and 8. Learn the sense the poem gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>suppliant</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person who humbly and earnestly asks for help or protection</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Odysseus becomes exactly this at Arete&rsquo;s feet: a person with no standing of his own, asking to be taken in.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>lofty</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; very high, grand, or noble</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Used to describe the walls of the Phaeacian city, and just as fitting for the palace Odysseus is about to enter.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>minstrel</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a singer or musician who performs stories and songs, especially in verse</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The Phaeacians name their own minstrels among their proudest skills, alongside sailing and dancing.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>muse</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a source of poetic inspiration</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The poem credits Demodocus&rsquo;s gift for song to inspiration from a muse, treating the ability to move an audience as something given, not only practiced.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>prowess</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; skill and courage, especially shown in a contest or a difficult task</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">What the Phaeacian youths dare Odysseus to show in the games, not expecting exactly how much of it he has.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>nimbly</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adverb) &mdash; quickly and lightly, with easy control of movement</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Describes the young Phaeacian dancers during the games, in sharp, graceful contrast to the discus Odysseus throws with raw strength instead.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">As you draft Quick Write 4, use <strong>one epic simile</strong> from Lesson 4.03, <strong>one parallel series</strong> of three or more matched items, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A precise word and a matched list both do the same quiet work: they make a sentence easier to picture and easier to follow. Carry a parallel series and two Word Study words with you into Quick Write 4, alongside the epic simile you already drafted.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.GV &middot; Figurative Language and Parallels</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 6.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0; }
+    details.notebook-reveal summary { font-size: 16px; color: #0e1c42; cursor: pointer; }
+    details.notebook-reveal .reveal-body { margin-top: 12px; }
+    .brief-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 7px; padding: 12px 16px; margin-bottom: 8px; }
+    .brief-step .lab { font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 6.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 6.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Shape of a Brief</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 6 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A verdict without a structure is just an opinion with better vocabulary. Today you learn the structure.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have read the whole play, and you have a sense of where you stand on Oedipus. That is not the same as having a brief. A real formal argument has a shape, six moves that always appear in the same order, and today you learn that shape on a small, low-stakes question before you ever touch the big one. This is a reread week: no new scenes, just the evidence you already have, organized on purpose.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the six moves of a formal brief: issue, verdict, arguments, counterclaim, response, and conclusion.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a verdict must name the standard of judgment it rests on, not just announce a position.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a complete miniature brief on a small question, before applying the same structure to the Trial of Oedipus.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">No new reading. This lesson rereads the Tiresias confrontation and the Creon quarrel, both already in your Evidence Bank. Full text free at <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg, trans. F. Storr</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to your Evidence Bank and Trial Notes.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SIX MOVES</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a disagreement, in class or out of it, where naming the actual point of dispute (not just restating opinions louder) helped settle it. What made the real question clear? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Naming the exact standard both sides are judging by is often the missing step. Today&rsquo;s lesson calls that the Issue, and it comes before any verdict.">&#128172; Someone finally asked what we were actually disagreeing about</button>
+                <button data-response="Real evidence usually settles more than volume does. Watch for that same pattern in the worked example below.">&#128202; Someone brought a specific fact instead of a stronger opinion</button>
+                <button data-response="Hearing the other side stated fairly, rather than as a strawman, is exactly what a Counterclaim is supposed to do in a brief.">&#128064; Someone finally stated the other side&rsquo;s case fairly</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Six moves, always in this order</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A formal brief is not a pile of evidence. It is a structure, and every real brief you will ever write, in this course or beyond it, uses some version of these six moves, in this order:</p>
+
+        <div class="brief-step"><div class="lab">1 &middot; ISSUE</div><div style="font-size: 16px; color: #1a2340;">What exactly must be decided, and under <strong>which standard of judgment</strong>. Not just &ldquo;is Oedipus guilty,&rdquo; but guilty under what test: does intent matter, or only the deed itself?</div></div>
+        <div class="brief-step"><div class="lab">2 &middot; VERDICT</div><div style="font-size: 16px; color: #1a2340;">Your thesis. Precise, defensible, and committed, naming the standard it rests on. Not a shrug, and not a slogan.</div></div>
+        <div class="brief-step"><div class="lab">3 &middot; ARGUMENTS</div><div style="font-size: 16px; color: #1a2340;">Each one is a claim, backed by evidence, connected by reasoning. Not evidence alone; the reasoning has to do real work.</div></div>
+        <div class="brief-step"><div class="lab">4 &middot; COUNTERCLAIM</div><div style="font-size: 16px; color: #1a2340;">The strongest case against your verdict, stated fairly, the way its own advocate would state it. Never a strawman.</div></div>
+        <div class="brief-step"><div class="lab">5 &middot; RESPONSE</div><div style="font-size: 16px; color: #1a2340;">Why the counterclaim, real as it is, does not overturn your verdict.</div></div>
+        <div class="brief-step"><div class="lab">6 &middot; CONCLUSION</div><div style="font-size: 16px; color: #1a2340;">What should actually happen, and what that decision means for the community that has to live with it.</div></div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Notice where the standard of judgment lives: it belongs in the Issue, stated before you ever announce a Verdict. Skip that step, and your whole brief quietly assumes an answer to the one question it was supposed to argue.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A FULL BRIEF, ON A SMALL QUESTION FIRST</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before you build the real brief, watch the whole structure work on a much smaller question the play already answers for you: <strong>did Creon conspire with Tiresias to falsely accuse Oedipus?</strong> You already have every piece of evidence this needs, from the Tiresias confrontation and the Creon quarrel.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: the full worked mini-brief -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE &middot; DID CREON CONSPIRE WITH TIRESIAS?</div>
+
+            <div style="margin-bottom: 12px;"><div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">ISSUE</div><div style="font-size:16px; color:#1a2340; line-height:1.55;">Under a standard that requires actual evidence of coordinated intent (not mere convenient timing), did Creon plot with Tiresias to accuse Oedipus falsely?</div></div>
+
+            <div style="margin-bottom: 12px;"><div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">VERDICT</div><div style="font-size:16px; color:#1a2340; line-height:1.55; font-style: italic;">&ldquo;Under a standard requiring evidence of coordinated intent, Creon did not conspire with Tiresias; his own defense rests on motive alone, and nothing in the text shows contact between the two men beyond suspicious timing.&rdquo;</div></div>
+
+            <div style="margin-bottom: 12px;">
+                <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">ARGUMENT</div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;"><strong>Claim:</strong> Creon had no rational motive to want the throne.</div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;"><strong>Evidence:</strong> &ldquo;Now all my needs are satisfied through thee, / And I have naught to fear; but were I king, / My acts would oft run counter to my will&rdquo; and &ldquo;I am not so infatuate as to grasp / The shadow when I hold the substance fast.&rdquo; (Creon, trans. F. Storr, public domain)</div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.55;"><strong>Reasoning:</strong> A conspiracy needs a motive strong enough to risk exposure. Creon names, specifically, why the crown would cost him more freedom than it would ever hand him, so the premise underneath the accusation, that he wanted power badly enough to plot for it, does not hold.</div>
+            </div>
+
+            <div style="margin-bottom: 12px;"><div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">COUNTERCLAIM, FAIRLY STATED</div><div style="font-size:15px; color:#1a2340; line-height:1.55;">Oedipus&rsquo;s suspicion is not baseless. Tiresias&rsquo;s accusation lands right after Oedipus&rsquo;s own aggressive proclamation, and a genuinely convenient piece of timing deserves real scrutiny, not automatic dismissal.</div></div>
+
+            <div style="margin-bottom: 12px;"><div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">RESPONSE</div><div style="font-size:15px; color:#1a2340; line-height:1.55;">Convenient timing is not the same charge as secret collusion. Wanting a prophet to check a king&rsquo;s overreach is not the same act as arranging a false accusation with him. No line in the confrontation or the quarrel shows the two men in contact beforehand; the Issue asked for coordinated intent, and timing alone cannot supply it.</div></div>
+
+            <div><div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">CONCLUSION</div><div style="font-size:15px; color:#1a2340; line-height:1.55;">Under the standard this brief committed to at the start, the conspiracy charge fails. What it actually exposes is Oedipus&rsquo;s own pattern: demanding proof only when a result is convenient. That pattern is itself evidence worth carrying into the larger trial.</div></div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what made this brief work on a small canvas: the Issue named a standard before anyone reached a verdict, the Argument connected a specific quote to a specific piece of reasoning instead of just dropping the quote and moving on, and the Counterclaim was a real, fair version of the other side, not a strawman built to lose.</p>
+
+        <!-- notebook practice before reveal -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#9997;&#65039; TRY IT YOURSELF, IN YOUR NOTEBOOK, BEFORE YOU LOOK AT THE MODEL BELOW</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Write one sentence for the Trial of Oedipus that could serve as your Issue: name what must be decided, and which standard of judgment (intent, or the deed itself) you intend to argue for. Do this in your notebook first.</div>
+        </div>
+
+        <details class="notebook-reveal">
+            <summary><strong>Compare your work: a model version</strong> (open only after you have written your own)</summary>
+            <div class="reveal-body">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>A model Issue:</strong> &ldquo;Under a standard that weighs what Oedipus intended, rather than the plague&rsquo;s indifference to intent, is Oedipus guilty of the death of Laius?&rdquo; Notice this names the standard being argued for (intent) before any verdict is reached. If you named the deed-standard instead, that is equally valid; the point is that your Issue names a standard at all.</div>
+            </div>
+        </details>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND BRIEF STRUCTURE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can hand you a six-part outline shape in seconds: issue, verdict, arguments, counterclaim, response, conclusion. What it cannot do is check, on its own, whether the actual evidence you plan to use fits the verdict you actually want to argue. That match, evidence to claim to standard, is the part only you can verify against the text.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TRY IT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Below are four possible verdict statements on the Creon question. More than one will sound reasonable at first glance. Only one is actually defensible and precise.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH VERDICT ACTUALLY HOLDS UP?</div>
+            <div class="widget-question">Which of these four verdict statements on the Creon question is defensible and precise? Weigh each one against what the text actually supports before you choose.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. This verdict names a standard (coordinated intent), commits to a clear position, and grounds itself in what the text actually shows: Creon&rsquo;s motive, and the absence of any evidence placing the two men in contact. It does not overreach, and it does not hedge." data-hint="Compare all four again. Does this one name a standard, commit to a position, and stay inside what the evidence actually supports, without inventing anything?">
+                <div class="widget-row-prompt">Which verdict statement is defensible and precise?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Creon is completely innocent.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Creon might have been involved with Tiresias in some way, or might not have been; it is honestly hard to say for certain.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Under a standard requiring coordinated intent, Creon and Tiresias secretly met before the confrontation to plan the accusation together.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Under a standard requiring evidence of coordinated intent, Creon did not conspire with Tiresias; his defense stands on motive alone, and no textual evidence shows contact between the two men beyond suspicious timing.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 14px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE FALL SHORT</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>&ldquo;Creon is completely innocent&rdquo;</strong> is bold but vague: it names no standard and gives a reader nothing to test it against.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>&ldquo;Might have been&hellip; hard to say for certain&rdquo;</strong> is hedged to nothing: it never actually commits to a position an advocate could defend.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>&ldquo;Secretly met before the confrontation&rdquo;</strong> is precise but unsupported: it names a standard and commits to a claim, but invents a meeting the text never shows. Precision without real evidence is not an advantage.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Save your Issue draft from Part 2 in your Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will build directly on it in Lesson 6.02.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 6.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will make the single most important decision in your whole brief: which standard of judgment you are actually arguing for.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Six moves, always in the same order, and a standard named before any verdict is announced. You just watched that structure carry a small question to a real, defensible answer. The Trial of Oedipus is a bigger canvas, but it is the exact same shape.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.01 &middot; The Shape of a Brief</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

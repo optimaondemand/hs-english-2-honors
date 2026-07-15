@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 6.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 6.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 6.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Land of the Dead</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 6</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">To learn how to get home, Odysseus has to travel to the one place no traveler returns from.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Circe sends Odysseus somewhere no ordinary hospitality can reach: the land of the dead, to consult the blind prophet Tiresias. What he learns there, and who he meets there, sets the terms for everything that happens in Book 12. This lesson is about mortality, consequence, and the strange comfort and horror of hearing the dead speak plainly, because they no longer have any reason to flatter or deceive.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Tiresias foretells about Odysseus&rsquo;s journey home, and the one warning attached to it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what Odysseus learns from his mother Anticlea and from the dead heroes Agamemnon and Achilles.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect what the dead say about their own lives to the stakes Odysseus still carries as a living man.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 11</strong> in your copy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; note what each of the dead tells Odysseus, and what it costs him to hear it.</div>
+        </div>
+    </div>
+
+    <!-- Warm-up -->
+    <div class="optima-widget ow-reflect">
+        <div class="widget-kicker">&#128172; WARM-UP</div>
+        <div class="widget-question">If you could ask someone who truly knew the future one honest question about your own life, even if the answer might be hard to hear, would you ask it?</div>
+        <div class="widget-options">
+            <button data-choice="0" data-response="Wanting certainty, even difficult certainty, is exactly what drives Odysseus to make this trip. Keep that in mind as you read what Tiresias tells him.">Yes, I would rather know, even if it&rsquo;s hard.</button>
+            <button data-choice="1" data-response="Some things are easier faced without knowing them in advance. Odysseus does not have that choice this week: he asks anyway, because the risk of not knowing is worse.">No, I think I would rather not know.</button>
+            <button data-choice="2" data-response="That uncertainty is worth sitting with. This week you will watch a hero choose to ask, at real cost, for exactly the kind of certainty you are weighing here.">I&rsquo;m honestly not sure.</button>
+        </div>
+        <div class="widget-feedback"></div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT TIRESIAS FORETELLS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus sails to the edge of the world and calls up the spirits of the dead to speak with the blind prophet Tiresias, the only one of them who can still reason clearly. Tiresias confirms that Odysseus will reach Ithaca, but attaches one condition, aimed squarely at a danger still ahead in Book 12: the cattle of Helios the Sun-god, grazing on the island of Thrinacia, must not be touched.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;If you leave these flocks unharmed and think of nothing but of getting home, you may yet after much hardship reach Ithaca; but if you harm them, then I forewarn you of the destruction both of your ship and of your men.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Tiresias, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the shape of the prophecy: it is not a vague fate hanging over Odysseus. It is a specific, avoidable condition. Homecoming is still possible, but only if a particular temptation is refused. Keep this warning in your notebook. It is the single piece of information that makes everything that happens in Book 12 tragic rather than simply unlucky: the crew will already have been told, in effect, exactly what not to do.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A MOTHER WHO CANNOT BE HELD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next ghost to approach is not part of the mission at all. It is Odysseus&rsquo;s own mother, Anticlea, who was alive when he left for Troy and has died in the long years since, of grief, waiting for a son who never came home.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then came the ghost of my dead mother Anticlea, daughter to Autolycus. I had left her alive when I set out for Troy and was moved to tears when I saw her.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Odysseus, trans. Samuel Butler, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled HTML/CSS diagram, palette tokens -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#127963;&#65039; WHAT THE LAND OF THE DEAD COSTS ODYSSEUS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C;"><strong>What he gains</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">A confirmed path home, and a clear warning about the one danger that could still ruin it: the cattle of Helios.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #C7922C;">
+                    <div style="font-size: 15px; color: #7A5A17;"><strong>What he loses, learning it</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Three times Odysseus tries to embrace his mother&rsquo;s ghost, and three times she slips from his arms like a shadow or a dream. The knowledge he came for arrives beside a grief he cannot fix.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C;"><strong>What it means for home</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Ithaca has already been changed by Odysseus&rsquo;s absence. Whatever he returns to will not be exactly what he left.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This moment is worth noticing carefully, because it complicates the prophecy that came before it. Tiresias tells Odysseus that home is still reachable. His mother&rsquo;s ghost reminds him that time has already taken something from him that no prophecy or homecoming can restore. Both things are true in the poem at once.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">For an ancient Greek audience, the dead in this scene are not simply gone; they are diminished, thin echoes of the living person, only able to speak clearly after drinking blood Odysseus offers them. A hero visiting this realm and returning alive was itself a mark of extraordinary favor and daring, understood by that audience as one of the rarest and most dangerous things a living person could attempt.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TWO WARNINGS FROM THE DEAD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two more ghosts speak to Odysseus, and both are warnings dressed as memory. Agamemnon, murdered by his own wife on the very day he came home from Troy, tells Odysseus not to make the mistake of trusting too openly, even the people closest to him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Be sure, therefore, and not be too friendly even with your own wife. Do not tell her all that you know.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Agamemnon, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Achilles, greatest of the warriors at Troy, answers a different question. Odysseus tries to console him by calling him a great king even in death, and Achilles rejects the comfort outright:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;I would rather be a paid servant in a poor man&rsquo;s house and be above ground than king of kings among the dead.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Achilles, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Achilles chose glory at Troy over a long quiet life, and the poem does not let him take that choice back or pretend death made it worthwhile. Read beside Agamemnon&rsquo;s warning, both dead heroes are telling Odysseus the same underlying thing from opposite directions: what you do while you are alive, and who you trust while you are alive, matters more than any fame that outlives you.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND MYTHOLOGICAL DETAIL</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can quickly summarize who Tiresias or Agamemnon is, or list which heroes Odysseus meets in the underworld. It is less reliable on the exact details, since figures like Tiresias and the geography of the underworld are described differently across ancient sources. If you use an AI tool to check a mythological detail, verify it against your own reading or a source your teacher trusts before treating it as settled fact.</div>
+        </div>
+
+        <!-- evaluative widget: weigh competing readings across the underworld scene -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES EACH ENCOUNTER ACTUALLY SHOW?</div>
+            <div class="widget-question">Each question offers four readings of a moment from Book 11. More than one will sound reasonable; choose the one the text best supports.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Tiresias names the exact danger (the cattle of Helios) and the exact condition for avoiding it. That precision is what makes Book 12 tragic rather than simply unlucky: the crew will already have been told exactly what not to do." data-hint="Reread Tiresias&rsquo;s wording closely. Does he describe a fate that cannot be changed, or a specific behavior that determines the outcome?">
+                <div class="widget-row-prompt">1. Tiresias tells Odysseus that home is reachable, but only if the cattle of Helios are left untouched. What kind of prophecy is this?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A vague warning about bad luck in general, meant to make Odysseus cautious about every choice ahead.</button>
+                    <button data-choice="1">A guarantee that Odysseus will die no matter what he does, since the gods have already decided his fate.</button>
+                    <button data-choice="2">A specific, avoidable condition: Odysseus is told exactly what must not happen for the return to succeed.</button>
+                    <button data-choice="3">A prophecy so obscure that no one aboard could reasonably be expected to understand or follow it.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Homecoming is still promised, but this scene shows what a promise of return cannot undo: the years, and the mother, already lost to grief. Both truths sit side by side in the poem without canceling each other out." data-hint="Ask what this moment adds to the prophecy just given, rather than what it contradicts. Does it cancel Tiresias&rsquo;s promise, or sit alongside it?">
+                <div class="widget-row-prompt">2. Odysseus tries three times to embrace his mother&rsquo;s ghost, and three times she slips away like a shadow or a dream. What does this detail add to the promise Tiresias just made?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows Anticlea rejecting her son out of anger for leaving her alone for so many years.</button>
+                    <button data-choice="1">It shows that Circe&rsquo;s instructions for the ritual were incomplete or flawed.</button>
+                    <button data-choice="2">It proves that Odysseus will never truly feel at home again, even after he returns to Ithaca.</button>
+                    <button data-choice="3">It complicates the promise of homecoming: reaching Ithaca again cannot restore what time and grief have already taken.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Achilles chose glory at Troy over a long life, and the poem lets him question, in his own voice, whether that trade was worth it. It does not simply celebrate his choice or erase it; it lets him complicate it." data-hint="Read Achilles&rsquo;s actual words again. Is he accepting the comfort Odysseus offers, or rejecting it outright, and what does that rejection cost the poem&rsquo;s usual celebration of heroic death?">
+                <div class="widget-row-prompt">3. Achilles rejects Odysseus&rsquo;s comfort that he is a great king even in death. What does his answer suggest about the value of the glory he won at Troy?</div>
+                <div class="widget-options">
+                    <button data-choice="0">That Achilles regrets nothing, since dying gloriously at Troy secured him eternal fame that any hero would envy.</button>
+                    <button data-choice="1">That the poem lets a dead hero question whether glory was worth trading for a long life, complicating rather than simply celebrating heroic death.</button>
+                    <button data-choice="2">That Achilles is simply being modest, downplaying an honor he still privately values above all else.</button>
+                    <button data-choice="3">That ancient Greek warriors commonly claimed to regret their choices, so this is a stock lament with no special weight here.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Book 11 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note Tiresias&rsquo;s warning about the cattle of Helios in your Module 1 Organizer. You will need it in Lesson 6.02.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 6.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will see whether that warning is heeded, and what it costs when it is not.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Book 11 gives Odysseus exactly what a hero needs before the most dangerous stretch of his journey: a clear path forward, and a clear warning about the one thing that could still destroy it. The dead do not flatter. They tell Odysseus, and you, the plain cost of things: what a life is worth, who can be trusted, and what a single act of harm can undo.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.01 &middot; The Land of the Dead</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 2.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Community Watches</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The chorus just heard a blind prophet accuse their king of murder. What do you do with an accusation like that?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In a Greek tragedy, the chorus stands in for the ordinary citizens watching events unfold, reacting the way a crowd of Thebans actually might. Once Tiresias exits, the chorus sings an ode processing what it just heard, and that ode is worth close attention. It is the closest thing this play has to a jury thinking out loud, and thinking through a hard case in public is exactly the discipline your future Trial of Oedipus brief will require of you.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what pulls the chorus in two directions after Tiresias&rsquo;s accusation.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect the chorus&rsquo;s undecided position to the future jury you will argue in front of in the Trial of Oedipus.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO REASONS PULLING IN TWO DIRECTIONS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The chorus opens by admitting, in plain terms, that it does not know what to think:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Sore perplexed am I by the words of the master seer. Are they true, are they false? I know not and bridle my tongue for fear.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Chorus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That is not indecision for its own sake. The chorus has two real reasons pulling against each other, and both are legitimate. On one side stands Tiresias&rsquo;s authority: he is &ldquo;the master seer,&rdquo; a man whose whole role in this city is to know things no one else can. On the other side stands Oedipus&rsquo;s record, and the chorus states that reason just as plainly:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;But that a mortal seer knows more than I know, where hath this been proven? Or how, without sign assured, can I blame him who saved our State when the winged songstress came, tested and tried in the light of us all, like gold assayed?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Chorus, trans. F. Storr, public domain (&ldquo;the winged songstress&rdquo; is the Sphinx)</div>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled diagram, the chorus caught between two claims -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#9878;&#65039; THE CHORUS, CAUGHT BETWEEN TWO CLAIMS</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; align-items: stretch;">
+                <div style="flex:1; min-width:230px; background:#EEF1F8; border-radius:8px; padding:16px 18px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom:6px;">CLAIM ONE &middot; THE PROPHET&rsquo;S AUTHORITY</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Tiresias speaks with a god-given gift for knowing what mortals cannot. His office alone gives his accusation real weight.</div>
+                </div>
+                <div style="flex:1; min-width:230px; background:#FDF3E3; border-radius:8px; padding:16px 18px; border-top: 3px solid #C7922C;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px; margin-bottom:6px;">CLAIM TWO &middot; THE KING&rsquo;S RECORD</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Oedipus solved the Sphinx&rsquo;s riddle and saved Thebes when no one else could. A single accusation, unproven, does not erase that record.</div>
+                </div>
+            </div>
+            <div style="margin-top:14px; font-size:15px; color:#1a2340; line-height:1.55; border-left:3px solid #0E1C42; padding-left:12px;">Neither claim is foolish. The chorus is not confused; it is genuinely weighing two real, competing reasons to believe or doubt, which is exactly what an honest juror is supposed to do.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR FUTURE JURY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hold onto this moment. In the Trial of Oedipus, you will argue a verdict in front of a council built to weigh both sides fairly, the way this chorus is trying to. A council like that will not be moved by volume or by picking the side that feels satisfying. It will be moved by whichever advocate shows the clearest, most honestly stated evidence, the kind that survives being looked at closely.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice, too, what the chorus does <em>not</em> do here. It does not pretend the prophet&rsquo;s words do not exist, and it does not pretend Oedipus&rsquo;s record does not exist. It holds both in mind at once and waits for &ldquo;sign assured,&rdquo; real proof, before it will condemn. That is the standard you will be held to as well.</p>
+
+        <!-- self-check widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; READING THE CHORUS&rsquo;S REASONING</div>
+            <div class="widget-question">Answer based on what the chorus actually says in its ode.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The chorus names both real reasons pulling against each other, Tiresias&rsquo;s authority and Oedipus&rsquo;s proven record, and it explicitly wants &lsquo;sign assured,&rsquo; real proof, before it will condemn. That is honest, careful judgment, not confusion or a hidden verdict." data-hint="Reread the chorus&rsquo;s own reasons, in its own words. Does it say it has secretly decided, or does it say it does not yet know?">
+                <div class="widget-row-prompt">1. Why does the chorus refuse to take a side right away after Tiresias&rsquo;s accusation?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It has quietly concluded that Oedipus is guilty but is too afraid of him to say so openly.</button>
+                    <button data-choice="1">It is weighing two real, competing reasons, the prophet&rsquo;s authority and the king&rsquo;s record, and wants proof before it decides.</button>
+                    <button data-choice="2">It considers the whole matter a private dispute between Oedipus and Tiresias that does not concern ordinary citizens.</button>
+                    <button data-choice="3">It has already sided with Tiresias, since a prophet&rsquo;s word is understood to outweigh any king&rsquo;s in this culture.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. A council or jury looking for &lsquo;sign assured&rsquo; before it judges will not be moved by a speaker&rsquo;s status or by piling up citations. It is the exact model your Trial of Oedipus argument has to satisfy: evidence, clearly stated, strong enough to hold up under scrutiny." data-hint="Think about what actually persuades a group that has explicitly refused to decide without solid proof. Is it authority, volume, or the quality of the evidence itself?">
+                <div class="widget-row-prompt">2. What does the chorus&rsquo;s standard (waiting for &ldquo;sign assured&rdquo; before it judges) suggest about how to win your future Trial of Oedipus argument?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A verdict will need to rest on solid, clearly stated evidence, not just confidence or the speaker&rsquo;s status.</button>
+                    <button data-choice="1">Whichever advocate can cite the most authorities, regardless of whether the citations are relevant, will win.</button>
+                    <button data-choice="2">The verdict has already been effectively decided by the chorus&rsquo;s uncertainty, so no argument can change it.</button>
+                    <button data-choice="3">Evidence matters only if it comes from someone with formal religious authority, like a prophet.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 2.03, Evidence That Holds.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn the craft skill the chorus is already modeling: how to state evidence fairly, even the evidence that does not favor your side.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The chorus will not condemn its king on one accusation alone, and it will not dismiss the accusation either. It waits for &ldquo;sign assured.&rdquo; That is your future jury, and that is the standard your own evidence will have to meet.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.02 &middot; The Community Watches</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

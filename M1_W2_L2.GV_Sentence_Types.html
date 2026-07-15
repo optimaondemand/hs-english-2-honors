@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 2.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sentence types &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from Books 3&ndash;4</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sentence Types</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A writer who can only build one kind of sentence can only tell one kind of story.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you learned to check that a sentence is complete. This week you learn the different shapes a complete sentence can take, and how to join two ideas together on purpose rather than by accident. You will use both moves in Quick Write 2, along with this week&rsquo;s Word Study words from Books 3 and 4.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify a simple, compound, or complex sentence and explain what joins its parts.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE SHAPES A SENTENCE CAN TAKE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every complete sentence is built from at least one <strong>independent clause</strong>: a subject and verb pair that could stand on its own as a full sentence. What changes from sentence to sentence is how many clauses are joined together, and what kind of clause each one is.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">A <strong>simple sentence</strong> has exactly one independent clause. A <strong>compound sentence</strong> joins two independent clauses, usually with a comma and a <strong>coordinating conjunction</strong> (<em>and, but, or, so, for, nor, yet</em>) or with a semicolon. A <strong>complex sentence</strong> joins an independent clause to a <strong>dependent clause</strong>, a clause that cannot stand alone, using a <strong>subordinating conjunction</strong> (<em>because, although, when, since, while, if</em>).</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences (simple/compound/complex) -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; SIMPLE, COMPOUND, COMPLEX</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><strong style="color:#FDF3E3;">Simple:</strong> Nestor welcomed the strangers at once.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">One independent clause. One subject, one verb, nothing joined to it.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><strong style="color:#FDF3E3;">Compound:</strong> Nestor fed his guests generously, <span style="border-bottom: 2px solid #C7922C;">and</span> he refused to let Telemachus sleep on a ship.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Two independent clauses, each one able to stand alone, joined here by a comma and the coordinating conjunction <em>and</em>.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><strong style="color:#FDF3E3;">Complex:</strong> <span style="border-bottom: 2px solid #55C8E8;">Because Menelaus honored his guests before questioning them</span>, Telemachus felt free to speak.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The underlined part cannot stand alone; it depends on the rest of the sentence. The subordinating conjunction <em>because</em> attaches it to the independent clause that follows.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what each shape is good for. A run of simple sentences can feel sharp and direct. A compound sentence balances two equal ideas side by side. A complex sentence can show cause and effect, or set a condition, in a single move. A writer who reaches for the same shape every time is leaving tools unused.</p>
+
+        <!-- evaluative widget: harder sentence-type discrimination (special case: items harder, feedback explains the analysis). Correct indices 2,1,2. -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; SIMPLE, COMPOUND, OR COMPLEX?</div>
+            <div class="widget-question">These are trickier than they look: a joining word does not always mean two independent clauses, and a missing comma does not always mean a sentence is simple. Analyze the structure of each one before you decide.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right, this is simple. There is only one subject, Nestor, doing two things joined by &lsquo;and&rsquo;: welcomed and fed. Because the second half has no subject of its own, &lsquo;fed them a hearty meal&rsquo; cannot stand alone as its own sentence, so this never becomes a compound sentence just because it uses &lsquo;and.&rsquo;" data-hint="Two verbs joined by &lsquo;and&rsquo; can look like a compound sentence, but check whether the second part has its own subject and could stand entirely alone. Read only &lsquo;fed them a hearty meal&rsquo;: is that a full sentence on its own, or is it still leaning on &lsquo;Nestor&rsquo; from earlier in the sentence?">
+                <div class="widget-row-prompt">1. &ldquo;Nestor welcomed the strangers and fed them a hearty meal.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Compound sentence</button>
+                    <button data-choice="1">Complex sentence</button>
+                    <button data-choice="2">Simple sentence</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right, this is complex. &lsquo;Because Menelaus honored his guests first&rsquo; cannot stand alone; the word &lsquo;because&rsquo; makes it dependent, even though it comes at the end of the sentence with no comma in front of it. A complex sentence does not need a comma when the dependent clause follows the independent one." data-hint="No comma appears before &lsquo;because,&rsquo; which can make this look like one plain, simple sentence. Try reading &lsquo;because Menelaus honored his guests first&rsquo; entirely on its own: does it finish a thought, or is it still waiting on something?">
+                <div class="widget-row-prompt">2. &ldquo;Telemachus felt free to speak because Menelaus honored his guests first.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Simple sentence</button>
+                    <button data-choice="1">Complex sentence</button>
+                    <button data-choice="2">Compound sentence</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right, this is compound. &lsquo;Yet&rsquo; is one of the seven coordinating conjunctions, often forgotten because it shows up less often than &lsquo;and&rsquo; or &lsquo;but.&rsquo; Both halves, &lsquo;Menelaus welcomed his guests warmly&rsquo; and &lsquo;his grief for lost companions never fully left him,&rsquo; are independent clauses that could each stand alone." data-hint="&lsquo;Yet&rsquo; is easy to overlook as a joining word since it appears less often than &lsquo;and&rsquo; or &lsquo;but.&rsquo; Check both halves of the sentence: can each one stand alone as its own complete sentence? If so, what does that make the sentence as a whole, no matter which conjunction joins the halves?">
+                <div class="widget-row-prompt">3. &ldquo;Menelaus welcomed his guests warmly, yet his grief for lost companions never fully left him.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Complex sentence</button>
+                    <button data-choice="1">Simple sentence</button>
+                    <button data-choice="2">Compound sentence</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in Books 3 and 4. Learn the sense the poem gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>hospitable</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; generous and welcoming toward guests or strangers</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Diocles, a host Telemachus and Mentor stay with on the road to Sparta, is described as entertaining them hospitably. The word marks exactly the quality Nestor and Menelaus share.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>splendor</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; great brightness or magnificence, especially of wealth or beauty</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The poem compares the splendor of Menelaus&rsquo;s palace to the sun and moon. It is the clearest sign yet of just how far this household&rsquo;s wealth outpaces Nestor&rsquo;s.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>cunning</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; clever in a sly or resourceful way, hard to outwit</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Menelaus admits that even Proteus, a shape-shifting sea god, found Odysseus too cunning to trap easily. The word follows Odysseus everywhere he goes, even in stories told about him by others.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>mourned</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb, past tense of mourn) &mdash; felt or expressed deep sorrow, especially for the dead or the lost</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Grief runs under the wealth in these two books. Even at Menelaus&rsquo;s glittering court, the losses of the Trojan War are still mourned openly, years later.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>discretion</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; good judgment in what to say or do, especially for someone&rsquo;s age</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Menelaus praises Telemachus&rsquo;s discretion, noting that his judgment is unusual for someone so young. It is a small but real sign that Telemachus is maturing into someone worth taking seriously.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>astonished</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; greatly surprised or amazed</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Telemachus and Pisistratus are astonished at their first sight of Menelaus&rsquo;s palace. The word captures just how far this household&rsquo;s wealth exceeds anything they have seen before.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">As you draft Quick Write 2, include <strong>at least one compound sentence and one complex sentence</strong>, built on purpose rather than by accident, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Simple, compound, and complex sentences are three different tools, not three difficulty levels. Choose the shape that fits the idea, and carry at least one of each, plus two Word Study words, into Quick Write 2.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.GV &middot; Sentence Types</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 8.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0; }
+    details.notebook-reveal summary { font-size: 16px; color: #0e1c42; cursor: pointer; }
+    details.notebook-reveal .reveal-body { margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 8.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 8.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Revising the Argument</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 8 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A finished-looking sentence is not the same as a finished argument. Today you learn to tell the difference in your own draft.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have a full draft of your brief from Quick Write 15. Most students, left alone with a draft, fix typos and swap a few words for fancier ones and call it revised. That is not what a real advocate does before facing a Council. Today you run your own draft through three deliberate passes: does the logic actually hold, is every piece of evidence actually analyzed, and does the tone sound like someone the Council should trust. This is exactly the same discipline behind the recitation you are polishing and submitting this week: saying something so that it holds up under real scrutiny, not just so that it sounds finished.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> check whether each argument&rsquo;s reasoning actually connects its evidence to its claim, and whether my Response actually answers my Counterclaim.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> find any quotation in my draft that is dropped in without analysis, and revise it so the quote&rsquo;s wording actually does work.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> revise sneering or dismissive language into a confident, formal tone without softening my actual position.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">No new reading. Have your Quick Write 15 argument section and your full draft in progress open beside this lesson.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to your Evidence Bank.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: LOGIC PASS ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE LOGIC PASS</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of an argument you have heard that sounded confident but, when you actually thought about it, did not really prove what it claimed. What tipped you off? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="A gap between the claim and the evidence is exactly what the logic pass is built to catch; today you learn to hunt for that gap in your own writing.">&#128269; The evidence did not actually match the size of the claim</button>
+                <button data-response="Restating a position loudly is not the same as answering an objection to it. That distinction is the whole point of a real Response, which you will check today.">&#128264; They just repeated their point louder instead of answering the objection</button>
+                <button data-response="Confidence is not proof. A convincing tone can hide a broken chain of reasoning, which is exactly what the logic pass exists to find before a Council does.">&#128170; It just sounded confident, so I believed it at first</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What the logic pass actually checks</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The logic pass asks two blunt questions of every paragraph in your brief: does this argument&rsquo;s evidence actually support the size of claim I am making with it, and does my Response actually answer my Counterclaim, or does it just change the subject back to my own side? A Response that restates your verdict instead of engaging the counterclaim&rsquo;s real premise is the single most common logic failure in a brief like this, because it feels like an answer without doing an answer&rsquo;s job.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: before/after worked example, logic pass -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE &middot; DOES THE RESPONSE ACTUALLY ANSWER THE COUNTERCLAIM?</div>
+            <div style="margin-bottom: 12px;"><div style="font-size:13px; color:#1a2340; letter-spacing:0.3px;">COUNTERCLAIM (STATED FAIRLY)</div><div style="font-size:15px; color:#1a2340; line-height:1.55; font-style: italic;">&ldquo;Oedipus acted entirely without knowledge of Laius&rsquo;s identity, and ignorance of this kind should excuse a killing that any reasonable person could have committed in his position.&rdquo;</div></div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C0392B; padding-left:14px;">
+                    <div style="font-size:13px; color:#8A1F16; letter-spacing:0.3px; margin-bottom:6px;">BEFORE &middot; RESTATES, DOES NOT ANSWER</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;This is wrong. Oedipus is guilty, and the city suffered terribly under the curse he brought on it.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">Notice what this does not do: it never engages the counterclaim&rsquo;s actual premise (that ignorance should excuse the act). It simply reasserts the verdict and changes the subject to the city&rsquo;s suffering, which the counterclaim never disputed.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:14px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px; margin-bottom:6px;">AFTER &middot; ENGAGES THE PREMISE DIRECTLY</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;Ignorance excuses an act only when nothing warned the actor to look closer. Oedipus received a direct oracle naming this exact danger before he ever left Corinth; rather than exercising more caution at an unfamiliar crossroads, he answered a blow with escalating force, by his own account &lsquo;quits with him and more.&rsquo; The warning he already carried, not the identity he lacked, is what the standard should weigh.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">This version takes the counterclaim&rsquo;s own premise (ignorance excuses) and shows exactly why it fails on these specific facts, rather than talking past it.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Run this test on your own Response section right now: cover up everything except your Counterclaim and your Response. Read only those two. If your Response could be swapped in after almost any counterclaim without changing a word, it is not actually answering this one. Revise it until it only makes sense as an answer to the specific objection you stated.</p>
+    </div>
+
+    <!-- ===== PART 2: EVIDENCE PASS ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE EVIDENCE PASS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The evidence pass checks a narrower thing: is every quotation in your brief actually analyzed, or does it just sit on the page doing nothing? A dropped quote, one followed only by a bare claim like &ldquo;this shows he was violent,&rdquo; asks the reader to do the analytical work you were supposed to do yourself.</p>
+
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE &middot; IS THE QUOTE ANALYZED, OR JUST DROPPED?</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C0392B; padding-left:14px;">
+                    <div style="font-size:13px; color:#8A1F16; letter-spacing:0.3px; margin-bottom:6px;">BEFORE &middot; QUOTE DROPPED, NOT ANALYZED</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;Oedipus&rsquo;s temper is part of the problem. &lsquo;Then jostled by the charioteer in wrath I struck him&hellip; yet was I quits with him and more.&rsquo; This shows he was violent.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">The quote (Oedipus, trans. F. Storr, public domain) sits there. &ldquo;This shows he was violent&rdquo; never explains what in the wording actually proves it.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:14px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px; margin-bottom:6px;">AFTER &middot; THE WORDING ITSELF IS ANALYZED</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;Oedipus does not describe a single defensive blow. By his own account he answers the old man&rsquo;s strike and then goes further, &lsquo;quits with him and more,&rsquo; language that frames the retaliation as exceeding what defense alone required. That excess does not prove premeditation, but it does complicate any claim that the killing was purely reactive.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">Notice the move: the analysis points at a specific phrase (&ldquo;and more&rdquo;) and explains exactly what work it does for the argument.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Go through your own draft and put a mark next to every quotation. For each one, check whether the sentence right after it names something specific in the wording, a word choice, a sequence, an omission, rather than just asserting what the quote supposedly proves. If a quote has no such sentence, that is not evidence yet; it is decoration.</p>
+    </div>
+
+    <!-- ===== PART 3: TONE PASS ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE TONE PASS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An advocate who mocks the other side loses the bench, even when the underlying argument is sound. The tone pass is not about softening your verdict. It is about cutting the sneer, the phrases that dismiss an opposing view instead of defeating it, while keeping every bit of your actual confidence and precision.</p>
+
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE &middot; CONFIDENT VS. SNEERING</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C0392B; padding-left:14px;">
+                    <div style="font-size:13px; color:#8A1F16; letter-spacing:0.3px; margin-bottom:6px;">BEFORE &middot; SNEERING</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;Only someone who has not actually read the play carefully could still believe Oedipus deserves mercy; that reading is embarrassing and does not deserve a serious response.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">Notice what this sentence never does: it never actually engages the mercy argument. It attacks the person who might hold it instead.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:14px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px; margin-bottom:6px;">AFTER &middot; CONFIDENT, STILL DIRECT</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">&ldquo;The case for mercy rests on a real and appealing premise: that ignorance should excuse the act entirely. That premise does not survive contact with the standard this brief has committed to, which asks not what Oedipus knew, but what he did and how the city must answer for it.&rdquo;</div>
+                    <div style="font-size:13px; color:#1a2340; line-height:1.5; margin-top:8px;">Same conclusion, same confidence, and the same firm rejection of the opposing view. The difference is that this version defeats the argument instead of insulting the person who might make it.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- notebook practice before reveal -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#9997;&#65039; TRY IT YOURSELF, IN YOUR NOTEBOOK, BEFORE YOU LOOK AT THE MODEL BELOW</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Rewrite this sneering sentence so it keeps its full confidence and its firm rejection of the opposing view, but cuts the insult: &ldquo;Anyone who thinks Creon had a real motive to conspire clearly was not paying attention to the play.&rdquo; Write your revision in your notebook first.</div>
+        </div>
+
+        <details class="notebook-reveal">
+            <summary><strong>Compare your work: a model version</strong> (open only after you have written your own)</summary>
+            <div class="reveal-body">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>A model revision:</strong> &ldquo;The theory that Creon had a real motive to conspire does not hold up against his own words: he names, specifically, why the crown would cost him more freedom than it would ever hand him. A motive this thin cannot carry the weight a conspiracy charge requires.&rdquo; Notice the rejection is just as firm; it simply argues the point instead of mocking whoever might raise it.</div>
+            </div>
+        </details>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND REVISION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can flag wordy sentences and suggest a calmer tone in seconds. What it cannot do is verify, on its own, whether your Response actually answers your specific Counterclaim, or whether a quote you cite actually supports the size of claim you are making with it. Those two checks require rereading your own draft against your own evidence, not running it through a tool.</div>
+        </div>
+
+        <!-- evaluative widget: RIGOR RULE -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH REVISION FIXES THE LOGIC?</div>
+            <div class="widget-question">Here is a weak paragraph from a draft brief: &ldquo;Oedipus is guilty because he killed a man at the crossroads, and that man turned out to be his father. Anyone who has read the play can see that this proves he is a violent person who was never fit to rule Thebes in the first place, and it is honestly a little embarrassing that anyone would argue otherwise.&rdquo; Below are four revision attempts. Each one fixes something real. Only one actually repairs the broken logic, the unsupported leap from &ldquo;killed a man who turned out to be his father&rdquo; to &ldquo;a violent person unfit to rule.&rdquo; Which one?</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. This is the only revision that actually repairs the reasoning. It keeps the responsibility claim but drops the overreach (violent person, unfit to rule) that the evidence never supported, and it explains why the play&rsquo;s own account of the killing, a mutual, escalating exchange rather than a premeditated attack, complicates that overreach. The other three fix real problems, tone or wording or citation, but leave the actual logical leap standing." data-hint="Ask what specific claim the paragraph makes (violent person, unfit to rule) and whether the evidence (killed a man who turned out to be his father) actually proves a claim that size. Which revision changes that claim itself, rather than just its wording, tone, or citations?">
+                <div class="widget-row-prompt">Which revision attempt actually fixes the logic failure, rather than only a cosmetic problem?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Oedipus is guilty because he killed a man at the crossroads, and that man turned out to be his father. Careful readers can see that this proves he is a violent person who was never fit to rule Thebes.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Oedipus is guilty because he killed a man at the crossroads, and that man turned out to be his father. As Oedipus admits, &lsquo;jostled by the charioteer in wrath, I struck him,&rsquo; and it is honestly a little embarrassing that anyone would argue otherwise.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Oedipus is responsible for the crossroads killing, though the play&rsquo;s own account, in which he describes being struck first and then striking back &lsquo;in wrath,&rsquo; complicates any claim that this one act alone proves settled violence or unfitness to rule; the case against him needs stronger ground than this moment supplies.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Oedipus is guilty of killing a man who turned out to be his father at the crossroads, proving he was a violent person unfit to rule, and it is embarrassing that anyone would argue otherwise.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 14px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE ARE ONLY COSMETIC</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The first</strong> softens the sneer (&ldquo;anyone who has read&rdquo; becomes &ldquo;careful readers&rdquo;) but keeps the exact same unsupported leap to &ldquo;violent&rdquo; and &ldquo;unfit to rule.&rdquo;</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The second</strong> adds a real citation, which the evidence pass would want, but keeps both the sneer and the same overreaching claim the citation does not actually support.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>The fourth</strong> only trims a few words for length. The sneer and the logical leap both survive intact, just in a shorter sentence.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Run all three passes on your own draft.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Logic, then evidence, then tone. Note what you fix in your Organizer before you write Quick Write 16.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 8.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will take the strongest material from your revised draft and turn it into a spoken closing argument.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Logic, evidence, tone: three different questions, and none of them is answered by a spell-check. An advocate who mocks the other side loses the bench even when the underlying case is sound; today you learned to find and fix the difference between a paragraph that looks finished and one that actually is.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.01 &middot; Revising the Argument</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

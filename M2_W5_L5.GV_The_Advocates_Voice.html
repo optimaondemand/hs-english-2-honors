@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 5.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Formal register &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from this week&rsquo;s reading</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Advocate&rsquo;s Voice</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A formal brief does not sound like a text message. It sounds like someone who has already decided exactly what they mean.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have spent this module gathering evidence and weighing it carefully. None of that work lands if your writing hedges every claim into mush. Today you practice the register (the level of formality a piece of writing uses) that a real advocate&rsquo;s brief requires, and this week&rsquo;s Word Study words, drawn from the reading, before you draft Quick Write 13.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> recognize slang, filler, and hedging in my own drafts, and rewrite them in formal register.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose a verb that commits to a claim rather than one that hedges around it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A SLACK SENTENCE, AND A FORMAL ONE, MAKING THE SAME POINT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Register</strong> is the level of formality a piece of writing uses, and it should match its purpose. Texting a friend calls for one register. A formal brief argued before a council calls for another. Two habits separate the two: <strong>slang and filler</strong> (casual words that add nothing: &ldquo;kind of,&rdquo; &ldquo;stuff,&rdquo; &ldquo;and all that&rdquo;), and <strong>hedging</strong> (softening a claim so much it stops committing to anything: &ldquo;I guess,&rdquo; &ldquo;maybe,&rdquo; &ldquo;it seems like it could be&rdquo;). A formal register removes both, and replaces hedged verbs with verbs that commit: not &ldquo;seems to suggest&rdquo; but &ldquo;establishes&rdquo;; not &ldquo;is sort of like&rdquo; but &ldquo;demonstrates.&rdquo;</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard, slack vs formal -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; SAME POINT, TWO REGISTERS</div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">SLACK</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">Oedipus kind of seems like he might be guilty, I guess, because of all the stuff that happened with the herdsman and everything.</div>
+                <div style="font-size: 13px; color: #C7922C; margin: 10px 0 4px 0;">FORMAL</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">The herdsman&rsquo;s testimony, combined with the earlier accounts, <strong>establishes</strong> Oedipus&rsquo;s guilt beyond reasonable doubt.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">The formal version replaces three hedges (&ldquo;kind of,&rdquo; &ldquo;seems like,&rdquo; &ldquo;I guess&rdquo;) with one committed verb.</div>
+            </div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">SLACK</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">Creon doesn&rsquo;t really seem mad or anything when he shows up, so maybe he&rsquo;s an okay guy.</div>
+                <div style="font-size: 13px; color: #C7922C; margin: 10px 0 4px 0;">FORMAL</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">Creon&rsquo;s response is measured; he <strong>neither mocks nor indulges</strong>, demonstrating restrained authority.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">Notice &ldquo;demonstrating&rdquo; commits to a specific claim, where &ldquo;seems&rdquo; and &ldquo;maybe&rdquo; commit to nothing.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">SLACK</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">It&rsquo;s kind of hard to say if it&rsquo;s fair that Oedipus punishes himself before anyone gets a trial, but yeah, it&rsquo;s a big deal I guess.</div>
+                <div style="font-size: 13px; color: #C7922C; margin: 10px 0 4px 0;">FORMAL</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.6;">Oedipus&rsquo;s self-imposed sentence, carried out before any trial, <strong>complicates</strong> the very verdict this brief must reach.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">One precise verb (&ldquo;complicates&rdquo;) does the work three vague phrases were straining to do.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that formal does not mean longer or more decorated. Every formal example above is actually shorter than its slack counterpart. Precision, not length, is the goal.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH VERSION COMMITS?</div>
+            <div class="widget-question">For each pair, choose the version that states its claim in formal register, with a verb that commits rather than hedges.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. &lsquo;Establishes&rsquo; commits to a specific, defensible claim. &lsquo;Sort of suggests&rsquo; and &lsquo;might have&rsquo; hedge the same claim into something a reader cannot actually hold you to." data-hint="Look for the version where every phrase commits to something specific, with no &lsquo;sort of,&rsquo; &lsquo;might,&rsquo; or &lsquo;kind of&rsquo; softening the claim.">
+                <div class="widget-row-prompt">1. Which version states the claim with committed, precise language rather than hedging?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The evidence sort of suggests Oedipus might have acted without really knowing who his victims were.</button>
+                    <button data-choice="1">The evidence establishes that Oedipus acted without knowledge of his victims&rsquo; identities.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. &lsquo;Exercises restrained, measured authority&rsquo; is a specific, defensible claim. The other version leans on filler (&lsquo;pretty reasonable and stuff&rsquo;) that commits to nothing precise." data-hint="Check which version could actually be quoted in a formal brief without embarrassment, and which one sounds like a text to a friend.">
+                <div class="widget-row-prompt">2. Which version avoids filler and commits to a specific, formal claim?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Creon exercises restrained, measured authority when he assumes control.</button>
+                    <button data-choice="1">Creon seems like he&rsquo;s being pretty reasonable and stuff when he takes over.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in this week&rsquo;s reading, the herdsman&rsquo;s testimony through the final scene. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>thrall</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person bound in servitude to another; a servant with no freedom to refuse</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The herdsman describes himself this way to Oedipus: &ldquo;I was, a thrall, not purchased but home-bred,&rdquo; explaining his bond to Laius&rsquo;s household.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>pinion</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to bind or restrain someone&rsquo;s arms so they cannot move or resist</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus orders it done to the herdsman mid-interrogation: &ldquo;Arrest the villain, seize and pinion him!&rdquo;, the exact moment the questioning turns to open threat.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>wretch</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person in a deeply miserable or pitiable condition</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus applies it to himself the instant he grasps the whole truth: &ldquo;I stand a wretch, in birth, in wedlock cursed,&rdquo; naming his own condition before anyone else can.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>woe</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; great sorrow or suffering</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus uses it to describe what his own eyes will never again witness: &ldquo;No more shall ye behold such sights of woe,&rdquo; spoken as he blinds himself.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>frenzy</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a state of wild, uncontrolled emotion or action</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The messenger describes Jocasta&rsquo;s final movements this way: &ldquo;when in her frenzy she had passed inside the vestibule,&rdquo; just before she shuts herself away.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>upbraid</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to scold or criticize someone sharply for a fault or wrongdoing</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon explicitly refuses to do this when he arrives: &ldquo;Not in derision, Oedipus, I come nor to upbraid thee with thy past misdeeds,&rdquo; setting the measured tone of the whole final scene.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Draft Quick Write 13 in <strong>formal register throughout</strong>: no slang, no filler, no hedging (&ldquo;kind of,&rdquo; &ldquo;I feel like,&rdquo; &ldquo;maybe&rdquo;). Choose verbs that commit to your claims. Work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A formal register is not decoration; it is precision. Every hedge you cut and every committed verb you choose makes your case harder to dismiss. Carry that discipline, along with two Word Study words, into Quick Write 13.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.GV &middot; The Advocate&rsquo;s Voice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 Honors &mdash; How to Do Real Research on JStor</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.worked-example { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+    details.worked-example summary { font-size: 17px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    details.worked-example summary::marker { color: #C7922C; }
+    details.worked-example .reveal { margin-top: 14px; padding-top: 14px; border-top: 1px solid #D0D9E8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2 HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Honors Sprint 2 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Sprint</div>
+        <div style="font-size: 17px; color: #0e1c42;">Weeks 3&ndash;4</div>
+        <div style="font-size: 12px; color: #1a2340;">Honors Sprint 2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Honors Track</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Designer&rsquo;s Table</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 16px; color: #0e1c42;">Real research on JStor</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Honors Sprint 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">How to Do Real Research on JStor</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; used again in Quarter 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your game has to be grounded in a real historical world, not a guess and not whatever an AI tool told you. JStor is the library you will use all year to do that grounding, starting with the first research find due this sprint. This lesson walks through getting in, searching well, telling a strong source from a weak one, reading a scholarly source efficiently, and combining more than one source into your own understanding instead of copying anyone&rsquo;s words. You will use this exact process again in Quarter 2 for your Oedipus research, so it is worth learning well now.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> log into JStor with the school&rsquo;s shared login and run a search that actually turns up useful results.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> judge whether a source is reliable enough to build my game&rsquo;s world on.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read a scholarly source for what I actually need, and combine more than one source into my own understanding rather than copying either one.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GETTING IN ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128274; PART 1 &middot; GETTING INTO JSTOR</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">JStor is a digital library of academic journal articles, primary sources, and book chapters, most of it written by scholars for other scholars. It is a different kind of source than a general search engine turns up: everything in it has gone through some form of academic vetting, which is exactly why it is the right place to ground a game in real history instead of impressions.</p>
+
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128273; SCHOOL SHARED LOGIN</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.7;">Optima Academy Online provides one shared JStor account for every student. Use it every time.</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.9; margin-top: 6px;">
+                <strong>Username:</strong> optimaonline<br />
+                <strong>Password:</strong> wisdom359
+            </div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 10px; line-height: 1.5;">Go to jstor.org, choose to log in, and enter this shared username and password. You do not need a personal account.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: SEARCHING EFFECTIVELY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128269; PART 2 &middot; SEARCHING EFFECTIVELY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A vague search wastes your time. Start with the specific noun tied to your world, not the broad topic: searching &ldquo;guest-friendship ancient Greece&rdquo; will get you closer to a usable article than searching &ldquo;Greek life,&rdquo; which returns far too much. Scholars also often use a different word than everyday speech does for the same idea; the World Tour&rsquo;s starter research threads gave you some of these words already, such as <em>xenia</em> for guest-friendship or <em>miasma</em> for ritual pollution. Try your search both ways: the plain-language phrase and the scholarly term, since each one turns up sources the other misses. JStor also lets you filter results by discipline (history, classics, anthropology, and so on); narrowing to the discipline closest to your question cuts out a lot of noise fast.</p>
+
+        <details class="worked-example">
+            <summary>Try it yourself first: think of your chosen world and your design question. Write down two different search phrases you could try, one in plain language and one using a more specific or scholarly term. When you are ready, open this to see a worked example.</summary>
+            <div class="reveal">
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 8px 0;"><strong>Worked example, a student building in Jazz-Age America who wants to know how Prohibition affected who held power:</strong></p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;"><strong>Plain-language search:</strong> &ldquo;Prohibition organized crime 1920s.&rdquo; Broad, returns a huge number of results, many too general to use.</p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;"><strong>Narrowed search:</strong> &ldquo;Prohibition bootlegging economy urban.&rdquo; Fewer, more specific results, several of them usable articles about how illegal alcohol shifted money and power in specific cities.</p>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Compare that to your own two phrases. Which one is more likely to land on an article you could actually use?</p>
+            </div>
+        </details>
+    </div>
+
+    <!-- ===== PART 3: EVALUATING RELIABILITY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 3 &middot; EVALUATING SOURCE RELIABILITY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every result JStor returns is equally trustworthy, and telling the difference is itself a skill worth practicing. A <strong>peer-reviewed</strong> journal article has been read and checked by other scholars in the same field before it was published; that review does not make it infallible, but it means someone with real expertise has already tested its evidence and reasoning. A <strong>popular</strong> source such as a general-interest magazine article covers similar ground for a broad audience, often without that same review, and may simplify or get details wrong. Four questions help you sort a source fast:</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;"><strong>Is it peer-reviewed or popular?</strong> JStor usually labels an item as a journal article (more likely peer-reviewed) versus a magazine or newspaper piece.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;"><strong>What are the author&rsquo;s credentials?</strong> Is the author affiliated with a university, museum, or research institution in a field connected to your question?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;"><strong>How old is it, and does that matter here?</strong> Some scholarship is foundational and still cited decades later (an old article can still be the right one); other questions need something closer to current research. Ask which kind of question you are asking.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Is it actually relevant to your specific question?</strong> A well-credentialed, current, peer-reviewed article on the wrong topic still will not help you. Relevance is not optional just because the other three checks pass.</p>
+
+        <!-- evaluative widget: rigor rule, four superficially-credible sources requiring real discrimination. Correct indices 3,2 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH SOURCE ACTUALLY WORKS?</div>
+            <div class="widget-question">Every source below looks credible at first glance. Only one actually clears all four checks (peer review, credentials, currency, and relevance) for the specific claim you need. Choose it, and be ready to explain why the other three fall short despite looking solid.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. This is the only option that is peer-reviewed, reasonably current, AND actually about your specific question: wealth and status inside a Homeric household. The other three each pass some checks and fail others." data-hint="This one is genuinely peer-reviewed and set in roughly the right period, which is exactly what makes it tempting. But it is about bridal ritual in a different region and era than your question; clearing the credibility check does not make a source relevant to what you actually need.">
+                <div class="widget-row-prompt">1. You are researching how households in Bronze Age Greece measured wealth and status, to ground a rule in your game. Which of these sources should you actually build on?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A 2021 peer-reviewed article, &ldquo;Bridal Ritual and Kinship in Archaic Sparta,&rdquo; in a respected classics journal.</button>
+                    <button data-choice="1">A 2024 feature on a popular history website, &ldquo;What Daily Life Was Really Like in Ancient Greece,&rdquo; written by a staff writer with no citations listed.</button>
+                    <button data-choice="2">A landmark 1957 monograph on the ancient Greek economy by a widely cited economic historian, still assigned in graduate seminars.</button>
+                    <button data-choice="3">A 2015 peer-reviewed article, &ldquo;Gift Exchange and Household Wealth in the Homeric World,&rdquo; by a classical archaeologist, in a journal of Mediterranean archaeology.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. This is the only option that is peer-reviewed, actually about your specific claim (wealth redistribution during Prohibition, not organized crime in general), and grounded in research current enough to reflect real archival work." data-hint="A firsthand account from someone who lived it is a genuinely valuable kind of source, and its fame is not an accident. But it was never reviewed by other scholars, and a memoir written partly to entertain readers is not the same thing as a peer-reviewed analysis of the evidence.">
+                <div class="widget-row-prompt">2. You are researching whether Prohibition-era bootlegging actually shifted economic power toward new groups in American cities. Which source should you actually build on?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A 2023 opinion column in a national newspaper, &ldquo;Why Prohibition Failed,&rdquo; written by a political commentator with no citations.</button>
+                    <button data-choice="1">A 1971 peer-reviewed article, &ldquo;Organized Crime and Urban Economies,&rdquo; by a respected sociologist, still cited by later scholars, but focused mainly on the 1950s with only a brief aside on Prohibition.</button>
+                    <button data-choice="2">A 2011 peer-reviewed article, &ldquo;Bootlegging and the Redistribution of Urban Wealth, 1920&ndash;1933,&rdquo; by an economic historian, in a journal of American history.</button>
+                    <button data-choice="3">A famous 1931 memoir by a former bootlegger, widely read and often quoted in popular histories, never peer-reviewed, and written partly to entertain.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 4: READING FOR WHAT YOU NEED ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 4 &middot; READING A SCHOLARLY SOURCE FOR WHAT YOU NEED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You do not need to read a twenty-page article start to finish to use it well. Read the abstract or opening paragraph first; it usually states the article&rsquo;s main claim in a few sentences. Read the conclusion next; it often restates that claim plainly, sometimes more plainly than the introduction did. With the main claim in hand, scan the headings and topic sentences of the body paragraphs for the one or two sections that actually address your specific question, and read those closely. This is not skipping the hard part; it is reading with a purpose instead of reading everything equally.</p>
+    </div>
+
+    <!-- ===== PART 5: SYNTHESIZING ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128161; PART 5 &middot; SYNTHESIZING, NOT COPYING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Synthesizing means taking what more than one source tells you and writing, in your own words, a sentence that states what you now understand, not a sentence that repeats either source&rsquo;s phrasing. If one source tells you that a Bronze Age household&rsquo;s wealth was measured partly in livestock and stored goods, and another tells you that hosting a stranger well could build a household&rsquo;s reputation across a whole region, your synthesis is your own new sentence connecting the two: hospitality was not just kindness, it was a visible way to spend real wealth in exchange for something a household could not buy outright, its standing among its neighbors. That sentence belongs to you because you built the connection; neither source stated it that way.</p>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">When you are taking notes from a source, what usually tempts you to copy its exact wording instead of putting it in your own words? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="That is a common and honest reason. A useful habit: write your note as a full sentence, closed source tab, stating what the source told you, before you ever look at the original wording again.">The source already says it better than I could</button>
+                <button data-response="That is worth noticing, since rushing is exactly when copied phrasing slips in unnoticed. Slowing down for just the sentences you plan to actually use (Part 4) leaves more time to restate them in your own words.">I am moving fast and do not want to lose the idea</button>
+                <button data-response="Unfamiliar or technical language is genuinely harder to restate, but that is exactly the kind of phrase worth pausing on: if you cannot yet say it in your own words, you may not fully understand it yet either.">The wording uses a term I am not fully sure I understand</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== AI + JSTOR VERIFICATION (RED CALLOUT) ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129302; AI AND YOUR RESEARCH</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An AI tool such as Microsoft Copilot can be useful for orienting yourself in a period fast, or for suggesting search terms and possible sources to look for. It is not a source itself, and it is frequently wrong or invented on exactly the kind of specific historical detail your game needs.</p>
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; HARD RULE &middot; VERIFY EVERY AI-SURFACED SOURCE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Every source, claim, or citation an AI tool gives you must be independently checked on JStor before it can appear in your project: the source must actually exist under the title given, and it must actually say what the AI claimed it says. If either check fails, the source and the claim are cut, no matter how useful or convincing it sounded. An unverifiable AI-surfaced source is not a shortcut; it is not research at all.</div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Get in with the shared login, search with both a plain phrase and a scholarly term, sort what you find by peer review, credentials, date, and relevance, read for the claim you need rather than the whole article, and write your own synthesis rather than anyone&rsquo;s exact words. Use this same process for your first JStor find this sprint, and again all year, including in Quarter 2.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Honors Sprint 2 &middot; How to Do Real Research on JStor</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

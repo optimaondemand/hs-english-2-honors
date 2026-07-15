@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 3.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 3.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Stranger on the Shore</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 3</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A shipwrecked stranger, naked and salt-crusted, meets a princess doing laundry by a river. Somehow, this goes well.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Book 6 shifts you into a brand-new place: the land of the Phaeacians, a seafaring people ruled by King Alcinous and Queen Arete. Homer builds this world for you almost entirely through small, concrete details, long before he tells you anything about its politics or history. Today you will watch how that world gets built on the page, and watch Odysseus make one of the most careful speeches in the whole poem to the young woman who finds him.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to the concrete, sensory details that make the Phaeacian world feel real.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Odysseus chooses careful, flattering words instead of a desperate grab for Nausicaa&rsquo;s knees.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Nausicaa&rsquo;s response shows hospitality to a total stranger.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 6</strong> in your copy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer, open to track what you notice about this new place.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WORLD BUILT FROM SMALL DETAILS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before Book 6 tells you anything abstract about the Phaeacians, it shows you an ordinary morning: the princess Nausicaa and her maids load a wagon with dirty clothes, drive it to a river, and get to work.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then they got their dinner by the side of the stream, and waited for the sun to finish drying the clothes. When they had done dinner they threw off the veils that covered their heads and began to play at ball.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Nothing about that scene is grand. It is laundry, lunch, and a ball game. But it does real work: it tells you this is a place of ordinary daily life, daylight, and unguarded ease, the exact opposite of the storm-tossed, unknown sea Odysseus has just survived. A setting does not need a throne room to feel real. It needs specific, sensory detail: what people are doing with their hands, what the light and weather are like, what the ordinary routine of the place looks like on any given day.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The Phaeacians are described elsewhere in the poem as living apart, on the edge of the known world, close to the gods and cut off from ordinary human trouble. Ancient audiences would have heard this as a kind of in-between place: not the wild danger of Calypso&rsquo;s isolated island, and not yet home, but a civilized stop where a stranger could be received properly before continuing his journey.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A CAREFUL SPEECH TO A STRANGER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A stray ball wakes Odysseus, who has been sleeping naked and covered in dried salt under a bush. He is, by his own poem&rsquo;s description, a frightening sight. Every maid but Nausicaa runs. Odysseus now faces a real decision: how does a shipwrecked, filthy stranger ask a young noblewoman for help without terrifying her or insulting her?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He considers grabbing her knees, the traditional gesture of a desperate suppliant, and decides against it. Instead he keeps his distance and speaks, opening with a comparison to the goddess Artemis before making his actual request:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;I dare not clasp your knees, but I am in great distress; yesterday made the twentieth day that I have been tossing about upon the sea.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Odysseus, trans. Samuel Butler, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: rhetorical choice annotated -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; A CALCULATED APPROACH, NOT A PANIC</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">WHAT HE AVOIDS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Clasping her knees would mark him as a desperate, demanding suppliant, and could easily read as threatening from a naked stranger. He deliberately keeps his distance instead.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">WHAT HE CHOOSES</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Praise first, then a plain statement of need: twenty days lost at sea. He is reading his audience and shaping his words to earn trust rather than demand help.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">This is worth pausing on: Odysseus is not simply telling the truth about his situation. He is choosing, in the moment, exactly how to present himself to get the response he needs. That is a rhetorical decision, the same kind a real speaker makes with a real audience, and this poem trusts you to notice it happening inside the story, not just when a narrator addresses you directly.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A GRACIOUS ANSWER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Nausicaa&rsquo;s reply matches the poem&rsquo;s picture of Phaeacia as a genuinely hospitable place. She does not flinch, does not question his story, and moves straight to helping him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Now, however, that you have come to this our country, you shall not want for clothes nor for anything else that a foreigner in distress may reasonably look for.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Nausicaa, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She orders her maids to bathe him, feed him, and clothe him, then gives him directions to the palace and instructions for winning over her mother, Queen Arete, whose goodwill matters most of all. Compare this to the household in Ithaca, where guests overstay and take without asking. Here, a stranger with nothing is met with real, unforced generosity. This is exactly what a well-run community owes a person who arrives with nothing, and it is the version of hospitality this poem holds up as the standard.</p>
+    </div>
+
+    <!-- evaluative widget: weigh competing READINGS (rigor rule). Correct indices 0,2. -->
+    <div class="optima-widget ow-select">
+        <div class="widget-kicker">&#9889; TRY IT &middot; SETTING AND HOSPITALITY</div>
+        <div class="widget-question">Each question below has more than one plausible reading. Choose the one Book 6 best supports, and be ready to say why the others overreach or miss the mark.</div>
+
+        <div class="widget-row" data-correct="0" data-fb="Right. The scene never explains Phaeacian government or history first; it simply shows hands doing laundry, people eating lunch, a ball game. That concrete, sensory grounding is what makes an unfamiliar place feel inhabited before the poem tells you anything abstract about it." data-hint="Consider what job the scene is actually doing on the page: is it building suspense, drawing a contrast with another household, assuming background knowledge, or doing something more basic? What does the passage actually give you: information, or texture?">
+            <div class="widget-row-prompt">1. Why does the poem open the Phaeacian scenes with laundry and a ball game rather than a description of the kingdom?</div>
+            <div class="widget-options">
+                <button data-choice="0">Because concrete, ordinary detail makes a new place feel real before any abstract explanation is given.</button>
+                <button data-choice="1">Because the poem trusts readers already know Phaeacian customs from elsewhere in Greek myth.</button>
+                <button data-choice="2">Because ordinary scenes like this build suspense before the arrival of the shipwrecked stranger.</button>
+                <button data-choice="3">Because Homer is contrasting Phaeacian leisure with the labor of other households, to criticize the suitors again.</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="2" data-fb="Right. Nausicaa moves straight to real help, clothing, food, directions, without suspicion, negotiation, or hesitation. The poem frames this as characteristic of Phaeacia as a whole, not just one especially generous individual." data-hint="Watch for readings that make her welcome conditional on his speech, narrow it to her personal character alone, or invent an expectation of repayment the text never states. What does the passage actually attach her welcome to?">
+            <div class="widget-row-prompt">2. What does Nausicaa&rsquo;s response to the shipwrecked stranger show about the Phaeacian world?</div>
+            <div class="widget-options">
+                <button data-choice="0">It is a place where hospitality depends on how persuasively a stranger can speak.</button>
+                <button data-choice="1">It is a place where kindness to strangers comes with an unstated expectation of future favor.</button>
+                <button data-choice="2">It is a place that offers real, unforced hospitality to a stranger in need.</button>
+                <button data-choice="3">It is a place where hospitality is really Nausicaa&rsquo;s personal virtue rather than anything typical of Phaeacia generally.</button>
+            </div>
+        </div>
+
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 3.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will practice building a setting of your own, the way Homer built the Phaeacian shore, for your Bard&rsquo;s Hall tale.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A princess doing laundry, a shipwrecked stranger choosing his words with care, and an answer of real generosity: Book 6 builds a whole world out of small, believable details, and shows a community meeting a stranger the way this poem thinks a community should.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; A Stranger on the Shore</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 4.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 4.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 4.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Good News That Isn&rsquo;t</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 4</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A stranger arrives with news that seems to save Oedipus. By the end of the same conversation, that same stranger has destroyed him, and he never once meant to.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A messenger arrives from Corinth this week, and at first his news sounds like the answer to everything Oedipus has feared. Watch closely what happens next, because a single new fact is about to change the meaning of every fact that came before it. That is not just a plot twist. It is exactly the kind of thing an advocate has to watch for when building a case: evidence you thought was settled can turn out to prove the opposite of what you believed, the moment one more piece of information arrives. Read this week&rsquo;s scenes, using the landmark &ldquo;the Corinthian messenger,&rdquo; not a line number, before you continue.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the sequence of this scene: the news of Polybus&rsquo;s death, the relief it briefly brings, Oedipus&rsquo;s remaining fear of Merope, the foundling revelation, and the detail of his pierced and pinned feet.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why the messenger&rsquo;s kindness, not cruelty, delivers the most devastating information in the scene.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a piece of evidence&rsquo;s meaning can change completely once a new fact appears, and why this matters for building a case.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> (trans. F. Storr), the Corinthian messenger scene. <a href="https://www.gutenberg.org/ebooks/31" target="_blank" rel="noopener" style="color:#3B4E8C;">Read it free at Project Gutenberg</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to the Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE NEWS THAT SEEMS TO SETTLE EVERYTHING</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Have you ever gotten news that seemed to solve one problem, only to create a bigger one you never saw coming? What was that like? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That relief is real while it lasts, which is exactly why it can be so disorienting when it turns out to be built on a mistake. Watch for that exact feeling in this week&rsquo;s scene.">&#128522; I felt relieved before I understood the full picture</button>
+                <button data-response="A good question to hold onto. This week&rsquo;s scene is built entirely around a piece of news that looks finished but is not.">&#129300; I wondered whether the news was really as good as it sounded</button>
+                <button data-response="That is close to what happens to Oedipus this week. The person delivering the second piece of news has no idea how much damage it will do.">&#128561; The second piece of news changed everything about the first</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A death that seems to disprove a prophecy</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A messenger arrives from Corinth looking for the palace. His actual errand is good news for a king: the people of Corinth want Oedipus to come rule them. But getting there means explaining why the throne is open, and that answer lands somewhere no one expects.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">JOCASTA: &ldquo;What! is not aged Polybus still king?&rdquo;<br />MESSENGER: &ldquo;No, verily; he&rsquo;s dead and in his grave.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta reacts instantly, and her reaction tells you exactly what this news seems to mean. Oedipus fled Corinth years ago because an oracle warned he would kill his father. If his father just died of old age, far away, with Oedipus nowhere near him, the prophecy looks broken.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Quick, maiden, bear these tidings to my lord. Ye god-sent oracles, where stand ye now! This is the man whom Oedipus long shunned, In dread to prove his murderer; and now He dies in nature&rsquo;s course, not by his hand.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Jocasta, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus himself seizes on the same relief, almost gleefully mocking the oracle he once fled: &ldquo;the oracles are dead, Dust, ashes, nothing, dead as Polybus.&rdquo; Hold onto how confident that relief sounds. You are about to watch it collapse.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ONE FEAR STILL LEFT, AND A MAN TRYING TO HELP</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus admits the relief is not quite complete. Half the prophecy is gone, but the other half, that he would marry his own mother, still worries him, since his mother Merope is still alive back in Corinth.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;Must I not fear my mother&rsquo;s marriage bed.&rdquo;<br />&hellip; &ldquo;Much, but my fear is touching her who lives.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The messenger overhears this and wants to finish the job of comforting the king who might soon reward him. He asks who this woman is, and when Oedipus names Merope and explains the oracle, the messenger says the one thing he believes will set Oedipus fully at ease:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Why, since I came to give thee pleasure, King, Have I not rid thee of this second fear?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Messenger, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He means every word of it as a gift. What he says next is the exact opposite of one.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">MESSENGER: &ldquo;Since Polybus was naught to thee in blood.&rdquo;<br />OEDIPUS: &ldquo;What say&rsquo;st thou? was not Polybus my sire?&rdquo;<br />MESSENGER: &ldquo;As much thy sire as I am, and no more.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In a single line, the man Oedipus has spent his whole adult life fleeing turns out to have never been his father at all. Notice that the messenger is not being cruel. He believes, sincerely, that he is doing Oedipus a favor by removing a fear. It is the single kindest character in this scene who ends up delivering its worst blow.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE PROOF WAS IN HIS OWN FEET</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus presses for the whole story, and the messenger explains where he actually got the child years ago: not from Merope, but as a foundling, handed to him on a mountainside.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;A foundling or a purchased slave, this child?&rdquo;<br />MESSENGER: &ldquo;I found thee in Cithaeron&rsquo;s wooded glens.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then comes the detail that seals it, a detail Oedipus has carried on his own body since infancy without ever knowing what it meant.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, evidence flipping meaning -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128065;&#65039; ONE FACT, TWO MEANINGS</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">MESSENGER: &ldquo;Those ankle joints are evidence enow.&rdquo; &hellip; &ldquo;I loosed the pin that riveted thy feet.&rdquo;<br />OEDIPUS: &ldquo;Yes, from my cradle that dread brand I bore.&rdquo;</div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">trans. F. Storr, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">BEFORE THIS SCENE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">A scar on his ankles was just a scar, an old mark from childhood with no story attached that anyone on stage has bothered to explain.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">AFTER THIS SCENE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The same scar is now proof: an infant was deliberately pinned through the ankles and left to die, and that infant grew up to be called &ldquo;Oedipus,&rdquo; a name built from that very wound.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Nothing about the scar changed. What changed is what the scar means, now that a new fact stands next to it. This is exactly what an advocate has to watch for in the weeks ahead: a piece of evidence is never finished proving something just because it seemed settled last week. New information can flip its meaning entirely, and a careful reader, or a careful advocate, has to be willing to reweigh it every time.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND SHIFTING EVIDENCE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize this scene&rsquo;s events accurately in seconds. What it will not do on its own is notice that the meaning of an earlier fact, like Polybus&rsquo;s death, quietly flips once a later fact arrives. Tracking how new evidence changes old evidence is a close-reading skill worth building in your own head, not outsourcing.</div>
+        </div>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE MOMENT SHOW?</div>
+            <div class="widget-question">Read each question carefully. More than one option will sound reasonable at first.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The relief felt real and even reasonable in the moment, but it rested on an assumption, that Polybus was his real father, that the messenger is about to demolish. Once that assumption falls, the death of Polybus proves nothing at all about the prophecy." data-hint="Consider what Oedipus and Jocasta are both assuming about Polybus at the moment they celebrate his death.">
+                <div class="widget-row-prompt">1. By the time this scene ends, what has actually happened to the relief Jocasta and Oedipus first felt at Polybus&rsquo;s death?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It holds up completely: a father&rsquo;s natural death is real proof no patricide prophecy could still apply.</button>
+                    <button data-choice="1">It turns out to rest on a mistake neither of them yet knows they made: Polybus was never Oedipus&rsquo;s real father, so his death proves nothing about the prophecy at all.</button>
+                    <button data-choice="2">It holds up for the father-killing half of the prophecy, but leaves the mother-marriage half exactly as dangerous as before.</button>
+                    <button data-choice="3">It quietly proves the whole prophecy was invented by priests to control the royal family.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The messenger believes, sincerely, that he is doing Oedipus a kindness. That sincerity is exactly what makes this moment so devastating and so hard to argue with: there is no villain here to blame, only a well-meaning man telling the truth." data-hint="Ask whether anything in the scene actually signals a hidden motive, or whether the messenger simply says what he believes.">
+                <div class="widget-row-prompt">2. The messenger says, &ldquo;since I came to give thee pleasure, King, Have I not rid thee of this second fear?&rdquo; What does this line reveal about how the worst news in the play arrives?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The messenger is lying about his motives to manipulate Oedipus into trusting him.</button>
+                    <button data-choice="1">It arrives because the messenger has finally decided to punish Oedipus for his earlier rudeness.</button>
+                    <button data-choice="2">It arrives as an act of genuine goodwill, which is exactly what makes it impossible for Oedipus to simply reject or deflect.</button>
+                    <button data-choice="3">It arrives by accident, proving the messenger never intended to discuss Oedipus&rsquo;s parents at all.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note one piece of evidence that flips meaning in your Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record which fact you tracked and how its meaning changed. You will draw on this in your Evidence Bank later.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 4.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will look at the one person on stage who understands the full truth before anyone else does, and what happens when she tries to stop it.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The kindest man in this scene destroys Oedipus without ever meaning to, and the evidence that seemed to prove Oedipus safe turns out to prove nothing at all. Carry that lesson, evidence has to be reweighed the moment new facts arrive, directly into your own case for the Trial.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.01 &middot; Good News That Isn&rsquo;t</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

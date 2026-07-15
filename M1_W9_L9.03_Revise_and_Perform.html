@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 9.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    details.notebook summary { cursor: pointer; list-style: none; }
+    details.notebook summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 9.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 9.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Revision, polish, and performance</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds the final Bard&rsquo;s Hall project</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Revise and Perform</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 9 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Drafting gets a story onto the page. Revision is what makes it worth someone else&rsquo;s time.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Every week this module has added a new tool to your Bard&rsquo;s Hall draft: an in medias res opening, a fully built setting, a figurative comparison, real dialogue, rising stakes, dramatic irony. This lesson is about the different, harder skill of standing back from all of that and asking whether it actually works as one whole piece. You will learn a concrete way to check your draft, watch a before-and-after example, and then apply the same checklist to your own writing before you prepare it to be shared aloud for your final project.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply a concrete revision checklist to a finished narrative draft.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify what changes when a piece of writing is prepared to be read aloud rather than read silently.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your full Bard&rsquo;s Hall draft from Quick Write 8.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document, and a quiet space to read your draft aloud to yourself.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT REVISION ACTUALLY CHECKS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Revision is not the same as fixing typos; that comes later, in this week&rsquo;s grammar lesson. Revision means reading your whole draft as a stranger would, looking for places where the story as a whole does not yet hold together, even if every individual sentence is fine. A finished draft can still have an ending that no longer matches how the story opened, a narrator who sounds like a different person from one scene to the next, or a big moment that lands flat because it was never properly set up. Use this checklist as you reread your full Bard&rsquo;s Hall draft:</p>
+
+        <!-- ONE MEANINGFUL VISUAL: revision checklist -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#9997;&#65039; THE REVISION CHECKLIST</div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;">Does your opening still match how the story now ends? A draft often changes direction as it grows; make sure the first paragraph still promises the story you actually told.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;">Is your narrator&rsquo;s voice consistent scene to scene? A teller who sounds wry and clever in one scene should not suddenly sound flat and formal in the next, unless that shift is doing something on purpose.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;">Have you cut any scene that only repeats what another scene already showed? If two moments make the same point about a character, keep the stronger one and cut the other.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;">Does the reader feel the stakes you built up actually pay off at the climax? If you raised a threat or a promise earlier in the draft, the ending needs to answer it.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;">Read the whole draft aloud once. Mark every place where you stumble, run out of breath, or have to reread a line to understand it. Fix those lines first; they are almost always the weakest ones.</div></div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Now watch the checklist applied to a short passage written for this lesson. Notice what actually changes between the two versions.</p>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 10px 0 10px 0;">
+            <div style="font-size: 13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom: 6px;">BEFORE</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">Aris was a young sailor who had always wanted to see the northern islands, and now he finally had his chance. He walked into the hall where the council was meeting. The hall was big and had a lot of old banners on the walls. He was nervous, but he decided to speak anyway, even though he had never spoken in front of the council before, and he cleared his throat.</p>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 0 0 14px 0;">
+            <div style="font-size: 13px; color:#C7922C; letter-spacing:0.3px; margin-bottom: 6px;">AFTER</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">Aris cleared his throat once, twice, and the old banners along the council hall seemed to sway with the sound. He had never spoken here before. He spoke anyway.</p>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The before version front-loads backstory the reader does not need yet (Aris wanting to see the northern islands has nothing to do with this scene), repeats the same idea twice (nervous, and never having spoken before), and buries the actual action, clearing his throat, deciding to speak, under a pile of explanation. The after version keeps only what the scene needs and trusts three short sentences to carry the tension.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; PREPARING TO PERFORM IT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your Bard&rsquo;s Hall project ends with a recorded telling, not just a written page, so revision has one more job to do: preparing the piece to be heard, not only read. A story meant to be read silently can survive a long, winding sentence, because a reader can pause and reread it. A story meant to be spoken aloud cannot. Long sentences need to be broken into pieces a voice can actually carry in one breath, and any moment where the listener needs to know who is speaking has to be completely clear without a page to glance back at.</p>
+
+        <details class="notebook" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; line-height: 1.6;"><strong>&#9997;&#65039; Find one sentence in your own draft that would be hard to say aloud in a single breath. Rewrite it in your notebook as two or three shorter sentences.</strong> Do this now, before you open this box to see one more worked example.</summary>
+            <div style="margin-top: 14px; font-size: 17px; color: #1a2340; line-height: 1.65;">
+                <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">ONE MORE EXAMPLE, FOR COMPARISON</div>
+                <p style="margin: 0 0 8px 0; font-style: italic;">Long, hard to say aloud: &ldquo;Mira had been planning the escape for weeks, ever since she overheard the guards talking about the shipment, and now that the night had finally come she felt both terrified and strangely calm as she reached for the door.&rdquo;</p>
+                <p style="margin: 0 0 8px 0; font-style: italic;">Broken for the ear: &ldquo;Mira had been planning this for weeks. She reached for the door. Terrified, and strangely calm.&rdquo;</p>
+                <p style="margin: 0;">Compare it to your own rewrite. Did breaking the sentence change the pacing, not just the length? A shorter sentence often lands harder when it is spoken aloud than the same idea would in one long sentence.</p>
+            </div>
+        </details>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">After reading your own draft aloud once, what did you notice most? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Stumbling out loud is one of the most reliable ways to find a sentence that needs revising, even when it looked fine on the page. Go back and shorten it.">&#128064; I stumbled over a sentence that looked fine on the page</button>
+                <button data-response="Noticing your own voice shift is a real signal about tone consistency. Mark where that shift happens and decide if it is intentional.">&#127908; My own voice or tone shifted somewhere partway through</button>
+                <button data-response="Feeling proud of a moment is worth trusting. That is often the passage doing exactly what you built it to do.">&#128077; One moment actually sounded as strong as I hoped it would</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Apply the checklist to your full draft.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Work through all five checklist items before you move to Lesson 9.GV for a final proofreading pass.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Submit your final Bard&rsquo;s Hall project.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This revised, performance-ready draft is what you will submit for the module project. See the Bard&rsquo;s Hall project page for full submission instructions.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A draft becomes a story worth telling only after someone goes back through it looking for what does not yet work. Give your Bard&rsquo;s Hall project that same honest pass this week, and read it aloud at least once before you call it finished.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 9.03 &middot; Revise and Perform</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

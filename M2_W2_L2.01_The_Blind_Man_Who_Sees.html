@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 2.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Blind Man Who Sees</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Oedipus can see everything except the truth standing in front of him. Tiresias sees nothing, and knows it already.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week Oedipus swore a public curse against whoever murdered the former king, Laius, not yet suspecting himself. This week he sends for the one person in Thebes said to know things no one else can see: the blind prophet Tiresias. What happens in this scene is the hinge of the whole play. Read it (or reread it) at the link on this week&rsquo;s Module Map before you continue, using the scene landmark &ldquo;the Tiresias confrontation,&rdquo; not a line number.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the sequence of the Tiresias confrontation: the summons, the refusal, the provocation, the accusation, and the exit prophecy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the sight-and-blindness irony this scene establishes for the rest of the play.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify why Oedipus&rsquo;s own rage, not just Tiresias&rsquo;s words, drives the scene forward.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> (trans. F. Storr), the Tiresias confrontation scene. <a href="https://www.gutenberg.org/ebooks/31" target="_blank" rel="noopener" style="color:#3B4E8C;">Read it free at Project Gutenberg</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to the Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SUMMONS AND THE REFUSAL</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time someone clearly knew something important but did not want to say it out loud. What made them hesitate? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Bad news is genuinely hard to deliver, especially to someone with power over you. Watch how carefully Tiresias tries to avoid this exact position.">&#128546; The news was bad and they did not want to be the one to say it</button>
+                <button data-response="Fear of the reaction is a real and reasonable hesitation. Tiresias names almost this exact fear before he ever accuses Oedipus of anything.">&#128561; They were afraid of how the other person would react</button>
+                <button data-response="Sometimes the truth is genuinely dangerous to the person holding it. Keep that thought ready. It applies directly to Tiresias&rsquo;s position in this scene.">&#9888;&#65039; Saying it out loud would cause real harm</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A respectful request, met with reluctance</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus opens the scene with real respect. He calls for the one man in Thebes who might see what the rest of the city cannot:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Teiresias, seer who comprehendest all, lore of the wise and hidden mysteries, high things of heaven and low things of the earth, thou knowest, though thy blinded eyes see naught, what plague infects our city; and we turn to thee, O seer, our one defense and shield.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that Oedipus already names the irony without meaning to: Tiresias&rsquo;s &ldquo;blinded eyes see naught,&rdquo; yet the king turns to him as the one man who can truly see the source of the plague. Tiresias&rsquo;s answer is not what Oedipus expects. He does not refuse to help out of stubbornness. He asks to leave, plainly and without ceremony:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Let me go home; prevent me not; &rsquo;twere best that thou shouldst bear thy burden and I mine.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Tiresias, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read that line again. Tiresias is not withholding the truth to be cruel. He is trying to protect Oedipus from it, and himself from the fallout of saying it. A prophet who can see the future is asking, in effect, to be allowed to see nothing at all today.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; PROVOKED INTO THE TRUTH</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus does not accept the refusal. He accuses Tiresias of withholding evidence out of disloyalty, even of having a hand in the murder himself. That accusation is what finally breaks Tiresias&rsquo;s restraint. He turns the accusation squarely back on the king:</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, sight/blindness irony -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128065;&#65039; THE ACCUSATION, ANNOTATED FOR IRONY</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">I say thou art the murderer of the man whose murderer thou pursuest.</span>&rdquo; ... &ldquo;<span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Thou art the man, thou the accursed polluter of this land.</span>&rdquo;
+            </div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">Tiresias, trans. F. Storr, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">A SEEING MAN, BLIND TO HIMSELF</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Oedipus has sworn to hunt down &ldquo;the murderer.&rdquo; Tiresias tells him, in plain words, that the man he is hunting is the man asking the question. Oedipus has eyes and still cannot see it.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">A BLIND MAN WHO ALREADY SEES</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Tiresias cannot see with his eyes at all, yet he is the only person on stage who already knows the truth. From this scene forward, the play keeps asking you to notice who actually sees clearly and who only has working eyes.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Later in the same exchange, Oedipus mocks Tiresias directly for his blindness, and Tiresias answers by turning the word back on him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Since thou hast not spared to twit me with my blindness&hellip; with other men, but not with thee, for thou in ear, wit, eye, in everything art blind.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Tiresias, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A blind man just told the king of Thebes that he, not Tiresias, is the one who cannot see. That is the central irony this play builds on, and it does not resolve here. It will keep growing until the play&rsquo;s final scene.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE CONSPIRACY CHARGE AND THE EXIT PROPHECY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus cannot accept the accusation on its own terms, so he reaches for an explanation that keeps him innocent: someone must have put Tiresias up to this.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;Is this a plot of Creon, or thine own?&rdquo;<br />TEIRESIAS: &ldquo;Not Creon, thou thyself art thine own bane.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what Oedipus does here, because it matters for the trial you will eventually argue. Faced with evidence he does not want to be true, he does not examine the evidence. He looks for someone to blame for bringing it to him. Watch for this move again; it returns next week when Oedipus turns the same suspicion on Creon directly.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before he is led away, Tiresias delivers one last riddle, describing a nameless man who will turn out to be tangled almost impossibly close to his own family:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Of her who bare him son and husband both, co-partner, and assassin of his sire.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Tiresias, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In plain terms: the man Oedipus is hunting will turn out to be son and husband to the same woman, and killer of his own father. Tiresias does not spell out that this man is Oedipus himself. He does not have to. The riddle is left standing in the air as he exits, and the chorus is left to make of it what they can.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND DRAMATIC IRONY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize this scene accurately and even define dramatic irony. What it cannot do for you is notice, on its own, that Oedipus names Tiresias&rsquo;s blindness as an insult in the very same breath that Tiresias uses to expose Oedipus&rsquo;s own blindness. That kind of close noticing is a reading skill, and it is the one this whole play is built to test in you.</div>
+        </div>
+
+        <!-- evaluative widget: what does each moment reveal -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE MOMENT SHOW?</div>
+            <div class="widget-question">For each moment in the confrontation, choose what it most reveals. You will get feedback right away.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Tiresias&rsquo;s plea to leave, before any accusation is made, reads as an attempt to protect both Oedipus and himself from a truth neither is ready to face; not evasion for its own sake, and not a calculated test." data-hint="Reread Tiresias&rsquo;s actual words: &lsquo;Let me go home&hellip; &lsquo;twere best that thou shouldst bear thy burden and I mine.&rsquo; Is that the language of someone testing the king, or someone trying to avoid causing harm?">
+                <div class="widget-row-prompt">1. Tiresias asks to go home rather than speak.</div>
+                <div class="widget-options">
+                    <button data-choice="0">He genuinely no longer feels bound by his old duty to serve the city in a crisis.</button>
+                    <button data-choice="1">He is trying to shield Oedipus, and himself, from a dangerous truth.</button>
+                    <button data-choice="2">He believes Oedipus already suspects the truth and is testing him with a show of reluctance.</button>
+                    <button data-choice="3">He wants Creon to be the one to break the news instead of himself.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Correct. Nothing new has actually been revealed before Oedipus turns to accusation; his own frustration at being refused is what escalates the scene, and that anger is exactly what provokes the truth he was not ready to hear." data-hint="Ask what evidence, if any, Oedipus has before he accuses Tiresias. Is his accusation a response to new information, or to being refused an answer?">
+                <div class="widget-row-prompt">2. Oedipus accuses Tiresias of disloyalty and involvement in the murder.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Oedipus is simply following standard procedure for questioning a reluctant witness.</button>
+                    <button data-choice="1">Oedipus already suspects the truth and is testing Tiresias with a false accusation.</button>
+                    <button data-choice="2">Oedipus is protecting Creon from suspicion by directing anger at Tiresias instead.</button>
+                    <button data-choice="3">Oedipus&rsquo;s own anger, not new evidence, is what provokes the accusation he says he fears.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Faced with an accusation he cannot accept on its own terms, Oedipus reaches for a conspiracy explanation instead of examining the evidence directly. Watch for this same move again with Creon next week." data-hint="Ask whether Oedipus engages with what Tiresias actually said, or looks for someone else to blame for saying it.">
+                <div class="widget-row-prompt">3. Oedipus asks whether this is &ldquo;a plot of Creon.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">He looks for someone to blame rather than weigh the accusation itself.</button>
+                    <button data-choice="1">He is genuinely convinced of Creon&rsquo;s innocence and is only asking out of formality.</button>
+                    <button data-choice="2">He is trying to protect Tiresias from Creon&rsquo;s influence.</button>
+                    <button data-choice="3">He has already privately accepted that he himself might be guilty.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. The play does not need Tiresias to say the name. Letting the audience assemble the answer from the riddle&rsquo;s details, son and husband to the same woman, killer of his own father, is exactly the technique that keeps the irony alive." data-hint="Consider what the riddle&rsquo;s details actually describe (son and husband to the same woman, killer of his own father), and ask what effect withholding the name has on an audience that already suspects the truth.">
+                <div class="widget-row-prompt">4. Tiresias&rsquo;s exit prophecy never says Oedipus&rsquo;s name outright.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Tiresias has grown too cautious to name him directly, having just been threatened.</button>
+                    <button data-choice="1">The riddle actually describes someone else in the royal household, not Oedipus.</button>
+                    <button data-choice="2">The play lets the details point unmistakably at Oedipus without stating his name outright, letting the audience assemble the answer itself.</button>
+                    <button data-choice="3">Sophocles intends the riddle to remain permanently unsolved within the play.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note one moment of sight/blindness irony in your Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record the line and a short note on what it reveals. You will draw on this in your Evidence Bank later this week.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 2.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will look at how the chorus, the ordinary citizens of Thebes, reacts to what it has just heard.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A blind man tells a seeing king that the king is the one who cannot see, and the king answers by looking for someone else to blame. That is the whole engine of this scene, and it is the engine of the rest of the play. Carry the phrase &ldquo;thou the accursed polluter of this land&rdquo; with you into tomorrow&rsquo;s lesson, where you will look at the people who have to decide, for now, whether to believe it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; The Blind Man Who Sees</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

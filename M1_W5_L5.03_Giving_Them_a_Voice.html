@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook summary { cursor: pointer; list-style: none; }
+    details.notebook summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 5.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Voice &amp; dialogue</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 5</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Giving Them a Voice</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A character does not have to be described as clever or crude. Give them the right words to say, and the reader figures it out.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This week you have watched Odysseus become the narrator of his own story, and you have heard Polyphemus, Aeolus, and Circe each speak in their own way. Today you study how the specific words a character says, and the way they say them, reveal who that character is, without a narrator ever needing to explain it. Then you try it yourself, before Quick Write 5 asks you to do it for real.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify what a line of dialogue reveals about a character&rsquo;s state of mind or personality, beyond its literal meaning.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> draft dialogue for my own characters that reveals who they are through word choice, rather than through direct explanation.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document to draft in.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Ten quiet minutes to draft a short exchange of your own.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT DIALOGUE CAN DO THAT DESCRIPTION CANNOT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Compare two ways of introducing the same character. A writer can simply state a trait: &ldquo;She was suspicious of strangers.&rdquo; Or a writer can let the character speak, and trust the reader to notice the suspicion for themselves. The second method almost always lands harder, because a reader who figures something out feels smarter and more involved than a reader who is simply told. Dialogue works this way whenever the words a character chooses, the questions they ask or refuse to ask, and even what they leave unsaid, do the characterizing instead of the narrator.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Study the worked example below. It was written for this lesson, not lifted from any published book, so you can take it apart freely.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated original worked example, shown-example -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE, ANNOTATED</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.7; font-style: italic;">
+                <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">&ldquo;You&rsquo;re not from the harbor,&rdquo; the woman said, not looking up from her nets. &ldquo;I know everyone who works these docks, and you&rsquo;re not one of them.&rdquo;</span><br /><br />
+                &ldquo;I could be new,&rdquo; he said.<br /><br />
+                <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">&ldquo;You could be.&rdquo; She still hadn&rsquo;t looked at him. &ldquo;But new men ask where to find work. You asked where to find the harbor-master&rsquo;s house. That&rsquo;s a different question.&rdquo;</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">CONTROL, NOT DESCRIPTION</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Her clipped, declarative lines and her refusal to look up show a woman entirely in control of the conversation. No sentence ever says &ldquo;she was suspicious,&rdquo; yet the suspicion is obvious.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">THE DETAIL THAT GIVES HIM AWAY</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">She never accuses him of anything. She simply repeats his own question back to him, and lets the reader notice what it reveals: he is not who he claims to be.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Notice that nobody in this exchange announces what they are feeling. Every clue comes from the specific words chosen and the specific words withheld. That is the target for your own dialogue: let word choice do the work a label would otherwise have to do.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Think of two characters in a moment of tension: one who is hiding something, and one who is starting to suspect it. It does not need to relate to the Odyssey. Pick a scene you can hear clearly in your head.</p>
+
+        <details class="notebook" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; line-height: 1.6;"><strong>&#9997;&#65039; In your notebook, write four to six lines of dialogue between your two characters, in which neither says exactly what they mean, but a reader can tell what each one is really thinking.</strong> Do this now, before you open this box to see one more worked example.</summary>
+            <div style="margin-top: 14px; font-size: 17px; color: #1a2340; line-height: 1.65;">
+                <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">ONE MORE EXAMPLE, FOR COMPARISON</div>
+                <p style="margin: 0 0 8px 0; font-style: italic;">&ldquo;Long trip?&rdquo; the guard asked, eyes on the bag more than the face.<br />&ldquo;Not too long,&rdquo; Dae said.<br />&ldquo;Funny. Most people answer that with a number.&rdquo;</p>
+                <p style="margin: 0;">Compare it to your own draft. Does any line of your dialogue give away more than the character intends? Does a reader get to notice the tension themselves, or does a stray line explain it outright? If your dialogue explains too much, try cutting the explanatory line and trusting the exchange itself.</p>
+            </div>
+        </details>
+
+        <!-- evaluative widget: dialogue reveals character, from this week's reading -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE VOICE REVEAL?</div>
+            <div class="widget-question">For each line of dialogue from this week&rsquo;s reading, choose what it most reveals about the speaker.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The line is delivered almost casually, as if savoring a meal in progress. That crudeness, promising to save a captive &lsquo;for the last&rsquo; the way one saves a favorite bite, is what makes the cruelty and contempt for his guests unmistakable." data-hint="Listen to the tone of the line itself, not just its content. What kind of speaker announces a plan like this out loud, and why?">
+                <div class="widget-row-prompt">1. Polyphemus: &ldquo;Then I will eat all Noman&rsquo;s comrades before Noman himself, and will keep Noman for the last.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals crude cruelty, a captor who treats a captive&rsquo;s death as a small pleasure to save for later.</button>
+                    <button data-choice="1">It reveals careful diplomacy, since Polyphemus is offering the guest he favors most a small comfort.</button>
+                    <button data-choice="2">It reveals that Polyphemus intends &ldquo;last&rdquo; as a reward for Noman&rsquo;s cleverness in naming himself.</button>
+                    <button data-choice="3">It reveals that Polyphemus has already guessed Odysseus&rsquo;s real identity and is toying with him knowingly.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. The line is calm, specific, and delivered without hesitation, not the sound of panic. It is a lie built for a purpose it will not pay off until later, when the other Cyclopes hear the name and dismiss the cry for help." data-hint="Listen to how the line is delivered: hesitant and scattered, or calm and specific? And consider what this lie is actually for, beyond this single moment.">
+                <div class="widget-row-prompt">2. Odysseus: &ldquo;My name is Noman; this is what my father and mother and my friends have always called me.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals panic, a lie blurted out with no real plan behind it.</button>
+                    <button data-choice="1">It reveals that Odysseus has adopted a nickname his own family actually uses, so no real deception is happening.</button>
+                    <button data-choice="2">It reveals calm, quick-thinking cunning, a lie built with a purpose that will not pay off until later.</button>
+                    <button data-choice="3">It reveals that Odysseus trusts Polyphemus and believes he means no real harm.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The danger has already passed; nothing requires this line. It reveals pride reaching for personal credit at the exact moment restraint would have cost him nothing." data-hint="Ask whether Odysseus is still in any real danger when he says this. If the danger has already passed, what is this line actually accomplishing for him?">
+                <div class="widget-row-prompt">3. Odysseus, from the ship: &ldquo;say it was the valiant warrior Odysseus, son of Laertes, who lives in Ithaca.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals continued fear, a final act of defiance to mask how frightened Odysseus still is.</button>
+                    <button data-choice="1">It reveals pride, a need to claim personal credit even though the danger has already passed.</button>
+                    <button data-choice="2">It reveals that Odysseus wants to warn other sailors away from this stretch of coastline.</button>
+                    <button data-choice="3">It reveals that Odysseus has forgotten the Nobody trick ever worked in the first place.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 5.GV, then Quick Write 5.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next you will learn how to punctuate the dialogue you just practiced writing, and then use both skills together in Quick Write 5.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A character&rsquo;s voice is one of the most efficient tools a writer has: the right words, spoken at the right moment, can reveal more than a paragraph of description. Carry your practice dialogue with you into Quick Write 5, where you will give your own Bard&rsquo;s Hall characters a voice of their own.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.03 &middot; Giving Them a Voice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 3.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 3.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 3.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Subordination for reasoning</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from this week&rsquo;s reading</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Subordination for Reasoning</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 3</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Certain small words make the logic of an argument visible on the page: because, although, since, if&hellip;then.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A sentence that simply states two facts side by side leaves the reader to guess how they connect. A sentence that joins them with the right subordinating word shows the connection outright: which fact is the reason, which is the result, and which is a concession you are willing to grant. This is the single most useful sentence-level tool for the brief you will eventually write, so today&rsquo;s practice matters more than it might look.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use because, although, since, and if&hellip;then clauses to connect a piece of evidence to a claim.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; MAKING REASONING VISIBLE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>subordinate clause</strong> has a subject and a verb, like any clause, but it cannot stand alone; it depends on a main clause to complete its thought. When that subordinate clause opens with a word like <em>because</em>, <em>although</em>, <em>since</em>, or an <em>if&hellip;then</em> pair, it does more than add information. It names the exact relationship between two ideas: cause, concession, or condition. Compare a flat pair of sentences to the same content joined by a reasoning word, using facts from this week&rsquo;s reading.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences about the play -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; MAKING THE CONNECTION VISIBLE</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 18px; color: #B9C3DE; line-height: 1.7;">Creon already shares in every benefit of royal power. Creon has no motive to seize the throne.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Flat: two true statements, side by side. The reader has to guess that the first explains the second.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="border-bottom: 2px solid #55C8E8;">Because</span> Creon already shares in every benefit of royal power, <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">he has no motive</span> to seize the throne.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Because names the first idea as the reason for the second. The logic is now on the page, not left for the reader to supply.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="border-bottom: 2px solid #55C8E8;">Although</span> Jocasta means her story as comfort, <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">it terrifies Oedipus instead</span>.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Although grants one fact (her intention) while pointing to a contrasting result. It is how a writer acknowledges something true without letting it undercut the main point.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="border-bottom: 2px solid #55C8E8;">If</span> the herdsman remembers robbers, plural, <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">then Oedipus cannot be the killer</span>, since he acted alone.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">If&hellip;then states a condition and its consequence. Notice the sentence also chains in since for a second reason, layering the logic further.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that these words are not interchangeable. <em>Because</em> and <em>since</em> both give a reason, but <em>although</em> concedes a point before pivoting away from it, and <em>if&hellip;then</em> states a condition rather than a settled fact. Choosing the right one is part of reasoning honestly: do not dress up a concession as a cause, or a mere possibility as a certainty.</p>
+
+        <!-- evaluative widget: identify the relationship named by the clause -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT RELATIONSHIP DOES THE CLAUSE NAME?</div>
+            <div class="widget-question">For each sentence, choose the relationship the subordinating word signals.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Since here gives the reason Oedipus fled: to escape the prophecy." data-hint="Does the underlined clause give a reason, grant a contrasting point, or state a condition?">
+                <div class="widget-row-prompt">1. &ldquo;Since Apollo prophesied he would kill his father, Oedipus fled Corinth.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">A concession (although-type)</button>
+                    <button data-choice="1">A reason (because/since-type)</button>
+                    <button data-choice="2">A condition (if&hellip;then-type)</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. Although grants that Oedipus is genuinely troubled while still pointing toward his refusal to accept blame." data-hint="Look for the word that grants one fact while pointing toward a contrasting one.">
+                <div class="widget-row-prompt">2. &ldquo;Although Oedipus is visibly shaken by Jocasta&rsquo;s story, he still insists on hearing the herdsman before drawing any conclusion.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">A reason (because/since-type)</button>
+                    <button data-choice="1">A condition (if&hellip;then-type)</button>
+                    <button data-choice="2">A concession (although-type)</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Correct grammar does not guarantee sound reasoning. This sentence assumes what it is trying to prove, that Oedipus is guilty, and then uses that assumption as the reason for the same conclusion. A real argument needs a reason that does not already depend on the claim being true." data-hint="Grammar and logic are different tests. The clause is grammatically fine; ask instead whether the reason it gives is actually independent evidence, or whether it just restates the conclusion in different words.">
+                <div class="widget-row-prompt">3. A student drafts: &ldquo;Oedipus must be guilty because he is the kind of man who would do something like this.&rdquo; What is the problem with this reasoning clause, even though it uses &lsquo;because&rsquo; correctly?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Nothing; because always signals a valid reason as long as the grammar is correct.</button>
+                    <button data-choice="1">The clause is circular: it assumes Oedipus is guilty (the kind of man who would do this) in order to prove that he is guilty, without offering any actual evidence.</button>
+                    <button data-choice="2">The clause is a concession, not a reason, so it should use although instead of because.</button>
+                    <button data-choice="3">The clause states a condition rather than a settled fact, so it should use if&hellip;then instead.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in this week&rsquo;s scenes: the Creon quarrel, Jocasta&rsquo;s oracle story, and Oedipus&rsquo;s Corinth story. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>probity</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; honesty and strong moral principle</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon appeals to his own probity, known and trusted by all, as part of his case that he has no reason to lie about his innocence.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>oath</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a solemn promise, often calling on something sacred to guarantee its truth</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon offers an oath as further backing for his claim of innocence, a formal way of raising the stakes on his own word.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>venomous</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; full of spite or malice; bitterly hostile</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus accuses Creon of venomous hate with no evidence attached, the exact move you learned in Lesson 3.01 to watch for and avoid in your own writing.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>roisterer</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a loud, rowdy reveler, especially one who has been drinking</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The drunken guest who first taunts Oedipus about his parentage at the Corinthian banquet, setting the whole chain of events toward Delphi in motion.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>prophesied</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb, past tense of prophesy) &mdash; foretold what would happen, especially through divine or supernatural knowledge</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">What the Delphic oracle did when Oedipus sought a simple answer about his parents and instead received a terrible warning about his future.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>herdsman</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person who tends a herd of livestock</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The sole surviving witness to the attack on Laius, now the one person whose memory could confirm or clear Oedipus.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Quick Write 11 is where these tools get tested for real. As you draft, use <strong>at least two</strong> reasoning clauses (because, although, since, or if&hellip;then) to connect your evidence to your claim, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Because, although, since, and if&hellip;then are small words carrying a great deal of weight: they are how a writer shows a reader the shape of their thinking instead of leaving it hidden between two separate sentences. Carry two of them, and two Word Study words, into Quick Write 11.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.GV &middot; Subordination for Reasoning</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

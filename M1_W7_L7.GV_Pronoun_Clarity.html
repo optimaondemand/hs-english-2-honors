@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 7.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Pronoun clarity &amp; agreement</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from Books 13&ndash;16</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Pronoun Clarity</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 7</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A story about disguise and mistaken identity is exactly the kind of story where a careless pronoun can confuse a reader.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This week two men, a father and a son, stand in the same small hut, and a scene built on recognition and confusion only works if the reader always knows exactly who &ldquo;he&rdquo; means. That is a useful accident: it is also exactly when your own writing is most likely to lose a reader with an unclear pronoun. This lesson gives you a quick test for catching that problem, plus this week&rsquo;s Word Study words, both of which you will use in Quick Write 7.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> find the exact word or phrase a pronoun refers back to, and revise a sentence where that reference is unclear.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHO DOES &ldquo;HE&rdquo; MEAN?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A pronoun like <em>he</em>, <em>she</em>, <em>they</em>, or <em>it</em> stands in for a noun that came before it, called its <strong>antecedent</strong>. A pronoun is only doing its job if a reader can point to exactly one word it refers back to. The moment a sentence has two people it could reasonably mean, the pronoun stops communicating and starts confusing. A separate but related problem is <strong>agreement</strong>: a pronoun has to match its antecedent in number, one for one and many for many, or the sentence quietly stops making sense even when the reference itself is clear.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Compare the sentences below, all describing this week&rsquo;s reunion between father and son. The <span style="color:#3B4E8C;"><strong>unclear or mismatched pronoun</strong></span> is marked in the first line of each pair, and the <span style="color:#C7922C;"><strong>fix</strong></span> in the second.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences (unclear vs clear pronoun) -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; CLEAR OR UNCLEAR?</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Odysseus greeted Telemachus warmly, and <span style="border-bottom: 2px solid #3B4E8C; padding: 0 2px;">he</span> could hardly believe his eyes.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Unclear: both Odysseus and Telemachus are men in this sentence, so &ldquo;he&rdquo; could technically point to either one. A first-time reader has to guess.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Odysseus greeted Telemachus warmly, and <span style="border-bottom: 2px solid #C7922C; padding: 0 2px;">the young man</span> could hardly believe his eyes.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Clear: naming &ldquo;the young man&rdquo; instead of repeating a pronoun removes the guesswork entirely. This is often the simplest fix of all: name the person again.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Every one of the suitors made <span style="border-bottom: 2px solid #3B4E8C; padding: 0 2px;">their</span> excuse to Penelope.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Mismatched: &ldquo;every one&rdquo; is singular, so it needs a singular pronoun to agree with it, not a plural one.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">Every one of the suitors made <span style="border-bottom: 2px solid #C7922C; padding: 0 2px;">his</span> excuse to Penelope.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Agrees: singular antecedent, singular pronoun. If you want to avoid assuming gender, you can also rewrite the whole sentence in the plural: &ldquo;All of the suitors made their excuses to Penelope.&rdquo;</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fastest test: read the sentence and ask, <em>could this pronoun honestly point to more than one noun I have already named?</em> If yes, either rename the person or restructure the sentence so only one reading is possible.</p>
+
+        <!-- evaluative widget: rigor rule, subtle pronoun traps (reference + agreement). Correct indices 1,0,1 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; CORRECT, OR NEEDS REVISION?</div>
+            <div class="widget-question">Each sentence has a pronoun worth checking closely. Some look suspicious but are actually fine; some read smoothly but hide a real problem. Decide whether each is correct as written or needs revision, and be ready to say why.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. &lsquo;His&rsquo; can grammatically point to either man just named, and nothing in the sentence signals which household is meant. Naming the noun again, &lsquo;Odysseus&rsquo;s own household,&rsquo; removes the guesswork." data-hint="Tempting, because the sentence reads smoothly and most readers would guess Odysseus&rsquo;s household from context. But smooth is not the same as clear: check whether the pronoun could honestly point to the other man in the sentence too.">
+                <div class="widget-row-prompt">1. &ldquo;Odysseus asked Eumaeus whether he could trust his own household.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Correct as written</button>
+                    <button data-choice="1">Needs revision</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Even though two people are named, &lsquo;she&rsquo; can only mean Penelope; Telemachus is not a candidate no matter how the sentence is read. Two names in a sentence do not automatically make a pronoun unclear; check whether more than one of them actually fits." data-hint="It is a fair instinct to flag any sentence with two people in it, but check the pronoun itself: does &lsquo;she&rsquo; grammatically fit both Telemachus and Penelope, or only one of them?">
+                <div class="widget-row-prompt">2. &ldquo;Telemachus told Penelope that she should wait a little longer before the suitors grew bolder.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Correct as written</button>
+                    <button data-choice="1">Needs revision</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. &lsquo;Neither&rsquo; is singular, so it needs a singular pronoun to agree with it: &lsquo;he was afraid,&rsquo; not &lsquo;they were afraid.&rsquo; To avoid assuming gender, you can also rewrite the whole sentence in the plural: &lsquo;None of the suitors would admit they were afraid.&rsquo;" data-hint="This kind of mismatch is easy to miss because &lsquo;they&rsquo; sounds natural in speech. Check the antecedent itself: is &lsquo;neither&rsquo; one person or more than one?">
+                <div class="widget-row-prompt">3. &ldquo;Neither of the suitors would admit that they were afraid of Telemachus&rsquo;s new resolve.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Correct as written</button>
+                    <button data-choice="1">Needs revision</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in Books 13 through 16. Learn the sense the poem gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>wrinkles</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; creases or folds, especially in skin, that come with age</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Part of the exact disguise Athena gives Odysseus in Book 13, covering him with wrinkles so no one will know his true age or face.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>begrimed</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; dirtied or blackened, especially with soot or smoke</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Describes the ragged tunic Athena puts on Odysseus in Book 13. The same word later describes a household grown neglected, as if dirt itself can mark what has gone wrong in Odysseus&rsquo;s absence.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>tramp</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person who wanders from place to place, often assumed to beg or lie</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The word Eumaeus uses in Book 14 for wandering strangers whose stories he distrusts, not realizing the very man he is sheltering is no tramp at all.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>ambuscade</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; an ambush; an attack launched from a hidden position</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Used in Book 14 for a surprise attack, and the exact danger Athena warns Telemachus to sail around in Book 15, the suitors lying in wait along the strait.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>imposing</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; impressive in size, appearance, or presence</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Describes Odysseus in Book 16 the instant Athena restores him, making him &ldquo;of more imposing presence&rdquo; right before Telemachus&rsquo;s eyes.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>lawless</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; having no respect for law or rightful authority</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Odysseus&rsquo;s own word for the suitors in Book 16, spoken the moment he reveals his identity to his son and names exactly what has been done to his household.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">As you draft Quick Write 7, run the pronoun test on every sentence with more than one person in it: could &ldquo;he,&rdquo; &ldquo;she,&rdquo; or &ldquo;they&rdquo; honestly point to more than one character you have named? If so, rename or restructure until only one reading is possible. Also work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A scene about disguise and recognition only works if the reader never loses track of who is who. Carry the pronoun test and two Word Study words with you into Quick Write 7.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.GV &middot; Pronoun Clarity</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

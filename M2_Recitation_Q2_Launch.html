@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Recitation Q2: Launch</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Recitation Q2 &middot; Launch</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Task</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Recitation Launch</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Recitation Q2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The City Finds Its Voice</div>
+        <div style="font-size: 16px; color: #1a2340;">Launch &middot; ungraded practice Weeks 5&ndash;7 &middot; recording due Week 8</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">&ldquo;A blight is on our harvest in the ear&hellip;&rdquo;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have already heard Thebes speak in one voice, through its priest, laying the city&rsquo;s suffering at Oedipus&rsquo;s feet. Before this module ends, you will hear the city speak in one voice again, through its chorus, at the very close of the play. Both moments are civic speech: not one citizen&rsquo;s private complaint, but a whole community putting its fear, its grief, or its judgment into words. An advocate&rsquo;s voice is trained the same way a bard&rsquo;s memory is trained, by carrying something worth saying until it can be delivered without notes. This week you choose one of those two civic voices to carry in memory, practice it through Week 7, and record it in Week 8. The habit you build here, holding language in memory and delivering it with real weight, is the same habit your closing argument in the Trial of Oedipus will call on.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a civic voice, speaking for a whole community, calls for careful, memorized delivery.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose one passage from a provided menu and begin memorizing it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use a memorization and delivery routine built for verse, keeping it through Week 7.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A quiet space where you can practice speaking aloud.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, to note which passage you choose and how your practice is going.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Nothing else. Both passages are provided in full below.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHY A CIVIC VOICE, AND WHY MEMORIZED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A recitation is the memorization and spoken delivery of a short passage: no notes, no script, no page to glance at, just language you have learned well enough to say aloud in your own voice. Both passages on this week&rsquo;s menu are spoken by a group standing in for the whole city of Thebes, not by a single character pleading a private case. When a text speaks for everyone, an advocate learns something from carrying it: how to make one voice sound like it holds the weight of a whole community&rsquo;s fear, or its grief, or its judgment.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This connects directly to your module project. The Trial of Oedipus asks you to deliver a closing argument in Week 9, standing before the Council the way an advocate stands before a bench. The recitation is your rehearsal for that same delivery, using the play&rsquo;s own civic speech first, so that the discipline of memorized, paced, meaningful delivery is already familiar when the words are finally your own.</p>
+
+        <!-- historical context (indigo box) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In the Athenian theater where Sophocles&rsquo;s plays were performed, the chorus spoke and sang as one body, often standing in for the ordinary citizens watching from the seats around them. Their lines were composed in verse and delivered from memory, in unison, to an audience who understood civic speech, formal, shared, and spoken aloud, as a normal part of public life, not just a feature of the stage.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR PASSAGE MENU (CHOOSE ONE)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Read both passages below aloud once before you decide. Notice which one feels natural in your mouth and voice.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: the passage menu, annotated -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 10px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px; letter-spacing: 0.4px;">&#128220; PASSAGE MENU</div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 18px; margin-bottom: 14px; border-top: 3px solid #3B4E8C;">
+                <div style="font-size: 14px; color: #3B4E8C; margin-bottom: 8px;"><strong>OPTION A &middot; THE PRIEST&rsquo;S PLEA</strong></div>
+                <div style="font-size: 19px; color: #0e1c42; line-height: 1.7; font-style: italic; margin-bottom: 6px;">&ldquo;A blight is on our harvest in the ear,<br />A blight upon the grazing flocks and herds,<br />A blight on wives in travail; and withal<br />Armed with his blazing torch the God of Plague<br />Hath swooped upon our city&hellip;&rdquo;</div>
+                <div style="font-size: 12px; color: #1a2340; margin-bottom: 10px;">trans. F. Storr, public domain</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Why choose this one: it is the play&rsquo;s opening cry, the city itself speaking through its priest, naming disaster after disaster before it ever names a cause. Short lines, heavy weight.</div>
+            </div>
+
+            <div style="background: #FDF3E3; border-radius: 8px; padding: 16px 18px; border-top: 3px solid #C7922C;">
+                <div style="font-size: 14px; color: #7A5A17; margin-bottom: 8px;"><strong>OPTION B &middot; THE CLOSING CHORUS</strong></div>
+                <div style="font-size: 19px; color: #0e1c42; line-height: 1.7; font-style: italic; margin-bottom: 6px;">&ldquo;Look ye, countrymen and Thebans, this is Oedipus the great,<br />He who knew the Sphinx&rsquo;s riddle and was mightiest in our state.<br />Who of all our townsmen gazed not on his fame with envious eyes?<br />Now, in what a sea of troubles sunk and overwhelmed he lies!<br />Therefore wait to see life&rsquo;s ending ere thou count one mortal blest;<br />Wait till free from pain and sorrow he has gained his final rest.&rdquo;</div>
+                <div style="font-size: 12px; color: #1a2340; margin-bottom: 10px;">trans. F. Storr, public domain</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Why choose this one: it is the play&rsquo;s final words, the whole city drawing the lesson of what it has just watched. A warning delivered to everyone still listening, including you.</div>
+            </div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">You do not need to decide alone right now. Say each one aloud once. Whichever passage you can already say without stumbling is probably your passage.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HOW TO PRACTICE VERSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">You have several weeks of ungraded practice before the recording is due. Both passages are verse this quarter, not the prose you recited in Module 1, so let the line breaks do some of the work for you. Here is a routine that fits:</p>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Memorize in chunks.</strong> Break your passage where the lines themselves break, mastering two or three lines at a time before linking them to the next.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Always say it aloud.</strong> Reading it silently will not build the same memory that speaking it out loud will.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Let the line break teach you the breath.</strong> A verse line often ends where a speaker would naturally pause to take a breath. Take a small pause at the end of each line, even where there is no comma, and your pacing will start to sound like the verse itself, not like flattened prose.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Eyes up.</strong> Each time you practice, try to look up from the page a little longer than the time before. By Week 8, you should not need it at all.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Let your voice carry the meaning.</strong> The priest&rsquo;s plea is a plea, urgent and mounting. The closing chorus is a warning, delivered after the worst has already happened. Decide what your passage is doing, then let your pace and emphasis show it, the same skill your closing argument will ask of you in Week 9.</div>
+        </div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Which passage are you leaning toward right now, and why? (No wrong answer, just check in with yourself before practice begins.)</div>
+            <div class="widget-options">
+                <button data-response="A strong choice if you like the drive of a rising complaint. Practice letting each line add weight to the one before it, so &lsquo;a blight&hellip;a blight&hellip;a blight&rsquo; builds instead of just repeating.">&#128220; The priest&rsquo;s plea, the city&rsquo;s opening cry</button>
+                <button data-response="A strong choice if you like the gravity of a final judgment. Practice slowing down on the last two lines, since a warning delivered at the very end of a story should not rush past the ears that need to hear it.">&#127917; The closing chorus, the city&rsquo;s last word</button>
+                <button data-response="That is fine. Say both passages aloud once, today, before you decide. Whichever one you can already deliver without stumbling is probably your passage.">&#129300; I am not sure yet</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Choose your passage this week.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note your choice in your Module 2 Organizer and begin memorizing your first chunk.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Practice through Weeks 5&ndash;7.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This is ungraded, no separate assignment page. Just use the routine above until you can say your full passage without notes.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Record and submit in Week 8.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Full directions, the rubric, and the due date are on the Recitation Q2 Submission page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">An advocate&rsquo;s voice is trained the same way a bard&rsquo;s memory is trained: by carrying language worth saying until it can be delivered without notes, at the right pace, with the right weight. Choose your passage, start today, and give yourself the next several weeks to make it truly yours before you ever stand to give your own closing argument.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Recitation Q2 &middot; The City Finds Its Voice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

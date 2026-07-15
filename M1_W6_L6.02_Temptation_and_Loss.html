@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 6.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 6.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 6.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Temptation and Loss</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 6</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Three dangers in one book, and only one of them is survived by everyone.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Book 12 puts three temptations in front of Odysseus and his men: a song no one can resist, a strait with no safe way through, and a herd of sacred cattle guarded by nothing but a warning. The first two, Odysseus survives through discipline and a hard calculation. The third destroys everyone but him. Watch closely what separates the danger a leader can manage from the one that gets away from him entirely.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Odysseus survives the Sirens and the strait between Scylla and Charybdis.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe why the crew kills the cattle of Helios despite Tiresias&rsquo;s warning, and what happens as a result.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> compare the different kinds of stakes at work across the Sirens, Scylla and Charybdis, and the cattle of Helios.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 12</strong> in your copy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer, with Tiresias&rsquo;s warning from Lesson 6.01 nearby.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SONG NO ONE CAN RESIST</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Circe warns Odysseus about the Sirens before he ever hears them: any sailor who listens to their song is drawn to his death. She also gives him a way to hear it anyway and live:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;You may get the men to bind you as you stand upright on a cross piece half way up the mast, and they must lash the rope&rsquo;s ends to the mast itself.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Circe, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus does exactly this, and his crew stops their own ears with wax so they cannot hear the song at all. When the Sirens do sing, notice what they promise. It is not treasure or pleasure. It is knowledge:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Come here,&rdquo; they sang, &ldquo;renowned Odysseus, honour to the Achaean name, and listen to our two voices.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">The Sirens, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is worth pausing on. A tempter who offers gold or comfort would be easy for a hero like Odysseus to refuse. The Sirens instead offer him the thing he actually wants most: to be known, praised, and told everything, which is precisely why Circe&rsquo;s plan requires restraint by force, not by willpower alone. Even bound, Odysseus strains against the ropes and begs to be released. The temptation is real even when it is survived.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A CHOICE WITH NO GOOD OPTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next danger is a narrow strait with a monster on each side: Scylla, a six-headed creature who seizes sailors from the deck, and Charybdis, a whirlpool that can swallow the entire ship. Circe gives Odysseus a hard, unsentimental piece of leadership advice: there is no route through that avoids loss entirely, so choose the smaller one.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;You had better lose six men than your whole crew.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Circe, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus follows this advice, and it costs exactly what Circe predicted:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Scylla pounced down suddenly upon us and snatched up my six best men.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Odysseus, trans. Samuel Butler, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled comparison diagram, palette tokens -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#127963;&#65039; TWO KINDS OF STAKES IN BOOK 12</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C;"><strong>The Sirens and the strait</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">A known danger, a plan made in advance, and a leader who accepts an unavoidable loss to protect the group as a whole. Painful, but managed.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #C7922C;">
+                    <div style="font-size: 15px; color: #7A5A17;"><strong>The cattle of Helios (Part 3)</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">A warning already given, ignored under pressure, that ends in total loss rather than a managed one. Watch how differently this one unfolds.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Six lives lost to Scylla is a real cost, and the poem does not soften it. But it is a cost accepted with open eyes, chosen to prevent a far worse one. Keep that distinction in mind heading into Part 3, where the crew faces a similar kind of pressure and responds very differently.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE CATTLE OF HELIOS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bad weather traps the ship at Thrinacia, the island where the Sun-god Helios keeps his sacred cattle, exactly the danger Tiresias named back in Book 11. Odysseus makes the crew swear an oath not to touch them, then falls asleep. Provisions run out. Days pass. Eventually one of the men, starving, persuades the others that hunger is worse than any risk:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Listen to me, my poor comrades. All deaths are bad enough, but there is none so bad as famine.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">A crew member, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The crew slaughters the cattle while Odysseus sleeps. When he wakes, the oath is already broken. The consequence Tiresias forewarned arrives almost immediately, once the ship puts back out to sea:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then Zeus let fly with his thunderbolts, and the ship went round and round, and was filled with fire and brimstone as the lightning struck it.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every man on the ship dies except Odysseus, who clings to wreckage and drifts alone. This is the turning point the whole poem has been building toward since Tiresias spoke: a warning that was specific, timed, and already known was set aside under pressure, and the cost was total. Compare this to Scylla in Part 2. There, a leader accepted a smaller loss to prevent a larger one. Here, an entire crew traded a known future risk for immediate relief, and lost everything.</p>
+
+        <!-- evaluative widget: weigh competing readings across the three trials -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES EACH TRIAL ACTUALLY SHOW?</div>
+            <div class="widget-question">Each question offers four readings of a moment from Book 12. More than one will sound reasonable; choose the one the text best supports.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. What the Sirens offer, to be known, praised, and told everything, is genuine enough that even a disciplined hero cannot simply refuse it by will. That is exactly why Circe&rsquo;s plan removes the choice physically rather than trusting Odysseus to resist it on his own." data-hint="Ask why Circe&rsquo;s plan relies on ropes and wax rather than simply telling Odysseus to be strong. What does that design choice suggest about the temptation itself?">
+                <div class="widget-row-prompt">1. Circe&rsquo;s plan to survive the Sirens relies on ropes for Odysseus and wax for the crew, not on willpower alone. What does this detail suggest about the nature of the temptation?</div>
+                <div class="widget-options">
+                    <button data-choice="0">That the Sirens&rsquo; offer is genuine enough that even a disciplined hero cannot simply resist it by will; the danger has to be physically removed as an option.</button>
+                    <button data-choice="1">That Odysseus does not trust his own men to resist temptation, so he binds only himself as an example.</button>
+                    <button data-choice="2">That Circe considers Odysseus too weak-willed to be trusted with any temptation at all.</button>
+                    <button data-choice="3">That ancient sailors commonly used ropes as standard safety equipment, regardless of any specific danger.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Circe frames the strait as a place with no route that avoids loss entirely. Following her advice means choosing the smaller, deliberate cost with open eyes, not being careless with lives or repeating an earlier mistake." data-hint="Consider what options Circe actually says are available in this strait. Is there a version of this choice where no one dies at all?">
+                <div class="widget-row-prompt">2. Circe advises accepting the loss of six men to Scylla rather than risking the whole crew to Charybdis, and Odysseus follows this advice. What does that choice reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">That Odysseus is indifferent to the lives of individual sailors as long as the larger mission succeeds.</button>
+                    <button data-choice="1">That Odysseus has learned nothing from the deaths at the Laestrygonians, since men die under his command again here.</button>
+                    <button data-choice="2">That some choices in this book offer no way to avoid loss entirely, only a chance to choose the smaller one with open eyes.</button>
+                    <button data-choice="3">That Scylla is actually the weaker of the two monsters in every respect, so the choice carries little real risk.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The poem frames Thrinacia as a danger already named and specifically warned against in Book 11. Acting on hunger here is a choice made against that knowledge, not an absence of choice, which is what makes the thunderbolt read as consequence rather than as disproportionate punishment." data-hint="Reread how this lesson frames the warning from Lesson 6.01. Does the poem present the crew as having no real alternative, or as choosing to set aside something they already knew?">
+                <div class="widget-row-prompt">3. The crew kills the cattle of Helios only after days without food, having sworn an oath not to touch them. Does hunger make their choice less blameworthy?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Yes, hunger removes any real choice, so the crew&rsquo;s death by Zeus&rsquo;s thunderbolt is simply an unjust, disproportionate punishment.</button>
+                    <button data-choice="1">No, the poem frames the danger as a warning already known and specifically named in advance, so acting on hunger is a choice made against that knowledge.</button>
+                    <button data-choice="2">No, because the starvation was actually just an excuse; the crew never intended to honor the oath at all.</button>
+                    <button data-choice="3">Yes, since the poem explicitly states that extreme hunger overrides any responsibility for breaking an oath.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Book 12 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note in your Module 1 Organizer which of the three dangers you found most avoidable, and why.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 6.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn how to build your own story toward a moment where the most is at risk, the skill behind Quick Write 6.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Book 12 lines up three temptations and lets them play out with real, differing consequences. A song resisted by force. A loss accepted deliberately to prevent a worse one. And a warning broken under pressure, which costs everything. The poem does not treat these as equally tragic. It treats them as a lesson in exactly where a leader&rsquo;s control ends and a crew&rsquo;s own choices begin.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.02 &middot; Temptation and Loss</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

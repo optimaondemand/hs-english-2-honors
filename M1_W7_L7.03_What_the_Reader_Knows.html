@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook summary { cursor: pointer; list-style: none; }
+    details.notebook summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 7.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Dramatic irony &amp; recognition</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 7</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What the Reader Knows</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 7 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You have spent this week reading with information the suitors do not have. Now build that same gap into your own story.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This week&rsquo;s reading gave you something rare: a poem that lets you know a secret its own characters do not know. That gap between what a reader knows and what a character knows is one of the oldest and most reliable tools a storyteller has. This lesson breaks the tool down into its parts, shows you a worked example, and asks you to try it yourself before you draft Quick Write 7.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the three ingredients a scene needs to create a gap between what the reader knows and what a character knows.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> draft a short scene of my own that lets the reader in on something a character in the scene does not know.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document to draft in.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Bard&rsquo;s Hall draft so far, since you will look for a scene in it to revise.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE INGREDIENTS FOR THE GAP</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Letting a reader know more than a character does is not a trick played on the reader; it is a gift given to them. Three things make the gift work. First, the reader has to be told a piece of information clearly, usually before the scene that matters begins, the way you were told in Book 15 that the suitors were planning an ambush. Second, a character in the scene has to be genuinely unaware of that same information, and has to act, speak, or make decisions as if it were not true. Third, the writer has to let the gap sit there without announcing it. You never write &ldquo;little did he know&rdquo; and explain the joke; you simply let the reader notice, on their own, that a character is walking toward something the reader can already see.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Study the worked example below. It was written for this lesson, not lifted from any published book, so you can take it apart freely.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated original worked example -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE, ANNOTATED</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">The letter Priya had hidden inside the lining of her coat had not moved in three days</span>, but Dominic kept talking as though nothing in the room could possibly know more than he did. <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">&ldquo;You can trust me completely,&rdquo; he said, refilling her cup before she had finished it.</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">THE READER IS TOLD FIRST</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">We learn about the hidden letter before Dominic speaks a single word, so we already know something is being concealed from him.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">THE CHARACTER ACTS UNAWARE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Dominic&rsquo;s confident line about trust reads completely differently to a reader who already knows what Priya is hiding. The irony comes from his own words, not from any narrator pointing it out.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Notice what the example does <em>not</em> do. It never adds a line like &ldquo;Dominic had no idea what she was hiding, which was funny, because&hellip;&rdquo; That kind of explaining flattens the effect. The version above trusts the reader to feel the gap without being told it exists.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Think of a moment in your own Bard&rsquo;s Hall story, or a brand-new moment if you prefer, where one character could plausibly not know something another character (or the reader) does know: a hidden identity, a secret plan, a danger just out of sight, a piece of news that has not reached them yet.</p>
+
+        <details class="notebook" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; line-height: 1.6;"><strong>&#9997;&#65039; In your notebook, write two to three sentences of a scene where the reader is told something clearly, and a character in the scene then speaks or acts as though it were not true.</strong> Do this now, before you open this box to see one more worked example.</summary>
+            <div style="margin-top: 14px; font-size: 17px; color: #1a2340; line-height: 1.65;">
+                <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">ONE MORE EXAMPLE, FOR COMPARISON</div>
+                <p style="margin: 0 0 8px 0; font-style: italic;">Malik&rsquo;s crew had already spotted the second ship trailing them at dusk. &ldquo;We&rsquo;re alone out here,&rdquo; Malik told the new recruit, checking the horizon in the one direction nothing was coming from.</p>
+                <p style="margin: 0;">Compare it to your own draft. Is there a fact stated plainly before the character speaks? Does the character&rsquo;s line or action only feel ironic because the reader already knows more? If your scene explains the irony out loud, try cutting the explanation and trusting the gap to speak for itself.</p>
+            </div>
+        </details>
+
+        <!-- evaluative widget: rigor rule (every option plausible; feedback teaches). Correct indices 0,1 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; IRONY OR JUST SUSPENSE?</div>
+            <div class="widget-question">Each setup could plausibly be read as either technique. Decide which the passage actually creates: dramatic irony (the reader has been given information a character does not have) or suspense (reader and character are finding out together).</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The reader has already been shown the letter on the table; Mia has not seen it yet. Her cheerful plans land as irony precisely because you know something concrete that she does not, not merely because the scene feels tense." data-hint="This scene may feel suspenseful because you sense bad news coming, but check what you were actually told. Has the reader already been shown a fact, in plain terms, that Mia has not seen?">
+                <div class="widget-row-prompt">1. A letter left open on the kitchen table reveals that Dad&rsquo;s promotion fell through last week. Mia gets home from school and launches straight into her plan for a celebration dinner that night.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Dramatic irony</button>
+                    <button data-choice="1">Suspense</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Correct. An ominous detail is not the same thing as reader knowledge. Both you and Mia notice the same odd sign at the same moment and have to guess what it means together, which is what makes this suspense rather than irony." data-hint="It is tempting to call any withheld fact irony, but ask specifically whether the READER has been given more information than Mia has here. An unexplained clue that both of you are puzzling over together is not the same as a fact only you have been shown.">
+                <div class="widget-row-prompt">2. Mia notices the light under her parents&rsquo; bedroom door is already off, though it is only eight o&rsquo;clock. She knocks once, waits, then eases the door open.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Dramatic irony</button>
+                    <button data-choice="1">Suspense</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 7 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Use the practice draft you just wrote, or revise an existing scene from your Bard&rsquo;s Hall tale, to build in this gap between reader and character. Full directions are on the Quick Write 7 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A gap between what the reader knows and what a character knows earns its power the same way a disguise does in this week&rsquo;s reading: by staying quiet about itself. Tell the reader the truth early, let the character act without it, and trust the distance between the two to do the work.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.03 &middot; What the Reader Knows</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

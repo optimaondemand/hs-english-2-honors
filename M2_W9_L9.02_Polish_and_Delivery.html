@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 9.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 9.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 9.02 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Final polish and oral delivery</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds the Trial of Oedipus final submission</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Polish and Delivery</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 9 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A brief that is nearly done is not the same as a brief that is finished. Today you close that last gap, on the page and out loud.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your full draft is written. This lesson has two jobs. First, a concrete final-proofread pass over your brief, the kind an advocate runs before ever walking into a real courtroom. Second, preparing that same brief to be spoken aloud as your recorded closing argument, since a page that reads well silently does not always land the same way out loud. Both feed directly into the Trial of Oedipus, your final submission this week.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply a final proofreading checklist built specifically for a formal brief.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify what separates a closing sentence that asks the Council for something specific from one that trails off, merely restates, or grandstands.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> rehearse the final sentence of my own closing argument so it actually lands when spoken aloud.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your full brief draft from Quick Write 16.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A quiet space where you can read your closing argument aloud to yourself.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE LAST PROOFREAD</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think about the last piece of writing you were genuinely proud of. What was the very last thing you checked before you called it finished? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Reading straight through catches flow problems a line-by-line check misses. Do that at least once with your brief today, start to finish, without stopping to fix anything yet.">&#128214; I read the whole thing straight through one more time</button>
+                <button data-response="Sources and citations are exactly the kind of detail a rushed final pass skips. The checklist below puts that check near the top on purpose.">&#128221; I double-checked a specific detail, like a name, date, or citation</button>
+                <button data-response="Hearing your own words is one of the most reliable proofreading tools there is, and it matters even more today, since your closing argument has to be heard, not just read.">&#128264; I read it out loud to catch anything that sounded off</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A formal brief has its own specific failure points, different from a personal essay or a narrative. Work through this checklist against your own full draft, in order:</p>
+
+        <!-- ONE MEANINGFUL VISUAL: the brief proofreading checklist -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#9997;&#65039; THE FINAL BRIEF CHECKLIST</div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;"><strong>Your verdict is named in the first paragraph, not buried later.</strong> A reader, or a Council member, should know your position and your standard of judgment before your second paragraph begins.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;"><strong>Every quote is actually analyzed, not just dropped in.</strong> Check each quotation you use: does a sentence of your own reasoning follow it, connecting it to your claim? A quote sitting alone proves nothing by itself.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;"><strong>Your counterclaim is answered, not mocked.</strong> Reread your Counterclaim section as if you agreed with it. Does your brief treat it as a real position deserving a real response, or does it quietly make the other side sound foolish?</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;"><strong>Citations are correct.</strong> Your play citation and your scholarly source citation both follow the MLA mechanics from Lesson 7&rsquo;s grammar lesson.</div></div>
+            <div class="checklist-item"><span style="color:#c7922c; font-size: 18px; flex-shrink: 0;">&#9744;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.55;"><strong>Your Works Cited is complete.</strong> The play and your one verified scholarly source both appear, formatted correctly, with nothing missing.</div></div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that four of these five items are not sentence-level correctness at all; a brief can be grammatically flawless and still fail every one of them. That is why this checklist comes before, not instead of, an ordinary proofread for spelling and punctuation.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND A FINAL PASS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can catch a misplaced comma or a dropped word quickly, and there is nothing wrong with using it for that narrow job. What it cannot do is tell you whether your counterclaim section is treating the other side fairly, or whether a specific quote is doing real analytical work versus just sitting on the page. Those checks require rereading your own argument as a skeptical reader would, which is a job only you can do.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FROM THE PAGE TO THE COUNCIL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your closing argument is the spoken version of your brief&rsquo;s conclusion, not a full rereading of the whole document. Three things change when your writing has to be delivered aloud instead of read silently. First, setup: begin by naming your verdict again, clearly, in your first sentence, the way you would if a listener had missed your written brief entirely. Second, pacing: a listener cannot reread a sentence the way a reader can, so slow down at your most important piece of evidence and let a short pause sit before you move on. Third, and most important, the final sentence: it is the last thing the Council hears, and it has to do real work, not just end the noise.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">A strong final sentence asks the Council for something specific: a verdict, a reason to act on it, or both. Watch four options for the same closing argument below, and notice which one actually does that.</p>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 10px 0 10px 0;">
+            <div style="font-size: 13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom: 6px;">OPTION 1</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">&ldquo;So in the end, there is a lot to think about here, and I hope you will consider everything I have said before you decide what happens next.&rdquo;</p>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 0 0 10px 0;">
+            <div style="font-size: 13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom: 6px;">OPTION 2</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">&ldquo;Let this trial echo through the ages as the moment justice finally looked tyranny in the eye and refused to blink, for Thebes, for truth, for all mankind!&rdquo;</p>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 0 0 10px 0;">
+            <div style="font-size: 13px; color:#C7922C; letter-spacing:0.3px; margin-bottom: 6px;">OPTION 3</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">&ldquo;Therefore, Council of Thebes, I ask you to affirm what Oedipus already carried out on himself: banishment, not as further cruelty, but as the one sentence that finally matches a crime no ordinary court was built to weigh.&rdquo;</p>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; margin: 0 0 14px 0;">
+            <div style="font-size: 13px; color:#3B4E8C; letter-spacing:0.3px; margin-bottom: 6px;">OPTION 4</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.6; font-style: italic; margin: 0;">&ldquo;In conclusion, Oedipus killed his father and married his mother, and that is why I believe the deed-standard is the right one to use in this case.&rdquo;</p>
+        </div>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; cursor: pointer;"><strong>Try it yourself first, in your notebook:</strong> write your own final sentence for your closing argument before you open this box to compare.</summary>
+            <div style="margin-top: 12px; font-size: 16px; color: #1a2340; line-height: 1.6;">Compare your sentence to Option 3 above. Does it name a specific verdict and ask the Council to act on it, the way Option 3 asks for affirmation of a specific sentence? If your sentence mostly restates a fact you already argued, trails off into a vague hope, or reaches for grand language without asking for anything concrete, revise it now, before you rehearse it aloud.</div>
+        </details>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH FINAL SENTENCE ACTUALLY WORKS?</div>
+            <div class="widget-question">Which of the four final sentences above genuinely asks the Council for something specific, rather than trailing off, merely restating an already-argued fact, or grandstanding?</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Option 3 names an exact verdict, banishment, and a specific reason tied to the standard argued all module: an ordinary court was never built to weigh this crime. A Council member hearing it knows exactly what they are being asked to do." data-hint="Reread each option and ask, specifically, what action or decision it is actually requesting from the Council. Grand language and a restated fact are not the same as a concrete ask.">
+                <div class="widget-row-prompt">Which final sentence actually asks the Council for something specific?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Option 1, because it invites the Council to weigh everything fairly before deciding.</button>
+                    <button data-choice="1">Option 3, because it names an exact verdict and the precise reason the Council should affirm it.</button>
+                    <button data-choice="2">Option 2, because its language is the most forceful and memorable of the four.</button>
+                    <button data-choice="3">Option 4, because it restates the two central facts of the case one final time for clarity.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 4px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE FALL SHORT</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>Option 1</strong> trails off: &ldquo;consider everything I have said&rdquo; asks for nothing in particular and could close almost any argument on any topic.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>Option 2</strong> grandstands: the language is loud, but it never names a verdict or gives the Council a concrete reason to rule one way over another.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>Option 4</strong> merely restates: it repeats facts already established earlier in the brief instead of using the closing moment to make one final, specific request.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Once your own final sentence names something specific, rehearse it out loud, alone, at least three times. Say it slower than feels natural the first time. Let a short silence sit after it before you stop recording. That pause is doing real work: it is what tells a listener the sentence they just heard was the point of everything that came before it.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Apply the full brief checklist, then rehearse your closing argument aloud at least three times.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Time yourself once, and check that your final sentence is the one you actually want a Council to remember.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to VR Activity 9.01, The Tribunal.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will deliver this rehearsed closing argument for real. Submit your finished brief and closing argument through the Trial of Oedipus project page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A verdict named up front, quotes that actually argue, a counterclaim answered instead of mocked, and citations that hold up: that is a finished brief. A final sentence that asks for something specific, spoken slowly enough to land: that is a finished closing argument. You have both now. Deliver them.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 9.02 &middot; Polish and Delivery</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

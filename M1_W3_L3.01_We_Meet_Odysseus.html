@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 3.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 3.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 3.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">We Meet Odysseus</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 3</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Four books of gods, sons, and searching, and only now does the poem finally show us the man it is named for.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Homer named his hero in the very first line of the poem, then made you wait four full books to actually meet him. Today that wait ends. In Book 5 you finally see Odysseus, trapped on a goddess&rsquo;s island, offered a life that never ends, and choosing something else entirely. By the end of the book he has built a raft with his own hands, lost it to a furious sea, and washed up alone on an unknown shore. This is your first real look at what kind of hero this poem has been building toward.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Homer delays introducing his hero until Book 5, and what effect the delay creates.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what Odysseus&rsquo;s choice to leave Calypso reveals about what he values.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the raft, the storm, and the shipwreck that end Book 5.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 5</strong> in your copy. See the &ldquo;How to Read the Odyssey&rdquo; page in this module for pacing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A HERO KEPT WAITING</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a story, show, or game where you had to wait a long time before the main character finally showed up in person. What did the wait make you feel by the time you actually met them? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Curiosity that has been allowed to build usually pays off. Watch whether meeting Odysseus in Book 5 feels worth the wait.">&#128064; More curious about who they really were</button>
+                <button data-response="A build-up can raise the stakes for a character before we even see them do anything. Notice how much we already know about Odysseus before he ever speaks in this poem.">&#128293; Like the character must be important</button>
+                <button data-response="Impatience is a real risk of delay, and a skilled storyteller has to earn the wait. Decide for yourself whether Homer earns his.">&#8987; A little impatient for them to finally arrive</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why wait four books?</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The poem&rsquo;s very first line calls its hero &ldquo;that ingenious hero,&rdquo; and every book since has circled around him without ever showing him to you directly. You have watched a household fall apart in his absence, and you have watched his son grow bold enough to go looking for him. Only now, in Book 5, does the poem finally turn its attention to the man himself. That delay is not an accident. By the time you meet Odysseus, you already know what is at stake in his absence: a wife under pressure, a son coming of age too fast, and a household in ruins. Meeting him now means meeting him as the answer to a problem you already understand.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">And where do we find him? Not in battle, not ruling a kingdom, but sitting alone on a beach, held on an island by a goddess named Calypso, weeping for a home he cannot reach.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ancient epic often opens with a council of the gods on Olympus, the way Book 5 does: Zeus, moved again by the goddess Athena&rsquo;s pleading on Odysseus&rsquo;s behalf, finally sends Hermes, the messenger of the gods, to order Calypso to let her captive go. An audience of the 700s BCE would have recognized this as the moment the plot truly starts moving: when the gods themselves intervene, mortal events are about to change.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE OFFER HE REFUSES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Hermes arrives, he finds Odysseus exactly where he has been for seven long years:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;He found him sitting upon the beach with his eyes ever filled with tears, and dying of sheer home sickness.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Calypso has kept him as a companion, and she is not eager to let him go. She reminds him of what he would be giving up: comfort, safety, and her offer to make him immortal, so that he would never grow old and never die. It is, on paper, the greatest reward a mortal could ever be handed. Odysseus turns it down anyway.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, what the choice reveals -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; READ THE CHOICE, NOT A LABEL</div>
+            <div style="font-size: 20px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">I want to get home, and can think of nothing else.</span> <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">If some god wrecks me when I am on the sea, I will bear it and make the best of it.</span>&rdquo;
+            </div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">trans. Samuel Butler, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">WHAT HE WANTS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Not comfort, not safety, not an endless life. Homecoming itself is the goal. The poem never has him explain why; it simply shows he cannot be talked out of it.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">WHAT HE ACCEPTS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">He knows the sea could kill him for this choice, and he accepts that risk anyway. Wanting to go home is not the same as being guaranteed a safe trip.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the moment the poem lets you see what kind of hero Odysseus actually is. He is not defined by strength in battle here. He is defined by what he refuses to trade his ordinary, mortal home for, even when the alternative is immortality itself.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE RAFT AND THE STORM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Calypso, bound by Zeus&rsquo;s order, helps Odysseus build a raft: she gives him tools, timber, and supplies, and he works for days, cutting and shaping the wood himself. He sets sail alone and survives seventeen days at sea. On the eighteenth day, land finally comes into view.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That is exactly when Poseidon, the sea god who still holds a grudge against Odysseus from earlier in his journey, notices him from a distance and decides he will not reach shore easily:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Poseidon sent a terrible great wave that seemed to rear itself above his head till it broke right over the raft, which then went to pieces.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus is thrown into the sea and swims for two days and nights before he finally reaches land, so exhausted by the end that he can barely move. He crawls under a pair of olive bushes grown together for shelter, covers himself with fallen leaves, and falls asleep without knowing what country he has washed up in. The hero we finally met at the start of this book, weeping for home, ends it stranded, alone, and utterly spent, on a shore he does not recognize.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND WHAT A CHOICE REVEALS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize the plot of Book 5 accurately: Odysseus is freed, refuses immortality, builds a raft, and is shipwrecked. What it will not do on its own is weigh why refusing immortality matters more than any single plot event in the book. That judgment about what a choice reveals is yours to make.</div>
+        </div>
+
+        <!-- evaluative widget: weigh competing READINGS (rigor rule). Correct indices 3,0,1. -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE MOMENT SHOW?</div>
+            <div class="widget-question">Each moment below has more than one plausible reading. Choose the one Book 5 best supports, and be ready to say why the others overreach or miss the mark.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Turning down an endless, painless life for an uncertain, dangerous voyage home is the clearest possible sign of what Odysseus actually values: not comfort or safety, but his own mortal home and identity." data-hint="Watch for readings that put a hidden motive in his mouth the text never gives him: doubt, fear, or holding out for something better. What does he actually say he wants, in his own words to Calypso?">
+                <div class="widget-row-prompt">1. Odysseus turns down Calypso&rsquo;s offer of immortality. What does this choice most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is afraid of upsetting the other gods by accepting.</button>
+                    <button data-choice="1">He secretly believes Calypso cannot really grant immortality.</button>
+                    <button data-choice="2">He is holding out for a better offer from another god.</button>
+                    <button data-choice="3">He values his mortal home and identity more than an endless, painless life.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Poseidon&rsquo;s anger goes back to an earlier offense from Odysseus&rsquo;s voyage, not anything that just happened. That a god&rsquo;s grudge can outlast years is itself something this world takes seriously." data-hint="Two traps here: treating this as a fresh punishment for something Odysseus just did, or as a test with conditions attached. What does the lesson tell you about when and why Poseidon&rsquo;s anger began?">
+                <div class="widget-row-prompt">2. Poseidon wrecks the raft just as land finally comes into view. What does this moment most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Poseidon is acting on an old grudge that time has not softened.</button>
+                    <button data-choice="1">Poseidon is testing whether Odysseus deserves to go home.</button>
+                    <button data-choice="2">Poseidon is punishing a fresh insult Odysseus has just committed.</button>
+                    <button data-choice="3">Poseidon is simply following orders from Zeus to test him.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The poem does not let the danger disappear the moment Odysseus makes the right choice. Wanting to go home and being guaranteed a safe trip are two different things, and this poem is careful to show both." data-hint="Watch for readings that treat this ordeal as proof the gods abandoned him or that his earlier choice was wrong. What does the poem actually show causing the storm, and does it undo the choice he made?">
+                <div class="widget-row-prompt">3. Odysseus swims for two days before finally reaching shore, exhausted. What does this moment most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">This proves the gods have turned against him completely.</button>
+                    <button data-choice="1">Wanting something and surviving the cost of getting it are two different things.</button>
+                    <button data-choice="2">He regrets leaving Calypso&rsquo;s island now that he faces this danger.</button>
+                    <button data-choice="3">The storm is a sign he made the wrong choice in Book 5.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Read Book 5 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">As you read, note one detail about Calypso&rsquo;s island and one about the shore Odysseus lands on. Record both in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 3.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will meet the people who find Odysseus and see how a very different kind of place is built on the page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The wait is over: Odysseus is finally on the page, and the poem shows him to us at his most exposed, weeping on a beach, refusing an easy immortality, and nearly drowned by a storm meant to punish him. Whatever comes next, you now know the one thing this hero will not trade away.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.01 &middot; We Meet Odysseus</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

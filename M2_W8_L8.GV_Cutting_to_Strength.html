@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 8.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 8.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 8.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Conciseness &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Cutting for strength, not just for length</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Cutting to Strength</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 8</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Cutting words is not the same as cutting meaning. Today you learn to tell them apart, on purpose.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A wordy sentence is not automatically a strong one, and a short sentence is not automatically weak. Conciseness is its own revision skill: finding the padding that adds nothing and removing it, while protecting every actual argument underneath. You will use this exact skill on your own Quick Write 16 draft this week, trimming it by ten percent without losing a single argument.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> cut redundant pairs, empty intensifiers, and nominalizations from formal prose.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell the difference between a cut that trims fat and a cut that removes part of the actual argument.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words, all drawn from a single ode in the play.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE KINDS OF PADDING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Formal writing tends to accumulate padding in three predictable places. Learn to spot all three, and cutting becomes a search-and-remove task instead of a guessing game.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Redundant pairs</strong> say the same thing twice: &ldquo;each and every,&rdquo; &ldquo;full and complete,&rdquo; &ldquo;first and foremost,&rdquo; &ldquo;due to the fact that&rdquo; (which just means &ldquo;because&rdquo;). <strong>Empty intensifiers</strong> claim strength without earning it: &ldquo;very,&rdquo; &ldquo;really,&rdquo; &ldquo;quite,&rdquo; &ldquo;honestly,&rdquo; &ldquo;clearly,&rdquo; &ldquo;basically.&rdquo; Cut them and reread the sentence; if nothing is lost, they were never doing real work. <strong>Nominalizations</strong> turn a strong verb into a weak noun propped up by a filler verb: &ldquo;make an argument&rdquo; instead of &ldquo;argue,&rdquo; &ldquo;conduct an analysis&rdquo; instead of &ldquo;analyze,&rdquo; &ldquo;reach a conclusion&rdquo; instead of &ldquo;conclude.&rdquo; The verb form is almost always shorter and stronger.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard, staged cutting -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; ONE SENTENCE, CUT TO STRENGTH IN STAGES</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 12px; color: #C7922C; margin-bottom: 4px;">STAGE 0 &middot; ORIGINAL (54 words)</div>
+                <div style="font-size: 17px; color: #ffffff; line-height: 1.65;">&ldquo;In my own personal opinion, I think that it is fairly obvious and quite clear that Oedipus, due to the fact that he made the decision to kill a man who happened to be his own father at a crossroads, should therefore ultimately be considered guilty of committing a serious and very grave crime against the city of Thebes and its innocent people.&rdquo;</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 12px; color: #C7922C; margin-bottom: 4px;">STAGE 1 &middot; CUT REDUNDANT PAIRS &amp; WORDY PHRASES (38 words)</div>
+                <div style="font-size: 17px; color: #ffffff; line-height: 1.65;">&ldquo;In my own personal opinion, I think that it is fairly obvious and quite clear that Oedipus, because he killed a man who happened to be his own father at a crossroads, should be considered guilty of committing a grave crime against the city of Thebes and its innocent people.&rdquo;</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 12px; color: #C7922C; margin-bottom: 4px;">STAGE 2 &middot; CUT EMPTY INTENSIFIERS &amp; HEDGES (26 words)</div>
+                <div style="font-size: 17px; color: #ffffff; line-height: 1.65;">&ldquo;Oedipus, because he killed a man who happened to be his father at a crossroads, should be considered guilty of committing a grave crime against Thebes.&rdquo;</div>
+            </div>
+
+            <div>
+                <div style="font-size: 12px; color: #C7922C; margin-bottom: 4px;">STAGE 3 &middot; CUT THE NOMINALIZATION, FINAL (14 words)</div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;">&ldquo;Oedipus is guilty of a grave crime against Thebes: he killed his own father at a crossroads.&rdquo;</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">Fifty-four words down to fourteen, and the claim, Oedipus killed his father and is guilty of a grave crime against Thebes, has not changed at all. Notice the colon doing the same job it learned to do back in Week 1: setting up the specific evidence.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A quick test for any cut: read the sentence before and after side by side. If a reader who saw only the &ldquo;after&rdquo; version could still state your exact claim, your evidence, and your reasoning, you cut fat. If any of those three is now missing or vaguer, you cut into the argument itself, and that is a different problem than wordiness.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH CUT LOSES MEANING?</div>
+            <div class="widget-question">Here is a bloated sentence from a draft brief: &ldquo;In my personal opinion, I honestly think that Creon clearly had no real motive to conspire with Tiresias, because he says himself that being king would actually take away his freedom rather than give him more power, which is a very important point that basically proves he is innocent.&rdquo; Below are four possible cuts. Three trim only fat. One actually removes part of the argument. Which one?</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. This cut removes the entire reason (that Creon says being king would cost him freedom rather than grant him power). A reader is left with a bare assertion, &lsquo;Creon had no motive,&rsquo; and no way to check it against the text. That is a cut into the argument itself, not a cut of fat." data-hint="Ask what a reader would still know after this cut: the claim, the reason, and the evidence, or only the claim by itself?">
+                <div class="widget-row-prompt">Which cut actually loses part of the argument, rather than only trimming fat?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Creon had no real motive to conspire with Tiresias, because he says himself that being king would take away his freedom rather than give him more power.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Creon had no motive to conspire.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Creon says being king would take away his freedom rather than give him more power, so he had no real motive to conspire with Tiresias.&rdquo;</button>
+                    <button data-choice="3">&ldquo;In my opinion, Creon clearly had no real motive to conspire with Tiresias, because he says himself that being king would take away his freedom.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 14px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE ARE ONLY FAT</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The first</strong> cuts every filler word and hedge but keeps the claim, the reason, and the evidence fully intact.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The third</strong> only reorders the same claim and reason; nothing is missing, just resequenced.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>The fourth</strong> still carries a little padding (&ldquo;in my opinion,&rdquo; &ldquo;clearly&rdquo;) but keeps the full reasoning, so it is an incomplete cut, not a harmful one.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">All six words below come from a single choral ode you have already read, the chorus&rsquo;s warning against insolence after the Tiresias confrontation. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>insolence</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; proud, contemptuous disregard for others or for what is rightfully owed to them</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The chorus names this, not ambition alone, as the actual root of the danger they fear: &ldquo;of insolence is bred the tyrant.&rdquo;</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>tyrant</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a ruler whose power is seized or held through excess and pride rather than earned through right</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The chorus warns that a tyrant, once he &ldquo;scales the precipitous height and grasps the throne,&rdquo; inevitably &ldquo;topples o&rsquo;er and lies in ruin prone.&rdquo; The play never names Oedipus this word directly; it leaves you to weigh whether it fits.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>reverence</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to show proper honor and respect toward the gods, the dead, or rightful authority</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The chorus condemns anyone who will &ldquo;not Justice heed, nor reverence the shrine of images divine.&rdquo;</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>profane</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; showing disrespect for what should be held sacred</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The chorus pictures a &ldquo;proud sinner&rdquo; who, &ldquo;urged by greed profane,&rdquo; lays &ldquo;an impious hand on holiest things.&rdquo;</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>blest</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective, an older form of &ldquo;blessed&rdquo;) &mdash; favored by fortune, free from suffering</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The closing Chorus, looking at Oedipus&rsquo;s fall, warns Thebans to &ldquo;wait to see life&rsquo;s ending ere thou count one mortal blest.&rdquo; Good fortune early in a life proves nothing about how it ends.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>unpurged</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; not cleansed of a defiling guilt or crime</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus himself warns that it would be &ldquo;a scandal&rdquo; to leave Laius&rsquo;s murder &ldquo;unpurged,&rdquo; unresolved and unanswered for, a line from his own curse speech in Week 1.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Before you write Quick Write 16, take your revised argument section from Lesson 8.01 and <strong>cut it by at least ten percent</strong> by word count, using the three moves from today: redundant pairs, empty intensifiers, and nominalizations. Every argument, every piece of cited evidence, and every reasoning sentence must still be present after the cut; if one disappears, you cut too far. Work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately, somewhere in your full draft. That is how this lesson gets assessed: not by a quiz, but by what is missing, and what remains, in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Fifty-four words or fourteen: the claim, the evidence, and the reasoning survived every stage of that cut, because none of them were ever the padding. Carry that same test, and two Word Study words, into your full draft.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.GV &middot; Cutting to Strength</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

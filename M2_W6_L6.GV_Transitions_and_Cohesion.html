@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 6.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 6.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 6.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Transitions &amp; cohesion</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from your own brief</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Transitions and Cohesion</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 6</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A transition word is a promise. &ldquo;Therefore&rdquo; promises a real consequence is coming. Broken promises read as logic even when they are not.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You just built a mini-brief and chose a standard of judgment. The last piece holding an argument together is the smallest one: the words that connect one sentence to the next. Today you learn to tell a transition that carries real logic from one that only sounds like it does, and you meet six more Word Study words attested in the play.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use transitions (therefore, however, moreover, by contrast) that match what the sentences around them actually do.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build cohesion across a paragraph by echoing key terms instead of switching vocabulary at random.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TRANSITIONS THAT PROMISE, AND TRANSITIONS THAT KEEP THE PROMISE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every transition word makes a small promise about the logical relationship between what comes before it and what comes after. <strong>Therefore</strong> promises: what follows is a real consequence of what I just said. <strong>However</strong> promises: what follows genuinely contrasts with what I just said. <strong>Moreover</strong> promises: what follows adds real, additional support to the same point. <strong>By contrast</strong> promises: what follows is a real, meaningful difference, not just a different topic. A transition fails, even when it is grammatically correct, the moment the sentence after it does not keep the promise the word just made. That failure is easy to miss, because the sentence still <em>sounds</em> logical. Readers, and readers who grade briefs, notice it anyway.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Cohesion</strong> is the related skill of making a paragraph feel like one continuous argument rather than several disconnected sentences. One reliable way to build it: keep echoing your key terms (your standard, your central claim&rsquo;s key word) instead of swapping in a new synonym every sentence just to sound varied. A reader should never have to work to figure out that &ldquo;the standard,&rdquo; &ldquo;the test,&rdquo; and &ldquo;the measure&rdquo; in three consecutive sentences are all supposed to mean the same thing.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard, same argument twice -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; THE SAME ARGUMENT, TWICE</div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C7922C; letter-spacing: 0.3px; margin-bottom: 8px;">FAKE CONNECTIVE TISSUE</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;">Oedipus fled Corinth to escape the prophecy. <span style="color:#C7922C; font-weight:bold;">However</span>, he killed a man at the crossroads. <span style="color:#C7922C; font-weight:bold;">Therefore</span>, Jocasta married her own son.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">Each transition sounds formal, but neither promise is kept. The second sentence is not really a contrast with the first; the third is not a consequence of the second. The logic is only decoration.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 8px;">REAL CONNECTIVE TISSUE</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;">Oedipus fled Corinth to escape the prophecy<span style="color:#3B4E8C; font-weight:bold;">; however,</span> the road he chose to escape it led him directly into the very crossroads the prophecy warned him about. He killed a stranger there in anger, not yet knowing the man was his father. <span style="color:#3B4E8C; font-weight:bold;">Therefore</span>, the same flight meant to prove his innocence became, without his knowledge, the first act of his guilt.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">Here &ldquo;however&rdquo; introduces a genuine contrast (his intention versus the outcome), and &ldquo;therefore&rdquo; introduces a genuine consequence that the previous sentence actually earns.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A quick test for any transition: cover it up and ask what relationship actually holds between the two sentences on either side. Then uncover the transition and ask whether it names that same relationship. If they do not match, the fix is almost never a fancier word; it is usually a plainer, more honest one, or a rewritten sentence that actually earns the one you wanted.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; DOES THE TRANSITION KEEP ITS PROMISE?</div>
+            <div class="widget-question">Each item below uses a transition that looks correctly placed. Check what relationship the sentences actually have before you decide.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The second sentence does not contrast with the first; it supports it, since relentless pursuit is exactly what someone who swore to find the truth would do next. &lsquo;Therefore&rsquo; or &lsquo;in fact&rsquo; would keep the real promise here; &lsquo;however&rsquo; sets up a contrast the sentence never delivers." data-hint="Cover the transition and ask what relationship actually holds between the two sentences. Does the second one genuinely contrast with the first, or does it confirm it?">
+                <div class="widget-row-prompt">1. &ldquo;Oedipus swore to find Laius&rsquo;s murderer with his own hands. However, he pursued the case relentlessly, even after Jocasta begged him to stop.&rdquo; Is &ldquo;however&rdquo; the right transition here?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Yes, because the two sentences are about different topics.</button>
+                    <button data-choice="1">Yes, because the second sentence is meant to surprise the reader.</button>
+                    <button data-choice="2">No, because the second sentence supports the first rather than contradicting it; a word like &lsquo;therefore&rsquo; would be more honest.</button>
+                    <button data-choice="3">No, because &lsquo;however&rsquo; can never be followed by a true statement.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. &lsquo;Moreover&rsquo; promises additional support for the same claim, an acquittal on intent. The plague evidence is real, but it actually supports the opposing, deed-based verdict, not this one; the transition promises addition and delivers a quiet contradiction instead." data-hint="Ask what claim the first sentence is making, and whether the second sentence actually adds support to that same claim, or supports a different, even opposing, claim instead.">
+                <div class="widget-row-prompt">2. A draft brief reads: &ldquo;Oedipus deserves acquittal on the standard of intent. Moreover, the plague devastated Thebes at every level of society.&rdquo; Why does &ldquo;moreover&rdquo; fail here, even though both sentences are true and well supported elsewhere in the play?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The second sentence does not add support to the acquittal claim; it actually supports the opposing, deed-based verdict, so &lsquo;moreover&rsquo; promises addition but delivers a contradiction.</button>
+                    <button data-choice="1">&ldquo;Moreover&rdquo; is too old-fashioned a word to appear in formal student writing.</button>
+                    <button data-choice="2">The sentence about the plague is not accurate to the play.</button>
+                    <button data-choice="3">Two sentences can never be connected by the word &ldquo;moreover&rdquo; in a formal brief.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">This is a reread week, so these six words are drawn from across the whole play, not just one scene. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>sentence</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun/verb) &mdash; a formal judgment or punishment handed down for wrongdoing</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus uses this exact word against himself: &ldquo;By my own sentence am cut off, condemned by my own proclamation &lsquo;gainst the wretch,&rdquo; realizing the curse he pronounced on Laius&rsquo;s killer now falls on him.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>judge</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to form and deliver an authoritative decision after weighing evidence</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon, defending himself against the conspiracy charge, tells Oedipus plainly: &ldquo;Then having heard me, judge,&rdquo; asking to be evaluated on his reasoning, not simply believed or dismissed.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>arraign</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to formally accuse someone before a judging authority</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The chorus uses this word as Tiresias is brought in: &ldquo;But here is one to arraign him,&rdquo; expecting the prophet to formally name Laius&rsquo;s killer.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>guilt</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; responsibility for a wrongdoing</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">In his opening curse, Oedipus extends his sentence to &ldquo;all the partners in his guilt,&rdquo; not realizing how directly the word will come to apply to himself.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>banishment</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; formal, forced exclusion from a community or land</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon reports the oracle&rsquo;s exact two options for the killer of Laius: &ldquo;Banishment, or the shedding blood for blood,&rdquo; setting the terms Oedipus will eventually apply to himself.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>expiation</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; an act that makes amends for wrongdoing or removes its stain</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus asks Creon directly, &ldquo;What expiation means he? What&rsquo;s amiss?&rdquo;, wanting to know exactly what the god requires to lift the plague.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Quick Write 14 is where these tools get tested for real. As you draft your thesis and outline, use <strong>at least two</strong> real logical transitions (therefore, however, moreover, or by contrast) that actually match what your sentences do, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A transition word is a promise about logic, not a decoration on top of it. Before you use therefore, however, moreover, or by contrast in Quick Write 14, check that the sentences on either side actually keep the promise the word makes.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.GV &middot; Transitions and Cohesion</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

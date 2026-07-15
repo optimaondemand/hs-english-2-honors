@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 1.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A City on Its Knees</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A city is dying by inches, and the man it trusts most just made a promise he cannot possibly keep safely.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read the opening scene itself: the priest&rsquo;s desperate plea, Creon&rsquo;s report from the oracle at Delphi, and Oedipus&rsquo;s own proclamation and curse. Warm-up first, in your notebook: before reading, jot one sentence answering this: <em>if you were responsible for a whole community and something was making everyone sick, what is the very first thing you would owe the people you led?</em> Keep that answer in mind as you watch what Oedipus actually does.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what the plague has done to Thebes, using the priest&rsquo;s own words.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Apollo&rsquo;s oracle, delivered through Creon, demands before the plague will lift.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the dramatic irony inside Oedipus&rsquo;s public curse on Laius&rsquo;s murderer.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week&rsquo;s reading is the opening scene: the priest&rsquo;s plea through Oedipus&rsquo;s proclamation and curse. Free online at <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg, trans. F. Storr</a>; key passages are also quoted directly below.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PRIEST&rsquo;S PLEA</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The play opens with a striking image: a crowd of suppliants, led by an old priest, sitting on the steps of the palace, holding olive branches wrapped in wool, a traditional sign of a plea to the gods or a powerful protector. Oedipus comes out to them directly, asking why they have gathered:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Why sit ye here as suppliants, in your hands branches of olive filleted with wool?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The priest answers with a description of the plague that is worth reading slowly, line by line. Notice how it moves from the fields, to the herds, to childbirth itself, growing more intimate and more devastating with each line:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;A blight is on our harvest in the ear, a blight upon the grazing flocks and herds, a blight on wives in travail; and withal armed with his blazing torch the God of Plague hath swooped upon our city emptying the house of Cadmus, and the murky realm of Pluto is full fed with groans and tears.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">The Priest, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read that progression again: crops fail, then livestock die, then women die in childbirth. The plague is not an abstract inconvenience. It is destroying Thebes at every level a community depends on to survive at all, and the dead are piling up faster than the city can mourn them. This is the community Oedipus steps out to address, and it is already, visibly, on its knees.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CREON&rsquo;S NEWS FROM DELPHI</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus has already anticipated the crisis. Before the priest even finishes speaking, he reveals that he has sent his brother-in-law, Creon, to consult the oracle at Delphi, the great shrine of the god Apollo, to ask how Thebes can be saved. Creon arrives with the god&rsquo;s answer, and it is specific and demanding:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;King Phoebus bids us straitly extirpate a fell pollution that infests the land, and no more harbor an inveterate sore.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Creon, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Pressed for detail, Creon explains what Apollo actually requires: the killer of Laius, the king who ruled Thebes before Oedipus, has never been found, and his unpunished murder has left a kind of stain on the whole city. Creon reports the god&rsquo;s command plainly:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;He fell; and now the god&rsquo;s command is plain: punish his takers-off, whoe&rsquo;er they be.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Creon, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">So the terms are set before Oedipus says a single word in response: find Laius&rsquo;s murderer, and drive him out or put him to death, and the plague will lift. It sounds, on its face, like an ordinary problem to solve. Read on, and you will see why it is anything but.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">To an ancient Greek audience, an unpunished murder was not just a private crime; it could bring <em>miasma</em>, a kind of religious pollution, down on an entire city, exactly as Creon describes here. That belief is why the whole community, not just Laius&rsquo;s family, suffers until the killer is found. The play assumes its audience already understood this connection between hidden guilt and collective disaster.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE PROCLAMATION AND THE CURSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus responds the way a good king should: immediately, publicly, and without hesitation. He issues a formal proclamation to the entire city, demanding that anyone with knowledge of the murder come forward:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;This proclamation I address to all: Thebans, if any knows the man by whom Laius, son of Labdacus, was slain&hellip;&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then he goes further than the oracle strictly required. He pronounces a solemn, sweeping curse on the murderer, whoever that person turns out to be, banning him from every comfort a citizen of Thebes could expect:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;And on the murderer this curse I lay (on him and all the partners in his guilt): wretch, may he pine in utter wretchedness! And for myself, if with my privity he gain admittance to my hearth, I pray the curse I laid on others fall on me.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read that last line again. Oedipus is so confident of his own innocence that he extends the curse to cover himself, in case he unknowingly harbors the killer. He also forbids any citizen from sheltering or even speaking to the murderer once found:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Let no man in this land, whereof I hold the sovereign rule, harbor or speak to him; give him no part in prayer or sacrifice or lustral rites, but hound him from your homes.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is where the play&rsquo;s central engine starts turning: <strong>dramatic irony</strong>, meaning the audience knows something the characters onstage do not. You already know, or will soon suspect, what Oedipus cannot: that the man he is cursing so thoroughly, and banishing from every home in Thebes, might be far closer to the throne than anyone in the scene imagines. Every word of that curse will mean something different the second time you read it, once you know how the story ends. That gap, between what Oedipus believes he is doing and what he is actually doing, is the terrible irony this whole module will keep asking you to weigh.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE OPENING ESTABLISH?</div>
+            <div class="widget-question">More than one option below will sound reasonable. Choose the reading the priest&rsquo;s plea, Creon&rsquo;s news, and Oedipus&rsquo;s proclamation best support, and be ready to say why the others fall short.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The description does not just list damage; it climbs in cost, ending on the most devastating loss, women dying in childbirth, to show the plague reaching every level Thebes depends on to survive at all." data-hint="Consider why the priest ends on childbirth rather than starting there. Reread the progression: crops, then herds, then women in labor. What effect does that order, specifically, have on a listener?">
+                <div class="widget-row-prompt">1. The priest describes the blight moving from crops, to herds, to women dying in childbirth, rather than simply saying &ldquo;there is a plague.&rdquo; What is the strongest reading of that progression?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It follows the order Thebans would have noticed the disaster themselves, so it is really a report of chronology, not rhetoric.</button>
+                    <button data-choice="1">It builds in intensity, from property, to livestock, to human life itself, to show the plague destroying the city at every level it depends on to survive.</button>
+                    <button data-choice="2">It shows the priest is more concerned with the economic loss of crops and herds than with the human cost.</button>
+                    <button data-choice="3">It is simply the traditional order suppliants used when addressing a king, a formal convention with no built-in emphasis.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Apollo&rsquo;s demand, as Creon reports it, is specific and personal: find Laius&rsquo;s murderer and drive him out or punish him. It is not a ritual gesture; it requires identifying an actual guilty person." data-hint="Reread Creon&rsquo;s exact words: &lsquo;punish his takers-off, whoe&rsquo;er they be.&rsquo; Is that a ritual demand, or a demand for a specific act against a specific person?">
+                <div class="widget-row-prompt">2. Apollo&rsquo;s oracle, delivered through Creon, could have simply told Thebes to make a sacrifice or perform a ritual. What does the oracle actually require instead?</div>
+                <div class="widget-options">
+                    <button data-choice="0">That the city identify and either exile or execute the specific person responsible for Laius&rsquo;s unpunished murder.</button>
+                    <button data-choice="1">That Oedipus personally travel to Delphi to receive the god&rsquo;s judgment in person.</button>
+                    <button data-choice="2">That the city offer an annual sacrifice to Apollo until the plague lifts on its own.</button>
+                    <button data-choice="3">That Thebes formally apologize to the spirit of the murdered king, Laius, in a public ceremony.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Dramatic irony means the audience knows something a character does not. Oedipus&rsquo;s confident self-inclusion in the curse means one thing to him, proof of his innocence, and something else entirely to an audience who suspects what he does not yet: that he may be the very man he is cursing." data-hint="Dramatic irony depends on a gap between what the audience knows and what a character believes. What does an audience already suspect about the identity of Laius&rsquo;s killer that Oedipus, in this scene, cannot yet see?">
+                <div class="widget-row-prompt">3. Oedipus curses Laius&rsquo;s murderer so thoroughly that he even extends the curse to cover himself, in case he unknowingly shelters the guilty man. Why is this moment an example of dramatic irony rather than simply confidence?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Because Oedipus does not actually believe curses have any real power, so the gesture is empty.</button>
+                    <button data-choice="1">Because Oedipus is unaware that Laius was ever a real king of Thebes.</button>
+                    <button data-choice="2">Because the audience already has reason to suspect that the man Oedipus is cursing, and banishing from his own hearth, may be far closer to the throne than Oedipus imagines.</button>
+                    <button data-choice="3">Because the priest never explained who Laius was before Oedipus issued the curse.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note one line from the curse in your Module 2 Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Write down why it strikes you now, before you know how the story unfolds further.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 1.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn what actually makes an argument, ahead of your first Quick Write for the Trial of Oedipus.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A city is dying, its king has already sent for the god&rsquo;s answer, and he responds by publicly vowing to find the killer, whoever he may be, and cursing him without mercy. Everything about Oedipus&rsquo;s response in this scene looks like exactly what a good king owes his suffering community. Keep that thought exactly as it is. You are going to need to test it, piece by piece, for the rest of this module.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.02 &middot; A City on Its Knees</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

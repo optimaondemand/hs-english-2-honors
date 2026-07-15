@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 5.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Whole Truth</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">One old man is dragged in against his will, and everything the play has been building toward arrives in a single scene.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have been collecting evidence for four weeks: Tiresias&rsquo;s riddle, Jocasta&rsquo;s account of the exposed child, Oedipus&rsquo;s own story of Corinth and the crossroads. This week the last witness is called, and he does not want to talk. Read (or reread) the scene at the link on this week&rsquo;s Module Map using the scene landmark &ldquo;the herdsman&rsquo;s testimony and the revelation,&rdquo; not a line number, before you continue.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the herdsman&rsquo;s interrogation: the summons, the refusal, the threat, and the confession.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate what testimony extracted under pressure does to its own reliability, the way an advocate must.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how every earlier clue converges in this one scene, and explain what Oedipus&rsquo;s cry reveals about him.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> (trans. F. Storr), the herdsman&rsquo;s testimony and the revelation. <a href="https://www.gutenberg.org/ebooks/31" target="_blank" rel="noopener" style="color:#3B4E8C;">Read it free at Project Gutenberg</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to the Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WITNESS WHO DOES NOT WANT TO SPEAK</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time you heard information that only came out because someone was pressured into giving it. Did you trust it the same way you would trust something offered freely? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That instinct is worth examining closely today. Pressure can produce a lie, but it can also finally break through someone&rsquo;s reasons for silence. Watch which one this scene actually shows.">&#129300; I trusted it less, since pressure can make people say what the questioner wants to hear</button>
+                <button data-response="That is also a real possibility, and it is exactly the question an advocate has to weigh today: does reluctance followed by confession make a witness more credible, or less?">&#128064; I trusted it about the same, since the person still had to know it in the first place</button>
+                <button data-response="Hold onto that reasoning. Today&rsquo;s scene gives you a concrete case to test it against: a witness who resists for a long time before finally speaking.">&#9878;&#65039; It depends entirely on why the person was resisting in the first place</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Brought in against his will</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The old herdsman is a servant from Laius&rsquo;s household, the one man left alive who handled the infant at the center of the whole mystery. He is not a willing witness. The Corinthian messenger, who once received that infant from him, recognizes him first:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;Corinthian, stranger, I address thee first, is this the man thou meanest?&rdquo;<br />MESSENGER: &ldquo;This is he.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus questions him directly, and the herdsman answers the easy part honestly enough. He admits he was a servant of Laius&rsquo;s house. But the moment the Corinthian reminds him of the child he once handed over, the herdsman stalls:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">MESSENGER: &ldquo;Well, thou must then remember giving me a child to rear as my own foster-son?&rdquo;<br />HERDSMAN: &ldquo;Why dost thou ask this question? What of that?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He is stalling, and everyone on stage can see it. An advocate reading closely should notice that stall for what it is: a man who knows exactly what is being asked and is buying time before he has to answer it.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FORCED INTO THE CONFESSION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus does not accept the stalling. He threatens the herdsman directly, and orders him seized:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;If thou lack&rsquo;st grace to speak, I&rsquo;ll loose thy tongue.&rdquo;<br />HERDSMAN: &ldquo;For mercy&rsquo;s sake abuse not an old man.&rdquo;<br />OEDIPUS: &ldquo;Arrest the villain, seize and pinion him!&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Only under that threat does the herdsman begin to admit the truth, and even then he does it in pieces, each one dragged out of him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">HERDSMAN: &ldquo;I did; and would that I had died that day!&rdquo;<br />OEDIPUS: &ldquo;And die thou shalt unless thou tell the truth.&rdquo;<br />HERDSMAN: &ldquo;Well then, it was a child of Laius&rsquo; house.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Pressed further on why the child was given away at all, the herdsman finally names the prophecy that started everything:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;What weird?&rdquo;<br />HERDSMAN: &ldquo;&rsquo;Twas told that he should slay his sire.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the phrase &ldquo;I did; and would that I had died that day.&rdquo; That is not the voice of a man inventing a story under pressure. It is the voice of a man who has clearly known this fact, and dreaded it, for years. That detail matters enormously for how you weigh what he says next.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: convergence diagram -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128269; WHERE EVERY THREAD MEETS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C;">WEEK 2</div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">Tiresias&rsquo;s riddle: a man who is &ldquo;son and husband both&rdquo; to the same woman.</div>
+                </div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C;">WEEK 3</div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">Jocasta&rsquo;s account: an infant, ankles pierced, given away to die on a mountainside.</div>
+                </div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C;">WEEK 4</div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">The Corinthian messenger: Oedipus was never really Polybus&rsquo;s son; he was given to Corinth as a foundling.</div>
+                </div>
+            </div>
+            <div style="text-align: center; color: #C7922C; font-size: 22px; margin-bottom: 12px;">&#8595;&nbsp;&#8595;&nbsp;&#8595;</div>
+            <div style="background: #0E1C42; border-radius: 6px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #55c8e8;">WEEK 5 &middot; THE HERDSMAN&rsquo;S CONFESSION</div>
+                <div style="font-size: 16px; color: #ffffff; line-height: 1.6;">The one witness who can confirm that the infant Laius ordered exposed and the foundling the Corinthian raised are the <strong>same child</strong>, and that the child is Oedipus. Three independent stories, none of which alone proved anything, lock together the moment he speaks.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is why the scene lands so hard. No single piece of evidence, on its own, would have convicted anyone. It is the convergence, three separate accounts confirming the exact same facts from three different angles, that removes any reasonable doubt.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; OEDIPUS&rsquo;S CRY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The moment the last piece falls into place, Oedipus does not argue, deny, or stall the way he has all play. He simply cries out:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Ah me! ah me! all brought to pass, all true! O light, may I behold thee nevermore! I stand a wretch, in birth, in wedlock cursed.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what is missing from this cry. There is no &ldquo;perhaps,&rdquo; no attempt to blame the herdsman for hiding it so long, no appeal to the fact that he acted in ignorance. &ldquo;All brought to pass, all true&rdquo; is total, immediate acceptance. Whatever verdict you argue in your brief, you will have to account for the fact that Oedipus convicts himself, completely, in this single line, before any court in Thebes ever gets the chance to weigh in.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND WITNESS RELIABILITY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize this scene accurately and even define what &ldquo;coerced testimony&rdquo; means in general. What it cannot do for you is weigh, specifically, whether this particular witness&rsquo;s reluctance makes his particular confession more or less believable. That judgment call, made against the actual details of the scene, is the reading skill this lesson is asking you to practice.</div>
+        </div>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WEIGHING THE TESTIMONY</div>
+            <div class="widget-question">For each question below, choose the reading the text best supports. A real advocate would have to weigh at least two options before choosing.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The herdsman spent the whole scene trying to avoid saying this. A witness with every reason to hide a fact and no apparent reason to invent it is generally more, not less, credible on that specific point, even though the manner of extracting it should still trouble you." data-hint="Consider what the herdsman had to gain by lying here, versus what he had to lose by telling the truth. Also consider whether &lsquo;forced&rsquo; and &lsquo;false&rsquo; are actually the same thing.">
+                <div class="widget-row-prompt">1. The herdsman only confesses after Oedipus threatens him with force. What does that do to the reliability of his testimony?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It makes the testimony worthless; a court should throw out any confession obtained under threat, no exceptions.</button>
+                    <button data-choice="1">It is more reliable, not less: he had every reason to hide it and none to invent it, since it incriminates people he protected for years.</button>
+                    <button data-choice="2">It does not matter either way; only whether the facts turn out to be true matters, not how they were obtained.</button>
+                    <button data-choice="3">It only matters if actual torture occurred; since Oedipus merely threatens, no reliability question is raised at all.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. The herdsman disobeyed his original order out of pity, giving the infant away to be raised rather than left to die. Confessing now means admitting he defied Laius&rsquo;s command, which is a much harder thing to say than simple cowardice would explain." data-hint="Look again at what the herdsman actually did with the infant years ago, and ask what confessing that would cost him now.">
+                <div class="widget-row-prompt">2. Why does the herdsman resist for so long before confessing?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Because Greek tragedy conventionally delays its climax as long as possible before the final revelation.</button>
+                    <button data-choice="1">Because he is simply a coward, unwilling to take responsibility for his own past choices.</button>
+                    <button data-choice="2">Because admitting the truth means admitting he disobeyed an order and showed the infant mercy, and undoing that mercy now feels unbearable.</button>
+                    <button data-choice="3">Because he fears Creon specifically will punish him once the truth becomes public.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. There is no hedging in the cry, no blame aimed outward, no appeal to his own ignorance. &lsquo;All brought to pass, all true&rsquo; is total and immediate acceptance of the whole truth, aimed entirely at himself." data-hint="Read the actual words of the cry again. Where is Oedipus&rsquo;s attention pointed: outward at someone else, or inward at himself?">
+                <div class="widget-row-prompt">3. What does Oedipus&rsquo;s cry reveal about him in this moment?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is already calculating how to manage the political fallout once the city learns the truth.</button>
+                    <button data-choice="1">He accepts the whole truth completely and immediately, without denial, bargaining, or blame aimed at anyone else.</button>
+                    <button data-choice="2">He is still partly hoping the herdsman has lied or is mistaken about the child&rsquo;s identity.</button>
+                    <button data-choice="3">He directs his anger at the herdsman for concealing the truth for so many years.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. Three independent accounts, Tiresias&rsquo;s riddle, Jocasta&rsquo;s story of the exposed child, and the Corinthian&rsquo;s story of the foundling, none of which alone proved anything, all lock into the same facts once the herdsman confirms them." data-hint="Ask what makes this scene different from every earlier near-miss: is it one dramatic new fact, or several old facts finally lining up?">
+                <div class="widget-row-prompt">4. Why does this scene, more than any earlier one, force the truth into the open?</div>
+                <div class="widget-options">
+                    <button data-choice="0">The herdsman is the one witness who can confirm that three separate, independent accounts all describe the same child.</button>
+                    <button data-choice="1">Jocasta openly admits the whole truth to Oedipus moments before the herdsman is even questioned.</button>
+                    <button data-choice="2">Tiresias returns to the stage to confirm his earlier accusation directly.</button>
+                    <button data-choice="3">Oedipus simply decides to stop investigating and accepts his guilt as a matter of faith.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add the herdsman&rsquo;s testimony to your Evidence Bank.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note the fact he confirms, and one sentence on how you weigh testimony that only came out under threat.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 5.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will read what happens after Oedipus rushes into the palace, and what the play does, and does not, show you directly.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Three witnesses who never spoke to each other tell the same story from three different angles, and a reluctant old man is the one who finally has to say it out loud. Carry the phrase &ldquo;all brought to pass, all true&rdquo; with you into tomorrow&rsquo;s lesson, where the play turns from revelation to consequence.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; The Whole Truth</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 Honors &mdash; Aristotle&rsquo;s Poetics on Tragedy</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2 HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Honors Enrichment &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Weeks 5&ndash;6</div>
+        <div style="font-size: 12px; color: #1a2340;">Honors Enrichment Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">read alongside Aristotle&rsquo;s Poetics</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Honors Enrichment</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Theory Built From This Play</div>
+        <div style="font-size: 16px; color: #1a2340;">Aristotle&rsquo;s <em>Poetics</em> on tragedy &middot; Weeks 5&ndash;6</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A century after Sophocles, an Athenian philosopher sat down to explain why tragedy works, and reached for this exact play as his proof.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have spent five weeks inside <em>Oedipus the King</em> building the evidence for your own verdict. Today you step outside the play and read the theory it inspired: Aristotle&rsquo;s <em>Poetics</em>, the earliest surviving work of Western literary criticism, written roughly a century after Sophocles staged this tragedy at the City Dionysia. Aristotle is not simply admiring the play. He is doing something closer to what you are already learning to do at the Designer&rsquo;s Table: taking a finished structure apart to ask what produces what effect, and why. Your job today is not to accept his theory as settled fact, but to test it, the way any careful reader tests a claim against the evidence.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state Aristotle&rsquo;s definition of tragedy and explain what he means by pity, fear, and the purgation of those emotions.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify reversal (peripeteia) and recognition (anagnorisis) in <em>Oedipus the King</em>, using Aristotle&rsquo;s own account of the play as his example.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh whether Aristotle&rsquo;s idea of the tragic error (hamartia) names a flaw in Oedipus&rsquo;s character or a mistake in his past action, and connect that judgment to the verdict I am building for the Trial.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The three passages from Aristotle&rsquo;s <em>Poetics</em> quoted directly on this page. The full public-domain text is free at <a href="https://www.gutenberg.org/ebooks/1974" target="_blank" rel="noopener" style="color:#3B4E8C;">Project Gutenberg</a> if you want more.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to your Trial Notes, since today&rsquo;s reading feeds directly into your verdict.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT ARISTOTLE SAYS TRAGEDY DOES</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a story, film, or play that left you genuinely shaken, not just sad. What do you think it was doing to you as you watched or read it? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That sense of release after intensity is close to what Aristotle is describing today. Hold onto that feeling as you read his definition.">&#128167; It felt like something built up and then let go</button>
+                <button data-response="Fearing for a character, and pitying them, are the exact two emotions Aristotle names as the engine of tragedy. Keep watching for both as you read.">&#128064; I felt afraid for the character, and sorry for them, at the same time</button>
+                <button data-response="That kind of reflection, carried out of the story and into your own thinking, is part of what Aristotle claims tragedy is for. See if his explanation matches your experience.">&#129504; It made me think differently about something in my own life afterward</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A definition built to be tested</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle wrote the <em>Poetics</em> in Athens in the fourth century B.C., roughly a hundred years after Sophocles staged <em>Oedipus the King</em> for the same city. By his time, Athenian tragedy already had a century of practice behind it, and Aristotle set out to explain, as a matter of craft, what a tragedy actually is and why it affects an audience the way it does. Here is his definition, in full:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Tragedy, then, is an imitation of an action that is serious, complete, and of a certain magnitude; in language embellished with each kind of artistic ornament, the several kinds being found in separate parts of the play; in the form of action, not of narrative; through pity and fear effecting the proper purgation of these emotions.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Unpack that sentence piece by piece. Tragedy imitates an <strong>action</strong>, meaning something that happens, performed rather than narrated. That action arouses <strong>pity</strong>, a feeling for a person suffering something they do not deserve, and <strong>fear</strong>, a feeling that the same thing could happen to anyone, including you. The effect Aristotle names for these two emotions is <strong>purgation</strong> (sometimes translated <em>catharsis</em>): the play does not simply make you feel pity and fear and leave them sitting there. It works those emotions through something, and releases them, so an audience leaves changed rather than merely upset.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Athenians experienced tragedy communally, at a civic religious festival, in an outdoor theater holding thousands of citizens at once. Aristotle is not describing private reading. He is describing what happens when a whole city watches the same catastrophe unfold together, in daylight, as an official act of public life.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE TURN AND THE DISCOVERY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle names two structural moves he considers essential to the best tragedies, and for both of them, he reaches for the same example: this play. The first is <strong>reversal</strong> (peripeteia), a moment where the action turns and produces the opposite of what was intended:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Reversal of the Situation is a change by which the action veers round to its opposite, subject always to our rule of probability or necessity.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle names the exact scene he means:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Thus in the Oedipus, the messenger comes to cheer Oedipus and free him from his alarms about his mother, but by revealing who he is, he produces the opposite effect.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second move is <strong>recognition</strong> (anagnorisis), a shift from not knowing to knowing:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Recognition, as the name indicates, is a change from ignorance to knowledge, producing love or hate between the persons destined by the poet for good or bad fortune.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle considers this play the best possible model precisely because both moves happen at once, in the same scene:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;The best form of recognition is coincident with a Reversal of the Situation, as in the Oedipus.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: same-scene convergence diagram -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128269; ONE SCENE, TWO MOVES AT ONCE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 14px;">
+                <div style="flex: 1; min-width: 230px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.3px;">REVERSAL (PERIPETEIA)</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The Corinthian messenger arrives meaning to bring relief: Polybus, the man Oedipus believed was his father, is dead of natural causes, so the old prophecy cannot touch him through that line. The news is meant to cheer him. It does the opposite.</div>
+                </div>
+                <div style="flex: 1; min-width: 230px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.3px;">RECOGNITION (ANAGNORISIS)</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">In trying to reassure him, the messenger reveals that Oedipus was never Polybus&rsquo;s son by blood at all, a foundling handed off years before. That single fact is what sets up the herdsman&rsquo;s forced confession and the full recognition still to come.</div>
+                </div>
+            </div>
+            <div style="background: #0E1C42; border-radius: 6px; padding: 16px 18px;">
+                <div style="font-size: 12px; color: #55c8e8;">WHY ARISTOTLE CALLS THIS THE STRONGEST FORM</div>
+                <div style="font-size: 16px; color: #ffffff; line-height: 1.6;">A play could reveal the truth in one scene and let the situation turn in another. This play does both in a single conversation, so the audience learns the truth at the exact same instant the hope of escaping it collapses. That doubling is what Aristotle is pointing to when he calls this the model case.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Compare Aristotle&rsquo;s account to your own reading of the herdsman scene from Week 5, where every earlier clue converges and Oedipus cries &ldquo;all brought to pass, all true.&rdquo; Notice that Aristotle is describing the same structural hinge you already identified on your own, weeks before you ever opened his book. That is worth sitting with for a moment: are you confirming his theory, or is his theory simply naming something Sophocles built and any careful reader would eventually notice regardless?</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE TRAGIC ERROR, AND YOUR VERDICT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle also has a theory of what makes a protagonist tragic rather than merely unfortunate. He rejects two extremes: a purely good person brought low (which he calls simply shocking, not tragic) and a purely wicked person brought low (which he says arouses no pity at all). Between them he places the figure he thinks makes tragedy actually work:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;There remains, then, the character between these two extremes,&mdash;that of a man who is not eminently good and just,&mdash;yet whose misfortune is brought about not by vice or depravity, but by some error or frailty.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Greek word behind &ldquo;error or frailty&rdquo; is <strong>hamartia</strong>, and Aristotle names his model case directly:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;He must be one who is highly renowned and prosperous,&mdash;a personage like Oedipus, Thyestes, or other illustrious men of such families.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Aristotle, <em>Poetics</em>, trans. S. H. Butcher, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that Aristotle never actually specifies, in the passage above, whether hamartia names a <strong>flaw in Oedipus&rsquo;s character</strong>, something like a temper or an overconfidence in his own reasoning, or a <strong>mistake in a specific past action</strong>, the literal act of striking a stranger at a crossroads without knowing who he was. Scholars have argued over this distinction for centuries, and the play itself gives you evidence for both readings: Oedipus&rsquo;s rage at Tiresias and at the herdsman looks like a trait; the killing at the crossroads looks like a single, isolated act, committed in ignorance of who his victim was.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CONTESTED TERMS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can define hamartia accurately and even summarize the scholarly debate over whether it means a character flaw or a mistaken act. What it cannot do for you is decide which reading your own verdict in the Trial of Oedipus actually depends on. That judgment has to come from your own argument, not from a definition, however accurate.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is not an idle question for your brief. If hamartia names a flaw in Oedipus&rsquo;s character, that supports a verdict built on intent: a man whose temper and pride made him dangerous, whatever the law says about the specific killing. If hamartia names a single mistaken act, committed in total ignorance, that supports a verdict built on innocence of intent, whatever the pollution his presence still brings to the city. Whichever standard of judgment you have been building toward, your reading of hamartia is already quietly inside it.</p>
+
+        <!-- Bridge to game track -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127918; FOR THE DESIGNER&rsquo;S TABLE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Notice what Aristotle is actually doing across this whole chapter. He is not just admiring the play; he is taking apart a finished structure to ask what specific choice produces what specific effect on an audience, and naming the moving parts so another maker could use them deliberately. That is the same move you are learning to make in your own design rationale: naming which of your mechanics produces which effect on a player, and arguing for it with evidence. Aristotle is doing design analysis on a play the way you are learning to do it on a game.</div>
+        </div>
+
+        <!-- evaluative widget: RIGOR RULE -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; TESTING ARISTOTLE AGAINST THE PLAY</div>
+            <div class="widget-question">Each question below asks you to weigh Aristotle&rsquo;s theory against the actual play, or against your own developing verdict. More than one option will sound reasonable; choose the one the evidence best supports.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Aristotle wrote roughly a century after Sophocles staged this play, and he explicitly draws his terms FROM Oedipus the King and a small set of other existing tragedies. He is naming a pattern he found already built, not handing playwrights a blueprint in advance." data-hint="Check the dates. Which came first: this play, or Aristotle&rsquo;s book about what makes a good tragedy?">
+                <div class="widget-row-prompt">1. Does the evidence suggest Sophocles built this play to fit Aristotle&rsquo;s later theory, or that Aristotle built his theory by studying plays like this one?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Sophocles must have anticipated Aristotle&rsquo;s rules, since the play matches them so precisely.</button>
+                    <button data-choice="1">There is no real relationship between the two; the match is coincidental.</button>
+                    <button data-choice="2">Aristotle wrote roughly a century after the play and explicitly draws his examples from it, so he is describing a pattern he found, not one he prescribed in advance.</button>
+                    <button data-choice="3">Aristotle revised the play himself before publishing the Poetics, so the match is expected.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Aristotle&rsquo;s own definition names the messenger&rsquo;s revelation, not any dice, oracle, or god&rsquo;s direct intervention on stage, as the reversal. The turn happens because a fact becomes known, which is a recognition doing the work of a reversal, not fate acting independently of human discovery." data-hint="Reread Aristotle&rsquo;s own account of the scene closely. What specific event does he say causes the reversal: a new piece of fate intervening, or a fact becoming known?">
+                <div class="widget-row-prompt">2. Aristotle says the messenger&rsquo;s news to Oedipus produces &ldquo;the opposite effect&rdquo; of what was intended. What does his own account identify as the actual cause of that reversal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A new act of the gods, intervening directly at that exact moment to punish Oedipus further.</button>
+                    <button data-choice="1">A fact becoming known: revealing who Oedipus really is, which is what turns comfort into catastrophe.</button>
+                    <button data-choice="2">Oedipus&rsquo;s own decision to demand more information than the messenger offered.</button>
+                    <button data-choice="3">The chorus intervening to correct the messenger&rsquo;s story.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Aristotle&rsquo;s passage names &lsquo;error or frailty&rsquo; without specifying which; the play supplies real evidence for both, a hot temper and public rage on one hand, a single act committed in total ignorance on the other. Which reading you pick is an argument you have to make, not a fact Aristotle hands you." data-hint="Look again at exactly what Aristotle&rsquo;s sentence says, and does not say. Does he ever specify whether hamartia is a trait or a single act, or does he leave that open?">
+                <div class="widget-row-prompt">3. Which reading of hamartia does Aristotle&rsquo;s own passage actually settle for you: a flaw in Oedipus&rsquo;s character, or a mistake in a specific action?</div>
+                <div class="widget-options">
+                    <button data-choice="0">A flaw in character; Aristotle clearly means Oedipus&rsquo;s temper and pride.</button>
+                    <button data-choice="1">A mistake in action; Aristotle clearly means the killing at the crossroads alone.</button>
+                    <button data-choice="2">Neither; Aristotle is only talking about Thyestes in that passage, not Oedipus.</button>
+                    <button data-choice="3">The passage does not settle it either way; it names &ldquo;error or frailty&rdquo; without specifying which, leaving the reading to the interpreter.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. A verdict resting on intent (did he MEAN it) leans on hamartia as a character trait, a temper and pride that made him genuinely dangerous. A verdict resting on the act itself, done in total ignorance, leans on hamartia as a single mistaken action, which cuts toward innocence of intent even if pollution remains. Your reading of the term is already inside your argument." data-hint="Think about which standard your own brief is leaning toward: intent (what he meant to do) or pollution/act (what he actually did, regardless of intent). Which reading of hamartia would that standard need to be true?">
+                <div class="widget-row-prompt">4. If your Trial verdict rests on the standard of intent (did Oedipus mean to do it), which reading of hamartia does that verdict need to be doing the real work?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Hamartia as a character trait, since an intent-based verdict needs a flaw that shows Oedipus&rsquo;s true disposition, not just an isolated accident.</button>
+                    <button data-choice="1">Hamartia as a single mistaken action, since intent-based verdicts only ever look at one isolated act.</button>
+                    <button data-choice="2">Hamartia is irrelevant to an intent-based verdict; only the oracle&rsquo;s prophecy matters there.</button>
+                    <button data-choice="3">Hamartia only matters for a pollution-based verdict, never for one based on intent.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add a note to your Trial Notes.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record which reading of hamartia (character flaw or mistaken action) your own developing verdict actually depends on, and why.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Carry this into your brief and your design rationale.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The same design-analysis instinct you practiced today, asking what specific choice produces what specific effect, is exactly what your Q2 milestone design rationale asks you to do with your own game.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Aristotle read this exact play closely enough to build a theory of tragedy out of it, and he reached for it as his proof text again and again: for reversal, for recognition, for the tragic error. That does not make his theory automatically correct. It makes it a claim, built from evidence, exactly like the verdict you are building. Test it the way you would test any argument: does the play actually support the claim, or did the claim get remembered because it fit this one famous case especially well?</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Honors Enrichment &middot; Aristotle&rsquo;s Poetics on Tragedy</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

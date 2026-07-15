@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 5.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Winds and Witchcraft</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Book 10 is a run of three tests, and each one asks something different of Odysseus as a leader.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Book 9 the danger was mostly outside Odysseus&rsquo;s crew: a monster, a temptation, an ambush. In Book 10, the danger increasingly comes from decisions, some his men&rsquo;s, some his own. Aeolus, the Laestrygonians, and Circe each test trust, caution, and command in a different way. By the end of this lesson, you will see how much of a leader&rsquo;s story is really about the choices made when no one is forcing the outcome.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the crew does with Aeolus&rsquo;s bag of winds and why it goes wrong.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Circe&rsquo;s island threatens Odysseus&rsquo;s men and how the danger is overcome.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the choices made across all three encounters reveal about trust, temptation, and leadership.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation), <strong>Book 10</strong>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive).</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AEOLUS: A GIFT UNDONE BY MISTRUST</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aeolus, keeper of the winds, hosts Odysseus and his men for a month and sends them off with an extraordinary gift: every dangerous wind tied shut in a leather bag, leaving only the gentle west wind free to carry them straight home. For nine days, Odysseus himself holds the sail, refusing to hand it to anyone else. Within sight of Ithaca at last, exhausted, he finally falls asleep. His men, convinced the bag must be hiding gold and silver Aeolus gave their captain in secret, decide among themselves to open it.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Thus they talked and evil counsels prevailed. They loosed the sack, whereupon the winds flew howling forth and raised a storm that carried us weeping out to sea and away from our own country.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Odysseus, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There is no monster in this scene. There is only mistrust, greed, and a captain too exhausted to keep watching. Blown back to Aeolus&rsquo;s island, Odysseus asks for help a second time and is refused outright, cast out as a man the gods themselves must hate. One crew&rsquo;s decision, made in secret while their leader slept, costs the whole voyage its easiest chance at home.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LAESTRYGONIANS: THE CAUTION THAT SAVES ONE SHIP</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Next, the fleet reaches the harbor of the Laestrygonians, a race of giants. The other captains sail their eleven ships deep into a narrow, cliff-lined harbor. Odysseus, wary of a place with only one way out, leaves his own ship moored outside. The giants prove to be monstrous hosts in the same mold as Polyphemus: they hurl boulders down onto the trapped ships from the cliffs above and spear the swimming survivors like fish. Every ship inside the harbor is lost, crew and all. Only Odysseus&rsquo;s own ship, held back by a single cautious decision, survives to sail on.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; CIRCE: TEMPTATION MET WITH HELP</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The last of Odysseus&rsquo;s ships reaches the island of Circe, a goddess-sorceress whose house is guarded by wolves and lions who, oddly, fawn on visitors instead of attacking. She welcomes a scouting party in and serves them a feast laced with a drug:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;She turned them into pigs by a stroke of her wand, and shut them up in her pig-styes. They were like pigs, head, hair, and all, and they grunted just as pigs do, but their senses were the same as before, and they remembered everything.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">One man, Eurylochus, holds back out of suspicion and escapes to warn Odysseus. Alone, Odysseus goes to face Circe himself, and on the way, Hermes meets him with a plant that will protect him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;The root was black, while the flower was as white as milk; the gods call it Moly, and mortal men cannot uproot it, but the gods can do whatever they like.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Hermes, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Protected by the herb, Odysseus eats Circe&rsquo;s drugged food without transforming, draws his sword when she strikes him with her wand, and forces her to release his men and swear an oath of safety before he will trust her further. What could have been Circe&rsquo;s greatest danger, an enemy no one saw coming, becomes instead the start of a full year of rest on her island: a threat met with outside help and a leader&rsquo;s own nerve, rather than escaped by luck alone.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled diagram comparing the three trials -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128506;&#65039; THREE TRIALS, THREE KINDS OF TEST</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C; margin-bottom: 6px;"><strong>AEOLUS</strong></div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">Trust broken. The crew&rsquo;s own suspicion and greed undo a gift that was already working.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #C7922C;">
+                    <div style="font-size: 15px; color: #7A5A17; margin-bottom: 6px;"><strong>THE LAESTRYGONIANS</strong></div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">Caution rewarded. One wary decision, made before any danger appears, saves the only ship that survives.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C; margin-bottom: 6px;"><strong>CIRCE</strong></div>
+                    <div style="font-size: 14px; color: #0e1c42; line-height: 1.5;">Temptation met with help. Outside aid (Hermes) and Odysseus&rsquo;s own nerve turn a trap into a year of safety.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- evaluative widget: leadership across the three trials -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES IT REVEAL?</div>
+            <div class="widget-question">For each moment from Book 10, choose what it most reveals. You will get feedback right away.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Nothing outside the crew forces this open. Their own suspicion of their captain, and their guess that he is hoarding treasure, causes them to undo, by their own hand, a gift that was already working perfectly." data-hint="Ask what actually causes the storm here: something outside the crew&rsquo;s control, or a decision the crew makes entirely on its own.">
+                <div class="widget-row-prompt">1. The crew opens Aeolus&rsquo;s bag while Odysseus sleeps, believing it holds treasure.</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals that Aeolus&rsquo;s gift was flawed from the start, since one bag of wind was never going to be enough for the whole voyage.</button>
+                    <button data-choice="1">It reveals that the crew&rsquo;s own mistrust and greed, not a flaw in the gift, undo their chance at home.</button>
+                    <button data-choice="2">It reveals that the gods simply favor some sailors over others, with no human choice involved.</button>
+                    <button data-choice="3">It reveals that Odysseus should never have let his men anywhere near the ship&rsquo;s cargo.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Correct. Odysseus makes this call before any danger has actually appeared, based only on the harbor&rsquo;s shape. That timing is what marks it as leadership rather than luck: he is the only captain who has not yet been proven right or wrong when he decides to hang back." data-hint="Notice when Odysseus makes this decision relative to when the giants attack. Does his caution look wise only in hindsight, or does the text suggest he acts on the danger before it is visible?">
+                <div class="widget-row-prompt">2. Odysseus leaves his own ship moored outside the Laestrygonian harbor while the other captains sail in.</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals that Odysseus was too afraid to risk his own ship, unlike the bolder captains who sailed in.</button>
+                    <button data-choice="1">It reveals that Odysseus somehow already knew the Laestrygonians were dangerous giants.</button>
+                    <button data-choice="2">It reveals that the other captains were reckless and brought their own destruction on themselves.</button>
+                    <button data-choice="3">It reveals a leader&rsquo;s wariness, exercised before any danger is visible, that alone saves the one ship that survives.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Suspicion, not obedience, is exactly what keeps Eurylochus outside Circe&rsquo;s house while the others walk in and are transformed, and it is what lets Odysseus learn the truth in time to act." data-hint="Ask what quality actually kept Eurylochus outside the house while the others walked in and were changed into pigs.">
+                <div class="widget-row-prompt">3. Eurylochus refuses to enter Circe&rsquo;s house and escapes to warn Odysseus.</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals that suspicion, this time, protects a man from disaster rather than merely slowing him down.</button>
+                    <button data-choice="1">It reveals that Eurylochus is a coward who abandons his comrades to whatever awaits them.</button>
+                    <button data-choice="2">It reveals that Circe only transforms men who trust her, so caution always defeats her kind of danger.</button>
+                    <button data-choice="3">It reveals that Odysseus deliberately sent Eurylochus in to test whether Circe could be trusted.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Book 10 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note one line of dialogue spoken by Odysseus, Circe, or a crew member, and what it reveals about the speaker.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 5.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn how a character&rsquo;s voice and dialogue reveal who they are, direct preparation for Quick Write 5.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Three encounters, three different kinds of test: broken trust, rewarded caution, and temptation overcome with help. Notice that Odysseus is not the only one making choices in this book. His crew&rsquo;s decisions shape the story just as much as his own.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.02 &middot; Winds and Witchcraft</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

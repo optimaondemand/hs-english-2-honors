@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 8.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 8.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 8.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sentence variety &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from Books 17&ndash;20</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sentence Variety</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 8</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Sentences that all sound alike flatten a scene, no matter how tense the events inside them are.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already write complete sentences. This lesson asks you to listen to them: does every sentence open the same way, and does every sentence run the same length? A paragraph built entirely from one pattern reads in a flat monotone, even when the content is dramatic. Varying your openings and your sentence length is one of the simplest ways to control rhythm, and it is exactly what your full draft this week needs, since a story building toward a climax should not sound the same on every page.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify when a paragraph relies too heavily on one sentence opening or one sentence length.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SAME OPENING, SAME LENGTH, FLAT SOUND</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read the two versions below out loud. Both describe the same moment: Odysseus standing in his own hall, disguised, watching the suitors. Listen for what changes between them, since the events described do not change at all.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; SAME SCENE, TWO VERSIONS</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 6px;">VERSION A &mdash; SAME OPENING WORD, SAME LENGTH</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.75;"><span style="border-bottom: 2px solid #55C8E8;">Odysseus</span> stood in the hall. <span style="border-bottom: 2px solid #55C8E8;">Odysseus</span> watched the suitors eat his food. <span style="border-bottom: 2px solid #55C8E8;">Odysseus</span> felt his anger rise. <span style="border-bottom: 2px solid #55C8E8;">Odysseus</span> said nothing.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Four sentences, all the same length, all opening with the subject&rsquo;s name. The repetition makes even a tense moment sound like a list.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 13px; color: #FDF3E3; margin-bottom: 6px;">VERSION B &mdash; VARIED OPENINGS AND LENGTH</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.75;"><span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">In the hall</span> he had built with his own hands, Odysseus stood among men who did not know him. The suitors ate his food without a thought. Rage rose in him, cold and controlled. He said nothing.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Same four ideas, but the openings vary (a phrase, a subject, a subject, a subject with a short verb), and the sentence lengths shift from long to short to short to shortest. The short final sentence lands harder because everything before it built up to it.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that Version B is not simply longer or fancier. It moves the pieces around: a sentence can open with a phrase describing time or place, a description, a transition word, or the subject itself, and it does not have to match the sentence before it in length. The fastest self-check: read your paragraph aloud and listen for the same word or the same rhythm repeating three or more times in a row. If you hear it, rewrite one of the sentences to open differently.</p>
+    </div>
+
+    <!-- evaluative widget: rigor rule, judges APPLIED variety in a suspense passage, not mere mechanical difference. Correct indices 0,1 -->
+    <div class="optima-widget ow-select">
+        <div class="widget-kicker">&#9889; TRY IT &middot; DOES THE VARIETY WORK?</div>
+        <div class="widget-question">Both passages below vary their sentence openings and lengths. Only one puts that variety to good use in building tension. Decide which is which, and be ready to say why.</div>
+
+        <div class="widget-row" data-correct="0" data-fb="Right. The lengths and openings shift (a subject, a place phrase, a subject) without calling attention to themselves, and the short final sentence lands with real restraint. The variety serves the moment instead of showing off." data-hint="This one is doing its job quietly: nothing here overreaches or draws attention to its own cleverness. Compare it closely to the next passage, which does.">
+            <div class="widget-row-prompt">1. &ldquo;The hall had gone silent. Somewhere near the doorway, a footstool scraped against stone. He did not turn his head.&rdquo;</div>
+            <div class="widget-options">
+                <button data-choice="0">Builds the tension effectively</button>
+                <button data-choice="1">Variety misused; it works against the tension</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="1" data-fb="Right. The middle sentence piles on so many clauses that the tension dissolves into clutter instead of building, and the one-word fragment at the end, &lsquo;Now,&rsquo; reads as a trick rather than an earned beat, since nothing before it actually held back enough to make the fragment feel necessary. Varying your sentences is not the same as varying them well." data-hint="Sentence length and opening really do vary here, which can look like the lesson's technique in action. But check whether the variety actually serves the moment: does the overloaded middle sentence build tension, or does it bury the reader in clauses right when the scene most needs restraint?">
+            <div class="widget-row-prompt">2. &ldquo;The suitors laughed too loud, filling the hall with a noise that pressed against the walls. He waited. Beneath the surface of his patience, built slowly across twenty years of exile and longing and grief he had never let himself fully name even to himself in the quiet hours before dawn, something had finally gone still. Now.&rdquo;</div>
+            <div class="widget-options">
+                <button data-choice="0">Builds the tension effectively</button>
+                <button data-choice="1">Variety misused; it works against the tension</button>
+            </div>
+        </div>
+
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in Books 17 through 20. Learn the sense the poem gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>insolence</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; bold, contemptuous disrespect toward someone owed courtesy</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Antinous accuses the beggar of &ldquo;insolence&rdquo; right before throwing a footstool at him, a sharp irony since the suitors themselves are the ones showing no respect to a guest, and, without knowing it, to their own king.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>wantonness</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; reckless cruelty done without any real cause or provocation</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">A goatherd kicks the disguised Odysseus &ldquo;out of pure wantonness,&rdquo; meaning there is no reason for it at all beyond casual cruelty. The word names abuse that costs the abuser nothing, which is exactly why it will cost them everything later.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>omen</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; an event or sign believed to foretell something about to happen</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Thunder from Zeus at the end of Book 20 is read by a servant as an omen, and Odysseus alone understands what it foretells. Omens are one of the poem&rsquo;s main tools for building suspense before a climax without revealing the outcome outright.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>stratagems</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun, plural) &mdash; clever schemes or tricks used to gain an advantage</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Penelope tells the disguised beggar that she must &ldquo;invent stratagems&rdquo; to hold off the suitors. It is worth noticing that this is the exact same skill, cunning under pressure, that has kept her husband alive the whole poem.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>forebodings</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun, plural) &mdash; uneasy feelings that something bad is about to happen</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">By Book 20 the suitors themselves feel forebodings they cannot explain, a sign that the poem is telegraphing its climax to the reader through the characters&rsquo; own unease, not just through direct narration.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>unseemly</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; not proper or fitting, especially in behavior</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Telemachus warns the suitors he will allow no more &ldquo;unseemly behaviour&rdquo; in the hall, a small but telling sign of how much he has grown since Week 1, when he could barely speak up in his own house.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your full draft this week is where this lesson gets tested for real. As you write Quick Write 8, deliberately vary your sentence openings and lengths, especially in your tensest scene, and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own draft.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Read your own draft aloud before you call it finished. If three sentences in a row sound the same, rebuild one of them. Rhythm is a small thing to control, and it is often the difference between a scene that builds and a scene that just lists what happened.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.GV &middot; Sentence Variety</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

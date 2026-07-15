@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; M365 Setup &amp; File Organization Guide</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Welcome &middot; Pinned Reference &middot; M365 Setup &amp; File Organization Guide</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Where This Lives</div>
+        <div style="font-size: 17px; color: #0e1c42;">Module 0 &middot; Welcome</div>
+        <div style="font-size: 12px; color: #1a2340;">Pinned all year</div>
+    </div>
+    <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Applies To</div>
+        <div style="font-size: 17px; color: #0e1c42;">Every Assignment</div>
+        <div style="font-size: 12px; color: #1a2340;">All quarters, English 2</div>
+    </div>
+    <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Tool</div>
+        <div style="font-size: 17px; color: #0e1c42;">Microsoft 365</div>
+        <div style="font-size: 12px; color: #1a2340;">Your school account</div>
+    </div>
+    <div style="flex: 1; min-width: 150px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Type</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reference Page</div>
+        <div style="font-size: 12px; color: #1a2340;">Ungraded</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Pinned Reference</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">M365 Setup &amp; File Organization Guide</div>
+        <div style="font-size: 16px; color: #1a2340;">Everything you need to open, name, save, and submit your Word documents this year</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHY THIS PAGE EXISTS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Almost everything you turn in this year in English 2, from your Quick Writes to your final projects, is a Word document that you create, name, save, and submit through Microsoft 365. Every assignment this module will link back to this page with a short reminder, so you never have to guess at the steps. Read it once now, carefully, and you will barely have to think about it again all year.</div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; OPEN WORD FROM YOUR SCHOOL ACCOUNT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You have a Microsoft 365 account through Optima Academy Online, and it is different from any personal Microsoft or Outlook account you might use at home. Your school account is the one tied to your Optima email address, and it is the only account you should use for coursework. Using your personal account by mistake is the single most common mix-up, so check this every time you sit down to write.</p>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Go to <strong>office.com</strong> in your browser (not a personal Microsoft account page, and not an app store search).</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Sign in with your <strong>Optima school email address</strong> and password. If you are already signed in on a school device, you may land here automatically.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Click <strong>Word</strong> from the app grid and choose <strong>New blank document</strong>. This opens Word in your browser, saved automatically to your school OneDrive as you type. (The desktop Word app works too, as long as it is signed in with your school account.)</div>
+        </div>
+
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0 0 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128161; WHY IT MATTERS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A document created in a personal account lives in a different OneDrive than the one your teacher can see. It can look finished to you and still never reach your teacher. Working from your school account the whole time is what keeps your work visible, backed up, and easy to submit.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; NAMING YOUR FILE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Every file you submit this year follows one naming rule. It looks fussy the first time and becomes automatic by the second. The rule exists so that your teacher, looking through dozens of files from dozens of students, can tell instantly whose work it is and what it is.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated filename, shown-example -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; THE NAMING RULE, ANNOTATED</div>
+            <div style="font-size: 22px; color: #0e1c42; line-height: 1.6; font-family: 'Segoe UI', monospace; word-break: break-word;">
+                <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Smith</span>_<span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Jane</span>_<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">BardsHall</span>_<span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">ELA10</span>_<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">Draft1</span><span style="color:#1a2340;">.docx</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">LASTNAME_FIRSTNAME</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Your legal name as it appears in Canvas. Spelled the same way every time you submit.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">ASSIGNMENTSHORTNAME</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">A short label for the assignment, no spaces (for example <em>QuickWrite1</em> or <em>BardsHall</em>). Use the short name given on the assignment page.</div>
+                </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:14px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">ELA10</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The course code. Every English 2 file ends with <em>ELA10</em>, no matter the assignment.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">DRAFT MARKER (WHEN NEEDED)</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;"><em>_Draft1</em>, <em>_Draft2</em>, or <em>_Final</em>, added only for multi-draft work like a module project. A one-time Quick Write does not need a draft marker.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Most Quick Writes are a single submission, so their file name simply ends after the course code: <strong>Smith_Jane_QuickWrite1_ELA10.docx</strong>. Longer, multi-part work such as your module project (The Bard&rsquo;s Hall) moves through stages, so its file name changes as the work grows:</p>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; font-family: 'Segoe UI', monospace;">Smith_Jane_BardsHall_ELA10_Draft1.docx <span style="font-family: 'Segoe UI', sans-serif; color:#1a2340;">&mdash; your first full draft</span></div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; font-family: 'Segoe UI', monospace;">Smith_Jane_BardsHall_ELA10_Draft2.docx <span style="font-family: 'Segoe UI', sans-serif; color:#1a2340;">&mdash; your revised draft, after feedback</span></div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; font-family: 'Segoe UI', monospace;">Smith_Jane_BardsHall_ELA10_Final.docx <span style="font-family: 'Segoe UI', sans-serif; color:#1a2340;">&mdash; the version you submit for a grade</span></div>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHERE YOUR FILES LIVE IN ONEDRIVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Keep every English 2 file in one place so you can always find it again, and so anything shared with a teacher points to the right folder. Build this simple path in your OneDrive once, at the start of the year, and save everything for this course into it:</p>
+        <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span style="background: #0E1C42; color: #fff; font-size: 15px; padding: 6px 14px; border-radius: 6px;">Optima</span>
+            <span style="color: #3B4E8C; font-size: 18px;">&rarr;</span>
+            <span style="background: #3B4E8C; color: #fff; font-size: 15px; padding: 6px 14px; border-radius: 6px;">ELA</span>
+            <span style="color: #3B4E8C; font-size: 18px;">&rarr;</span>
+            <span style="background: #C7922C; color: #fff; font-size: 15px; padding: 6px 14px; border-radius: 6px;">ELA10</span>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">If you are enrolled in more than one Optima course, this same <strong>Optima</strong> folder can hold a matching subfolder for each one (for example, an <strong>ELA</strong> folder for English and a separate folder for another subject). Everything for English 2 this year, every Quick Write, your Module 1 Organizer, and your project drafts, belongs inside <strong>Optima &rarr; ELA &rarr; ELA10</strong>.</p>
+    </div>
+
+    <!-- ===== PART 4 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; SUBMITTING THROUGH CANVAS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">You do not attach files from your computer to submit work in this course. Instead, each assignment page has a <strong>OneDrive tab</strong> built directly into Canvas, and you submit straight from your OneDrive through it. This keeps one single copy of your file as the version of record, instead of scattering copies across your device and Canvas.</p>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Open the assignment in Canvas and scroll to <strong>Submit Assignment</strong>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Choose the <strong>Microsoft OneDrive</strong> tab (sometimes shown as a OneDrive icon) rather than <strong>File Upload</strong>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Browse to <strong>Optima &rarr; ELA &rarr; ELA10</strong> and select your correctly named file.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Confirm the submission and check that Canvas shows a green submitted confirmation before you close the tab.</div>
+        </div>
+    </div>
+
+    <!-- optional ungraded check-in -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; A QUICK CHECK-IN (OPTIONAL, UNGRADED)</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; HOW ARE YOU FEELING ABOUT THIS?</div>
+            <div class="widget-question">Which part of this process feels least familiar to you right now? (No wrong answer, this is just for you.)</div>
+            <div class="widget-options">
+                <button data-response="That is normal the first time. Bookmark office.com and double-check the account name in the top right corner of the screen before you start typing anything.">&#128187; Signing in with the right account</button>
+                <button data-response="Reread Part 2 once and try building one practice file name for this week's Quick Write. It gets faster every time you do it.">&#128221; The file naming rule</button>
+                <button data-response="Build the Optima &rarr; ELA &rarr; ELA10 folder path once, right now if you can, so it is ready and waiting the first time you need it.">&#128193; Finding the right OneDrive folder</button>
+                <button data-response="Practice it once on any short document before your first real assignment is due, so submission day itself is not the first time you have tried it.">&#128228; Submitting through the OneDrive tab</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Four habits carry you through the whole year: sign in with your school account, name every file the same way, keep everything in one OneDrive folder, and submit through the OneDrive tab. None of it is complicated once you have done it once. Come back to this page any time an assignment&rsquo;s M365 reminder points you here, and you will always find the full steps waiting.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Pinned Reference Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">M365 Setup &amp; File Organization Guide</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

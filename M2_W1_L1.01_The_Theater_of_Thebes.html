@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 1.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 1.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 1.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Theater of Thebes</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">This play was never meant to be read quietly at a desk. It was meant to be watched, in daylight, by thousands of citizens at once.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Before you meet the plague-stricken city of the opening scene, you need to know what kind of event you are stepping into. Greek tragedy was a civic occasion, not a private entertainment, performed for the whole community at a public festival. Today you learn how that theater was built and staffed, and you get the backstory the play assumes you already know: who Oedipus is, and why an entire city once owed him everything.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Greek tragedy was performed as a civic event before a mass public audience, not staged as private entertainment.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the parts of the ancient theater and explain what the chorus does that the actors do not.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell the Sphinx story and explain why it is the reason a plague-stricken city turns to Oedipus for help.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> is public domain and free to read online: <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg, trans. F. Storr</a> (it is the first play in the volume). No purchase needed; the passages you need are also quoted directly in these lessons.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer (Word doc in your OneDrive) &mdash; open it and keep it handy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or a notes document.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A PLAY FOR THE WHOLE CITY</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a large public event your whole town or school attends together, a game, a ceremony, a concert. What feels different about watching something with thousands of other people, compared to watching it alone? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Shared reaction is exactly what Athenian tragedy relied on. When the whole city gasps or falls silent at the same moment, the story stops being one person&rsquo;s experience and becomes the community&rsquo;s.">&#128101; Everyone reacts together, out loud</button>
+                <button data-response="A sense of occasion is part of why tragedy was staged at a religious festival, not on an ordinary afternoon. The city set aside real time and ritual for it.">&#127903;&#65039; It feels like an occasion, not just entertainment</button>
+                <button data-response="Feeling connected to strangers around you is close to what a chorus does inside the play itself: it stands in for the community&rsquo;s shared feeling, so no one in the audience watches alone.">&#129309; You feel connected to people you don&rsquo;t know</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A festival, not a night out</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sophocles wrote <em>Oedipus the King</em> for a specific occasion: the City Dionysia, an annual religious festival in Athens honoring the god Dionysus, held in the open air in daylight before an audience that could number in the thousands. Attendance was a civic act, something closer to a citizen showing up to vote or serve on a jury than to buying a ticket for a show. Playwrights competed for a prize judged by the city itself, and the plays they wrote wrestled openly with the questions a community cared about most: justice, guilt, the gods, and the burdens of power. A play about a king whose choices might be poisoning his own city was not an escape from public life. It was public life, examined in front of everyone at once.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That civic setting matters for how you read the play now. Every choice Oedipus makes onstage was, in its first performance, being weighed by an audience of his fellow citizens, together, out loud, in real time. You are going to do something similar this module: weigh his choices yourself, and eventually argue a verdict.</p>
+
+        <!-- historical context (indigo box) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Sophocles wrote <em>Oedipus the King</em> in Athens in the 400s BCE, likely in the years around 429, when the city itself was gripped by a real plague during the Peloponnesian War. An audience watching a fictional Thebes overwhelmed by disease had almost certainly watched real neighbors sicken and die not long before. This translation, by the English classicist F. Storr, is in the public domain, which is why you can read the whole play free online and why the quotations in this module come straight from the text itself.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SHAPE OF A TRAGEDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Two kinds of performers shared the stage, and they did very different jobs. A small handful of masked actors, often as few as two or three, played all the named characters, sometimes switching masks and roles within the same performance. Alongside them stood the <strong>chorus</strong>, a group of performers who sang, chanted, and danced between scenes. The chorus does not usually drive the plot. Its job is to represent the ordinary people of the city, reacting to events the way any citizen might: with fear, hope, confusion, or grief. When you read a choral passage in this play, you are hearing the voice of the community itself, watching its king from the outside.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled diagram of the ancient Greek theater -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#127916; THE ANCIENT THEATER, LABELED</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0;">
+                <div style="width: 100%; max-width: 460px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 6px 6px 0 0; padding: 14px; text-align: center;">
+                    <div style="font-size: 15px; color: #3B4E8C; font-weight: bold;">SKENE</div>
+                    <div style="font-size: 13px; color: #1a2340; margin-top: 4px;">A backdrop building representing a palace or temple. Actors entered and exited through its doors and could change masks out of sight.</div>
+                </div>
+                <div style="width: 90%; max-width: 420px; background: #FDF3E3; border: 2px solid #C7922C; border-top: none; padding: 16px; text-align: center;">
+                    <div style="font-size: 15px; color: #7A5A17; font-weight: bold;">ORCHESTRA</div>
+                    <div style="font-size: 13px; color: #1a2340; margin-top: 4px;">A round, level performance space where the chorus sang and danced, closest to the audience, at the center of the whole design.</div>
+                </div>
+                <div style="width: 100%; max-width: 500px; background: #FFFFFF; border: 2px dashed #D0D9E8; border-top: none; border-radius: 0 0 10px 10px; padding: 16px; text-align: center;">
+                    <div style="font-size: 15px; color: #0e1c42; font-weight: bold;">THEATRON (AUDIENCE)</div>
+                    <div style="font-size: 13px; color: #1a2340; margin-top: 4px;">Tiered stone seating built into a hillside, curving around the orchestra so thousands of citizens could see and hear at once, in open daylight.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">Notice what this design makes impossible: privacy. The orchestra sits at the center of a bowl of citizens. Whatever happens there happens in full view of the whole community, which is exactly the pressure Oedipus is under in this play. He cannot solve his city&rsquo;s crisis quietly, off to the side. Every step he takes as king happens in public, in front of the very people whose lives depend on the outcome.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT THE STAGING MEANS</div>
+            <div class="widget-question">The theater&rsquo;s design and the play&rsquo;s opening choices carry meaning beyond mere fact. More than one option below will sound reasonable; choose the reading the lesson&rsquo;s own evidence best supports.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The lesson ties the orchestra&rsquo;s central position directly to what the chorus does: standing in for the community, reacting to the king&rsquo;s unfolding crisis from the inside, closest to the audience it represents." data-hint="Acoustics and construction are real facts about Greek theaters, but this lesson draws a specific connection between where the chorus stands and what job the chorus does in the play. Reread the paragraph just above the diagram.">
+                <div class="widget-row-prompt">1. This lesson notes that the orchestra, where the chorus performs, sits closest to the audience, at the very center of the design. What does that position suggest about the chorus&rsquo;s role in the play?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reflects mainly acoustic convenience: the round space carried sound best, with no bearing on the chorus&rsquo;s dramatic role.</button>
+                    <button data-choice="1">It places the community&rsquo;s shared reaction physically nearest the audience, since the chorus voices the ordinary citizens watching the king&rsquo;s crisis unfold.</button>
+                    <button data-choice="2">It marks the chorus as the least significant performers, positioned nearest the exit for a quick departure.</button>
+                    <button data-choice="3">It reflects the practical need for extra room between the skene doors and the open air, pushing the chorus forward as a side effect of the layout.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The design puts every action at the center of a bowl of citizens. Oedipus cannot solve his city&rsquo;s crisis quietly, off to the side; every step he takes as king happens in front of the very people whose lives depend on the outcome." data-hint="Reread the sentence right after the diagram that names, in one word, what this design makes impossible.">
+                <div class="widget-row-prompt">2. Given how the theater was built, tiered seating wrapped around a central public performance space, this lesson argues something is made impossible for Oedipus. What is it?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Privacy: whatever happens in the orchestra happens in full view of the whole community, exactly the pressure Oedipus is under as king.</button>
+                    <button data-choice="1">Comedy: an open-air civic theater built this way could stage only serious tragic material.</button>
+                    <button data-choice="2">Audibility: a bowl of thousands of citizens made it impossible for actors to actually be heard.</button>
+                    <button data-choice="3">Improvisation: actors could never depart from a fixed, memorized script in front of this large a crowd.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The priest&rsquo;s reminder establishes that Oedipus did not inherit his authority; he earned it by saving Thebes once already. That is the entire foundation for why a plague-stricken city turns to him now, before he has done anything else to deserve their trust." data-hint="The lesson states plainly that the first audience already knew the Sphinx story. If it is not there to inform them, what work is the reminder doing in the very first speech of the play?">
+                <div class="widget-row-prompt">3. The priest opens the play by reminding Oedipus of the Sphinx, rather than simply asking for help. Why does the play establish this backstory first?</div>
+                <div class="widget-options">
+                    <button data-choice="0">To flatter Oedipus into cooperating, regardless of whether the old debt has any real bearing on a plague.</button>
+                    <button data-choice="1">To fill in backstory the first audience would not have known, since Sophocles assumed the myth was unfamiliar to them.</button>
+                    <button data-choice="2">To establish that Oedipus&rsquo;s authority rests on a proven record of saving Thebes once already, which is exactly why the city turns to him again.</button>
+                    <button data-choice="3">To suggest that the same cleverness that solved the Sphinx&rsquo;s riddle will let Oedipus reason his way to the plague&rsquo;s cause as well.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY THIS KING? THE SPHINX BACKSTORY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The play opens without explaining who Oedipus is or why the city trusts him, because its first audience already knew. Before the action begins, Thebes had been terrorized by the Sphinx, a monster with a riddle, who killed every traveler unable to answer it. Oedipus, a stranger arriving from Corinth, solved the riddle and freed the city. In gratitude, Thebes made him king and gave him the hand of its recently widowed queen, Jocasta. That single act, years before the play starts, is the entire foundation of Oedipus&rsquo;s authority: he did not inherit the throne, he earned it by saving the city once already.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The priest who opens the play reminds Oedipus of exactly this debt, addressing him as the man who once freed Thebes from what the text calls, in its own poetic phrase, the &ldquo;fell songstress,&rdquo; a riddling reference to the Sphinx herself:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Art thou not he who coming to the town of Cadmus freed us from the tax we paid to the fell songstress?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">The Priest, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That is why the opening scene shows a city turning to Oedipus again, not to a general or a priest, but specifically to him. He is not merely their king by birth. He is the man who has already proven, once, that he can save Thebes when nothing else can. Hold onto that fact as you read what happens next: a community that trusts its king completely, based on real evidence, is about to ask him to save it a second time, from a danger no one yet understands.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND BACKGROUND FACTS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can summarize the Sphinx story and the layout of a Greek theater accurately, since both are well documented. What it cannot do is decide, for you, why Sophocles chooses to have the priest bring up the Sphinx in the play&rsquo;s very first speech, rather than somewhere later. That is a reading decision, and it stays yours to make no matter how good the summary is.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 1.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will read the priest&rsquo;s plea, Creon&rsquo;s news from Delphi, and Oedipus&rsquo;s own proclamation and curse: the opening scene itself.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note the Sphinx story in your Module 2 Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will want it on hand when you begin weighing Oedipus&rsquo;s record as king.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This play was written for a city to watch together, in daylight, with its own community singing back at it through the chorus. It opens on a king who has already saved Thebes once, by riddle-solving cleverness rather than force. That earned trust is the whole reason the next scene can happen at all: a broken city, kneeling at its king&rsquo;s door, certain he can fix what is breaking it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.01 &middot; The Theater of Thebes</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

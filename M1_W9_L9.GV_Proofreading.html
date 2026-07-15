@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 9.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 9.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 9.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Proofreading &amp; commonly confused words</div>
+        <div style="font-size: 12px; color: #1a2340;">Word Study from Books 21&ndash;24</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Proofreading</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 9</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The last pass before you call a piece finished is a different kind of reading than any of the others.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday&rsquo;s lesson asked you to revise for the big things: structure, voice, pacing. Proofreading is smaller and just as important. It is the pass where you hunt down the specific words that get swapped for each other so often that a writer can miss them even after several careful readings. This lesson teaches you what to look for, and this week&rsquo;s Word Study words close out the vocabulary you have been building since Book 1.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> correctly choose between commonly confused word pairs, including its/it&rsquo;s, their/there/they&rsquo;re, then/than, and effect/affect.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words, drawn from Books 21 through 24.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE WORDS THAT SLIP PAST YOU</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A proofreading pass is not about reading for meaning; you already know what your draft is trying to say, and that is exactly the problem. Because you know what you meant, your eyes tend to skip right past small errors and fill in the correct word automatically. The fix is to slow down and check specific trouble spots one at a time, rather than trying to catch everything at once. Four pairs cause more trouble than almost anything else in student writing.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences (mix-up vs fix) -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; CAUGHT AND FIXED</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;"><span style="text-decoration: line-through; color:#E7A6A0;">The bow had finally done it&rsquo;s work in Odysseus&rsquo;s hands.</span></div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;">The bow had finally done <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">its</span> work in Odysseus&rsquo;s hands.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;"><strong>its/it&rsquo;s:</strong> &ldquo;it&rsquo;s&rdquo; only ever means &ldquo;it is&rdquo; or &ldquo;it has.&rdquo; This sentence needs the possessive, so it takes &ldquo;its,&rdquo; with no apostrophe, exactly like &ldquo;his&rdquo; or &ldquo;her.&rdquo;</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;"><span style="text-decoration: line-through; color:#E7A6A0;">Their gathered outside the hall, waiting for they&rsquo;re chance at revenge.</span></div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;"><span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">They&rsquo;re</span> gathered outside the hall, waiting for <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">their</span> chance at revenge.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;"><strong>their/there/they&rsquo;re:</strong> &ldquo;they&rsquo;re&rdquo; is the contraction for &ldquo;they are.&rdquo; &ldquo;Their&rdquo; shows possession. &ldquo;There&rdquo; points to a place. Say the full words in your head to check which one you need.</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;"><span style="text-decoration: line-through; color:#E7A6A0;">Odysseus was more cautious then reckless when he revealed himself.</span></div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;">Odysseus was more cautious <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">than</span> reckless when he revealed himself.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;"><strong>then/than:</strong> &ldquo;than&rdquo; compares two things. &ldquo;Then&rdquo; shows time or sequence, as in &ldquo;he strung the bow, then he stood.&rdquo;</div>
+            </div>
+
+            <div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;"><span style="text-decoration: line-through; color:#E7A6A0;">Penelope&rsquo;s test had a powerful affect on Odysseus, and it effected his patience.</span></div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.7;">Penelope&rsquo;s test had a powerful <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">effect</span> on Odysseus, and it <span style="border: 2px solid #C7922C; border-radius: 4px; padding: 0 5px; color:#FDF3E3;">affected</span> his patience.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;"><strong>effect/affect:</strong> &ldquo;affect&rdquo; is almost always the verb, the action of influencing something. &ldquo;Effect&rdquo; is almost always the noun, the result itself.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Proofread for one pair at a time. Search your draft for every &ldquo;its&rdquo; and &ldquo;it&rsquo;s&rdquo; first, decide each one on its own, then move to the next pair. Checking for all four types of confusion in a single read-through is exactly how they slip past.</p>
+
+        <!-- evaluative widget: commonly confused words -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; CHOOSE THE RIGHT WORD</div>
+            <div class="widget-question">Choose the correct word to complete each sentence.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The sentence needs the possessive, showing the hall belongs to the suitors, so it takes &lsquo;their,&rsquo; not the contraction or the place-word." data-hint="Try saying &lsquo;they are&rsquo; or picturing a location in place of the missing word. Does either one make sense here?">
+                <div class="widget-row-prompt">1. The suitors&rsquo; kinsmen marched toward ___ fallen sons&rsquo; house.</div>
+                <div class="widget-options">
+                    <button data-choice="0">they&rsquo;re</button>
+                    <button data-choice="1">their</button>
+                    <button data-choice="2">there</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. &lsquo;Its&rsquo; without an apostrophe shows possession here, the string belonging to the bow." data-hint="Say &lsquo;it is&rsquo; in place of the missing word. Does the sentence still make sense?">
+                <div class="widget-row-prompt">2. The bow held ___ string taut after twenty years unused.</div>
+                <div class="widget-options">
+                    <button data-choice="0">its</button>
+                    <button data-choice="1">it&rsquo;s</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. &lsquo;Effect&rsquo; is the noun here, naming the result of the covenant, not the act of influencing something." data-hint="Ask whether this word names a result (a noun) or an action of influencing something (a verb).">
+                <div class="widget-row-prompt">3. The covenant had a lasting ___ on the peace between Odysseus and the island.</div>
+                <div class="widget-options">
+                    <button data-choice="0">affect</button>
+                    <button data-choice="1">then</button>
+                    <button data-choice="2">effect</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. This sentence sequences one event after another, naming the crimes, then beginning the reckoning, which is exactly the job &lsquo;then&rsquo; does. There is no comparison between two things here, which is the only job &lsquo;than&rsquo; ever performs." data-hint="Tempting, because &lsquo;than&rsquo; and &lsquo;then&rsquo; are easy to swap on sound alone. Check for an actual comparison between two things in this sentence; there isn't one. This sentence is simply putting two events in order.">
+                <div class="widget-row-prompt">4. Odysseus named the suitors&rsquo; crimes aloud, ___ the household began its reckoning.</div>
+                <div class="widget-options">
+                    <button data-choice="0">than</button>
+                    <button data-choice="1">then</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in Books 21 through 24, the final stretch of the poem. Learn the sense the poem gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>contending</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective/verb) &mdash; competing or striving against others for something</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Penelope uses this word for the suitors competing for her hand in Book 21, and the poem uses it again in Book 24 for the two sides ready to fight over the suitors&rsquo; deaths. The same word marks both a marriage contest and a blood feud.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>substance</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun, older sense) &mdash; a person&rsquo;s wealth, property, or livelihood</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Odysseus names this word first in his charge against the suitors in Book 22, the wealth of his household they wasted while he was gone. It is one of the concrete losses the poem lists before any violence begins.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>covenant</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a solemn, binding agreement between two parties</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The word the poem uses in Book 24 for the peace made between Odysseus and the people of Ithaca. It is stronger than a simple truce; it is a formal agreement meant to hold.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>convincing</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; able to persuade through solid evidence</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Used in Book 24 to describe the proofs Odysseus gives Laertes about the orchard, the exact detail that finally convinces his father who he is. The word marks evidence strong enough to overcome real doubt.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>marvellous</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; causing wonder, extraordinary</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Odysseus&rsquo;s own word in Book 23 for the bed he built around the living olive tree, a thing that causes wonder because of how it was made, not because of anything magical about it.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>wooed</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; courted, sought to marry</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Part of Odysseus&rsquo;s charge against the suitors in Book 22: they wooed his wife while he was still living. The word makes clear the suitors were not simply guests overstaying their welcome; they were actively pursuing a married woman.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Give your finished Bard&rsquo;s Hall draft one last proofreading pass before you submit it. Check every its/it&rsquo;s, their/there/they&rsquo;re, then/than, and effect/affect one pair at a time. Then look back across your whole module: work in at least three Word Study words from across the weeks, used accurately, somewhere in your final draft. That is how grammar and vocabulary get assessed this module: not by a quiz, but by what shows up, correctly, in the writing you actually submit.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A careful proofreading pass is the last, smallest form of respect a writer pays a reader: making sure nothing distracts from the story itself. Give your final Bard&rsquo;s Hall draft that pass, one word pair at a time, before you call it finished.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 9.GV &middot; Proofreading</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

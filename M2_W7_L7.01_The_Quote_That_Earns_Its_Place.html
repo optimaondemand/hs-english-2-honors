@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0; }
+    details.notebook-reveal summary { font-size: 16px; color: #0e1c42; cursor: pointer; }
+    details.notebook-reveal .reveal-body { margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 7.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Quote That Earns Its Place</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 7 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A brief crowded with long quotations does not look more thorough. It looks like an advocate who has not decided what the evidence proves.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already know how to find strong evidence, integrate it grammatically, and cite it fairly. This lesson is about a choice you make every time evidence goes into your brief: which words to quote, how much of the passage to include, and how to fold the quote into a sentence that argues something specific. A quote is not proof by itself. It becomes proof only once you show a reader exactly what it proves.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose a short, sharp quotation over a long, undigested block when both are available.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a quotation must be analyzed, never simply dropped in, to earn its place in an argument.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell the difference between a quotation that genuinely supports a claim and one that only decorates, distorts, or overreaches it.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">No new reading. Today&rsquo;s examples reread the curse scene (Week 1) and the Tiresias confrontation (Week 2), both already in your Evidence Bank. Full text free at <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg, trans. F. Storr</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Quick Write 14 outline, open and ready to draft from.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SAME EVIDENCE, HANDLED THREE WAYS</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time someone tried to prove a point to you by reading an entire long passage aloud, instead of pointing to the one sentence that actually mattered. Did it convince you more, or less? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That instinct is exactly what today&rsquo;s lesson is built on: more words are not the same as more proof.">&#128172; Less; I lost track of what I was supposed to be listening for</button>
+                <button data-response="Watch for that exact move today: pointing to one word or phrase and explaining what it proves is far more persuasive than reading everything aloud.">&#127919; It only convinced me once they pointed to the specific part that mattered</button>
+                <button data-response="A wall of quoted material can feel thorough without actually proving anything on its own. Today&rsquo;s lesson names why.">&#128218; More, at first, because it felt thorough</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every argument section needs the same three ingredients: a <strong>claim</strong>, <strong>evidence</strong> from the text, and <strong>reasoning</strong> that connects them. Where advocates go wrong is usually not the claim or the evidence itself; it is how the evidence gets placed on the page. Watch the same argument, built from evidence you already verified in Weeks 1 and 2, handled three different ways below.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;"><strong>The claim being argued:</strong> Oedipus&rsquo;s curse on Laius&rsquo;s murderer reveals a king so confident of his own innocence that the curse becomes devastating dramatic irony once the truth is known.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: worked example, three versions -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; THE SAME CLAIM, PROVED THREE WAYS</div>
+
+            <div style="margin-bottom: 18px; border-left: 3px solid #C0392B; padding-left: 14px;">
+                <div style="font-size: 13px; color: #8A1F16; letter-spacing: 0.3px; margin-bottom: 6px;">VERSION A &middot; THE UNDIGESTED BLOCK QUOTE</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;">Oedipus is very confident he is innocent. He says: &ldquo;And on the murderer this curse I lay (on him and all the partners in his guilt): wretch, may he pine in utter wretchedness! And for myself, if with my privity he gain admittance to my hearth, I pray the curse I laid on others fall on me.&rdquo; This shows he is a good king.</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>What goes wrong:</strong> the entire curse is dropped in whole, then followed by a vague, unrelated conclusion (&ldquo;this shows he is a good king&rdquo;) that never actually engages the specific words just quoted. The reader has to do all the analytical work the writer skipped.</div>
+            </div>
+
+            <div style="margin-bottom: 18px; border-left: 3px solid #C0392B; padding-left: 14px;">
+                <div style="font-size: 13px; color: #8A1F16; letter-spacing: 0.3px; margin-bottom: 6px;">VERSION B &middot; THE PARAPHRASE WITH NO ANCHOR</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;">Oedipus curses whoever killed Laius, and he says the curse would apply to him too if he turned out to be sheltering the killer without knowing it. This proves he believes he is innocent.</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>What goes wrong:</strong> this is an accurate summary, but it never quotes the play&rsquo;s actual words. A reader cannot check this claim against the text itself, and the argument loses the specific, striking wording (&ldquo;with my privity&rdquo;) that made the claim about irony possible in the first place.</div>
+            </div>
+
+            <div style="border-left: 3px solid #C7922C; padding-left: 14px;">
+                <div style="font-size: 13px; color: #C7922C; letter-spacing: 0.3px; margin-bottom: 6px;">VERSION C &middot; THE SHORT INTEGRATED QUOTE, ANALYZED</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;">Oedipus is so certain of his own innocence that he extends the curse to himself, praying it will fall on him &ldquo;if with my privity he gain admittance to my hearth.&rdquo; The word &ldquo;privity,&rdquo; meaning knowledge, is the hinge the irony turns on: Oedipus is confident because he assumes guilt requires knowing, and he does not yet know what he has done.</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>Why this works:</strong> the quotation is short, exact, and blended into the writer&rsquo;s own sentence. It is followed immediately by analysis of the one word (&ldquo;privity&rdquo;) doing the real work, connecting the specific wording to the specific claim about irony. Nothing is left for the reader to reconstruct.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the pattern. Version A gives the reader everything and explains nothing. Version B explains but gives the reader nothing to check. Version C gives the reader exactly enough of the text to verify the claim, then does the analytical work a reader cannot do without you: naming which word or phrase matters, and why.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TRY IT YOURSELF</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is a second piece of evidence, already verified in your Week 2 Evidence Bank: Tiresias&rsquo;s accusation, &ldquo;Thou art the man, thou the accursed polluter of this land.&rdquo; The claim it can support: Tiresias reverses the very search Oedipus began, turning the king&rsquo;s own proclamation back on himself.</p>
+
+        <!-- notebook practice before reveal -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#9997;&#65039; TRY IT YOURSELF, IN YOUR NOTEBOOK, BEFORE YOU LOOK AT THE MODEL BELOW</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Write one sentence that integrates a short piece of Tiresias&rsquo;s accusation, &ldquo;the accursed polluter of this land,&rdquo; blended into your own grammar, followed by one sentence of analysis explaining specifically what the phrase reveals. Do this in your notebook first.</div>
+        </div>
+
+        <details class="notebook-reveal">
+            <summary><strong>Compare your work: a model version</strong> (open only after you have written your own)</summary>
+            <div class="reveal-body">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Tiresias names Oedipus &ldquo;the accursed polluter of this land,&rdquo; using the same religious language Oedipus himself used in his proclamation, so that the man hunting a polluter is accused, in his own terms, of being one. The quotation is short enough to blend directly into the sentence, and the analysis names exactly what makes the accusation devastating: it turns Oedipus&rsquo;s own vocabulary against him.</div>
+            </div>
+        </details>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND QUOTE SELECTION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can shorten a long quotation for you in seconds. What it cannot do reliably is choose the one phrase that actually proves your specific claim, or write the analysis connecting that phrase to your argument; that judgment call depends on knowing exactly what you are trying to prove, which only you know. If you use an AI tool to help trim a quotation, check the shortened version against the original text yourself before it goes in your brief.</div>
+        </div>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH INTEGRATION ACTUALLY SUPPORTS THE CLAIM?</div>
+            <div class="widget-question"><strong>Claim:</strong> Oedipus&rsquo;s curse shows a king so confident of his innocence that the curse becomes devastating dramatic irony. Four sentences below try to support that claim with the same evidence. Only one actually does, without decorating, distorting, or overreaching.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. This sentence quotes accurately, blends the words into its own grammar, and connects the specific phrase &lsquo;with my privity&rsquo; to the specific claim about confidence and irony, without adding anything the text does not support." data-hint="Compare all four again. Does this one quote accurately, connect directly to the claim about confidence and irony, and avoid claiming more than the words actually show?">
+                <div class="widget-row-prompt">Which sentence actually supports the claim?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Oedipus is a proud king who cares about justice, and he says, &ldquo;wretch, may he pine in utter wretchedness,&rdquo; which shows Thebes was suffering under the plague.</button>
+                    <button data-choice="1">Oedipus admits, &ldquo;if&hellip; he gain admittance to my hearth, I pray the curse&hellip; fall on me,&rdquo; proving that he already suspects his own guilt before Tiresias ever speaks.</button>
+                    <button data-choice="2">Oedipus extends the curse to include himself &ldquo;if with my privity he gain admittance to my hearth,&rdquo; a confidence in his own innocence that becomes devastating dramatic irony once the audience learns the truth.</button>
+                    <button data-choice="3">Oedipus&rsquo;s line, &ldquo;I pray the curse I laid on others fall on me,&rdquo; proves that he already knows, deep down, that he is Laius&rsquo;s murderer.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-top: 4px;">
+            <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.3px; margin-bottom: 10px;">WHY THE OTHER THREE FALL SHORT</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The first</strong> quotes real words, but the quote and the conclusion do not actually connect; &ldquo;utter wretchedness&rdquo; is decoration for a claim about the plague, not evidence for a claim about confidence and irony.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 8px;"><strong>The second</strong> quietly drops the word &ldquo;privity&rdquo; from the middle of the quotation. That cut distorts the meaning: without &ldquo;privity&rdquo; (knowledge), the line no longer shows Oedipus excluding only knowing guilt, and the sentence ends up arguing the opposite of what the full line actually supports.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><strong>The third</strong> overreaches: the line shows Oedipus is confident he is innocent, not that he secretly suspects otherwise. Claiming the opposite of what the quote plainly shows is not a stronger reading; it is an unsupported one.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Complete Lesson 7.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn exactly how to cite the play and a scholarly source in MLA form, so the quotes you have just learned to integrate are also credited correctly.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 15 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Draft one full argument section of your brief, with at least one integrated and correctly cited quote. Full directions are on the Quick Write 15 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A quote does not prove anything by sitting on the page. It proves something once you show, in your own words, exactly what it proves. Choose the short, sharp phrase over the long block, and never let a quotation stand where analysis should be doing the work instead.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.01 &middot; The Quote That Earns Its Place</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 5.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.03 &middot; Research</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Finding and evaluating a scholarly source</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 13</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Research That Holds Up</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5 &middot; Research</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Your brief needs a source beyond the play itself. Today you learn how to find one, and how to tell a real one from a weak one.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You now have the whole story of the play in your Evidence Bank. Your brief also requires one researched scholarly source, because a strong verdict rests on more than your own reading; it engages what scholars have argued about the very question your case turns on. Today&rsquo;s lesson walks you through accessing a research database, searching it well, judging what you find, and using it honestly. Quick Write 13 is where you log the source you choose.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> access JStor and search it effectively for a research question.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate a source&rsquo;s reliability and read it strategically before deciding whether it earns a place in my brief.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the scholarly question of miasma versus intent, and use a source to inform, not replace, my own reasoning about it.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: ACCESS + SEARCH ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; GETTING INTO JSTOR</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">JStor is a large digital library of scholarly journal articles across the humanities and sciences, including classics and literary studies. Optima Academy Online provides a shared school login so every student can search it directly.</p>
+
+        <div style="background: #0E1C42; border-radius: 8px; padding: 18px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 10px; letter-spacing: 0.4px;">&#128273; SCHOOL LOGIN FOR JSTOR.ORG</div>
+            <div style="font-size: 17px; color: #ffffff; line-height: 1.7;">Username: <strong>optimaonline</strong> &nbsp;&middot;&nbsp; Password: <strong>wisdom359</strong></div>
+            <div style="font-size: 14px; color: #B9C3DE; margin-top: 6px;">This is the same shared login every Optima student uses to access JStor. Go to jstor.org, sign in, and you can search and read articles directly.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Once you are signed in, search terms matter as much as the login itself. A vague search returns thousands of results with no clear direction. A well-built search gets you to relevant scholarship fast. Try search terms like these:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 12px 0;">
+            <div style="background: #EEF1F8; border: 1px solid #C7D0E5; border-radius: 20px; padding: 8px 16px; font-size: 15px; color: #0e1c42;">&ldquo;miasma Greek tragedy&rdquo;</div>
+            <div style="background: #EEF1F8; border: 1px solid #C7D0E5; border-radius: 20px; padding: 8px 16px; font-size: 15px; color: #0e1c42;">&ldquo;pollution Oedipus&rdquo;</div>
+            <div style="background: #EEF1F8; border: 1px solid #C7D0E5; border-radius: 20px; padding: 8px 16px; font-size: 15px; color: #0e1c42;">&ldquo;moral luck Oedipus&rdquo;</div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">If your first search returns too much, narrow it (add &ldquo;Sophocles&rdquo; or &ldquo;guilt&rdquo;). If it returns too little, broaden it (drop &ldquo;Oedipus&rdquo; and search just &ldquo;miasma pollution guilt&rdquo;). Searching well is its own skill, and it usually takes more than one try.</p>
+    </div>
+
+    <!-- ===== PART 2: EVALUATING ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; IS THIS SOURCE ANY GOOD?</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time you had to decide whether an article or video was trustworthy before you used it for something that mattered. What made you trust it, or not? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That is one of the four tests you are about to practice today: checking who wrote something and what qualifies them to make the claims they make.">&#128100; I checked who wrote it and whether they seemed to know what they were talking about</button>
+                <button data-response="Good instinct. Today&rsquo;s lesson adds a second layer to that: checking not just when something was published, but whether it is still the best available word on the subject.">&#128197; I checked how recent it was</button>
+                <button data-response="That is exactly right, and it is the single most common thing students skip. A source can be excellent and still say nothing useful about your specific question.">&#127919; I checked whether it actually answered the question I was asking, not just a related one</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not everything JStor returns is equally useful. Some results are peer-reviewed scholarship (reviewed by other experts before publication); some are book reviews, popular commentary, or older material that has since been built on by newer research. Before you log a source, run it through four tests.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: evaluation checklist -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#9989; FOUR QUESTIONS TO ASK BEFORE YOU TRUST A SOURCE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #3B4E8C;">1. Peer-reviewed?</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Is this a journal article that went through expert review, or a magazine piece, blog post, or opinion essay?</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #3B4E8C;">2. Credentials?</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Who wrote it, and what makes them qualified to argue this claim (a scholar in classics or philosophy, or someone without relevant expertise)?</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #3B4E8C;">3. Date?</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Is it reasonably current, or does it predate scholarship your question actually needs (like modern intent-based legal thinking)?</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #3B4E8C;">4. Relevance?</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Does it actually address YOUR verdict question, or a related-but-different topic (staging, meter, biography)?</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">A source can pass three of these tests and still fail the fourth. An excellent, current, peer-reviewed article on Sophoclean stagecraft is still the wrong source for your brief if it never touches guilt, pollution, or intent.</p>
+    </div>
+
+    <!-- ===== PART 3: READING STRATEGICALLY + SYNTHESIS ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; READING IT WELL, THEN USING IT HONESTLY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You do not have to read a scholarly article start to finish to know whether it is useful. Read strategically: the <strong>abstract</strong> first (a short summary at the top, if the article has one), then the <strong>introduction</strong> (which states the argument), then the <strong>conclusion</strong> (which restates what was actually shown). Only once those three convince you the source is worth your time should you read the body in full.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Once you have a source worth using, the way you use it matters just as much as finding it. A source should <strong>inform your reasoning</strong>, not replace it. That means: restate its claim faithfully in your own words (the same faithful-paraphrase habit from Week 3), then explain in your own words how it bears on your verdict. Never let a quotation stand in for your own argument; the source is evidence you reason with, not a substitute for reasoning.</p>
+    </div>
+
+    <!-- ===== PART 4: MIASMA VS INTENT ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE QUESTION YOUR RESEARCH ACTUALLY ANSWERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your search terms are not random; they point at one real scholarly disagreement your verdict depends on. To an ancient Athenian audience, an act could <strong>pollute</strong> a person or a city (the Greek concept is <strong>miasma</strong>) whether or not the person meant to do it. Killing your father and marrying your mother would defile Thebes even if you had no idea, at the time, who either of them was. A modern court works differently: guilt usually depends on <strong>intent</strong> (what a defendant meant to do, sometimes called <em>mens rea</em>, a guilty mind). Oedipus did not know Laius was his father or Jocasta his mother. Under a pollution standard, that ignorance would not matter; the deed itself is the problem. Under an intent standard, it matters enormously; a person who acts without knowledge, and without any reasonable way to have known, is judged very differently from one who acts on purpose.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your verdict, whichever one you argue, depends on which standard you believe the Council of Thebes should apply, and your researched source should help you argue that choice with more than your own opinion behind it.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND YOUR RESEARCH</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can suggest search terms and give you a decent plain-language summary of what miasma means. What it cannot reliably do is cite real sources: AI tools regularly invent article titles, authors, and journals that sound entirely convincing but do not exist, or misdescribe what a real article actually says. Every source an AI tool surfaces for you must be independently verified on JStor itself: confirm the article actually exists, and confirm it actually says what the AI claimed. If you cannot find and confirm it yourself, on JStor, it does not go in your Research Log.</div>
+        </div>
+
+        <!-- evaluative widget: 4-source discrimination round -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; LOG IT, OR CUT IT?</div>
+            <div class="widget-question">Your search for &ldquo;miasma Greek tragedy intent&rdquo; turns up four possible sources. For each one, decide whether it belongs in your Research Log.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Peer review tells you the scholarship is sound, but it does not tell you the source bears on your question. This article would strengthen a paper about staging, not your verdict on miasma versus intent." data-hint="A respected journal is a good sign, but check relevance too: does this article actually discuss guilt, pollution, or intent, or something else entirely?">
+                <div class="widget-row-prompt">1. A peer-reviewed classics journal article on choral meter and staging in Sophocles, with no real discussion of guilt, pollution, or intent.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Log it for your Research Log</button>
+                    <button data-choice="1">Cut it</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. This is exactly the kind of source that feels current and readable but is not scholarship: no peer review, no citations, and a novelist&rsquo;s opinion rather than a researcher&rsquo;s argument. It cannot anchor your Research Log entry." data-hint="Ask who wrote this and whether it went through any expert review before publication. Recent and popular are not the same thing as reliable.">
+                <div class="widget-row-prompt">2. A widely shared magazine essay published this month, written by a novelist, arguing passionately that ancient Greeks were obsessed with fate.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Cut it</button>
+                    <button data-choice="1">Log it for your Research Log</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right, for this assignment specifically. This is real, respected scholarship, directly on-topic, which makes it a legitimate source for a longer research project. But because it predates most modern scholarship on intent-based guilt, it cannot alone answer a question that compares an ancient idea to a modern one; log a source that puts both sides in the same conversation." data-hint="This source is genuinely credible and on-topic. Ask what it is missing, given that your question compares an ancient idea to a modern one.">
+                <div class="widget-row-prompt">3. A classics journal article from 1962 by a respected scholar, directly analyzing pollution in Sophocles, written decades before most modern scholarship on intent-based guilt existed.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Log it for your Research Log</button>
+                    <button data-choice="1">Cut it</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Peer-reviewed, reasonably current, and directly on the question your verdict depends on: this is the kind of source that belongs in your Research Log." data-hint="Check this one against all three earlier tests at once: is it peer-reviewed, is it reasonably current, and does it address your actual question?">
+                <div class="widget-row-prompt">4. A peer-reviewed article in a classics or philosophy journal, published within the last twenty years, directly comparing ancient pollution-based guilt to modern intent-based guilt in Oedipus specifically.</div>
+                <div class="widget-options">
+                    <button data-choice="0">Cut it</button>
+                    <button data-choice="1">Log it for your Research Log</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 13 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Search JStor yourself, choose one verified source, and log it: citation, faithful summary, the claim you may borrow, and how it bears on your verdict. Full directions are on the Quick Write 13 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A real source does four things at once: it is peer-reviewed, it comes from someone qualified to make the claim, it is reasonably current, and it actually answers your question. Find one that passes all four tests, and use it to sharpen your own reasoning about miasma and intent, not to replace it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.03 &middot; Research That Holds Up</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

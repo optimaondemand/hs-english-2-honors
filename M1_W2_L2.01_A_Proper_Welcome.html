@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 2.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Proper Welcome</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Telemachus finally reaches a household where the rule of the guest is still honored.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you watched the suitors break every rule of guest and host in Odysseus&rsquo;s own hall. This week, Telemachus travels to Pylos and meets Nestor, an old friend of his father&rsquo;s from the Trojan War, and finds a household that does the opposite of everything the suitors did. Nestor feeds him, honors him, and lets him tell his story, all before he ever asks who Telemachus is or why he has come. Watching Nestor do this correctly will teach you more about the suitors&rsquo; failure than any list of their crimes could.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the correct order of hospitality that Nestor follows: welcome, feast, honor, story, and only then the guest&rsquo;s errand.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> contrast Nestor&rsquo;s household with the suitors&rsquo; behavior in Odysseus&rsquo;s hall.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to a moment in Book 3 where Telemachus acts with more confidence than he showed in Book 2.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 3</strong> in your copy. See the &ldquo;How to Read the Odyssey&rdquo; page in this module for pacing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A FEAST ON THE SHORE</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time an adult you barely knew went out of their way to make you feel welcome somewhere new. What did they actually do? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Feeding someone before asking them anything is one of the oldest welcomes there is. Watch for exactly this move when Telemachus arrives at Pylos.">&#127869;&#65039; They fed me or offered me something right away</button>
+                <button data-response="Being introduced to others and included in what was already happening is its own kind of welcome. Nestor does something similar for Telemachus.">&#128101; They introduced me around and included me</button>
+                <button data-response="Patience with questions, especially from someone nervous or new, is a real form of hospitality. Notice how Nestor handles Telemachus&rsquo;s hesitation.">&#128172; They were patient while I figured out what to say</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Telemachus and Mentor (Athena in disguise) land at Pylos in the middle of a public sacrifice. The whole community is gathered on the beach, honoring Poseidon with an enormous feast, before any stranger has even been noticed:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Now the people of Pylos were gathered on the sea shore to offer sacrifice of black bulls to Poseidon, lord of the Earthquake. There were nine guilds with five hundred men in each, and there were nine bulls to each guild.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Nestor&rsquo;s son Pisistratus spots the newcomers and, without asking a single question, brings them into the feast already underway. He hands them meat and a golden cup of wine and asks them to join the prayer to Poseidon before anything else:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then he gave them their portions of the inward meats and poured wine for them into a golden cup, handing it to Athena first, and saluting her at the same time. &lsquo;Offer a prayer, sir,&rsquo; said he, &lsquo;to King Poseidon, for it is his feast that you are joining.&rsquo;&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Pisistratus, trans. Samuel Butler, public domain</div>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A public sacrifice like this one was not just a meal. It was a religious act meant to secure a community&rsquo;s safety and good fortune, performed in full view of everyone. That Nestor folds two total strangers into a ceremony this important, without hesitation, tells an ancient audience everything it needs to know about the kind of king he is.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE ORDER NESTOR GETS RIGHT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Once the feast is finished, Nestor still does not ask his guests&rsquo; names. He talks with them, tells stories of the Trojan War, and only afterward invites Telemachus to say who he is and what he wants. When Telemachus does explain that he needs shelter for the night, Nestor will not hear of anything less than his own home and his own bedding:</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, hospitality contrast -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; NESTOR&rsquo;S WORDS, AND WHAT THEY REVEAL</div>
+            <div style="font-size: 20px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">Heaven and the immortal gods forbid that you should leave my house to go on board of a ship</span>. <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Do you think I am so poor and short of clothes, or that I have so few cloaks and rugs as to be unable to find comfortable beds both for myself and for my guests?</span>&rdquo;
+            </div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">Nestor, trans. Samuel Butler, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">A HOST WHO TAKES OFFENSE AT LESS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Nestor treats it as almost insulting that his guest might sleep somewhere less comfortable than his own household provides. Compare that to the suitors, who eat someone else&rsquo;s food and offer their host&rsquo;s own son nothing.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">GENEROSITY OFFERED FREELY</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Nothing here is grudging. Nestor offers his best without being asked twice, which is the opposite of a guest helping himself to what was never offered at all.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Line the two households up side by side. In Odysseus&rsquo;s hall, uninvited men take a host&rsquo;s cattle and never leave. In Nestor&rsquo;s hall, invited strangers are given a place at a sacred feast and a bed in the king&rsquo;s own house, and no one has to demand it. The same custom, xenia, produces opposite behavior depending entirely on the character of the people involved. That is the point this poem keeps making: a rule is only as good as the person keeping it.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A LESS HESITANT TELEMACHUS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before he ever reaches Nestor, Telemachus admits to Mentor that he is nervous about approaching a king so much older and more experienced than himself: &ldquo;dare I go up to Nestor, and how am I to address him? I have never yet been used to holding long conversations with people.&rdquo; This is the same young man who stood silent through most of Book 1.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But something has shifted since Book 2. Once he is seated and fed as an honored guest, Telemachus does speak, asking Nestor directly for news of his father and even correcting himself partway through his own question, catching his nerves and pushing past them. It is a small moment, but it is a real one: a young man who was silent among the suitors finds his voice the moment he is treated as though his words matter.</p>
+
+        <!-- evaluative widget: weigh competing READINGS (rigor rule). Correct indices 1,3,0. -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES IT REVEAL?</div>
+            <div class="widget-question">Each moment below has more than one plausible reading. Choose the one Book 3 best supports, and be ready to say why the others overreach or miss the mark.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Nothing in the scene suggests calculation on Pisistratus&rsquo;s part; a stranger is fed and folded into a sacred rite before anyone asks his business. That order, welcome before question, is the poem&rsquo;s model of hospitality done well." data-hint="Watch for readings that assign a hidden motive the text never states, or that treat the welcome itself as a weakness. What does the passage actually show Pisistratus doing, and does anything in it suggest calculation?">
+                <div class="widget-row-prompt">1. Pisistratus feeds Telemachus and Mentor at the sacrifice and invites them into the prayer to Poseidon, all before he has asked either of them a single question. What does this moment most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Pisistratus is simply following custom mechanically; the moment reveals nothing about his own character.</button>
+                    <button data-choice="1">Nestor&rsquo;s household extends real welcome to a guest before it extends any suspicion or demand.</button>
+                    <button data-choice="2">Pisistratus is currying favor with strangers who might be important, in case it benefits the household later.</button>
+                    <button data-choice="3">The poem is showing how easily strangers could exploit an overly trusting household.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Yes. Nestor&rsquo;s near-offense (&lsquo;do you think I am so poor&hellip;&rsquo;) is the tell: this is a man who takes pride in generosity, not one grudgingly meeting a religious obligation or quietly sizing up a guest. Compare this to the suitors, who resent every obligation xenia places on them." data-hint="Two traps here: reducing Nestor&rsquo;s motive to fear of the gods, or reading conditions into his offer that the passage never states. Read his own words again. What does his near-offense at being underestimated tell you about how he sees hospitality?">
+                <div class="widget-row-prompt">2. Nestor insists Telemachus sleep in his own house, invoking &ldquo;Heaven and the immortal gods forbid&rdquo; and asking whether Telemachus thinks him too poor to provide proper bedding. What does this moment most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Nestor is mainly worried about the gods punishing him, not about Telemachus&rsquo;s comfort.</button>
+                    <button data-choice="1">Nestor is testing whether Telemachus is worthy of such treatment before fully committing to it.</button>
+                    <button data-choice="2">This was simply standard practice for any host of the era, revealing nothing in particular about Nestor himself.</button>
+                    <button data-choice="3">Nestor treats generosity as something owed freely, not grudgingly, and is almost insulted at being offered less credit than he deserves.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The poem does not erase Telemachus&rsquo;s nerves; it shows him admitting them and asking anyway. That is growth measured honestly: not a boy transformed overnight, but one who can now act despite the fear he still names." data-hint="Watch for the overreach that erases his nervousness entirely, and for the reading that treats his hesitation as not caring. What does the text actually show him doing with his fear, not instead of it?">
+                <div class="widget-row-prompt">3. Telemachus admits to Mentor that he is nervous about addressing Nestor, then still asks him directly for news of Odysseus once he has been fed and honored as a guest. What does this moment most reveal?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Being honored as a guest gives Telemachus the confidence to push past his nerves and speak, even though the nerves do not fully disappear.</button>
+                    <button data-choice="1">Telemachus has completely overcome the hesitation he showed in Book 1 and is now fully self-assured.</button>
+                    <button data-choice="2">Nestor&rsquo;s court pressures Telemachus into speaking whether he is ready or not.</button>
+                    <button data-choice="3">Telemachus&rsquo;s nervousness shows he still does not care enough about finding his father to push through it.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Book 3 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note one detail of Nestor&rsquo;s hospitality that stands out to you, and record it in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 2.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will see hospitality on an even grander scale, at the court of Menelaus in Sparta.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Nestor gets the order right: welcome first, feast and honor next, the guest&rsquo;s own story invited, and only then his errand. Every step is offered before it is demanded. Set that beside the suitors from last week, and the poem&rsquo;s point becomes plain: the same custom can build a household or wreck one, depending entirely on who is keeping it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; A Proper Welcome</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

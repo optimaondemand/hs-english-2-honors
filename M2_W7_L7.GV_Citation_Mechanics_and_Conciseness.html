@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 7.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Citation punctuation &amp; conciseness</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from the play&rsquo;s final scenes</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Citation Mechanics and Conciseness</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 7</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Two small habits, correctly punctuating a citation and cutting your own throat-clearing, make a draft look like a finished brief instead of a rough one.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You learned MLA citation forms yesterday. Today you learn exactly where the punctuation goes around them, plus a first-pass revision habit: cutting the wordy openers that delay your actual claim. You will use both, and this week&rsquo;s Word Study words, in Quick Write 15.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> place a sentence&rsquo;s final period correctly when a parenthetical citation follows a quotation.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> keep a quoted question mark inside the quotation marks, even when a citation and a new period follow it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> cut a wordy opener so a sentence starts on its actual claim, and define and use this week&rsquo;s Word Study words.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: PERIOD PLACEMENT ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHERE THE PERIOD GOES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When a parenthetical citation follows a quotation, the sentence&rsquo;s final period moves to <strong>after the closing parenthesis</strong>, never inside the quotation marks. The parenthetical citation is still part of your sentence; the sentence is not finished until it is.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard, before/after -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; PERIOD PLACEMENT WITH A CITATION</div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">WRONG</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Oedipus warns the murderer he will face &ldquo;utter wretchedness.&rdquo; (Sophocles)</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The period sits inside the quotation marks, before the citation, making the citation look like it starts a brand-new sentence.</div>
+            </div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">RIGHT</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Oedipus warns the murderer he will face &ldquo;utter wretchedness&rdquo; (Sophocles).</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The period moves to after the parenthesis, since the citation is still part of the same sentence.</div>
+            </div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">WRONG (A QUOTED QUESTION)</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Creon demands to know, &ldquo;What then&rsquo;s thy will? To banish me the land&rdquo; (Sophocles)?</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Moving the question mark outside the quotation marks makes it look like the writer is asking the question, when it actually belongs to Creon&rsquo;s own words.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">RIGHT (A QUOTED QUESTION)</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Creon demands to know, &ldquo;What then&rsquo;s thy will? To banish me the land?&rdquo; (Sophocles).</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The question mark stays inside the quotation marks, because it belongs to Creon&rsquo;s own words, not the writer&rsquo;s. The writer&rsquo;s own sentence still needs its own final period, placed after the citation.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Remember the ellipsis and bracket rules from Week 2: any cut you make inside a quotation still has to preserve what the line actually says. That honesty rule does not change just because a citation now follows the quotation; it simply means your citation should point to the same honestly-quoted words.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; IS THE PUNCTUATION ACTUALLY RIGHT?</div>
+            <div class="widget-question">Each sentence below cites a real line from the play. Look closely at the punctuation around the quotation marks and the citation before you decide.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The quoted words end mid-thought, so no punctuation belongs inside the quotation marks at all; the sentence&rsquo;s own final period comes after the citation, exactly where it is here." data-hint="Read only what is inside the quotation marks. Does it end on a mark that belongs to the original line, or does it simply stop? Where does the sentence&rsquo;s own final period need to go?">
+                <div class="widget-row-prompt">1. Oedipus calls himself &ldquo;the miscreant by heaven itself declared unclean&rdquo; (Sophocles).</div>
+                <div class="widget-options">
+                    <button data-choice="0">Wrong: the period should sit inside the quotation marks, before the citation.</button>
+                    <button data-choice="1">Wrong: a citation can never follow a quotation that does not end the paragraph.</button>
+                    <button data-choice="2">Correct as written.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Creon&rsquo;s question mark belongs inside the quotation marks, since it is his own words asking the question, not the writer&rsquo;s. Moving it outside makes it look like the writer is asking Creon&rsquo;s question." data-hint="Whose question is this: the writer&rsquo;s, or Creon&rsquo;s, inside the quotation? Where does a mark that belongs to the original speaker need to stay?">
+                <div class="widget-row-prompt">2. Creon asks Oedipus, &ldquo;What then&rsquo;s thy will? To banish me the land&rdquo; (Sophocles)?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Correct as written.</button>
+                    <button data-choice="1">Wrong: the question mark belongs to Creon&rsquo;s own words and should stay inside the quotation marks; the sentence&rsquo;s own period then follows the citation.</button>
+                    <button data-choice="2">Wrong: the whole quotation should be rewritten as a statement instead of a question.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: CONCISENESS ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CUTTING THE THROAT-CLEARING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A &ldquo;throat-clearing&rdquo; opener is a phrase that delays your actual claim without adding anything: &ldquo;In my opinion, it seems clear that&hellip;&rdquo; or &ldquo;I think that it could be argued that&hellip;&rdquo; An advocate&rsquo;s brief has already established, in Lesson 1.03, that you are arguing a claim, not sharing a feeling; these openers quietly undo that work by hedging every sentence before it starts.</p>
+
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; CUTTING THE OPENER</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 13px; color: #C0392B; margin-bottom: 4px;">BEFORE</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">In my opinion, it seems clear that Oedipus&rsquo;s curse is an example of dramatic irony.</div>
+            </div>
+            <div>
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">AFTER</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Oedipus&rsquo;s curse is an example of dramatic irony.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Nothing is lost. The claim was always the point; the opener was only delaying it.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">A quick test: read your sentence without the opening phrase. If the claim still stands, fully intact, the opener was throat-clearing, and it should go.</p>
+    </div>
+
+    <!-- ===== PART 3: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in the play&rsquo;s final scenes, the ones you are rereading this week as you gather evidence. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>accursed</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; under a curse; doomed or condemned</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Tiresias&rsquo;s exact charge against Oedipus: &ldquo;thou the accursed polluter of this land.&rdquo; The word ties Oedipus&rsquo;s own curse back onto himself.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>banish</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to officially expel someone from a place, especially a country or city</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Creon names it as one of two possible punishments early on (&ldquo;Banishment, or the shedding blood for blood&rdquo;), and it becomes Oedipus&rsquo;s actual fate by the play&rsquo;s final scene.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>witness</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to see an event happen and be able to attest to it firsthand</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">In his final speech, Oedipus addresses the crossroads themselves, asking whether they recall &ldquo;those deeds of mine ye witnessed,&rdquo; the killing that started everything.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>abhor</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(verb) &mdash; to regard with disgust and hatred</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus uses it of the still-unknown murderer, vowing his &ldquo;heart shall still abhor&rdquo; him, not yet aware whom he is condemning.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>miscreant</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a villain or wrongdoer</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus&rsquo;s own word for himself once the truth is known: &ldquo;the miscreant by heaven itself declared unclean.&rdquo;</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>canker</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a spreading corruption or decay, often hidden beneath a healthy surface</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus describes his own hidden guilt this way, looking back on his youth in Corinth: &ldquo;how foul the canker that lay festering in the bud.&rdquo;</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">As you draft Quick Write 15, correctly punctuate at least <strong>one citation</strong> following a quotation, tighten <strong>at least one sentence</strong> by cutting a throat-clearing opener, and work in at least <strong>two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own draft.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A citation&rsquo;s period belongs after the parenthesis, a quoted question mark stays inside the quotation marks, and a claim is stronger the moment it stops clearing its throat. Carry all three, and today&rsquo;s six words, into your draft.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.GV &middot; Citation Mechanics and Conciseness</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

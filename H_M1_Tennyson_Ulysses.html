@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 Honors &mdash; Tennyson&rsquo;s Ulysses</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .poem-block { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 22px 26px; margin: 16px 0; }
+    .poem-block p { font-size: 16px; color: #0E1C42; line-height: 1.85; font-style: italic; margin: 0 0 20px 0; white-space: pre-line; }
+    .poem-block p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2 HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Honors Literary Enrichment &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Weeks 3&ndash;4</div>
+        <div style="font-size: 12px; color: #1a2340;">Read alongside Books 5&ndash;8</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Ulysses</div>
+        <div style="font-size: 12px; color: #1a2340;">Alfred, Lord Tennyson &middot; 1842 &middot; public domain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Type</div>
+        <div style="font-size: 16px; color: #0e1c42;">Honors enrichment</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Honors Literary Enrichment</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Tennyson&rsquo;s &ldquo;Ulysses&rdquo;: The Hero Who Cannot Rest</div>
+        <div style="font-size: 16px; color: #1a2340;">Read alongside Books 5&ndash;8 &middot; does not replace any Standard lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The restless old king in the poem you are about to read is the same hero you are following through Calypso&rsquo;s island and the Phaeacian court right now, Odysseus, imagined many centuries later by an English poet under his Roman name, Ulysses. This lesson is an honors-only addition, meant to sit alongside your Book 5&ndash;8 reading, not replace anything in your regular week. Tennyson picks up an idea Homer never quite settles: what happens to a hero once the journey is officially over, once he is home, safe, and a king again?</div>
+    </div>
+
+    <!-- Name note -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128221; A NOTE ON THE NAME</div>
+        <div style="font-size: 16px; color: #0E1C42; line-height: 1.6;">Everywhere else in this course you have used the Greek name Odysseus. Tennyson&rsquo;s poem is titled &ldquo;Ulysses,&rdquo; the Roman form of the same name, and it uses that name throughout its own lines. Because this is Tennyson&rsquo;s actual text, we keep his word exactly as he wrote it. Just remember as you read: Ulysses and Odysseus are the same hero.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> place Tennyson&rsquo;s poem in its historical moment and its literary form.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify how Tennyson imagines this hero&rsquo;s story continuing after Homer&rsquo;s ending.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a restless, aged hero reveals about purpose and legacy, a question your own game could take up.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: HISTORICAL MOMENT ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128337; PART 1 &middot; A POEM WRITTEN AFTER A LOSS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Alfred Tennyson wrote &ldquo;Ulysses&rdquo; in 1833, shortly after the sudden death of Arthur Hallam, his closest friend since university, and published it in 1842. Grief runs underneath the poem even though it never mentions Hallam directly: a poem about a man who refuses to sit still and wait out the rest of his life reads differently once you know it was written by someone freshly reminded how short a life can be.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The poem is a <strong>dramatic monologue</strong>: a single speaker, Ulysses himself, addresses an audience inside the poem (first his own restless thoughts, then his old sailors) while the poet stays silent and lets the character&rsquo;s own words do all the work. It is written in <strong>blank verse</strong>, unrhymed lines of ten syllables falling into a steady rise-and-fall rhythm. Read a few lines aloud and you can hear that measured, unhurried beat under the old king&rsquo;s restlessness.</p>
+    </div>
+
+    <!-- ===== PART 2: THE POEM ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128220; PART 2 &middot; THE POEM, IN FULL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Homer&rsquo;s epic ends with Odysseus restored: home on Ithaca, reunited with Penelope and Telemachus, peace remade in his own hall. Tennyson picks the story up from there and imagines what an old king does with a peace he cannot enjoy. Read the whole poem once through before you look closely at any one part of it.</p>
+        <div class="poem-block">
+<p>It little profits that an idle king,
+By this still hearth, among these barren crags,
+Match'd with an aged wife, I mete and dole
+Unequal laws unto a savage race,
+That hoard, and sleep, and feed, and know not me.
+I cannot rest from travel: I will drink
+Life to the lees: all times I have enjoy'd
+Greatly, have suffer'd greatly, both with those
+That loved me, and alone; on shore, and when
+Thro' scudding drifts the rainy Hyades
+Vext the dim sea: I am become a name;
+For always roaming with a hungry heart
+Much have I seen and known; cities of men
+And manners, climates, councils, governments,
+Myself not least, but honour'd of them all;
+And drunk delight of battle with my peers,
+Far on the ringing plains of windy Troy.
+I am a part of all that I have met;
+Yet all experience is an arch wherethro'
+Gleams that untravell'd world, whose margin fades
+For ever and for ever when I move.
+How dull it is to pause, to make an end,
+To rust unburnish'd, not to shine in use!
+As tho' to breathe were life. Life piled on life
+Were all too little, and of one to me
+Little remains: but every hour is saved
+From that eternal silence, something more,
+A bringer of new things; and vile it were
+For some three suns to store and hoard myself,
+And this gray spirit yearning in desire
+To follow knowledge, like a sinking star,
+Beyond the utmost bound of human thought.</p>
+<p>This is my son, mine own Telemachus,
+To whom I leave the sceptre and the isle&mdash;
+Well-loved of me, discerning to fulfil
+This labour, by slow prudence to make mild
+A rugged people, and thro' soft degrees
+Subdue them to the useful and the good.
+Most blameless is he, centred in the sphere
+Of common duties, decent not to fail
+In offices of tenderness, and pay
+Meet adoration to my household gods
+When I am gone. He works his work, I mine.</p>
+<p>There lies the port: the vessel puffs her sail:
+There gloom the dark broad seas. My mariners,
+Souls that have toil'd, and wrought, and thought with me&mdash;
+That ever with a frolic welcome took
+The thunder and the sunshine, and opposed
+Free hearts, free foreheads&mdash;you and I are old;
+Old age hath yet his honour and his toil;
+Death closes all: but something ere the end,
+Some work of noble note, may yet be done,
+Not unbecoming men that strove with Gods.
+The lights begin to twinkle from the rocks:
+The long day wanes: the slow moon climbs: the deep
+Moans round with many voices. Come, my friends,
+'Tis not too late to seek a newer world.
+Push off, and sitting well in order smite
+The sounding furrows; for my purpose holds
+To sail beyond the sunset, and the baths
+Of all the western stars, until I die.
+It may be that the gulfs will wash us down:
+It may be we shall touch the Happy Isles,
+And see the great Achilles, whom we knew.
+Tho' much is taken, much abides; and tho'
+We are not now that strength which in old days
+Moved earth and heaven; that which we are, we are;
+One equal temper of heroic hearts,
+Made weak by time and fate, but strong in will
+To strive, to seek, to find, and not to yield.</p>
+        </div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 4px;">Alfred, Lord Tennyson, &ldquo;Ulysses,&rdquo; 1842. Public domain; text verified against Wikisource.</div>
+    </div>
+
+    <!-- ===== PART 3: THE RESTLESS HERO ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9973; PART 3 &middot; A KING WHO WON&rsquo;T STAY HOME</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice where Ulysses places himself in his own story. He has already returned; the throne, the wife, the household are all his again, exactly what the whole Odyssey drove toward. And yet his opening word for his own peace is &ldquo;idle,&rdquo; and he calls the people he now rules a &ldquo;savage race&rdquo; who &ldquo;know not me.&rdquo; He hands the kingdom&rsquo;s actual, patient work to Telemachus without much visible regret, then turns to his old crew and proposes one more voyage, out past the edge of anything either of them has charted, with no promise of return.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This raises a genuinely open question, one careful readers answer differently. Is Ulysses admirable here, refusing to let age and comfort end a life still capable of &ldquo;some work of noble note&rdquo;? Or is he abandoning a real, present duty, a kingdom and a family, to chase a feeling he cannot get any other way? The poem gives you real evidence for both readings and does not settle the question for you. As you reread, mark one line that makes Ulysses sound most admirable to you, and one that makes him sound most like he is making excuses. You do not have to resolve the tension; noticing it clearly is the point.</p>
+    </div>
+
+    <!-- ===== PART 4: A CHARACTER WHO LIVES ON ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127918; PART 4 &middot; A SEED FOR YOUR OWN GAME</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Tennyson is doing something worth noticing as a designer, not just as a reader: he takes a story everyone already considers finished and asks what the main character does the day after the ending. A game can do the same thing. What does a character, a household, or a whole community look like once the official story is over? Do they settle, or does something in them keep pulling toward one more risk? Whichever world you build your game in, this poem is worth holding onto as one shape a character&rsquo;s life after the ending might take.</p>
+    </div>
+
+    <!-- evaluative self-check -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; SELF-CHECK</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; THE BEST-SUPPORTED READING</div>
+            <div class="widget-question">Each question offers four readings of specific lines. More than one will sound reasonable; choose the one the poem&rsquo;s actual language best supports, and be ready to say why the others overreach or fall short.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Just before this line, Ulysses calls Telemachus &lsquo;most blameless&rsquo; and praises his patience and care in real, unmocking detail. &lsquo;He works his work, I mine&rsquo; reads as a genuine division of labor between two different, both-legitimate kinds of work, not a put-down." data-hint="This claims Ulysses is mocking his son, but check the lines right before it: &lsquo;most blameless,&rsquo; &lsquo;discerning to fulfil this labour&rsquo; is generous praise, not sarcasm. A mocking reading has to explain away that praise, and the poem gives no signal that it's insincere.">
+                <div class="widget-row-prompt">1. Ulysses says of Telemachus, &ldquo;He works his work, I mine.&rdquo; What is the best-supported reading of this line?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Ulysses is mocking Telemachus&rsquo;s caution, implying that only his own voyaging counts as real work.</button>
+                    <button data-choice="1">Ulysses regrets leaving the kingdom to his son and wishes he could undo the decision.</button>
+                    <button data-choice="2">Ulysses believes Telemachus is not truly capable of ruling and only tolerates him out of necessity.</button>
+                    <button data-choice="3">Ulysses believes his son&rsquo;s steady governance and his own restless voyaging are both legitimate, but fundamentally different, kinds of labor.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. &lsquo;Death closes all&rsquo; concedes mortality outright; the lines do not pretend otherwise. What they insist on is that real accomplishment, &lsquo;some work of noble note,&rsquo; remains possible inside that limit, not that the limit can be argued away." data-hint="This reading has to ignore the poem's own words. &lsquo;Death closes all&rsquo; is about as direct a concession of mortality as blank verse allows; a reading that denies death is inevitable is arguing against the text's plain statement, not interpreting it.">
+                <div class="widget-row-prompt">2. &ldquo;Old age hath yet his honour and his toil... Death closes all: but something ere the end, / Some work of noble note, may yet be done.&rdquo; What is the best-supported reading of this stance toward old age?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It accepts old age and mortality as real limits, while insisting genuine accomplishment is still possible inside them.</button>
+                    <button data-choice="1">It denies that death is truly inevitable, since Ulysses believes his own will can somehow overcome it.</button>
+                    <button data-choice="2">It argues that old men are actually stronger than young men, since will can fully substitute for lost strength.</button>
+                    <button data-choice="3">It suggests that any further voyage is really just a search for an honorable death, since return is treated as impossible either way.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The poem gives you Ulysses's restlessness in his own vivid, one-sided words, but it never steps outside his voice to confirm his judgment of his people or settle whether his itch to leave is greatness or neglect. That is exactly the open question Part 3 asked you to sit with." data-hint="This treats Ulysses's own aggrieved description as if the poem itself confirms it. A dramatic monologue gives you only one speaker's voice; nothing here tells you the poet agrees that Telemachus's subjects are actually poorly governed or genuinely primitive.">
+                <div class="widget-row-prompt">3. Ulysses opens by calling his own peaceful rule &ldquo;idle&rdquo; and describing his people as a &ldquo;savage race&rdquo; that &ldquo;hoard, and sleep, and feed, and know not me.&rdquo; What is the best-supported reading of this opening?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows Ulysses's genuine contempt for his subjects, and the poem endorses that contempt as an accurate judgment of them.</button>
+                    <button data-choice="1">It proves that Ithaca is in fact poorly governed and in real danger under Telemachus's coming rule.</button>
+                    <button data-choice="2">It establishes Ulysses's restlessness and dissatisfaction with domestic peace, while leaving open whether that restlessness is admirable ambition or a blindness to real duty.</button>
+                    <button data-choice="3">It is simply factual reporting on the primitive condition of Ithaca's people at the time the poem is set.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Tennyson gives the Odyssey&rsquo;s hero a life after the ending, and it is not a restful one. Keep both readings of Ulysses in mind as you finish Books 5&ndash;8: a man still capable of greatness, or a man unwilling to accept that the story is supposed to be over. Either way, notice how a single poem, decades after Homer, kept this hero&rsquo;s story alive by imagining past its edge.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Honors Literary Enrichment &middot; Tennyson&rsquo;s Ulysses</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

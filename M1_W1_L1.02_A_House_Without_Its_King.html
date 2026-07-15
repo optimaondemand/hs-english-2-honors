@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 1.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A House Without Its King</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Odysseus has been gone twenty years. In his absence, an entire community has forgotten how to behave.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday you learned the tools the poem uses to tell its story. Today you look at what the story actually shows you in Books 1 and 2: a household overrun by men who will not leave, a son too young and too alone to stop them, and a goddess who decides it is time to act. The poem never stops to tell you outright that the suitors are bad guests. It shows you what they do, and lets you draw the conclusion. That is the central skill of this lesson, and it is one you will use on every character you meet this year.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain xenia, the ancient rule of hospitality between guest and host, and why it matters so much to this poem.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> show how a character is revealed by what they do, not by what the poem says about them.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize what happens in Book 2, when Telemachus finally tries to act.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 2</strong> in your copy. See the &ldquo;How to Read the Odyssey&rdquo; page in this module for pacing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE RULE EVERYONE KNEW</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time someone was a guest in your home, or you were a guest in someone else&rsquo;s. What is one unwritten rule about how a guest should behave? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Respect for a host&rsquo;s space and things is close to the oldest rule there is. Watch how directly the suitors violate exactly that rule.">&#127968; Don&rsquo;t treat someone else&rsquo;s house like your own</button>
+                <button data-response="Knowing when to leave is a real skill, and its absence is exactly what makes the suitors intolerable. Keep that in mind as you read.">&#8987; Know when it&rsquo;s time to go</button>
+                <button data-response="Gratitude toward a host is a value this poem takes very seriously. The suitors show none of it, and the poem wants you to notice.">&#128591; Show gratitude for what you&rsquo;re given</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Xenia: the world&rsquo;s central rule</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the world of the Odyssey, hospitality between guest and host was close to sacred. A traveler could arrive at a stranger&rsquo;s door with nothing, and custom demanded that the host feed him, shelter him, and send him off with gifts, before ever asking his name. In exchange, a guest owed his host respect: he did not overstay his welcome, damage the household, or take what was not offered. This exchange had a name, xenia, and it mattered so much because travel was dangerous and strangers had no other protection. A god might even be testing you, disguised as the stranger at your door. Xenia was not simply good manners. It was the thread that held a scattered, dangerous world together.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Keep that rule in mind as you picture the scene inside Odysseus&rsquo;s hall. A crowd of local noblemen has moved in and refuses to leave, hoping to force his wife, Penelope, into remarrying one of them. They are, technically, guests. They are treating the rule of xenia as a joke.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An audience listening to this poem performed aloud, likely in the 700s BCE, would have felt the suitors&rsquo; behavior as a genuine outrage, not a minor rudeness. Xenia protected a world without hotels, police, or reliable roads. A community that let this many strangers overrun one household without consequence was a community that had lost its center. The poem asks its listeners to hold that thought until the king returns.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; SHOWN, NOT TOLD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice something about how the poem introduces the suitors. It never simply announces, &ldquo;these men are greedy and disrespectful.&rdquo; It shows you a picture and trusts you to judge it:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;There she found the lordly suitors seated on hides of the oxen which they had killed and eaten, and playing draughts in front of the house.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, action-based characterization -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; READ THE ACTIONS, NOT A LABEL</div>
+            <div style="font-size: 20px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;There she found the lordly suitors seated on <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">hides of the oxen which they had killed and eaten</span>, and <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">playing draughts in front of the house</span>.&rdquo;
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">ACTION 1 &mdash; WHAT IT REVEALS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">They have slaughtered and eaten a host&rsquo;s cattle for their own comfort. A grateful guest does not consume the household that shelters him. This single detail tells you these men take without limit.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">ACTION 2 &mdash; WHAT IT REVEALS</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">They pass the day playing a board game, in no hurry to leave. No urgency, no shame, no plan to go home. That is a household under occupation, not a house of guests.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the method to carry with you all year: when you want to know what the poem thinks of a character, do not look for a label. Look for what that character does when no one is forcing a choice on them. The suitors reveal themselves by helping themselves. Telemachus, by contrast, has done nothing at all, and that inaction is its own kind of revelation: a young man who does not yet believe he is allowed to act in his own house.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TELEMACHUS TRIES TO ACT (BOOK 2)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athena&rsquo;s visit at the end of Book 1 has an immediate effect. In Book 2, Telemachus does something he has not done before: he calls a formal assembly of the men of Ithaca and stands up in public to accuse the suitors of ruining his household. It is a real act of courage for a young man who has spent his whole life in his absent father&rsquo;s shadow.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It does not go the way he hopes. Two of the suitors&rsquo; ringleaders, Antinous and Eurymachus, answer him in public, and their answer tells you everything about how little they respect him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Telemachus, insolent braggart that you are, how dare you try to throw the blame upon us suitors? It is your mother&rsquo;s fault, not ours, for she is a very artful woman.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Antinous, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the word Antinous reaches for: <em>insolent</em>. He calls Telemachus disrespectful for demanding that guests behave like guests. That is worth sitting with. The suitors, who are the ones actually behaving with no respect at all, accuse the household&rsquo;s own son of insolence. Watch for this pattern all year: characters who lack a virtue are often the quickest to accuse someone else of lacking it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Antinous also reveals why the suitors have been able to linger this long. Penelope, Telemachus&rsquo;s mother, has been holding them off for years with a trick: she told them she would choose a husband once she finished weaving a burial shroud for Odysseus&rsquo;s aging father, Laertes, then quietly unpicked her work every night so it was never done. The suitors have just discovered the trick and are furious about it. It is a small, patient act of resistance, and it is the clearest sign in these two books that someone in that house still believes the king is coming home.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Book 2 ends with Telemachus taking real action of his own. Athena, again disguised, this time as an old family friend named Mentor, helps him quietly gather a crew and a ship. Under cover of night, he sails off to seek news of his father, without telling his mother he is going. It is the first independent decision he makes in the whole poem.</p>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CHARACTER JUDGMENT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can quickly summarize what happens in Book 2 and even define xenia accurately. What it cannot do is notice, on its own, that Antinous calling Telemachus &ldquo;insolent&rdquo; is itself a piece of characterization, or weigh whether Penelope&rsquo;s trick counts as cleverness or as deception. That judgment comes only from reading the scene closely yourself, and it is yours to make.</div>
+        </div>
+
+        <!-- evaluative widget: weigh competing READINGS (rigor rule: every option plausible; feedback teaches). Correct indices 1,3,0,2 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH READING HOLDS UP?</div>
+            <div class="widget-question">Each question below offers four readings of a moment from Books 1&ndash;2. More than one will sound reasonable; choose the one the text best supports, and be ready to say why the others fall short.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Yes. The poem passes no verdict in its own voice; it stages the details (whose cattle, whose hides, a board game in the doorway) and trusts you to convict them. That restraint is the technique this lesson is about." data-hint="Reread the quoted line. Does the poet ever call the suitors greedy, or does something else do that work? And who provided the oxen they are sitting on?">
+                <div class="widget-row-prompt">1. The poem introduces the suitors seated on the hides of oxen &ldquo;which they had killed and eaten,&rdquo; playing a game in the doorway. What is the poet doing in this moment?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Condemning the suitors directly, in the narrator&rsquo;s own voice, as greedy and disrespectful.</button>
+                    <button data-choice="1">Arranging details that let the audience convict the suitors without the poet saying a judging word.</button>
+                    <button data-choice="2">Recording an ordinary aristocratic pastime of the era, with little judgment implied either way.</button>
+                    <button data-choice="3">Showing the suitors enjoying hospitality that Telemachus has freely offered them as guests.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right, and notice how the move works: the one person quietly defending the household is recast as the deceiver, by a man consuming what is not his. Blame-shifting that accuses others of your own fault is a pattern worth tracking all year." data-hint="&lsquo;Artful&rsquo; sounds almost like admiration, and that is the trap. Ask instead what the accusation accomplishes FOR Antinous at this moment, in front of the whole assembly.">
+                <div class="widget-row-prompt">2. Confronted in the assembly, Antinous answers that the fault is not the suitors&rsquo; but Penelope&rsquo;s, &ldquo;for she is a very artful woman.&rdquo; What is the strongest reading of this reply?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He is paying Penelope a backhanded compliment; even her enemies concede her intelligence.</button>
+                    <button data-choice="1">He speaks from honest conviction; from where the suitors stand, years of delay really do look like bad faith.</button>
+                    <button data-choice="2">He is deflecting attention from Telemachus, whose youth makes him an easy target in public.</button>
+                    <button data-choice="3">He recasts the household&rsquo;s quiet resistance as deceit, shifting blame to excuse the obligation the suitors are violating.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Yes. Both parties deceive, and the poem knows it. The difference it stages is purpose and cost: her trick protects a household at nobody&rsquo;s expense but her own patience; their imposture drains a house they have no claim to. The poem is more interested in what deception is FOR than in deception itself." data-hint="Be careful with any option that makes deception itself the crime; Odysseus, the poem&rsquo;s hero, is its most famous deceiver. What separates her trick from the suitors&rsquo; behavior?">
+                <div class="widget-row-prompt">3. Penelope&rsquo;s shroud trick is also a deception: for years she has lied to the suitors about her intentions. How does the poem weigh her deceit against theirs?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It distinguishes by purpose: her deception preserves a household at her own cost, while theirs consumes one they have no claim to.</button>
+                    <button data-choice="1">It treats all deception alike; her unraveling makes her no better than the men she resists, and the poem lets both stand condemned.</button>
+                    <button data-choice="2">It excuses her because she is loyal to Odysseus; loyalty makes any means acceptable in the poem&rsquo;s world.</button>
+                    <button data-choice="3">It plays her trick mostly for cleverness, a light interlude before the serious business of the assembly.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The assembly changes Telemachus, not Ithaca: he finds his public voice and is publicly rebuffed, and the citizens sit silent. That silence is part of this module&rsquo;s question; a community that will not back its own household has troubles deeper than the suitors." data-hint="Two of these options claim more than Book 2 shows. Check each claim against outcomes: does anyone in the assembly stand up for him? Does anything about the suitors actually change?">
+                <div class="widget-row-prompt">4. By the end of Book 2, Telemachus has spoken in the assembly and sailed secretly for news of his father. What is the best-supported reading of where he now stands?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Athena&rsquo;s visit has transformed him; he now commands the authority his father once held in Ithaca.</button>
+                    <button data-choice="1">His speech has moved the community; the assembly&rsquo;s silence shows the citizens quietly turning against the suitors.</button>
+                    <button data-choice="2">He is learning to act, in words and now one deed, but his authority is still untested and the suitors remain unmoved.</button>
+                    <button data-choice="3">His secret departure shows he has given up on the household and is escaping a fight he cannot win.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Read Book 2 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">As you read, note one moment where a character&rsquo;s action, not a label, tells you who they are. Record it in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 1.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will practice starting your own story in the middle of an action, the way this poem does.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Xenia held this world together, and the suitors have broken it in plain sight: eating another man&rsquo;s cattle, refusing to leave, and mocking the one person who dares to object. Telemachus finally speaks up in Book 2 and is mocked for it, but he does not stop there: he acts, quietly and on his own, by the book&rsquo;s end. A household in disorder, a son learning to act, and a wife holding the line by patience alone. That is the state of the king&rsquo;s community while he is still an ocean away.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.02 &middot; A House Without Its King</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

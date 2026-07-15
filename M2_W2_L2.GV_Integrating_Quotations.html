@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 2.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Integrating quotations</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from the Tiresias scene</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Integrating Quotations</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 2</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A quotation dropped into an essay with no lead-in reads like a stray sentence. A quotation folded into your own sentence reads like proof.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already know how to find strong evidence and state it fairly. This lesson gives you the grammar to fold that evidence smoothly into your own writing, with lead-in phrases, honest brackets, and honest ellipses. You will use both today&rsquo;s Word Study words and this grammar in Quick Write 10.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> introduce a quotation with a lead-in phrase and blend a quotation grammatically into my own sentence.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use brackets and ellipses honestly, without changing what a quotation actually says.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words, drawn from the Tiresias scene.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FOLDING A QUOTATION INTO YOUR SENTENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A quotation dropped into your writing with no setup forces your reader to guess why it is there. A <strong>lead-in phrase</strong> names who is speaking and why the line matters, before the quotation arrives. A <strong>blended quotation</strong> goes further: it fits the quoted words directly into the grammar of your own sentence, so the sentence still reads smoothly if you read it straight through.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Compare the three versions below, all built from real lines in the Tiresias scene.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; THREE WAYS TO USE A QUOTATION</div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">DROPPED QUOTATION (AVOID THIS)</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Tiresias is angry at Oedipus. &ldquo;Thou art the man, thou the accursed polluter of this land.&rdquo;</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The quotation just appears with no grammatical connection to the sentence before it. A reader has to work to see why it is there.</div>
+            </div>
+
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">LEAD-IN PHRASE</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Provoked past patience, Tiresias finally declares: &ldquo;Thou art the man, thou the accursed polluter of this land.&rdquo;</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">The lead-in (&ldquo;Provoked past patience, Tiresias finally declares&rdquo;) tells the reader who is speaking and why, right before the words arrive.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">BLENDED QUOTATION</div>
+                <div style="font-size: 18px; color: #ffffff; line-height: 1.65;">Tiresias names Oedipus as &ldquo;the accursed polluter of this land,&rdquo; reversing the very search Oedipus himself began.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Here the quoted words (&ldquo;the accursed polluter of this land&rdquo;) are fitted directly into the grammar of the writer&rsquo;s own sentence, as its object. Read the whole sentence aloud: it flows as one sentence, not two stitched together.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fastest test for a blended quotation: read your full sentence aloud, quotation marks and all. If it does not sound like one grammatical sentence, the quotation is not blended yet.</p>
+    </div>
+
+    <!-- ===== PART 2: GRAMMAR CONTINUED ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; BRACKETS AND ELLIPSES, USED HONESTLY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sometimes a quotation needs a small edit to fit your sentence. Two tools let you edit honestly, without changing what the text actually says.</p>
+        <div class="ws-card" style="border-top-color:#3B4E8C;">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>Square brackets [ ]</strong> replace or clarify a word, usually a pronoun, so the quotation makes sense outside its original sentence.</div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 6px; line-height: 1.55;">Original: &ldquo;Thou art the man, thou the accursed polluter of this land.&rdquo;<br />With a bracket: Tiresias insists that &ldquo;[Oedipus] art the man&hellip; the accursed polluter of this land.&rdquo;</div>
+        </div>
+        <div class="ws-card" style="border-top-color:#3B4E8C;">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>An ellipsis (&hellip;)</strong> shows you cut words from the middle of a quotation, honestly, without changing its meaning.</div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 6px; line-height: 1.55;">Original: &ldquo;Sore perplexed am I by the words of the master seer. Are they true, are they false? I know not and bridle my tongue for fear.&rdquo;<br />Honestly shortened: &ldquo;Sore perplexed am I by the words of the master seer&hellip; I know not and bridle my tongue for fear.&rdquo;</div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">Remember what you learned in Lesson 2.03: a cut that changes the sentence&rsquo;s actual meaning is not a shortcut, it is a misquotation. An honest ellipsis only ever removes words that were not doing meaning-carrying work.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; BLENDED OR DROPPED?</div>
+            <div class="widget-question">Decide whether the quotation is grammatically blended into the sentence, or simply dropped in.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Correct. The quoted phrase &lsquo;stone-blind&rsquo; would need to fit the grammar of a lead-in sentence to count as blended. Here it just appears after a period, unconnected." data-hint="Read the whole thing aloud. Does the quotation complete the grammar of the sentence before it, or does it start a new, separate sentence?">
+                <div class="widget-row-prompt">1. &ldquo;Oedipus mocks the prophet&rsquo;s gift. &lsquo;In his proper art stone-blind.&rsquo;&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Blended</button>
+                    <button data-choice="1">Dropped</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. The quoted words complete the sentence's own grammar as its object; reading it aloud, it works as one sentence." data-hint="Read the whole sentence aloud, quotation marks and all. Does it work as a single grammatical sentence?">
+                <div class="widget-row-prompt">2. &ldquo;Tiresias warns that Oedipus is &lsquo;thine own bane,&rsquo; the cause of his own ruin.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Blended</button>
+                    <button data-choice="1">Dropped</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Inserting &lsquo;[not]&rsquo; does not clarify the quotation; it reverses what Tiresias actually says. A bracket may replace a pronoun or add a clarifying word, but it can never change the sentence&rsquo;s actual claim." data-hint="Read each bracketed insertion against the real line: &lsquo;Thou art the man, thou the accursed polluter of this land.&rsquo; Which insertion changes what the sentence actually asserts, rather than merely clarifying it?">
+                <div class="widget-row-prompt">3. Which use of a bracket or ellipsis below is dishonest, even though it looks like a normal editorial insertion?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Tiresias insists that &ldquo;[Oedipus] art the man&hellip; the accursed polluter of this land.&rdquo;</button>
+                    <button data-choice="1">Tiresias insists that Oedipus is &ldquo;the accursed polluter of this land&rdquo; (Tiresias, in the confrontation scene).</button>
+                    <button data-choice="2">Tiresias insists that Oedipus is &ldquo;[not] the accursed polluter of this land.&rdquo;</button>
+                    <button data-choice="3">Tiresias tells Oedipus he is &ldquo;the accursed polluter of this land,&rdquo; using an ellipsis to skip past the earlier build-up in the same speech.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 3: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in the Tiresias confrontation scene. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>seer</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person believed able to see or foretell the future</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The title Oedipus himself gives Tiresias: &ldquo;Teiresias, seer who comprehendest all.&rdquo; The word becomes ironic once Tiresias proves he sees more than the seeing king.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>prophet</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; one who speaks with special, often divinely given, insight into hidden or future truth</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus mockingly demands proof of &ldquo;the prophet&rsquo;s art&rdquo; that solved the Sphinx&rsquo;s riddle, forgetting that the answer he mocks is about to be proven true about himself.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>riddle</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a puzzling question or statement requiring cleverness to solve</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus is famous for solving the Sphinx&rsquo;s riddle. Tiresias leaves him a new one on his way out, and this time Oedipus cannot solve it.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>blind</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(adjective) &mdash; unable to see; here, also unable to perceive an obvious truth</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Tiresias is blind in his eyes. He tells Oedipus that Oedipus is blind &ldquo;in ear, wit, eye, in everything,&rdquo; turning a physical word into a judgment about the king&rsquo;s mind.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>bane</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a cause of ruin, harm, or persistent trouble</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Tiresias&rsquo;s exact word for Oedipus when the king blames Creon: &ldquo;thou thyself art thine own bane.&rdquo; Oedipus is, in this telling, his own worst enemy.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>polluter</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; one who contaminates or defiles, here a person whose guilt is believed to bring a curse on a whole community</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Tiresias&rsquo;s direct accusation: Oedipus is &ldquo;the accursed polluter of this land.&rdquo; The word ties one man&rsquo;s guilt to the whole city&rsquo;s suffering, which is exactly the standard your Trial of Oedipus brief will have to weigh.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Quick Write 10, integrate at least <strong>two</strong> quotations using a lead-in phrase or a blended quotation, not a dropped quotation, and work in at least <strong>two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own Evidence Log.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A blended quotation and an honest ellipsis both do the same job: they let the text speak for itself without distorting it. Carry both habits, and today&rsquo;s six words, into your Evidence Log.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.GV &middot; Integrating Quotations</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

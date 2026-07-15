@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 5.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 5.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Odysseus Tells His Tale</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The poem hands its own microphone to its hero, and Odysseus takes it.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Through Book 8, an outside narrator has been telling this story, and you have watched Odysseus listen to Demodocus sing of Troy. In Book 9, that changes. Alcinous finally asks his guest who he is, and Odysseus answers by taking over the telling himself. For the next four books, you are hearing Odysseus&rsquo;s wanderings the way he chooses to tell them, in his own voice, to a room full of strangers deciding whether to trust him. Notice what that shift does to the story.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what changes when the poem shifts from an outside narrator to Odysseus narrating his own adventures.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the &ldquo;Nobody&rdquo; trick Odysseus uses against the Cyclops Polyphemus and explain why it works.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Odysseus&rsquo;s decision to shout his real name back at Polyphemus reveals both his cunning and his pride, and what it costs him.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 9</strong> in your copy for this lesson, and <strong>Book 10</strong> before Lesson 5.02.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A HERO BECOMES HIS OWN NARRATOR</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time you told a friend, a coach, or an interviewer the story of something that happened to you. Did you shape the story to make yourself look a certain way? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Leaving something out is one of the oldest storytelling moves there is. Watch for what Odysseus chooses not to dwell on as he tells his own tale.">&#129501; I left out a detail that made me look bad</button>
+                <button data-response="Making yourself the clever one in your own story is exactly what Odysseus does throughout Book 9. See if you notice him doing it.">&#128161; I made myself sound smarter or braver than I felt</button>
+                <button data-response="Telling the story straight is possible too, though a hero telling his own story to a room of strangers has extra reasons to want to look good.">&#128172; I just told it exactly like it happened</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus finally answers Alcinous&rsquo;s question of who he is, and the line he uses to introduce himself is one of the most famous in the poem:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;I am Odysseus son of Laertes, renowned among mankind for all manner of subtlety, so that my fame ascends to heaven.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what he leads with. Not his kingdom, not his family first, but his own cleverness, the very quality this whole telling is about to put on display. From here through the end of Book 12, an outside narrator is no longer describing Odysseus from a distance. Odysseus is describing himself, to an audience deciding in real time whether to believe him and help him home. Everything you learn about the Cyclops, Circe, and the rest comes filtered through his own account of his own adventures, told in his own words.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In an oral storytelling culture, a guest who could hold a hall spellbound with his own adventures was proving something: that he was worth feeding, worth helping, worth trusting with a ship home. Odysseus is not only surviving his story. He is performing it, the same way Demodocus performed the fall of Troy last week. The line between hero and bard has nearly disappeared.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO QUICK WARNINGS: THE CICONES AND THE LOTUS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before the Cyclops, Odysseus tells two shorter stories against himself, or at least against his men. Leaving Troy, they raid the city of the Cicones and win easily, dividing the plunder fairly. But instead of leaving, the men linger on the shore, feasting and drinking, until the Cicones return with reinforcements and cut them down. It is not a monster that costs them here. It is their own delay.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the winds carry them to the land of the Lotus-eaters, where the local plant is not poison but something closer to total contentment: anyone who eats it stops caring about home entirely. Three of Odysseus&rsquo;s scouts taste it and have to be dragged back to the ships, weeping, and tied down so they cannot go back for more. Notice the pattern starting here: the greatest dangers in this book are not always claws and teeth. Sometimes they are a man&rsquo;s own appetite or carelessness.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; POLYPHEMUS, THE HOST WHO EATS HIS GUESTS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Cyclops Polyphemus lives alone in a cave, tending flocks, answering to no king and, he says openly, caring nothing for the gods. When Odysseus and twelve of his men enter his cave hoping for the kind of welcome Nestor and Menelaus gave their own guests, they get the opposite: Polyphemus rolls a boulder across the entrance, traps them inside, and eats two men at a time for his meals. Every rule of hospitality you have watched built up for four weeks is broken here in the worst way imaginable. A proper host feeds his guest. Polyphemus feeds on his.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus&rsquo;s escape plan depends on a trick of naming. In the actual Greek, when Polyphemus asks his name, Odysseus answers <em>Outis</em>, which means &ldquo;Nobody.&rdquo; Butler&rsquo;s translation renders this as a single invented word:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;My name is Noman; this is what my father and mother and my friends have always called me.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Odysseus, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polyphemus, pleased with what he takes as a kind of favor, answers:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Then I will eat all Noman&rsquo;s comrades before Noman himself, and will keep Noman for the last.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Polyphemus, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That night, Odysseus and his men drive a fire-hardened stake into the Cyclops&rsquo;s single eye while he sleeps off the wine they gave him: &ldquo;We drove the sharp end of the beam into the monster&rsquo;s eye, and bearing upon it with all my weight I kept turning it round and round as though I were boring a hole in a ship&rsquo;s plank with an auger.&rdquo; When Polyphemus screams for help, the other Cyclopes outside hear him shout that Nobody is attacking him, and they simply go back to sleep. A name built to disappear saves Odysseus&rsquo;s life. In the morning, his men escape clinging to the undersides of the Cyclops&rsquo;s own rams, tied together in threes, slipping past his blindly searching hands.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, cunning vs hubris -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; THE BOAST FROM THE SHIP, AND WHAT IT COSTS</div>
+            <div style="font-size: 20px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;<span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Cyclops, if any one asks you who it was that put your eye out and spoiled your beauty</span>, <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">say it was the valiant warrior Odysseus, son of Laertes, who lives in Ithaca.</span>&rdquo;
+            </div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">Odysseus, trans. Samuel Butler, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">THE CUNNING THAT SAVED HIM</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The Nobody trick was pure calculation: give up a name to protect a life, and let the other Cyclopes dismiss the cry for help.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">THE PRIDE THAT DOOMS HIM</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Once safely at sea, Odysseus cannot resist taking his name back and boasting of it. Polyphemus turns out to be Poseidon&rsquo;s own son, and now knows exactly whom to curse.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polyphemus, blind and furious, prays to his father:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Hear me, great Poseidon; if I am indeed your own true begotten son, grant that Odysseus may never reach his home alive; or if he must get back to his friends at last, let him do so late and in sore plight after losing all his men.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Polyphemus, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Everything that happens to Odysseus for the rest of the poem, every storm, every year lost, traces back to this one moment: the same cunning that got him out of the cave could not resist one boast that gave a god a reason to hate him. A story he is telling to make himself look impressive to Alcinous includes, without flinching, the exact mistake that is still costing him his voyage home.</p>
+
+        <!-- evaluative widget: cunning vs hubris -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; CUNNING OR PRIDE?</div>
+            <div class="widget-question">For each moment from Book 9, choose what it most reveals about Odysseus. You will get feedback right away.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The trick&rsquo;s real payoff comes later, when the other Cyclopes hear Polyphemus shouting that &lsquo;Nobody&rsquo; is attacking him and simply go back to sleep. Giving up his name is a calculated move made only to survive the night, not a courtesy to his captor." data-hint="Ask what this choice actually accomplishes for Odysseus, and for whom it is really intended: Polyphemus, or the other Cyclopes listening outside the cave.">
+                <div class="widget-row-prompt">1. Odysseus tells Polyphemus his name is &ldquo;Noman.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals humility, since offering a self-deprecating name is a gesture of respect toward a dangerous host.</button>
+                    <button data-choice="1">It reveals cunning, a calculated lie designed to make his cry for help sound like nonsense to the other Cyclopes later.</button>
+                    <button data-choice="2">It reflects a common ancient Greek custom of offering a humble name to a stranger&rsquo;s host, so it reveals nothing distinct about Odysseus.</button>
+                    <button data-choice="3">It reveals that Polyphemus already suspected a trick and only pretended to believe the false name.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. Nothing requires this boast; the danger has already passed. Odysseus does it anyway, reaching for personal credit at a cost the poem makes clear a few lines later, when Polyphemus prays to Poseidon by name." data-hint="Ask whether anything actually forces Odysseus to say this. If the danger were truly still active, would shouting his name help him at all?">
+                <div class="widget-row-prompt">2. Once safely at sea, Odysseus shouts his real name back at Polyphemus.</div>
+                <div class="widget-options">
+                    <button data-choice="0">It reveals pride, a need for personal credit that outweighs the real risk of being cursed by name.</button>
+                    <button data-choice="1">It reveals a sense of justice: Polyphemus deserves to know exactly who defeated him.</button>
+                    <button data-choice="2">It reveals sound judgment, since once safely at sea, the name can no longer cost Odysseus anything.</button>
+                    <button data-choice="3">It reveals a practical concern: confirming for his own crew that the Cyclops has truly been blinded.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Polyphemus now has exactly what his curse needs: a name to curse, and a father, Poseidon, to curse it to. Pride handed the enemy back what cunning had just taken away." data-hint="Think about what changes the moment Polyphemus learns Odysseus&rsquo;s real name and his father&rsquo;s. What can he now do that he could not do a moment before?">
+                <div class="widget-row-prompt">3. Polyphemus prays to Poseidon by name, now that he knows who blinded him.</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows that Poseidon was already searching for a reason to oppose Odysseus before this moment.</button>
+                    <button data-choice="1">It shows that prayer works in this world only when the god addressed is a direct blood relative.</button>
+                    <button data-choice="2">It shows Polyphemus forgiving Odysseus, since knowing an enemy&rsquo;s name properly eases anger.</button>
+                    <button data-choice="3">It shows how Odysseus&rsquo;s own boast supplies exactly what Polyphemus&rsquo;s curse needs: a name and a father-god to curse it to.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Book 9 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note one moment where Odysseus&rsquo;s telling seems to make himself look good, and record it in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 5.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will read Book 10 and follow Odysseus through Aeolus&rsquo;s island, the Laestrygonians, and Circe.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Odysseus survives Polyphemus through cunning and nearly ruins himself through pride, and he tells both halves of that story without hiding either one. A teller&rsquo;s voice reveals character just as much as a character&rsquo;s actions do. Carry that idea with you into this week&rsquo;s writing lessons.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; Odysseus Tells His Tale</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 3.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 3.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 3.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Reasonable Man</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 3</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The most reasonable speech in the play so far belongs to the man on trial, not the king questioning him.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After Tiresias named Oedipus as the source of Thebes&rsquo;s plague, Oedipus concluded that Creon put the old prophet up to it, hoping to seize the throne for himself. Today Creon answers that charge directly, and you will study his answer the way an advocate studies any argument: not by asking whether you like the speaker, but by asking whether the reasoning holds. This is the same test you will apply to every piece of evidence in your own brief.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the parts of a formal argument: a claim, the reasons that support it, and an appeal to probability or character.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Creon&rsquo;s defense counts as a stronger argument than Oedipus&rsquo;s accusation, even though Oedipus is the king.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize how Jocasta ends the quarrel between the two men.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week, read the scene known as <strong>the Creon quarrel</strong>, through Jocasta stepping between the two men. You can read the full play free at <a href="https://www.gutenberg.org/ebooks/31" style="color:#3B4E8C;">Project Gutenberg #31</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer (Word doc in your OneDrive) &mdash; open your Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT AN ARGUMENT NEEDS</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time someone accused you of something you did not do. What made your defense convincing, or what made it fall flat? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="A calm explanation of your reasons is close to what Creon does today. Watch for the same move in his speech.">&#128172; I stayed calm and gave my reasons in order</button>
+                <button data-response="Pointing out that the accusation does not even make sense given the situation is a real form of argument, called an appeal to probability. Creon uses exactly this move.">&#129300; I pointed out the accusation did not make sense</button>
+                <button data-response="Getting angry can make a true defense look weak. Notice how Oedipus, not Creon, is the one who loses his composure in today&rsquo;s scene.">&#128293; I got angry, which did not help my case</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Claim, reason, and an appeal to probability</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A formal argument has moving parts. A <strong>claim</strong> is the position being argued: I am innocent. A <strong>reason</strong> is evidence or logic offered to support that claim. An <strong>appeal to probability</strong> asks the listener to judge which explanation is more likely, given everything else known about the situation, rather than simply asserting innocence and hoping to be believed. A strong advocate uses all three, in order, instead of relying on emotion or on the force of their own position.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Creon is accused of plotting with Tiresias to take the throne. Rather than simply denying it, he reasons his way through the accusation. Consider his central claim, quoted directly from the play:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Now all my needs are satisfied through thee, / And I have naught to fear; but were I king, / My acts would oft run counter to my will. / How could a title then have charms for me / Above the sweets of boundless influence?&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Creon, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the shape of the reasoning. Creon&rsquo;s claim is that he has no motive to seize the crown. His reason is that he already shares in every benefit of royal power, safety, comfort, respect, without carrying any of the burdens a king must carry: the unpopular decisions, the blame when things go wrong, the constant demands on his will. His appeal to probability follows directly: which is more likely, that a man would trade a comfortable share of power for the exhausting whole of it? He sums up the point in a single memorable line:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;I am not so infatuate as to grasp / The shadow when I hold the substance fast.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Creon, trans. F. Storr, public domain</div>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, argument anatomy -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; THE ANATOMY OF CREON&rsquo;S ARGUMENT</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">Now all my needs are satisfied through thee, / And I have naught to fear</span>; <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">but were I king, / My acts would oft run counter to my will</span>. How could a title then have charms for me / Above the sweets of boundless influence?
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">THE REASON</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">He already has everything a king has, without the danger. This is offered as fact, something the audience already knows to be true of his position.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">THE APPEAL TO PROBABILITY</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Kingship would only cost him freedom he currently enjoys. He is asking Oedipus to judge which choice is more likely for a rational man.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; AN ACCUSATION IS NOT AN ARGUMENT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now set Oedipus&rsquo;s response beside it. Oedipus does not answer Creon&rsquo;s reasoning with reasoning of his own. He answers with certainty about Creon&rsquo;s character, unsupported by any new evidence:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Thou art glib of tongue, but I am slow to learn / Of thee; I know too well thy venomous hate.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is worth sitting with as a writer building your own brief. Oedipus dismisses Creon&rsquo;s reasoning as mere cleverness, &ldquo;glib of tongue,&rdquo; and replaces it with his own certainty about Creon&rsquo;s hatred. He never actually answers the claim that Creon has no motive. A confident tone is not the same thing as a supported claim, and an advocate who confuses the two leaves the strongest argument unanswered on the table. That gap is exactly what an opposing advocate will exploit.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The quarrel escalates until Jocasta, Oedipus&rsquo;s wife and Creon&rsquo;s sister, comes out of the palace and physically parts the two men, demanding to know why they are shouting in a city already suffering from plague. She sends Creon away and turns to calm her husband, which is where next lesson&rsquo;s reading begins. Notice what she does not yet know: she is about to try to soothe Oedipus with a story that will do the opposite.</p>
+    </div>
+
+    <!-- evaluative widget: argument anatomy across the quarrel -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TRY IT</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; NAME THE MOVE</div>
+            <div class="widget-question">For each line from the quarrel, choose the argument move it represents.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. This line offers no new evidence and no logical connection to anything Creon has said; it is pure certainty about Creon&rsquo;s feelings, which is exactly the kind of unsupported claim an opposing advocate can expose." data-hint="Ask whether this line offers a reason connected to evidence, or only a judgment about someone&rsquo;s character with nothing behind it.">
+                <div class="widget-row-prompt">1. &ldquo;I know too well thy venomous hate.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">An appeal to probability, weighing which outcome is more likely for a rational man</button>
+                    <button data-choice="1">A reason drawn from new evidence Oedipus has just uncovered about Creon&rsquo;s actions</button>
+                    <button data-choice="2">An assertion about character, with no supporting reason attached</button>
+                    <button data-choice="3">A concession that Creon&rsquo;s argument has a point, before Oedipus pivots away from it</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. He states plainly the fact his whole defense rests on: he already enjoys every real benefit of royal power without carrying its risks. That fact is the reason underneath the claim of innocence that follows." data-hint="Ask what specific fact about Creon&rsquo;s current position this line offers, and whether that fact is doing the work of a reason or of a bare denial.">
+                <div class="widget-row-prompt">2. &ldquo;Now all my needs are satisfied through thee, / And I have naught to fear.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">The reason underneath Creon&rsquo;s claim of innocence: he already has everything a king has, without a king&rsquo;s dangers</button>
+                    <button data-choice="1">A personal attack aimed at provoking Oedipus&rsquo;s anger</button>
+                    <button data-choice="2">A denial of the charge with no reason attached, similar to Oedipus&rsquo;s own style of argument</button>
+                    <button data-choice="3">An appeal to probability, asking Oedipus to judge which outcome is more likely</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Yes. Creon is not simply asserting his innocence; he is asking Oedipus to weigh which choice is more likely for a rational man, trading a comfortable share of power for its exhausting whole. That is an appeal to probability, not a bare denial." data-hint="Is Creon simply saying &lsquo;I am innocent,&rsquo; or is he asking Oedipus to judge which outcome a reasonable person would actually choose?">
+                <div class="widget-row-prompt">3. &ldquo;I am not so infatuate as to grasp / The shadow when I hold the substance fast.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">A threat directed at Oedipus, warning him not to press the accusation further</button>
+                    <button data-choice="1">An appeal to probability, asking Oedipus to judge which choice a reasonable man would actually make</button>
+                    <button data-choice="2">An assertion about character, with no supporting reason attached</button>
+                    <button data-choice="3">A concession that he might, in some circumstances, want the throne after all</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Log this exchange in your Evidence Bank.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note which side made the stronger argument in the quarrel, and why. You may need this comparison later for your brief.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 3.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will read the story Jocasta tells to calm her husband, and the detail in it that does the opposite.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Creon builds a claim, gives it a reason, and closes with an appeal to probability. Oedipus answers with anger and an unsupported judgment of character. As you build your own brief in the weeks ahead, that contrast is the standard to measure yourself against: does every claim you make carry an actual reason underneath it, or only your certainty that you are right?</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.01 &middot; The Reasonable Man</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

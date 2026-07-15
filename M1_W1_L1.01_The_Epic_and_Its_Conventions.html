@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 1.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 1.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 1.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Why Does an Epic Begin in the Middle?</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">&ldquo;Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy.&rdquo;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Those are the first words of a poem roughly three thousand years old. Before the story starts, the poet stops to ask a goddess for help remembering it. This year opens with the question that will run through all four of our works: what does a community owe its king, and what does a king owe his community? The Odyssey begins that conversation with a king who has been gone twenty years and a household that has fallen apart without him. Today you learn the tools the poem uses to tell that story: the conventions of epic.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify four conventions of epic poetry: the invocation, the epithet, in medias res, and the epic simile.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how these conventions grew out of oral performance, when poems were sung from memory rather than read.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read the poem&rsquo;s opening for what it tells us about a king&rsquo;s absence and a household in disorder.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Book 1</strong> in your copy. See the &ldquo;How to Read the Odyssey&rdquo; page in this module for pacing.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; open it and keep it handy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or a notes document.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A POEM THAT WAS SUNG, NOT READ</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Before we begin: when you hear the word <em>hero</em>, what comes to mind first? (No wrong answer &mdash; just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Strength and victory are the oldest meaning of the word, and the warrior at Troy fits it. Watch this year for how the Odyssey quietly measures a different kind of strength: patience, cunning, and the will to get home.">&#9876;&#65039; Someone strong who wins</button>
+                <button data-response="Cleverness is exactly what this poem prizes. Its hero is called &lsquo;ingenious&rsquo; in the very first line. Keep asking whether cleverness is always admirable, or whether it can shade into something colder.">&#129504; Someone clever who outwits others</button>
+                <button data-response="Sacrifice for others is one of the deepest meanings of heroism, and it will be tested here by a king whose people have waited twenty years. Notice who sacrifices for whom as the poem unfolds.">&#128170; Someone who sacrifices for others</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The poet asks for help</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Odyssey was not written to be read silently. For generations before it was ever written down, poets performed it aloud from memory, singing or chanting to a listening crowd at feasts and festivals. A performance could last for hours across many nights. That single fact explains almost everything strange about how the poem opens. When the poet begins, &ldquo;Tell me, O Muse, of that ingenious hero,&rdquo; he is doing two things at once: he is praying to the goddess of memory and inspiration to carry him through an enormous act of recall, and he is announcing his subject in the very first line. The Muse is the poet&rsquo;s source; the &ldquo;ingenious hero&rdquo; is the promise of what the audience is about to hear.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Because the poem lived in performance, it is built out of repeatable, memorable parts. Poets leaned on fixed phrases, familiar patterns, and set ways of opening and comparing. Scholars call these repeated building blocks the <em>conventions</em> of epic. They are not decoration. They were the working tools that made a poem this long possible to hold in a human memory and deliver to a live audience. When you learn to spot them, you are reading the way the poem was actually made.</p>
+
+        <!-- historical context (indigo box, per the ELA framework: history in its own box and color) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">We speak of &ldquo;Homer&rdquo; as the author, but the Odyssey grew out of a long oral tradition in which many singers reshaped the same stories over centuries before the version we have was fixed in writing, likely in the 700s BCE. Our course uses the <strong>Greek</strong> names for everyone in the poem: the hero <strong>Odysseus</strong>, his wife <strong>Penelope</strong>, his son <strong>Telemachus</strong>, and the gods <strong>Zeus</strong>, <strong>Athena</strong> (his protector), and <strong>Poseidon</strong> (the sea-god who opposes him). One note for your reading: older public-domain translations sometimes use the gods&rsquo; Roman names, so a few short quotations on these pages come from a public-domain version and are given here with the Greek names restored. If you ever see <em>Ulysses</em>, <em>Minerva</em>, <em>Jove</em>, or <em>Neptune</em> elsewhere, those are Odysseus, Athena, Zeus, and Poseidon under Latin labels.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FOUR CONVENTIONS OF EPIC</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Four conventions do most of the work in these opening lines. Read the definitions, then study how the invocation itself shows two of them at once.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated invocation (shown-example, built with tokens) -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; THE INVOCATION, ANNOTATED</div>
+            <div style="font-size: 21px; color: #0e1c42; line-height: 1.5; font-style: italic;">
+                &ldquo;Tell me, O <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">Muse</span>, of that <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">ingenious hero</span> who travelled far and wide after he had sacked the famous town of Troy.&rdquo;
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">INVOCATION</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The poet calls on the Muse for inspiration and memory before telling the tale. It marks the poem&rsquo;s beginning and names its subject.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">EPITHET</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">A fixed descriptive phrase attached to a person or thing (&ldquo;ingenious hero&rdquo;). Repeatable phrases like this helped a performing poet compose on the beat.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 12px 0; font-style: italic;">A note as you read your own copy: translators render Odysseus&rsquo;s epithet differently. The public-domain version quoted above calls him the &ldquo;ingenious hero&rdquo;; others call him a man of many turns, or of many wiles. The original Greek word is <em>polytropos</em>, literally &ldquo;of many turns.&rdquo; However your edition phrases it, watch for it in the opening lines: cunning is his defining trait, and it is the first thing the poem tells you about him.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;"><strong>In medias res</strong> is Latin for &ldquo;into the middle of things.&rdquo; The Odyssey does not start at the beginning of its hero&rsquo;s story. It opens years after the Trojan War, with the hero already stranded far from home and his household already in crisis. The earlier events reach us later, out of order, once we are hooked.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 8px 0;">The <strong>epic simile</strong> (sometimes called a Homeric simile) is an extended comparison that runs for several lines, opening a small window onto everyday life before returning to the action. Where an ordinary simile is a quick flash (&ldquo;brave as a lion&rdquo;), an epic simile lingers: it might compare a warrior to a lion among the sheepfolds, describe the lion and the frightened flock in detail, and only then turn back to the fighter. You will meet these often once the voyage begins.</p>
+
+        <!-- evaluative widget: discriminate conventions via NEW mini-examples (rigor rule). Correct indices 1,3,0,2. -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; NAME THE CONVENTION</div>
+            <div class="widget-question">Each line below is a new example, written for this exercise, not a line from the poem. More than one convention will seem to fit at first glance. Choose the one the passage best demonstrates, and be ready to say why the others fall short.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Yes. The comparison does not end at &lsquo;like a hawk stooping on a hare.&rsquo; It lingers on the wings, the talons, the hare&rsquo;s zigzag, before the sentence returns to the runner crossing the line. That lingering, not the mere presence of &lsquo;like,&rsquo; is what makes a simile epic rather than brief." data-hint="Tempting is &lsquo;brief simile,&rsquo; since the line opens with a quick flash of comparison. But watch what happens after &lsquo;like a hawk stooping on a hare&rsquo;: does the sentence cut away immediately, or does it keep describing the hawk and the hare before returning to the runner?">
+                <div class="widget-row-prompt">1. &ldquo;The runner broke from the pack like a hawk stooping on a hare, wings tucked, talons already reaching, indifferent to the hare&rsquo;s last desperate zigzag, and did not look back until the finish line was behind her.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">A brief simile: a quick, one-line comparison</button>
+                    <button data-choice="1">An epic simile: an extended comparison that lingers before returning to the action</button>
+                    <button data-choice="2">An epithet: a fixed descriptive tag attached to the runner</button>
+                    <button data-choice="3">In medias res: the narrative beginning mid-action</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. &lsquo;Like ice&rsquo; lands in three words and the sentence moves on. Nothing about the comparison is developed further, which is exactly what keeps a simile brief instead of epic." data-hint="The trap here is assuming any comparison introduced by &lsquo;like&rsquo; automatically counts as epic. Check whether the comparison is elaborated over several clauses, the way the hawk-and-hare line was, or whether it lands in a single quick phrase.">
+                <div class="widget-row-prompt">2. &ldquo;She answered him coldly, like ice.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">An epic simile, since any comparison introduced by &lsquo;like&rsquo; counts as epic</button>
+                    <button data-choice="1">A fixed epithet attached to her name</button>
+                    <button data-choice="2">An invocation calling on a source of inspiration</button>
+                    <button data-choice="3">A brief simile: a quick comparison with no elaboration</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Yes. There is no comparison word at all, no &lsquo;like&rsquo; or &lsquo;as.&rsquo; &lsquo;Swift-footed&rsquo; is simply fused onto &lsquo;messenger&rsquo; as a permanent descriptive tag. That fusion, not any comparison, is what makes it an epithet." data-hint="Look for the word &lsquo;like&rsquo; or &lsquo;as&rsquo; before deciding this is any kind of simile. Do you find one? If a description is welded onto a name or role rather than compared to something else, what convention does that describe?">
+                <div class="widget-row-prompt">3. &ldquo;Wherever the swift-footed messenger went, doors opened before he arrived.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">An epithet: a fixed descriptive tag fused to his role</button>
+                    <button data-choice="1">An epic simile comparing him to something swift</button>
+                    <button data-choice="2">A brief simile with the comparison word omitted</button>
+                    <button data-choice="3">An invocation asking for aid</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. &lsquo;The clever fox of a captain&rsquo; is a fixed tag, an epithet, and &lsquo;like smoke through a cracked door&rsquo; is a separate, brief comparison describing how he moved. Recognizing that a single sentence can carry more than one convention at once is exactly the discrimination this lesson is after." data-hint="Two traps here: calling the simile &lsquo;epic&rsquo; overstates a comparison that lands in one phrase, and calling the whole line &lsquo;epithet only&rsquo; ignores the separate work the smoke comparison is doing. What does each piece actually contribute?">
+                <div class="widget-row-prompt">4. &ldquo;The clever fox of a captain slipped through the harbor guards like smoke through a cracked door.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">An epithet only; the simile marker is decorative and adds nothing</button>
+                    <button data-choice="1">An extended epic simile, since the smoke comparison carries the whole sentence</button>
+                    <button data-choice="2">A fixed epithet describing the captain, paired with a brief simile describing how he moved</button>
+                    <button data-choice="3">In medias res, because the sentence begins mid-action</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A HOUSE WITHOUT ITS KING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Watch what the poem shows us the moment the goddess arrives at the hero&rsquo;s home in Book I. A crowd of suitors has moved into the palace, pressing the hero&rsquo;s wife to remarry and consuming his wealth while they wait:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;There she found the lordly suitors seated on hides of the oxen which they had killed and eaten, and playing draughts in front of the house.&rdquo;</blockquote>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read that picture closely before you read on. The suitors sit on the hides of the host&rsquo;s own cattle, which they have slaughtered and eaten, and they pass the day playing a board game in the doorway. In a world where a guest was sacred and a host&rsquo;s generosity was a measure of honor, this is the image turned upside down: guests who devour the house instead of honoring it. The king&rsquo;s absence has left more than an empty chair. It has left a community without order, living off a kingdom it is slowly draining. Hold onto that image. The whole poem drives toward the day the king returns and the house is set right, and it will keep asking you whether that setting-right is justice, vengeance, or both.</p>
+
+        <!-- AI-awareness callout (red frame, AI-only) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THE CONVENTIONS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">If you ask an AI tool to list the conventions of epic poetry, it will give you a fast, mostly accurate list. What it cannot do is tell you what <em>this</em> opening chooses to foreground, or why the poet shows us the suitors eating the king&rsquo;s cattle before we ever meet the king. Naming a convention is recall; deciding what it means here is the reading only you can do. This stays true no matter how good the tools get.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Read Book 1 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">As you read, note one epithet and the exact moment you feel the story has dropped you &ldquo;into the middle of things.&rdquo; Record them in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 1 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Write a short narrative opening that drops your reader straight into the middle of the action, the way the Odyssey does. Full directions are on the Quick Write 1 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A poem sung from memory taught its singers to open with a prayer, to tag its people with fixed phrases, to plunge into the middle of the story, and to pause for long comparisons drawn from ordinary life. Those tools are still doing their work in the first lines you read. And already the poem has shown you its real question: a house without its king, and a community that no longer knows how to behave. Keep your eye on that house. Everything returns to it.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.01 &middot; Why Does an Epic Begin in the Middle?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

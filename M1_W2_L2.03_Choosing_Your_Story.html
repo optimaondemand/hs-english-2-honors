@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 2.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook summary { cursor: pointer; list-style: none; }
+    details.notebook summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 2.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 2.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Choosing an episode worth telling</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Choosing Your Story</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 2 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Before a teller opens their mouth, they have already made the hardest choice: which story to tell.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Odysseus is away from home for twenty years. Homer does not attempt to tell you all twenty. The poem you are reading picks one narrow slice of that decade, the final weeks of the journey, and tells that slice in full. Today you learn to make the same choice for your own tale, The Bard&rsquo;s Hall. This lesson is direct preparation for Quick Write 2, where you will pitch the one episode or world your story will actually tell.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify what makes one possible story episode stronger than another for a short telling.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> narrow a large idea down to one bounded episode or world I can actually tell well.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document to draft in.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Ten quiet minutes to test a few possible story ideas against each other.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WHOLE LIFE IS TOO BIG TO TELL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Recall how the Odyssey opens, a technique you studied in Week 1: not with Odysseus&rsquo;s birth, not with the start of the Trojan War, but years into his journey home, in the middle of trouble. That choice is not just about where the sentences begin. It is a choice about scope: which part of a much larger life is actually worth an audience&rsquo;s time. A story that tries to hold everything usually ends up holding nothing tightly.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A strong story seed passes three tests. First, it is <strong>bounded</strong>: it has a clear beginning and end, not an entire lifetime or an entire war. Second, it has <strong>stakes</strong>: something is genuinely at risk, and the outcome is not certain. Third, it <strong>reveals character</strong>: by the end, we know something true about someone that we did not know at the start, the same way a host&rsquo;s treatment of a guest reveals exactly who that host is.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: worked example comparing story seeds -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE &middot; TWO POSSIBLE SEEDS, COMPARED</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 22px;">
+                <div style="flex: 1; min-width: 230px; border-left: 3px solid #C0392B; padding-left: 12px;">
+                    <div style="font-size: 15px; color: #8A1F16;"><strong>Too big: &ldquo;The rise and fall of a great kingdom.&rdquo;</strong></div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-top: 4px;">This spans generations and dozens of characters. A short telling could only summarize it, never live inside it. Nothing specific has stakes because nothing specific is ever shown in detail.</div>
+                </div>
+                <div style="flex: 1; min-width: 230px; border-left: 3px solid #C7922C; padding-left: 12px;">
+                    <div style="font-size: 15px; color: #7A5A17;"><strong>Bounded: &ldquo;A soldier returning from that kingdom&rsquo;s last war finds a stranger sitting in his father&rsquo;s chair.&rdquo;</strong></div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-top: 4px;">This is one scene, one moment of tension, one decision to make. It implies the whole kingdom&rsquo;s history without having to tell it, and it reveals character immediately: how does this soldier react?</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Notice what the bounded version does. It does not abandon the big idea (a kingdom, a war, a homecoming). It simply finds the one doorway into that world small enough to walk through in a single telling.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Think of two possible directions for your own Bard&rsquo;s Hall story: it could be a lost episode of the Odyssey that Homer never tells (a stop on the journey home no one has heard of, or a moment involving a minor character), or it could be a modern retelling of a hero&rsquo;s return in a world entirely your own. Either path works. What matters is narrowing it down.</p>
+
+        <details class="notebook" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; line-height: 1.6;"><strong>&#9997;&#65039; In your notebook, write down two possible story ideas, then test each against the three questions: is it bounded, does it have real stakes, will it reveal character?</strong> Do this now, before you open this box to see the test applied to one more example.</summary>
+            <div style="margin-top: 14px; font-size: 17px; color: #1a2340; line-height: 1.65;">
+                <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">THE TEST, APPLIED</div>
+                <p style="margin: 0 0 8px 0;"><strong>Idea:</strong> &ldquo;A watchman on the walls of Troy, on the single night the wooden horse is dragged inside, has to decide whether to raise the alarm he no longer believes in.&rdquo;</p>
+                <p style="margin: 0 0 4px 0;"><strong>Bounded?</strong> Yes: one night, one decision.</p>
+                <p style="margin: 0 0 4px 0;"><strong>Stakes?</strong> Yes: a city&rsquo;s fate turns on what he does next.</p>
+                <p style="margin: 0;"><strong>Reveals character?</strong> Yes: his choice shows whether duty or doubt wins in him.</p>
+            </div>
+        </details>
+
+        <!-- evaluative widget: weigh bounded-vs-too-big judgments with genuine traps (rigor rule). Correct indices 1,0,1. -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; BOUNDED OR TOO BIG?</div>
+            <div class="widget-question">Each idea below is written to make the judgment harder than it first looks. Decide what the seed actually promises to show, not just how it sounds at first read.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. One setting, one night, one decision under pressure: that is tight enough to live inside for a full telling. We do not yet know why the ferryman refuses, and that is fine; a story seed does not need to explain everything before it starts. The mystery is fuel for the scene, not proof it needs to be bigger." data-hint="It might feel like this needs a full backstory to make sense (why is he refusing?), which can make it seem too big. But ask only: is this one moment, or a sprawl of moments? What does the sentence actually describe happening?">
+                <div class="widget-row-prompt">1. &ldquo;A ferryman refuses to carry one last passenger across a flooded river at nightfall, though the passenger begs him.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Too big to tell in one sitting</button>
+                    <button data-choice="1">Bounded enough to tell</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Correct. This spans an entire multi-generational history. A short telling could only summarize it in passing, never live inside a single moment the way a strong seed does." data-hint="Consider how many years, characters, and events this idea would have to cover to make sense as written. Does anything in the sentence narrow it down to one moment?">
+                <div class="widget-row-prompt">2. &ldquo;The complete history of a seafaring people, from their first voyage to their final settlement centuries later.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Too big to tell in one sitting</button>
+                    <button data-choice="1">Bounded enough to tell</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. &lsquo;A dying king&rsquo;s reign&rsquo; sounds enormous, but check what the sentence actually promises to show: one hour, and three specific gifts. The reign is only backdrop here; the framing device, not the story itself, does the narrowing." data-hint="The phrase &lsquo;a dying king&rsquo;s reign&rsquo; can make this sound like it needs an entire life story. But look again at what is actually being shown: is it the whole reign, or one hour framed by three choices?">
+                <div class="widget-row-prompt">3. &ldquo;The last hour of a dying king&rsquo;s reign, told entirely through the three gifts he chooses to give away before he dies.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Too big to tell in one sitting</button>
+                    <button data-choice="1">Bounded enough to tell</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 2 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Use one of the ideas you tested today, or a stronger one it led you to, to pitch the episode or world your Bard&rsquo;s Hall story will tell. Full directions are on the Quick Write 2 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Homer did not try to tell twenty years. He told a few weeks and let the rest live in the background. Hold your own story idea to the same standard: bounded, at stake, and revealing of character. Carry whichever idea passed the test into Quick Write 2.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.03 &middot; Choosing Your Story</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

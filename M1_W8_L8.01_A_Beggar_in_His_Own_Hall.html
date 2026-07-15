@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 8.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 8.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 8.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Beggar in His Own Hall</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 8 &middot; Books 17&ndash;18</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The king of Ithaca walks into his own hall, and not one person there knows him.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Disguised as an old beggar, Odysseus enters the palace he has not seen in twenty years and stands in the middle of the men eating his household out of house and home. Every insult he absorbs and every kindness he receives happens because no one recognizes him, which is exactly the tension this lesson asks you to notice. The reader knows something almost every character in the room does not, and Homer stretches that gap out, scene after scene, before he ever lets it snap.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Odysseus&rsquo;s disguise creates dramatic irony in Books 17 and 18.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the suitors&rsquo; treatment of the beggar reveals their character.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why the dog Argos&rsquo;s recognition of Odysseus is placed where it is in the story.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Books 17 through 20</strong> in your copy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep a running list of who is kind to the disguised beggar and who is not.</div>
+        </div>
+    </div>
+
+    <!-- Warm-up reflect -->
+    <div class="optima-widget ow-reflect">
+        <div class="widget-kicker">&#128172; WARM-UP</div>
+        <div class="widget-question">Think of a time someone misjudged you because they did not know the whole story, or did not recognize what you were actually capable of. What was that like?</div>
+        <div class="widget-options">
+            <button data-response="That gap between what people assumed and what was actually true is exactly the kind of tension Homer builds into this week&rsquo;s reading. Keep that feeling in mind as you watch the suitors misjudge the beggar in the hall.">It was frustrating. I wanted to prove them wrong.</button>
+            <button data-response="Holding something back and watching how people react to you can feel like a strange kind of power. Odysseus uses that same position deliberately in this week&rsquo;s reading.">I actually used it to my advantage and watched how people acted.</button>
+            <button data-response="Waiting for the right moment instead of correcting people immediately takes real self-control. Odysseus does exactly this for four whole books.">I stayed quiet and waited for the right moment to reveal the truth.</button>
+        </div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ANTINOUS AND THE STOOL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus enters his own hall as a ragged old beggar and asks for alms, the same way any traveler might. Most of the suitors give grudgingly. Antinous does not. When Odysseus presses his case, Antinous turns on him:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;What god can have sent such a pestilence to plague us during our dinner? Get out, into the open part of the court, or I will give you Egypt and Cyprus over again for your insolence.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Antinous, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then, without warning, Antinous acts on the threat:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;With these words he threw a footstool at him, and hit him on the right shoulder blade near the top of his back.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A man just struck his own king with a piece of furniture and does not know it. That is dramatic irony at its sharpest: the reader flinches at what Antinous is actually doing, while Antinous himself feels nothing but irritation at a stranger. The poem does not rush past this moment or explain it. It lets the insult sit there, plainly, and trusts the reader to feel the weight Antinous cannot.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: labeled diagram of what each character knows -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; letter-spacing: 0.4px;">&#128065;&#65039; WHO KNOWS WHAT, IN THIS SCENE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C;"><strong>The reader</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Knows the beggar is Odysseus, the rightful king, and feels every insult land twice as hard.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #C7922C;">
+                    <div style="font-size: 15px; color: #7A5A17;"><strong>Antinous and the suitors</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">See only a nuisance in rags. Their cruelty is careless because they believe there is no cost to it.</div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px; border-top: 3px solid #3B4E8C;">
+                    <div style="font-size: 15px; color: #3B4E8C;"><strong>Odysseus himself</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Knows exactly who he is and chooses to absorb the insult without breaking his disguise, a test of his own self-control.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE FIGHT WITH IRUS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A local beggar named Irus, who is used to working the hall for scraps, sees Odysseus as competition and orders him off the doorstep:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Be off, old man, from the doorway, or you shall be dragged out neck and heels.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Irus, trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The suitors, delighted at the prospect of a spectacle, egg the two beggars into a fistfight. Odysseus, still holding back his full strength, lands a single blow that ends it instantly. He could have killed every man in that hall already, and the suitors have no idea how close they are standing to that fact. The scene plays as comedy on the surface: a scuffle between two ragged old men. Underneath, it is a warning the suitors cannot read.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; ARGOS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Before any of this, as Odysseus first approaches his own gates, an old hunting dog lying neglected on a heap of manure lifts his head. This is Argos, the dog Odysseus raised and trained himself before he ever sailed for Troy. No servant, no suitor, no member of the household has recognized the king. The dog does, instantly:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;As soon as he saw Odysseus standing there, he dropped his ears and wagged his tail, but he could not get close up to his master.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. Samuel Butler, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Odysseus has to hide even this. He wipes away a tear without letting Eumaeus see it, because grief for a dog would give him away just as surely as grief for anything else. Then, having accomplished the one thing he was waiting twenty years to do, Argos dies. Homer places this scene at the very threshold of the palace, before a single human inside recognizes the king. Notice what that placement does: it tells the reader, before the suitors&rsquo; abuse even begins, exactly how much loyalty and how much time have been lost, and it raises the emotional stakes of everything that follows in this hall.</p>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An audience of Homer&rsquo;s day would have known hospitality, xenia, as a sacred obligation owed to every stranger, rich or poor. Antinous&rsquo;s stool-throwing was not merely rude by their standards; it was an offense against the gods, who were believed to sometimes travel disguised as beggars to test a household&rsquo;s decency. A listener would have felt the danger in Antinous&rsquo;s cruelty even before learning who the beggar truly was.</div>
+        </div>
+
+        <!-- AI-awareness callout -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND STORY STRUCTURE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can quickly summarize what happens to Argos or list the insults the suitors throw at the beggar. It is far less reliable at explaining why a writer places a scene exactly where it is, since that judgment depends on reading the whole surrounding structure, not just isolated facts. If you use an AI tool to check a plot detail, verify it against your own reading before treating any claim about the story&rsquo;s structure or meaning as settled.</div>
+        </div>
+
+        <!-- evaluative widget: rigor rule (every option plausible; feedback teaches). Correct indices 3,1 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT THE SCENE IS DOING</div>
+            <div class="widget-question">Each question offers four readings of a moment in Books 17&ndash;18. More than one will sound reasonable; choose the one the text best supports.</div>
+
+            <div class="widget-row" data-correct="3" data-fb="Yes. The reader flinches at what Antinous is actually doing to his own king; Antinous himself feels nothing but irritation at a stranger. That gap between the weight of the act and the doer's indifference to it is dramatic irony working at full strength, not comic relief." data-hint="This borrows the comic tone of the later Irus fight and misapplies it here. The poem itself treats this moment very differently: it lingers on the blow without softening it, which is not how the text stages its comic beats.">
+                <div class="widget-row-prompt">1. Antinous throws a footstool and strikes his own disguised king, without any idea what he has just done. What effect does this moment create?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It offers comic relief, a suitor hurling furniture at a beggar being lightly humorous before the story turns serious.</button>
+                    <button data-choice="1">It condemns violence toward beggars in general terms, independent of who this particular beggar happens to be.</button>
+                    <button data-choice="2">It shows Antinous already suspects something is wrong with the stranger, which is why he reacts so violently.</button>
+                    <button data-choice="3">It sharpens the dramatic irony: the reader feels the full weight of an insult that the man committing it cannot perceive at all.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Before the suitors' abuse in the hall even gets underway, the poem has already shown you a household running out of time and loyalty. That placement raises what is at stake in every scene that follows." data-hint="This claims more than the scene supports. Eumaeus, who you already met in Book 14, is proof that at least one human in this household has stayed faithful; Argos is not the only loyal one, which weakens any reading that treats animal loyalty as unique.">
+                <div class="widget-row-prompt">2. Homer places Argos&rsquo;s recognition of Odysseus, and his death, at the very threshold of the palace, before any human inside recognizes the king. What is the strongest reading of why the scene sits exactly there?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows that only animals possess true loyalty, since every human in the household will prove faithless by comparison.</button>
+                    <button data-choice="1">It measures, before the suitors&rsquo; abuse even begins, exactly how much loyalty and time this household has already lost.</button>
+                    <button data-choice="2">It is included mainly for sentiment, a sad detail about a faithful old dog with no real bearing on the household&rsquo;s larger state.</button>
+                    <button data-choice="3">It signals that Odysseus&rsquo;s disguise has already failed, since something in the household recognized him instantly.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Continue reading Books 17 and 18 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Track every character who is kind or cruel to the beggar, and note it in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 8.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There the disguise is tested again, this time by the two people who know Odysseus best.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A disguise only works because it hides something the audience already knows, and that gap is where tension lives. Antinous&rsquo;s stool, the fight with Irus, and Argos&rsquo;s death all draw their power from the same source: we can see the king where the household sees only a beggar. Carry this technique, tension built from what a reader knows and a character does not, into your own draft.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.01 &middot; A Beggar in His Own Hall</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

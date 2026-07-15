@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 7.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 7.01 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 7.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Odyssey</div>
+        <div style="font-size: 12px; color: #1a2340;">Homer &middot; read your own copy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Home in Disguise</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 7</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Odysseus finally reaches Ithaca, and the poem will not let him arrive as himself.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After ten years and six books of storytelling, Odysseus sets foot on his own island in Book 13, asleep and unaware, carried there by the Phaeacians who then sail off without ever seeing him wake. Athena greets him not with a triumphant homecoming but with a disguise: she turns her own favorite hero into an old, ragged beggar nobody would look at twice. In Book 14, that disguised stranger walks straight into the hut of Eumaeus, the swineherd who has kept faith with an absent master for twenty years. Watch what Eumaeus does for a man he does not recognize, and ask why the poem makes its king hide before it lets him rule again.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how and why Athena disguises Odysseus as a beggar before he ever reaches his own house.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Eumaeus&rsquo;s hospitality toward a stranger contrasts with the suitors&rsquo; treatment of Odysseus&rsquo;s own household.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify what a disguise lets a story reveal that a plain arrival could not.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your own copy of <em>The Odyssey</em> (Fagles translation). This week, read <strong>Books 13 and 14</strong> in your copy. See the &ldquo;How to Read the Odyssey&rdquo; page for pacing across this longer week.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 1 Organizer (Word doc in your OneDrive) &mdash; keep it open to track what you notice.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A KING MADE INTO A BEGGAR</div>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time you showed up somewhere and no one recognized you right away, or a time you deliberately kept quiet about who you were. What did you learn about how people treated a stranger versus how they treated you? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Watching how people act before they know who they are dealing with is exactly the test Odysseus is about to run on his own household.">&#128065;&#65039; I noticed people acted differently before they knew who I was</button>
+                <button data-response="Being underestimated or overlooked can be uncomfortable, but it can also tell you something true about a place. Keep that feeling in mind as you read.">&#128532; I felt overlooked or underestimated</button>
+                <button data-response="Choosing what to reveal and when is a kind of power. Odysseus is about to use that power very deliberately.">&#129323; I liked having information other people did not have</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Phaeacians set the sleeping Odysseus on the shore of Ithaca and sail home, so that when he wakes he does not even recognize his own island; Athena has covered it in a mist. Once she reveals herself and the two of them agree on a plan against the suitors, she transforms him on the spot:</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;She covered him with wrinkles, took away all his yellow hair, and withered the flesh over his whole body&hellip; she changed his clothes and threw an old rag of a wrap about him, and a tunic, tattered, filthy, and begrimed with smoke.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Athena, trans. Samuel Butler, public domain</div>
+
+        <!-- historical context box -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127963;&#65039; HISTORICAL CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In this culture, hospitality toward strangers was treated as a sacred duty owed to any traveler, since the gods themselves were said to sometimes visit in disguise. A household&rsquo;s true character showed most clearly in how it treated someone who could offer nothing in return. Odysseus does not choose disguise to trick his friends for sport; it lets him find out, without warning anyone, exactly who has kept faith with him and who has not.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SWINEHERD WHO NEVER STOPPED WAITING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Eumaeus does not know the ragged old man at his door is his own king. He takes him in anyway, feeds him, and makes him a bed by the fire:</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated passage, hospitality + loyalty contrast -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; EUMAEUS&rsquo;S WORDS, AND WHAT THEY REVEAL</div>
+            <div style="font-size: 20px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                &ldquo;<span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">Old man, come inside, and when you have had your fill of bread and wine, tell me where you come from</span>. <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">I have lost the best of masters, and am in continual grief on his account&hellip; it is the loss of Odysseus that grieves me most.</span>&rdquo;
+            </div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">Eumaeus, trans. Samuel Butler, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">WELCOME BEFORE ANY QUESTION</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Eumaeus feeds a total stranger before he has any idea who the man is or whether he can repay the kindness. He does this out of habit, not calculation.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">LOYALTY WITH NO AUDIENCE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Eumaeus grieves for Odysseus to a man he thinks is a nobody, with nothing to gain by saying it. That is the surest sign his loyalty is real.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Set that beside how Eumaeus describes the suitors, still speaking to the man he does not know is his king: &ldquo;The fat pigs have to go to the suitors, who eat them up without shame or scruple&hellip; they waste his estate by force, without fear or stint.&rdquo; One household&rsquo;s poorest servant treats a stranger better than its wealthiest guests treat their absent host. The disguise does not create this contrast; it simply lets Odysseus, and the reader, see it clearly for the first time.</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TRY IT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sort what you have read so far into what disguise reveals about each character in Book 14.</p>
+
+        <!-- evaluative widget: rigor rule (every option plausible; feedback teaches). Correct indices 0,3,2 -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE DISGUISE REVEAL?</div>
+            <div class="widget-question">Each question offers four readings of a moment in Book 14. More than one will sound reasonable; choose the one the scene best supports.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Yes. Eumaeus has a hut and a pig-yard, not a king&rsquo;s table, yet he gives freely to a man who may never repay him. The poem measures xenia by what a gift costs the giver, not by its size, which is exactly why a swineherd&rsquo;s welcome can outweigh the suitors&rsquo; plunder of a far wealthier table." data-hint="Tempting, because it sounds like a fair comparison, but the logic runs backward. Giving away a share of almost nothing costs the giver MORE, relatively, than the suitors risk by helping themselves to a rich man&rsquo;s stock.">
+                <div class="widget-row-prompt">1. Eumaeus, who owns little beyond the hut and pigs he tends for another man, still feeds and shelters the ragged stranger before asking his name. What is the strongest reading of what this scene asks you to weigh?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Eumaeus&rsquo;s welcome costs him more than the suitors&rsquo; ever could; it is the poorer household, not the richer one, that keeps xenia&rsquo;s true measure.</button>
+                    <button data-choice="1">Because Eumaeus has so little to lose, his kindness is a smaller, easier virtue than the risk the suitors take on by hosting so many.</button>
+                    <button data-choice="2">Hospitality was simply expected of any household in this period, rich or poor, so the scene does not really distinguish Eumaeus from the suitors.</button>
+                    <button data-choice="3">The scene mainly shows that Eumaeus is a naturally trusting man, not that his poverty makes the gesture mean more.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. A confession made to someone who can do nothing for you is the one kind of loyalty that cannot be a performance. The poem stages it precisely when no audience is watching, which is what makes it trustworthy." data-hint="This reads Eumaeus&rsquo;s grief as knowledge he does not have. Nothing in the scene suggests he suspects the beggar&rsquo;s identity; the poem&rsquo;s irony depends on the reader knowing what Eumaeus does not.">
+                <div class="widget-row-prompt">2. Eumaeus tells the disguised beggar, a man he believes to be a homeless stranger, that he grieves more for the loss of Odysseus than for anything else. What does the poem most want you to take from a servant confessing this to someone who cannot reward him for it?</div>
+                <div class="widget-options">
+                    <button data-choice="0">It shows Eumaeus&rsquo;s loyalty extends to the whole household, proving every servant in the house secretly still favors Odysseus.</button>
+                    <button data-choice="1">It shows Eumaeus is simply an emotional man, prone to complaining to whoever happens to be sitting nearby.</button>
+                    <button data-choice="2">It shows Eumaeus already suspects the beggar is Odysseus and is testing how the stranger reacts.</button>
+                    <button data-choice="3">It shows the loyalty is genuine, since Eumaeus has nothing to gain by saying it to someone he thinks is a nobody.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Disguised as a nobody, Odysseus hears exactly how his household is spoken of when no one is performing for a king&rsquo;s benefit. That is information no return in his own name could ever get him." data-hint="This treats a deliberate choice as a matter of timing. Nothing in the scene suggests Odysseus is simply waiting for a private moment; he has every chance to speak and does not take it.">
+                <div class="widget-row-prompt">3. Even safely inside a loyal household, Odysseus keeps the disguise instead of telling Eumaeus the truth. What is the best-supported reason for this choice, based on what the scene shows?</div>
+                <div class="widget-options">
+                    <button data-choice="0">He no longer trusts anyone in his own household after twenty years away, Eumaeus included.</button>
+                    <button data-choice="1">He is testing Eumaeus specifically, because the servant has already given him some reason to doubt his faithfulness.</button>
+                    <button data-choice="2">He is gathering an honest account of his household, the kind no one would give him if they knew a king was listening.</button>
+                    <button data-choice="3">He has simply not yet found a convenient private moment to reveal himself.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish reading Books 13 and 14 in your own copy.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note one moment where Eumaeus&rsquo;s loyalty shows, and record it in your Module 1 Organizer.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 7.02.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There, Telemachus comes home, and a father reveals himself to his son.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A disguise strips away rank and reputation and leaves only how people actually treat someone who seems to be nobody. Eumaeus passes that test without knowing he is being tested at all, which is exactly what makes his loyalty worth something.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.01 &middot; Home in Disguise</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

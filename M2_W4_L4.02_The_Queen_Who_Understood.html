@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 4.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 4.02 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 4.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Oedipus the King</div>
+        <div style="font-size: 12px; color: #1a2340;">Sophocles, trans. F. Storr (public domain)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Queen Who Understood</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 4</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Jocasta understands everything before Oedipus does. She spends her last moments on stage trying to stop him, and he hears the opposite of what she means.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Earlier in this module, Jocasta was the calm one, the skeptic who told Oedipus that prophecies rarely mean what people fear. In this week&rsquo;s scene, that same woman becomes the first person on stage to see the whole truth, and the last thing she does with that knowledge is beg her husband to stop looking. He refuses, and he badly misreads why she is begging. This lesson asks you to sit with a genuinely hard question: is her silence mercy, self-protection, or both at once?</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace Jocasta&rsquo;s shift from confident skeptic to the first character who fully understands the truth.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Oedipus misreads her plea and her exit as wounded pride rather than mercy.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh whether Jocasta&rsquo;s silence functions as mercy, self-protection, or both, using evidence from the text.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>Oedipus the King</em> (trans. F. Storr), Jocasta&rsquo;s exit. <a href="https://www.gutenberg.org/ebooks/31" target="_blank" rel="noopener" style="color:#3B4E8C;">Read it free at Project Gutenberg</a>.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module 2 Organizer, open to the Evidence Bank section.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE MOMENT HER CONFIDENCE BREAKS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In earlier weeks, Jocasta dismissed prophecy as unreliable and told Oedipus that a wise man &ldquo;lives most at ease&rdquo; by ignoring &ldquo;brainsick phantasies.&rdquo; That confidence disappears the instant Oedipus starts tracing the messenger&rsquo;s story back to its source, a herdsman &ldquo;of Laius&rsquo; house.&rdquo; When Oedipus turns to her and asks whether she recognizes the man they already sent for, her answer is nothing like her earlier calm.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">OEDIPUS: &ldquo;Madam, dost know the man we sent to fetch? Is the same of whom the stranger speaks?&rdquo;<br />JOCASTA: &ldquo;Who is the man? What matter? Let it be. &rsquo;Twere waste of thought to weigh such idle words.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the change. Earlier, Jocasta reasoned Oedipus out of his fears with logic. Here, she is no longer reasoning at all. She is trying to stop the conversation itself, which is the behavior of someone who has just understood far more than she is saying out loud.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE PLEA, AND THE MISREADING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta&rsquo;s plea is direct and, on its surface, easy to understand. Read it carefully, because both halves of her sentence matter.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Oh, as thou carest for thy life, give o&rsquo;er This quest. Enough the anguish I endure.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Jocasta, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She names his safety first (&ldquo;as thou carest for thy life&rdquo;), then her own suffering second (&ldquo;the anguish <em>I</em> endure&rdquo;). Oedipus, however, hears something else entirely. He assumes she is worried about her own social standing, ashamed at the thought of a husband who might turn out to be low-born.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;Be of good cheer; though I be proved the son Of a bondwoman, aye, through three descents Triply a slave, thy honor is unsmirched.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">She tries again, twice more, with no logic left, only urgency: &ldquo;Yet humor me, I pray thee; do not this,&rdquo; and &ldquo;Ah mayst thou ne&rsquo;er discover who thou art!&rdquo; He answers by sending for the herdsman anyway and dismissing her as prideful: &ldquo;Go, fetch me here the herd, and leave yon woman To glory in her pride of ancestry.&rdquo;</p>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HER LAST WORDS, AND HIS ANSWER TO THEM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jocasta leaves the stage with one final line, and it is worth reading exactly as written.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated exit line -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128065;&#65039; HER LAST LINE, ANNOTATED</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;<span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">O woe is thee, poor wretch!</span> With that last word <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">I leave thee, henceforth silent evermore.</span>&rdquo;</div>
+            <div style="font-size: 12px; color: #1a2340; margin-top: 8px;">Jocasta, trans. F. Storr, public domain</div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:230px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">GRIEF FOR HIM, NOT HERSELF</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">Her very last words are spent pitying Oedipus, &ldquo;thee,&rdquo; not herself. That is a strong signal that her plea was never really about her own pride.</div>
+                </div>
+                <div style="flex:1; min-width:230px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">SILENCE, NOT SPITE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">She promises silence, not accusation. She does not stay to argue, condemn, or explain. She simply leaves, carrying the full truth alone.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oedipus, left alone with the chorus&rsquo;s alarm (&ldquo;Much I fear From this dead calm will burst a storm of woes&rdquo;), fills the silence with the explanation that costs him the least.</p>
+        <blockquote style="margin: 0 0 12px 0; padding: 12px 20px; background: #F4F6FA; border-left: 4px solid #C7922C; border-radius: 4px; font-size: 18px; color: #0e1c42; line-height: 1.6; font-style: italic;">&ldquo;It may be she with all a woman&rsquo;s pride Thinks scorn of my base parentage. But I Who rank myself as Fortune&rsquo;s favorite child, The giver of good gifts, shall not be shamed.&rdquo;</blockquote>
+        <div style="font-size: 12px; color: #1a2340; margin: -4px 0 12px 0;">Oedipus, trans. F. Storr, public domain</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what he does here. He reaches for the explanation that keeps his own guilt furthest away: that she is ashamed of a possible low birth, not that she already knows a truth far worse than low birth. This is the same move he made with Tiresias two weeks ago, filling a frightening silence with the smallest, safest story available instead of the one actually in front of him. The play does not force you to pick only one motive for Jocasta&rsquo;s exit. Her own words give real evidence for mercy toward Oedipus and for her own unbearable dread at once. A careful reader can hold both.</p>
+    </div>
+
+    <!-- AI-awareness callout -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND AMBIGUOUS MOTIVE</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can define dramatic irony accurately. It is much weaker at weighing a genuinely ambiguous motive, like whether Jocasta&rsquo;s silence is mercy, self-protection, or both, because that judgment call means holding two readings at once instead of picking the single most common answer. That kind of weighing is exactly what this lesson is asking you to practice yourself.</div>
+    </div>
+
+    <!-- evaluative widget -->
+    <div class="optima-widget ow-select">
+        <div class="widget-kicker">&#9889; TRY IT &middot; WHAT DOES THE MOMENT REVEAL?</div>
+        <div class="widget-question">For each moment, choose the reading the text best supports. More than one option will sound plausible.</div>
+
+        <div class="widget-row" data-correct="2" data-fb="Right. The play gives evidence for both readings in the same two lines: &lsquo;as thou carest for thy life&rsquo; is about him, and &lsquo;the anguish I endure&rsquo; is about her. A careful reader does not have to choose only one motive; the plea holds both together." data-hint="Look again at both halves of her sentence, the one naming his safety and the one naming her own suffering, before choosing only one motive.">
+            <div class="widget-row-prompt">1. &ldquo;Oh, as thou carest for thy life, give o&rsquo;er This quest. Enough the anguish I endure.&rdquo; What does this plea reveal?</div>
+            <div class="widget-options">
+                <button data-choice="0">She is worried only about her own reputation being exposed.</button>
+                <button data-choice="1">She already understands the truth and is trying only to spare Oedipus from discovering it.</button>
+                <button data-choice="2">She is acting out of both self-protection and genuine mercy for Oedipus, and the play does not force a reader to choose only one.</button>
+                <button data-choice="3">She is testing whether Oedipus truly loves her before revealing more.</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="1" data-fb="Right. In her final words on stage, with her own world collapsing, she directs her grief at him, not herself. That is a strong textual signal for genuine pity, not spite." data-hint="Notice who the pity in this line is directed toward, and weigh what that says about her tone.">
+            <div class="widget-row-prompt">2. &ldquo;O woe is thee, poor wretch! With that last word I leave thee, henceforth silent evermore.&rdquo; What does calling Oedipus, not herself, &ldquo;poor wretch&rdquo; reveal?</div>
+            <div class="widget-options">
+                <button data-choice="0">That she is mocking him for his stubbornness.</button>
+                <button data-choice="1">That her final thought, even in her own collapse, is pity for what is coming to him, not anger at him.</button>
+                <button data-choice="2">That she no longer loves him and is renouncing the marriage.</button>
+                <button data-choice="3">That she is being sarcastic, since &ldquo;wretch&rdquo; is usually an insult.</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="3" data-fb="Right. Oedipus reaches for the explanation that costs him the least: that she is ashamed of a possible low birth, not that she already knows a truth far worse. This is the same move he made with Tiresias, reaching for a smaller, safer story instead of the one in front of him." data-hint="Ask what Oedipus gains, emotionally, by choosing this explanation over the one the audience already suspects.">
+            <div class="widget-row-prompt">3. &ldquo;It may be she with all a woman&rsquo;s pride Thinks scorn of my base parentage.&rdquo; How does this line function in the scene?</div>
+            <div class="widget-options">
+                <button data-choice="0">It reports what the chorus thinks of Jocasta, not Oedipus&rsquo;s own view.</button>
+                <button data-choice="1">It proves Oedipus is right about Jocasta&rsquo;s motives, since he knows her best.</button>
+                <button data-choice="2">It shows Oedipus has finally realized the truth and is speaking with irony.</button>
+                <button data-choice="3">It shows Oedipus filling the silence she left with the one explanation that keeps his own guilt furthest away.</button>
+            </div>
+        </div>
+
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note Jocasta&rsquo;s exit line in your Organizer.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record which motive, or motives, you think her final words support, and why.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Move on to Lesson 4.03.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">There you will learn how to state the strongest case against your own verdict, and answer it.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The one person who might have stopped this play from ending in catastrophe says everything she can within the limits of her own dread and her marriage, and it is not enough. Carry her final, silent exit with you into next week&rsquo;s reading, where the truth she already knows finally reaches everyone else.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.02 &middot; The Queen Who Understood</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

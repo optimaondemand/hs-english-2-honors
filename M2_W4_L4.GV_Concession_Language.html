@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 4.GV</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ws-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 2 &middot; Module 2: Oedipus the King &mdash; The Trial of a King &middot; Lesson 4.GV &middot; Grammar &amp; Word Study</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #1a2340;">Oedipus the King: The Trial of a King</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 4.GV</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Concession language &amp; Word Study</div>
+        <div style="font-size: 12px; color: #1a2340;">Examples from this week&rsquo;s scenes</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.GV</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Concession Language</div>
+        <div style="font-size: 16px; color: #1a2340;">Grammar &amp; Vocabulary &middot; Week 4</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Giving up a little ground, on purpose, can make an argument harder to knock down, not easier.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday you learned to state the strongest case against your own verdict. Today you learn the exact language for answering it without sounding defensive: phrases that let you admit something true about the other side, then pivot straight back to your own claim. You will use this language, along with this week&rsquo;s Word Study words, in Quick Write 12.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use concession language (&ldquo;while it is true that,&rdquo; &ldquo;granted,&rdquo; &ldquo;admittedly,&rdquo; &ldquo;even if&rdquo;) to acknowledge a real point on the other side before pivoting back to my claim.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> distinguish a genuine concession-and-pivot from empty hedging or from giving away the whole argument.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define and correctly use this week&rsquo;s Word Study words in my own writing.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1: GRAMMAR ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; GIVING GROUND WITHOUT LOSING THE ARGUMENT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Concession language</strong> signals to the reader that you are about to admit something true or reasonable about the opposing side, before you pivot back to your own claim. Phrases like <strong>while it is true that</strong>, <strong>granted</strong>, <strong>admittedly</strong>, and <strong>even if</strong> all do this same job: they name the real, specific thing the other side gets right, and then a pivot word, often <em>still</em>, <em>however</em>, or <em>but</em>, turns the sentence back toward your claim. A concession does not weaken an argument. It shows a reader you have already accounted for the strongest objection, which makes everything else you say more trustworthy, not less.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: navy chalkboard of real example sentences -->
+        <div style="background: #0E1C42; border-radius: 8px; padding: 20px 22px; margin: 10px 0 16px 0;">
+            <div style="font-size: 11px; color: #55c8e8; margin-bottom: 14px; letter-spacing: 0.4px;">&#9998; ON THE BOARD &middot; CONCEDE, THEN PIVOT</div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="color:#C7922C; font-weight:bold;">While it is true that</span> Oedipus could not have known the stranger at the crossroads was his father, his own choice to strike first <span style="color:#3B4E8C; font-weight:bold;">still</span> calls for an answer.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">Concession names a real fact (he did not know); the pivot word &ldquo;still&rdquo; turns back to the claim (the act itself needs an answer).</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="color:#C7922C; font-weight:bold;">Granted</span>, the oracle set the terms of Oedipus&rsquo;s fate long before his birth<span style="color:#3B4E8C; font-weight:bold;">;</span> his refusal to stop searching once Jocasta begged him to, <span style="color:#3B4E8C; font-weight:bold;">however</span>, was entirely his own.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">&ldquo;Granted&rdquo; concedes a genuine point about fate; &ldquo;however&rdquo; pivots to a choice that belongs to Oedipus alone.</div>
+            </div>
+
+            <div>
+                <div style="font-size: 19px; color: #ffffff; line-height: 1.7;"><span style="color:#C7922C; font-weight:bold;">Even if</span> Oedipus is guilty of striking the fatal blow, guilt of the act is not the same as guilt of the mind the city seems ready to assume.</div>
+                <div style="font-size: 14px; color: #B9C3DE; margin-top: 4px;">&ldquo;Even if&rdquo; concedes the strongest possible version of the opposing fact, then redefines the actual standard the writer wants judged.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A useful test: after your concession phrase, ask whether you have actually named something specific and true, not just admitted vague uncertainty. Then check that a pivot word carries the sentence back to a specific claim of your own. If a sentence concedes everything and never pivots back, it has stopped being an argument.</p>
+
+        <!-- evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; REAL CONCESSION OR NOT?</div>
+            <div class="widget-question">Decide which sentence is doing genuine concession-and-pivot work.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. This concedes a specific, real fact (he did not know Laius&rsquo;s identity) and then pivots to a specific, defensible claim (his temper, not his knowledge, is what the city must judge). That is what a working concession does." data-hint="Check whether the sentence names something specific and true about the other side, and whether it pivots to a specific claim afterward, rather than dismissing the concession or giving up the whole case.">
+                <div class="widget-row-prompt">1. Which sentence uses a fair concession without accidentally giving away the whole argument?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;While it is true that Oedipus killed a man at the crossroads, this hardly matters compared to everything else going on in his life.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Admittedly, Oedipus did not know Laius was his father, but his rash temper at the crossroads was entirely his own, and that is what the city must judge.&rdquo;</button>
+                    <button data-choice="2">&ldquo;Granted, some people think Oedipus is guilty, but I disagree.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Even if it is true that Oedipus is guilty, I still think he is a good king.&rdquo;</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. This names a real, favorable fact for the other side (he tried to leave Corinth to avoid the prophecy) and then pivots to a specific claim about what that effort could and could not undo. The others hedge without ever conceding a specific point or landing on a position." data-hint="Look for the one sentence that names a specific true fact for the other side, not just uncertainty, and then commits to a claim afterward.">
+                <div class="widget-row-prompt">2. Which sentence is doing genuine concession-and-pivot work, rather than just hedging without ever taking a position?</div>
+                <div class="widget-options">
+                    <button data-choice="0">&ldquo;Maybe Oedipus is guilty, or maybe he isn&rsquo;t; it&rsquo;s hard to say for sure.&rdquo;</button>
+                    <button data-choice="1">&ldquo;Oedipus definitely knew what he was doing the whole time.&rdquo;</button>
+                    <button data-choice="2">&ldquo;It could be argued that Oedipus is guilty, and it could also be argued that he is not.&rdquo;</button>
+                    <button data-choice="3">&ldquo;Granted, Oedipus tried to outrun the prophecy by leaving Corinth; that effort still could not undo the act he committed once he arrived at the crossroads.&rdquo;</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 2: WORD STUDY ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">These six words all appear in this week&rsquo;s reading, the Corinthian messenger scene. Learn the sense the play gives each one, not just a dictionary definition.</p>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>tidings</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; news, especially of an important event</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Jocasta orders a servant to &ldquo;bear these tidings&rdquo; to Oedipus the moment she believes Polybus&rsquo;s death has disproven the prophecy.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>foundling</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; an abandoned child of unknown parentage, found and raised by others</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus asks the messenger directly whether he was &ldquo;a foundling or a purchased slave,&rdquo; not yet realizing how close to the truth his own question lands.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>herdsman</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a person who tends a herd of animals, such as sheep or goats</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">The messenger reveals he received the infant Oedipus from another man, a herdsman &ldquo;of Laius&rsquo; house,&rdquo; the single witness who can now confirm the whole story.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>guerdon</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a reward or recompense given for a service</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus promises the messenger &ldquo;due guerdon for thy pains,&rdquo; a reward the messenger has been hoping for since he first set out from Corinth.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>bondwoman</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun) &mdash; a woman held in slavery or servitude</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">Oedipus tries to reassure Jocasta that even if he is &ldquo;proved the son of a bondwoman,&rdquo; her own honor remains untouched, entirely misreading what she actually fears.</div>
+        </div>
+
+        <div class="ws-card">
+            <div style="font-size: 18px; color: #0e1c42;"><strong>Fortune</strong> <span style="font-size: 14px; color: #1a2340; font-weight: normal;">(noun, here personified) &mdash; chance or luck, treated as a power that gives or withholds favor</span></div>
+            <div style="font-size: 15px; color: #1a2340; margin-top: 4px; line-height: 1.5;">After Jocasta&rsquo;s exit, Oedipus declares himself &ldquo;Fortune&rsquo;s favorite child,&rdquo; choosing to see his mysterious birth as a gift from chance rather than a warning.</div>
+        </div>
+    </div>
+
+    <!-- Application (replaces a quiz) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #7A5A17; margin-bottom: 10px;">&#9997;&#65039; PUT IT TO WORK</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This week&rsquo;s Quick Write is where these tools get tested for real. As you draft Quick Write 12, use <strong>at least one fair concession</strong> (with a phrase like &ldquo;while it is true that,&rdquo; &ldquo;granted,&rdquo; &ldquo;admittedly,&rdquo; or &ldquo;even if&rdquo;) and work in <strong>at least two</strong> of today&rsquo;s Word Study words, used accurately. That is how this lesson gets assessed: not by a quiz, but by what shows up in your own writing.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A good concession says: this much is true, and I am not afraid to say so. The pivot word that follows says: and here is why my claim still stands. Carry both, along with two Word Study words, into Quick Write 12.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 2 &middot; Grammar &amp; Word Study</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.GV &middot; Concession Language</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

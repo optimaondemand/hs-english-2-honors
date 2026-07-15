@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 &mdash; Lesson 6.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (recolored to the ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    details.notebook summary { cursor: pointer; list-style: none; }
+    details.notebook summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Lesson 6.03 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #1a2340;">Lesson 6.03 &middot; Writing Technique</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Craft Focus</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Raising the stakes to a turning point</div>
+        <div style="font-size: 12px; color: #1a2340;">Feeds Quick Write 6</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Kings and Community</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Raising the Stakes</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 6 &middot; Writing Technique</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Book 12 did not tell you the cattle mattered once. It told you three separate times, each time a little louder, until the warning finally broke.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A strong turning point is rarely a surprise dropped out of nowhere. It is built, one raised cost at a time, until the reader can feel that something has to give. This lesson teaches you how a writer raises the stakes on purpose, so that when the turning point finally arrives, in your own story or in the reader&rsquo;s mind, it lands as inevitable rather than random. This is direct preparation for Quick Write 6.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the three moves that raise the stakes toward a turning point: a clear cost, mounting pressure, and a choice that cannot be undone.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> draft a short scene of my own that builds toward an irreversible turning point.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or notes document to draft in.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;">
+            <span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Ten quiet minutes to draft a short scene of your own.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE MOVES THAT BUILD A TURNING POINT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Raising the stakes is not the same as adding more danger. It is a sequence, and it works in a specific order. First, the writer states a clear cost: something the reader can name exactly, not a vague sense of doom. Tiresias does this precisely in Book 11, naming exactly what will happen and to whom. Second, pressure mounts on the character, usually from something ordinary and human, like hunger, exhaustion, or fear, that makes the original warning harder and harder to keep honoring. Third, a choice arrives that cannot be undone: once it is made, the story cannot go back to where it was before. Notice that the third move is what makes something a true turning point rather than just an obstacle. An obstacle can be solved and the story continues as before. A turning point changes what is possible afterward.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Study the worked example below. It was written for this lesson, not lifted from any published book, so you can take it apart freely.</p>
+
+        <!-- ONE MEANINGFUL VISUAL: annotated original worked example, shown-example -->
+        <div style="background: #FFFDF7; border: 1px solid #E7D6AE; border-radius: 8px; padding: 20px 22px; margin: 6px 0 16px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px; letter-spacing: 0.4px;">&#128221; WORKED EXAMPLE, ANNOTATED</div>
+            <div style="font-size: 19px; color: #0e1c42; line-height: 1.6; font-style: italic;">
+                <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:0 3px;">The old keeper had warned them once, clearly: never open the lower gate after the tide turned, or the whole harbor would flood by morning.</span> Three days into the storm, with the well run dry and the children crying from thirst, <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:0 3px;">Ren&rsquo;s hand found the gate&rsquo;s cold iron latch anyway.</span> <span style="background:#F4F6FA; border-bottom:2px solid #0E1C42; padding:0 3px;">The latch gave before she had decided anything at all, and the sea below the gate began, very quietly, to rise.</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;">
+                <div style="flex:1; min-width:200px; border-left:3px solid #3B4E8C; padding-left:12px;">
+                    <div style="font-size:13px; color:#3B4E8C; letter-spacing:0.3px;">MOVE 1: A CLEAR COST</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The warning is specific and named in advance: the lower gate, the tide, the whole harbor. Nothing vague about what is at risk.</div>
+                </div>
+                <div style="flex:1; min-width:200px; border-left:3px solid #C7922C; padding-left:12px;">
+                    <div style="font-size:13px; color:#C7922C; letter-spacing:0.3px;">MOVE 2: MOUNTING PRESSURE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">An ordinary, human pressure (thirst, crying children, days of storm) builds until the original warning gets harder and harder to keep honoring.</div>
+                </div>
+                <div style="flex:1; min-width:200px; border-left:3px solid #0E1C42; padding-left:12px;">
+                    <div style="font-size:13px; color:#0E1C42; letter-spacing:0.3px;">MOVE 3: IRREVERSIBLE CHOICE</div>
+                    <div style="font-size:15px; color:#1a2340; line-height:1.55;">The latch gives, almost before a decision is made, and the sea starts to rise. There is no undoing this moment. The story after it is permanently different from the story before it.</div>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Notice what the example does <em>not</em> do. It never explains that this is a big, important moment. It trusts the three moves, cost, pressure, and an irreversible choice, to make that clear on their own.</p>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; YOUR TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now try the same three moves in a scene of your own, ideally one that could belong to your Bard&rsquo;s Hall tale. Think of a warning your character already knows, a kind of ordinary pressure that could make them break it, and the exact instant the choice becomes impossible to take back.</p>
+
+        <details class="notebook" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <summary style="font-size: 17px; color: #0e1c42; line-height: 1.6;"><strong>&#9997;&#65039; In your notebook, draft three to five sentences that name the cost, build the pressure, and land on the irreversible choice.</strong> Do this now, before you open this box to see one more worked example.</summary>
+            <div style="margin-top: 14px; font-size: 17px; color: #1a2340; line-height: 1.65;">
+                <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">ONE MORE EXAMPLE, FOR COMPARISON</div>
+                <p style="margin: 0 0 8px 0; font-style: italic;">The captain had made the rule plain: no one opened the sealed hold until they reached port, whatever noise came from inside it. By the fourth night without sleep, half the crew swore they heard someone crying in there. Osei broke the seal before the others could stop him, and whatever had been waiting was already loose in the corridor before he understood what he had done.</p>
+                <p style="margin: 0;">Compare it to your own draft. Is the original warning specific enough to name in one sentence? Does something ordinary, not a monster, actually apply the pressure? Does your last sentence make the choice impossible to undo, the way the seal breaking or the gate latch giving cannot be reversed? If any of the three moves is missing, add it before you move on.</p>
+            </div>
+        </details>
+
+        <!-- evaluative widget: identify which of three specific moves is absent -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHICH MOVE IS MISSING?</div>
+            <div class="widget-question">Each passage below is missing exactly one of the three moves: a clear cost, mounting pressure, or an irreversible choice. Read carefully, since two of the three moves are usually present and only one is genuinely absent.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Correct. The passage names the warning (never cross before the first snow) and shows real pressure (three days without food), but it stops at people arguing. No choice actually gets made yet, so it stops short of the turning point itself." data-hint="Ask whether anything in this passage actually happens that cannot be taken back, or whether the characters are still only talking about what to do.">
+                <div class="widget-row-prompt">1. &ldquo;They had been told never to cross the frozen lake before the first snow. After three days without food, they stood at its edge, arguing about what to do.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Clear cost is missing.</button>
+                    <button data-choice="1">Mounting pressure is missing.</button>
+                    <button data-choice="2">Irreversible choice is missing.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Sleeplessness supplies real pressure, and pushing the door open is a clear, irreversible action. But the passage never names a specific consequence, only a vague sense that something feels wrong. Compare this to Tiresias, who names the cattle of Helios exactly." data-hint="Ask whether the passage ever states exactly what is at stake if the door is opened, or only gestures at a feeling of unease.">
+                <div class="widget-row-prompt">2. &ldquo;Something had always felt wrong about the west corridor after dark. Three nights running, unable to sleep, she finally reached for the door and pushed it open.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Clear cost is missing.</button>
+                    <button data-choice="1">Mounting pressure is missing.</button>
+                    <button data-choice="2">Irreversible choice is missing.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. The cost is stated plainly (the mountain will not let you back down alive), and the choice is clearly irreversible (he steps off the trail). But nothing builds toward that moment; it happens instantly, on the first morning, with no mounting pressure to explain why now instead of later." data-hint="Ask whether anything in the passage builds up over time, or whether the irreversible choice happens immediately, with no build-up at all.">
+                <div class="widget-row-prompt">3. &ldquo;The guide had warned them plainly: step off the marked trail and the mountain would not let you back down alive. Without a word, on the very first morning, Tomas stepped off it.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="0">Clear cost is missing.</button>
+                    <button data-choice="1">Mounting pressure is missing.</button>
+                    <button data-choice="2">Irreversible choice is missing.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write 6 (Canvas assignment).</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Use the practice draft you just wrote, or start fresh, to write the highest-stakes turning-point moment of your Bard&rsquo;s Hall tale. Full directions are on the Quick Write 6 assignment page.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A turning point earns its weight from what comes before it: a cost the reader can name, pressure that makes the original warning harder to keep, and a choice that closes the door behind it. You have now tried building all three in your notebook. Carry that draft into Quick Write 6.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.03 &middot; Raising the Stakes</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

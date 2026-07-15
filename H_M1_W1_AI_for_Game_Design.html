@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 2 Honors &mdash; AI for Game Design</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    /* ===== WIDGET CSS (ELA gold/indigo palette; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C7D0E5; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #7A5A17; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #7A5A17; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .log-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    .log-table th { padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334; background: #0E1C42; }
+    .log-table td { padding: 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 2 HONORS</div>
+    <div style="font-size: 18px; color: #55c8e8;">Quarter 1 &middot; Module 1: The Odyssey &mdash; The King&rsquo;s Journey Home &middot; Honors Sprint 1 &middot; Student Page</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #1a2340;">The Odyssey: The King&rsquo;s Journey Home</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Sprint</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #1a2340;">Honors Sprint 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Honors Track</div>
+        <div style="font-size: 17px; color: #0e1c42;">The Designer&rsquo;s Table</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 16px; color: #0e1c42;">Using AI to support design</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Honors Sprint 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Using AI to Support Your Game, Not Replace You</div>
+        <div style="font-size: 16px; color: #1a2340;">Lesson &middot; Week 1</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY&rsquo;S FOCUS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Building a game all year means a lot of thinking out loud: brainstorming, drafting rules, researching a period, sketching an aesthetic. AI tools are genuinely useful for that kind of thinking-out-loud work. They are not useful for deciding whether your game is any good, and they cannot be trusted on historical detail without checking. This lesson sets the ground rules you will use for the rest of the year, and introduces the log you will keep every time you use AI on this project.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name what an AI assistant is and identify at least one tool available to me through my school account, plus one other common, free, credible option.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply the verify-and-critique stance and basic privacy habits any time I use AI on this project.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain two specific things AI cannot do for a game designer, and keep an AI-Use Log across the year.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 1 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129302; PART 1 &middot; WHAT THESE TOOLS ARE, AND WHICH ONE IS YOURS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An AI assistant is a program that generates text, ideas, or images in response to what you type, based on patterns it learned from enormous amounts of writing. It does not know your specific game, your specific classroom, or whether a rule you wrote is actually fun to play. It is fast at producing options and drafts, and it is unreliable at judgment calls that depend on real testing or real, verifiable facts.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You do not have a Claude account for this course, and you do not need one. Your school Microsoft 365 account already gives you <strong>Microsoft Copilot</strong>, built into Word, Edge, and the rest of your school apps; that is the default tool for this class because it is already yours. Other common, free, credible assistants exist too, such as Google Gemini or a school-approved alternative, and you are welcome to use whichever you have real access to. No specific tool is required. What matters is not which tool you pick, but what you do with what it gives you.</p>
+
+        <!-- historical/context-style box reused for privacy basics -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-top: 3px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128274; PRIVACY BASICS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Never paste personal information into an AI tool: your full name and school together, addresses, other students&rsquo; names, photos of yourself or classmates, or anything you would not want stored on a company&rsquo;s server. For this project, you are almost always asking about a game concept, a historical period, or a rule, none of which requires any personal data at all.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 2 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129504; PART 2 &middot; THE STANCE: VERIFY AND CRITIQUE, NEVER SUBSTITUTE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every use of AI on this project follows the same shape: you ask, it answers, and then <strong>you</strong> check the answer against something real and decide what to keep. The AI never makes the design decision, never confirms a historical fact on its own authority, and never stands in for the thinking you are supposed to be doing. Across the year you will use this stance to brainstorm design questions, summarize a period so you can choose a world, red-team your rules for clarity, and catch anachronisms in your aesthetic research. Each time, the pattern is the same: prompt, then verify, critique, and improve.</p>
+
+        <!-- reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">If an AI tool gave you a confident, detailed answer about a historical period, how sure would you want to be before you used it in your game? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Trusting confident detail is a common trap, since AI states wrong details with exactly the same confident tone as right ones. This module's Part 3 spells out why period detail specifically needs checking against a real source.">Pretty sure, if it sounds detailed and confident</button>
+                <button data-response="That is close to the right instinct. Confidence is not evidence. Anything you plan to actually build into your game gets checked against a real source, which for this project means JStor once you reach Sprint 2.">Only sure enough to double-check it against a real source</button>
+                <button data-response="That is a defensible starting stance for period facts specifically, though for brainstorming and rough drafts a lighter check is often enough. Part 3 will help you calibrate when a full source-check is worth the time.">Not at all, until I have verified it myself</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ===== PART 3 ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9888;&#65039; PART 3 &middot; TWO THINGS AI CANNOT DO FOR A GAME DESIGNER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This project happens to expose AI&rsquo;s limits with unusual clarity. Two of them matter enough to name outright, before you start building.</p>
+
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; LIMIT ONE: FUN AND FAIR</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI cannot tell you whether your game is fun or fair. It can describe what &ldquo;fun&rdquo; usually means in general, but it has never played your specific rules against a real opponent who got bored, frustrated, or delighted. Only <strong>playtesting</strong>, with real people and your actual materials, can answer that. This is why the Designer&rsquo;s Table requires three real playtest cycles later this year; there is no AI shortcut around them.</div>
+        </div>
+
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #C0392B; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; LIMIT TWO: PERIOD DETAIL</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI gets historical and period detail wrong more often than it sounds like it does, and it states wrong details with the same confident tone as right ones. Once you declare your world and start real research, every AI-surfaced historical claim you plan to use gets checked on <strong>JStor</strong>, where you confirm it exists and says what the AI claimed. An unverifiable claim gets cut, no matter how good it sounded.</div>
+        </div>
+    </div>
+
+    <!-- ===== PART 4: AI-USE LOG ===== -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128221; PART 4 &middot; YOUR AI-USE LOG</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Starting with the Design Question assignment, you keep one running log of every substantive AI use on the Designer&rsquo;s Table project. Keep it in your Module 1 Organizer, and carry it forward for the rest of the year. An honest, complete log is required before your final portfolio can be assessed at all; it is not optional polish.</p>
+        <div style="overflow-x: auto;">
+        <table class="log-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>What I asked AI to do</th>
+                    <th>What it gave me</th>
+                    <th>How I verified or critiqued it</th>
+                    <th>What I changed and why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #FFFFFF;">
+                    <td>Example: 9/2</td>
+                    <td>Brainstorm 10 design questions about community and belonging.</td>
+                    <td>A list of 10 questions, several very generic.</td>
+                    <td>Checked each against what actually interests me and what a game could show through play, not just tell.</td>
+                    <td>Rejected 8 as too broad for a game; combined ideas from 2 into my own question.</td>
+                </tr>
+                <tr style="background: #F4F6FA;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 12px 0 0 0; font-style: italic;">The example row shows the format only; your own rows will look different because your own thinking will be different.</p>
+    </div>
+
+    <!-- evaluative self-check -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; SELF-CHECK &middot; WHICH LIMIT IS THIS?</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT</div>
+            <div class="widget-question">Each situation demands a judgment call, not just a label. Read it closely and choose what actually follows.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. General pacing theory is a reasonable starting point, and getting it from AI is a legitimate use. But theory about games in general cannot certify that your specific fix worked on your specific prototype; that verdict only comes from playtesting the revised version with real players." data-hint="This claims AI gave you nothing useful, but the scenario says otherwise: it gave a reasonable general explanation. The real gap is narrower than 'AI can't explain pacing at all.'">
+                <div class="widget-row-prompt">1. An AI tool explains, in general terms, why games often feel like they drag in the middle, and the explanation seems reasonable. You use it to revise a rule. What can this explanation NOT tell you, even after you make the revision?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Whether your specific fix actually made your specific game more fun; only playtesting the revised prototype can answer that.</button>
+                    <button data-choice="1">Anything at all about why games drag, since that requires real playtesting to understand in the first place.</button>
+                    <button data-choice="2">Anything useful, since brainstorming falls under the period-detail limit, not the fun-and-fair limit.</button>
+                    <button data-choice="3">Anything about pacing, since pacing is entirely a matter of historical accuracy.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Confidence is not evidence, and neither is dismissing AI outright without checking. The move that actually respects both the tool and the project is verifying the specific claim on JStor and keeping it only if a real source backs it up." data-hint="Softening the wording to 'sometimes' without checking anything is not the same as verification; it just makes an unverified claim sound more cautious while still being unverified.">
+                <div class="widget-row-prompt">2. AI tells you confidently that duels in Elizabethan England were always fought with rapiers, never any other weapon. You have not yet checked this. What is the correct move?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Use the claim as written, since AI stated it with total confidence and specific detail.</button>
+                    <button data-choice="1">Reject the claim outright without checking anything, since AI is never reliable on historical claims.</button>
+                    <button data-choice="2">Treat it as a claim to verify on JStor before building it into the game, and keep it only if a real source confirms it.</button>
+                    <button data-choice="3">Soften the claim to &ldquo;sometimes rapiers&rdquo; without checking anything, since that feels like a safer middle ground.</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Generating a rough list of options and then sharpening or combining the useful ones into your own real question is exactly the kind of thinking-out-loud work AI is good for on this project. Neither wholesale rejection nor passive acceptance is the right response to a first draft." data-hint="This treats a brainstorming task as if it required the same historical-fact verification that period claims need. A rough list of design-question ideas is not a factual claim, so a JStor check is the wrong tool here.">
+                <div class="widget-row-prompt">3. You ask AI to generate ten possible design questions about community and belonging. It gives you a list, several fairly generic. What should happen next?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Discard the whole list, since AI-generated ideas are inherently untrustworthy for creative work.</button>
+                    <button data-choice="1">Treat the list as raw material: keep what is useful, and combine or sharpen a few ideas into your own real design question.</button>
+                    <button data-choice="2">Adopt the first question exactly as written, since it came from a tool trained on enormous amounts of writing.</button>
+                    <button data-choice="3">Treat this as a period-detail claim and verify each question on JStor before using any of them.</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU&rsquo;LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Use this stance on the Design Question assignment.</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">When you brainstorm candidate design questions with an AI tool, record that use as your first AI-Use Log entry.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Use AI to generate options, drafts, and first drafts of a period summary; never to decide if your game works or to settle a historical fact on its own word. Playtesting tells you what AI cannot, and JStor confirms what AI might have gotten wrong. Keep the log honest, and it will do real work for you all year.</p>
+    </div>
+
+</div>
+<!-- ===== /BODY WRAPPER ===== -->
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 2 HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Honors Sprint 1 &middot; Using AI to Support Your Game, Not Replace You</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
